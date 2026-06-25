@@ -1,0 +1,416 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { tools, type AECTool, clusterColorCls, accessCls, accessLabel, maturityLabel, maturityCls } from '../../lib/tools';
+
+export function getStaticPaths() {
+  return tools.map(t => ({
+    params: { id: t.tool_id.toLowerCase() },
+    props:  { tool: t },
+  }));
+}
+
+const { tool } = Astro.props;
+
+// Provenance discipline: flag all [claimed, VERIFY] and [VERIFY] spans in description
+function renderDescription(text: string): string {
+  return text
+    .replace(/\[claimed, VERIFY\]/g, '<mark class="claimed-flag">[claimed, VERIFY]</mark>')
+    .replace(/\[VERIFY\]/g, '<mark class="verify-flag">[VERIFY]</mark>');
+}
+
+// Modality display labels (schema v2.0 additions included)
+const modalityLabels: Record<string, string> = {
+  'text': 'Text',
+  'image': 'Image',
+  'video': 'Video',
+  'structured-data': 'Structured data',
+  'code': 'Code',
+  'report': 'Report',
+  'dashboard': 'Dashboard',
+  '3d-model-ifc': '3D model (IFC)',
+  '3d-model-proprietary': '3D model (proprietary)',
+  '3d-model': '3D model',
+  'point-cloud': 'Point cloud',
+  'drawing-annotation': 'Drawing / annotation',
+};
+function mLabel(m: string): string { return modalityLabels[m] ?? m; }
+
+// Entity disambiguation note for T007
+const isArchilyse = tool.tool_id === 'T007';
+
+// Pricing display
+function pricingDisplay(tool: AECTool): { label: string; cls: string } {
+  if (tool.access === 'open-source') {
+    return { label: tool.pricing_tier === 'freemium' ? 'Freemium (OSS core free)' : 'Free / open-source', cls: 'text-emerald-300' };
+  }
+  if (tool.access === 'freemium') {
+    return { label: tool.pricing_tier.includes('[VERIFY]') ? 'Freemium — pricing details [VERIFY]' : `Freemium — ${tool.pricing_tier}`, cls: 'text-teal-300' };
+  }
+  switch (tool.pricing_tier) {
+    case 'freemium': return { label: 'Freemium (free tier + paid)', cls: 'text-sky-300' };
+    case 'subscription-published': return { label: 'Subscription (public pricing — see product page)', cls: 'text-amber-300' };
+    case 'subscription-enterprise': return { label: 'Enterprise subscription (contact sales)', cls: 'text-slate-400' };
+    default: return { label: tool.pricing_tier, cls: 'text-slate-400' };
+  }
+}
+const pricing = pricingDisplay(tool);
+
+// Has any claimed stats in description
+const hasClaimedStats = tool.short_description.includes('[claimed, VERIFY]') || tool.notes.includes('[claimed, VERIFY]');
+---
+
+<Layout
+  title={tool.name}
+  description={`${tool.name} — ${tool.category}. AEC AI tool registry, CRAFTER systematic review.`}
+>
+
+<style>
+  mark.claimed-flag {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+    border-radius: 3px;
+    padding: 0 3px;
+    font-style: normal;
+    font-size: 0.78em;
+  }
+  mark.verify-flag {
+    background: rgba(251, 191, 36, 0.10);
+    color: #d97706;
+    border-radius: 3px;
+    padding: 0 3px;
+    font-style: normal;
+    font-size: 0.78em;
+  }
+</style>
+
+  <!-- Page header -->
+  <div class="page-header">
+    <div class="mx-auto max-w-5xl">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <a href="/tools">Tools</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="text-slate-400" aria-current="page">{tool.name}</span>
+      </nav>
+
+      <div class="flex flex-col sm:flex-row sm:items-start gap-5 mt-2">
+        <div class="flex-1">
+          <p class="section-label">{tool.category_cluster} · {tool.tool_id}</p>
+          <h1 class="font-display text-3xl font-bold text-white sm:text-4xl mb-3">
+            {tool.name}
+          </h1>
+          <p class="text-slate-400 text-sm leading-relaxed max-w-2xl">
+            {tool.category}
+          </p>
+
+          <!-- Badges row -->
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class={`chip text-xs border ${clusterColorCls(tool.category_cluster)}`}>
+              {tool.category_cluster}
+            </span>
+            <span class={`chip text-xs border ${accessCls(tool.access)}`}>
+              {accessLabel(tool.access)}
+            </span>
+            {tool.hardware_required && (
+              <span class="chip text-xs bg-rose-950/60 text-rose-300 border border-rose-800/60">
+                Hardware required
+              </span>
+            )}
+            <span class={`chip text-xs ${maturityCls(tool.maturity)}`}>
+              {maturityLabel(tool.maturity)}
+            </span>
+            <span class="chip text-xs bg-slate-800/60 text-slate-400 border border-slate-700/60">
+              {tool.verification_status}
+            </span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex flex-col gap-2 shrink-0">
+          <a
+            href={tool.resolvable_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Use {tool.name}
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M6 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-3"/>
+              <path d="M10 1h5v5M15 1l-7 7"/>
+            </svg>
+          </a>
+          {tool.github_url && (
+            <a
+              href={tool.github_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary text-xs"
+            >
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              GitHub
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entity disambiguation alert for T007 -->
+  {isArchilyse && (
+    <div class="mx-auto max-w-5xl px-4 pt-6 sm:px-6 lg:px-8">
+      <div class="rounded-xl border border-amber-700/50 bg-amber-950/30 p-4 text-sm">
+        <strong class="text-amber-300">⚠ Entity disambiguation (VERIFIER F-060):</strong>
+        <span class="text-amber-200/80">
+          {' '}This record is the <strong class="text-amber-200">ETH Zurich academic open-source pipeline</strong>
+          at <a href="https://archilyse.standfest.science/" target="_blank" rel="noopener noreferrer" class="underline text-amber-300">archilyse.standfest.science</a> and
+          <a href="https://github.com/Archilyse/Archilyse" target="_blank" rel="noopener noreferrer" class="underline text-amber-300">github.com/Archilyse/Archilyse</a> —
+          <em>not</em> archilyse.com, which was a separate commercial proptech entity (SaaS now discontinued).
+        </span>
+      </div>
+    </div>
+  )}
+
+  <!-- Claimed-stats provenance warning -->
+  {hasClaimedStats && (
+    <div class="mx-auto max-w-5xl px-4 pt-4 sm:px-6 lg:px-8">
+      <div class="rounded-xl border border-amber-900/40 bg-amber-950/20 p-3 text-xs text-amber-300/80">
+        <strong class="text-amber-300">Provenance note:</strong> This tool carries claimed statistics
+        (marked <span class="bg-amber-900/30 text-amber-300 px-1 rounded">[claimed, VERIFY]</span> below).
+        Verification_status = "verified (existence)" — the tool exists and URLs resolve, but
+        accuracy figures, user counts, and pricing have not been independently confirmed.
+      </div>
+    </div>
+  )}
+
+  <!-- Main content -->
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8 grid gap-6 lg:grid-cols-3">
+
+    <!-- Left: description + tasks + integration -->
+    <div class="lg:col-span-2 flex flex-col gap-6">
+
+      <!-- Description -->
+      <div class="card p-6">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          Description
+        </h2>
+        <p
+          class="text-sm text-slate-300 leading-relaxed"
+          set:html={renderDescription(tool.short_description)}
+        />
+      </div>
+
+      <!-- AEC tasks -->
+      <div class="card p-6">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          AEC Tasks
+        </h2>
+        <div class="flex flex-wrap gap-2">
+          {tool.aec_task.map(t => (
+            <span class="chip text-xs bg-slate-800/60 text-slate-300 border border-slate-700/60">{t}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- I/O modality -->
+      <div class="card p-6">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          Input / Output Modality
+        </h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-2">Input</p>
+            <div class="flex flex-col gap-1">
+              {tool.input_modality.map(m => (
+                <span class="flex items-center gap-2 text-xs text-slate-300">
+                  <span class="h-1.5 w-1.5 rounded-full bg-primary-500 shrink-0" />
+                  {mLabel(m)}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-2">Output</p>
+            <div class="flex flex-col gap-1">
+              {tool.output_modality.map(m => (
+                <span class="flex items-center gap-2 text-xs text-slate-300">
+                  <span class="h-1.5 w-1.5 rounded-full bg-accent-500 shrink-0" />
+                  {mLabel(m)}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Integration ecosystem -->
+      {tool.integration_ecosystem.length > 0 && (
+        <div class="card p-6">
+          <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+            Integration Ecosystem
+          </h2>
+          <div class="flex flex-wrap gap-2">
+            {tool.integration_ecosystem.map(e => (
+              <span class="chip text-xs bg-slate-800/60 text-slate-300 border border-slate-700/60">{e}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Notes -->
+      {tool.notes && (
+        <div class="card p-6">
+          <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+            Curator Notes
+          </h2>
+          <p
+            class="text-sm text-slate-400 leading-relaxed"
+            set:html={renderDescription(tool.notes)}
+          />
+        </div>
+      )}
+    </div>
+
+    <!-- Right: metadata sidebar -->
+    <div class="flex flex-col gap-4">
+
+      <!-- Key metadata card -->
+      <div class="card p-5">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          Tool Metadata
+        </h2>
+        <dl class="flex flex-col gap-3 text-xs">
+          {[
+            { k: 'Tool ID',       v: tool.tool_id },
+            { k: 'Category',      v: tool.category },
+            { k: 'Cluster',       v: tool.category_cluster },
+            { k: 'AI type',       v: tool.ai_type },
+            { k: 'Maturity',      v: maturityLabel(tool.maturity) },
+            { k: 'License',       v: tool.license },
+          ].map(row => (
+            <div class="flex gap-2">
+              <dt class="w-24 shrink-0 text-slate-500 font-medium">{row.k}</dt>
+              <dd class="text-slate-300 break-words">{row.v}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <!-- Access & pricing -->
+      <div class="card p-5">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          Access &amp; Pricing
+        </h2>
+        <div class="flex flex-col gap-2 text-xs">
+          <div class="flex gap-2">
+            <span class="w-24 shrink-0 text-slate-500 font-medium">Access</span>
+            <span class={`chip text-[9px] border ${accessCls(tool.access)}`}>
+              {accessLabel(tool.access)}
+            </span>
+          </div>
+          <div class="flex gap-2 items-start">
+            <span class="w-24 shrink-0 text-slate-500 font-medium">Pricing</span>
+            <span class={pricing.cls}>{pricing.label}</span>
+          </div>
+          {tool.pricing_tier === 'subscription-published' && (
+            <p class="text-amber-400/80 text-[10px]">
+              Published pricing — see product page. Figures in description marked [claimed, VERIFY] reflect DISCOVERER snapshot and may not reflect current rates.
+            </p>
+          )}
+          <div class="flex gap-2">
+            <span class="w-24 shrink-0 text-slate-500 font-medium">API</span>
+            <span class={tool.api_available === '[VERIFY]' ? 'text-amber-400' : 'text-slate-300'}>
+              {tool.api_available === '[VERIFY]' ? '[VERIFY] — not confirmed' : tool.api_available}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="card p-5">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          Links
+        </h2>
+        <div class="flex flex-col gap-2">
+          <a
+            href={tool.resolvable_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 text-xs text-primary-400 hover:text-primary-300 transition-colors"
+          >
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M6 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-3"/>
+              <path d="M10 1h5v5M15 1l-7 7"/>
+            </svg>
+            Product / project page
+          </a>
+          {tool.github_url && (
+            <a
+              href={tool.github_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 text-xs text-primary-400 hover:text-primary-300 transition-colors"
+            >
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              GitHub repository
+            </a>
+          )}
+          {tool.paper_doi && (
+            <a
+              href={`https://doi.org/${tool.paper_doi}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 text-xs text-primary-400 hover:text-primary-300 transition-colors"
+            >
+              Paper (DOI)
+            </a>
+          )}
+          {tool.arxiv_id && (
+            <a
+              href={`https://arxiv.org/abs/${tool.arxiv_id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 text-xs text-primary-400 hover:text-primary-300 transition-colors"
+            >
+              arXiv:{tool.arxiv_id}
+            </a>
+          )}
+        </div>
+      </div>
+
+      <!-- Benchmark target -->
+      <div class="card p-5">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          Benchmark Target
+        </h2>
+        <p class="text-xs text-amber-400/80">
+          {tool.benchmark_target === '[VERIFY]'
+            ? '[VERIFY] — no AEC benchmark coverage confirmed. Strong candidates for future evaluation.'
+            : tool.benchmark_target}
+        </p>
+      </div>
+
+      <!-- Provenance -->
+      <div class="card p-5">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          Record Provenance
+        </h2>
+        <p class="text-[10px] text-slate-500 leading-relaxed">{tool.provenance}</p>
+        <p class="text-[10px] text-slate-600 mt-2">
+          Verification scope: existence only. Claimed capabilities require independent confirmation.
+        </p>
+      </div>
+
+      <!-- Back link -->
+      <a href="/tools" class="btn btn-secondary text-xs justify-center">
+        ← All tools
+      </a>
+    </div>
+
+  </div>
+
+</Layout>

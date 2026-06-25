@@ -1,0 +1,488 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { tools, clusters, clusterColorCls, accessCls, accessLabel, maturityLabel, maturityCls } from '../lib/tools';
+
+const byCluster: Record<string, typeof tools> = {};
+for (const cluster of clusters) {
+  byCluster[cluster] = tools.filter(t => t.category_cluster === cluster);
+}
+
+const openCount = tools.filter(t => t.access === 'open-source').length;
+const commercialCount = tools.filter(t => t.access === 'commercial').length;
+
+// Cluster → schematic SVG glyph (28×28)
+function clusterGlyphSvg(cluster: string): string {
+  switch (cluster) {
+    case 'BIM/IFC AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="4" y="10" width="14" height="14" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <rect x="10" y="4" width="14" height="14" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="4" y1="10" x2="10" y2="4" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="18" y1="10" x2="24" y2="4" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="4" y1="24" x2="10" y2="18" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="18" y1="24" x2="24" y2="18" stroke="currentColor" stroke-width="1.5"/>
+      </svg>`;
+    case 'Code/Compliance AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="5" y="3" width="18" height="22" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="9" y1="9" x2="19" y2="9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="9" y1="13" x2="19" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <polyline points="9,18 12,21 19,16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>`;
+    case 'Drawing/Takeoff AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="3" y="12" width="22" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="7" y1="12" x2="7" y2="15" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="11" y1="12" x2="11" y2="16" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="15" y1="12" x2="15" y2="15" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="19" y1="12" x2="19" y2="16" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="5" y1="8" x2="23" y2="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>
+      </svg>`;
+    case 'Generative Design AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <path d="M14 4 L15.5 11 L22 12 L15.5 13 L14 20 L12.5 13 L6 12 L12.5 11 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+        <path d="M22 5 L22.8 7.5 L25 8 L22.8 8.5 L22 11 L21.2 8.5 L19 8 L21.2 7.5 Z" stroke="currentColor" stroke-width="1" stroke-linejoin="round" fill="none"/>
+        <path d="M6 18 L6.5 20 L8.5 20.5 L6.5 21 L6 23 L5.5 21 L3.5 20.5 L5.5 20 Z" stroke="currentColor" stroke-width="1" stroke-linejoin="round" fill="none"/>
+      </svg>`;
+    case 'Construction Site Monitoring AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="4" y="9" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <circle cx="14" cy="16" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <circle cx="14" cy="16" r="1.5" fill="currentColor"/>
+        <path d="M10 9 L12 5 L16 5 L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>`;
+    case 'PM/RAG Assistants':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <path d="M4 6 Q4 3 7 3 L21 3 Q24 3 24 6 L24 16 Q24 19 21 19 L16 19 L12 23 L12 19 L7 19 Q4 19 4 16 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="9" y1="9" x2="19" y2="9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="9" y1="13" x2="16" y2="13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>`;
+    case 'Structural AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="5" y="5" width="18" height="3" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <rect x="5" y="20" width="18" height="3" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="14" y1="8" x2="14" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="8" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2"/>
+      </svg>`;
+    case 'Energy/Sustainability AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <path d="M16 3 L8 15 L13 15 L10 25 L20 13 L15 13 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+      </svg>`;
+    case 'HVAC/MEP AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="3" y="11" width="22" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <path d="M8 15 L10 12 L10 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M15 15 L17 12 L17 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <line x1="3" y1="11" x2="3" y2="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="25" y1="19" x2="25" y2="25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>`;
+    case 'Scan-to-BIM/Reality-Capture AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <circle cx="14" cy="5" r="2" fill="currentColor"/>
+        <line x1="14" y1="5" x2="4" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="14" y1="5" x2="10" y2="22" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.55"/>
+        <line x1="14" y1="5" x2="14" y2="22" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.55"/>
+        <line x1="14" y1="5" x2="18" y2="22" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.55"/>
+        <line x1="14" y1="5" x2="24" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="2" y1="23" x2="26" y2="23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>`;
+    case 'Digital Twin AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="2" y="8" width="10" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <rect x="16" y="8" width="10" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
+        <line x1="12" y1="14" x2="16" y2="14" stroke="currentColor" stroke-width="1" stroke-dasharray="1.5 1.5"/>
+        <path d="M13.5 12.5 L12 14 L13.5 15.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.5 12.5 L16 14 L14.5 15.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
+    case 'Drone/Aerial AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <circle cx="14" cy="14" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="14" y1="11" x2="14" y2="6" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="17" y1="14" x2="22" y2="14" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="14" y1="17" x2="14" y2="22" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="11" y1="14" x2="6" y2="14" stroke="currentColor" stroke-width="1.5"/>
+        <ellipse cx="14" cy="5" rx="3.5" ry="1.2" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <ellipse cx="23" cy="14" rx="1.2" ry="3.5" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <ellipse cx="14" cy="23" rx="3.5" ry="1.2" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <ellipse cx="5" cy="14" rx="1.2" ry="3.5" stroke="currentColor" stroke-width="1.2" fill="none"/>
+      </svg>`;
+    case 'Construction Robotics/Automation':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="3" y="22" width="8" height="3" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="7" y1="22" x2="7" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="7" cy="14" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="9" y1="14" x2="18" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="19" cy="9" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <path d="M21 9 L25 7 M21 9 L25 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>`;
+    case 'Surveying/Geospatial AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <circle cx="14" cy="12" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <circle cx="14" cy="12" r="2" fill="currentColor" opacity="0.6"/>
+        <line x1="14" y1="4" x2="14" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="14" y1="16" x2="14" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="6" y1="12" x2="10" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="18" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M12 20 L14 25 L16 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>`;
+    case 'Geotechnical AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="2" y="3" width="24" height="6" rx="1" stroke="currentColor" stroke-width="1" opacity="0.4" fill="none"/>
+        <line x1="2" y1="9" x2="26" y2="9" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="2" y1="16" x2="26" y2="16" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 2"/>
+        <line x1="2" y1="22" x2="26" y2="22" stroke="currentColor" stroke-width="1"/>
+        <line x1="14" y1="9" x2="14" y2="26" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <path d="M12 25 L14 28 L16 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>`;
+    case 'Safety AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <path d="M5 18 Q5 10 14 8 Q23 10 23 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <line x1="14" y1="8" x2="14" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <rect x="4" y="18" width="20" height="3" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="8" y1="21" x2="8" y2="24" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+        <line x1="20" y1="21" x2="20" y2="24" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+      </svg>`;
+    case 'FM/Operations AI':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <path d="M7 22 L20 9 Q23 4 26 7 Q23 7 22 9 Q24 11 21 14 Q18 17 15 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M7 22 L4 25 Q3 26 4 27 Q5 28 6 27 L9 24 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+      </svg>`;
+    case 'AEC Code-Gen Copilots':
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <polyline points="10,8 4,14 10,20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <polyline points="18,8 24,14 18,20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <line x1="15" y1="7" x2="13" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>`;
+    default:
+      return `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <circle cx="14" cy="14" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <circle cx="14" cy="14" r="3" fill="currentColor"/>
+      </svg>`;
+  }
+}
+
+// Cluster → background color for glyph area
+function clusterGlyphBg(cluster: string): string {
+  switch (cluster) {
+    case 'BIM/IFC AI':                     return 'bg-teal-950/60 text-teal-400';
+    case 'Code/Compliance AI':             return 'bg-indigo-950/60 text-indigo-400';
+    case 'Drawing/Takeoff AI':             return 'bg-violet-950/60 text-violet-400';
+    case 'Generative Design AI':           return 'bg-purple-950/60 text-purple-400';
+    case 'Construction Site Monitoring AI':return 'bg-orange-950/60 text-orange-400';
+    case 'PM/RAG Assistants':              return 'bg-emerald-950/60 text-emerald-400';
+    case 'Structural AI':                  return 'bg-red-950/60 text-red-400';
+    case 'Energy/Sustainability AI':       return 'bg-lime-950/60 text-lime-400';
+    case 'HVAC/MEP AI':                    return 'bg-cyan-950/60 text-cyan-400';
+    case 'Scan-to-BIM/Reality-Capture AI': return 'bg-blue-950/60 text-blue-400';
+    case 'Digital Twin AI':                return 'bg-sky-950/60 text-sky-400';
+    case 'Drone/Aerial AI':                return 'bg-fuchsia-950/60 text-fuchsia-400';
+    case 'Construction Robotics/Automation':return 'bg-amber-950/60 text-amber-400';
+    case 'Surveying/Geospatial AI':        return 'bg-green-950/60 text-green-400';
+    case 'Geotechnical AI':                return 'bg-yellow-950/60 text-yellow-400';
+    case 'Safety AI':                      return 'bg-rose-950/60 text-rose-400';
+    case 'FM/Operations AI':               return 'bg-zinc-900/60 text-zinc-400';
+    case 'AEC Code-Gen Copilots':          return 'bg-pink-950/60 text-pink-400';
+    default:                               return 'bg-slate-800/60 text-slate-400';
+  }
+}
+
+// Card description: replace [claimed, VERIFY] with visible "(claimed)" badge, not silent strip.
+// [VERIFY] on standalone fields → "(unverified)". Never present claimed stats as fact.
+function cardDesc(text: string): string {
+  return text
+    .replace(/\[claimed, VERIFY\]/g, '<span class="text-amber-500/80 text-[9px] font-medium not-italic align-baseline">(claimed)</span>')
+    .replace(/\[VERIFY\]/g, '<span class="text-amber-500/60 text-[9px] align-baseline">(unverified)</span>');
+}
+
+// Pricing tier display
+function pricingLabel(tier: string, access: string): string {
+  if (access === 'open-source') return tier === 'freemium' ? 'Freemium / OSS' : 'Free / OSS';
+  switch (tier) {
+    case 'freemium': return 'Freemium';
+    case 'free': return 'Free';
+    case 'subscription-published': return 'Subscription (public pricing)';
+    case 'subscription-enterprise': return 'Enterprise subscription';
+    case 'open-source': return 'Free / OSS';
+    default: return tier;
+  }
+}
+---
+
+<Layout
+  title="AEC AI Tools"
+  description="47 curated AI tools for Architecture, Engineering & Construction — across 18 practice clusters: BIM/IFC, compliance, generative design, robotics, drones, digital twins, and more."
+>
+
+  <!-- Page header -->
+  <div class="page-header">
+    <div class="mx-auto max-w-7xl">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="text-slate-400" aria-current="page">Tools</span>
+      </nav>
+
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="section-label">Tool Registry</p>
+          <h1 class="font-display text-3xl font-bold text-white sm:text-4xl mb-2">
+            AEC AI Tools
+          </h1>
+          <p class="text-slate-400 text-sm max-w-2xl">
+            {tools.length} curated AI-powered tools across {clusters.length} practice clusters —
+            seeded by DISCOVERER 0.14.6, existence-verified by VERIFIER 0.5.31.
+            Capability claims marked <span class="text-amber-400 font-medium">[claimed]</span> are unverified.
+            9 tools require dedicated hardware — marked with a badge.
+          </p>
+        </div>
+        <div class="flex gap-6 shrink-0">
+          {[
+            { label: 'Total',       value: String(tools.length),       sub: 'tools',            cls: 'text-primary-300' },
+            { label: 'Open-source', value: String(openCount),          sub: 'free/OSS',         cls: 'text-emerald-300' },
+            { label: 'Commercial',  value: String(commercialCount),    sub: 'commercial/SaaS',  cls: 'text-sky-300'     },
+            { label: 'Clusters',    value: String(clusters.length),    sub: 'practice areas',   cls: 'text-violet-300'  },
+          ].map(s => (
+            <div class="text-center">
+              <div class={`font-display text-2xl font-bold ${s.cls}`}>{s.value}</div>
+              <div class="text-[10px] font-medium text-slate-400 uppercase tracking-wide">{s.label}</div>
+              <div class="text-[10px] text-slate-600">{s.sub}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter bar -->
+  <div
+    id="tools-filter-bar"
+    class="sticky top-[57px] z-30 border-b border-slate-800/80 bg-slate-950/95 backdrop-blur-md"
+  >
+    <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center gap-2">
+        <!-- Search -->
+        <input
+          id="tools-search"
+          type="search"
+          placeholder="Search tools…"
+          aria-label="Search tools"
+          class="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-primary-500 focus:outline-none w-44"
+        />
+
+        <!-- Cluster filter -->
+        <select
+          id="filter-cluster"
+          aria-label="Filter by cluster"
+          class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-300 focus:border-primary-500 focus:outline-none cursor-pointer"
+        >
+          <option value="">All clusters</option>
+          {clusters.map(c => <option value={c}>{c}</option>)}
+        </select>
+
+        <!-- Access filter -->
+        <select
+          id="filter-access"
+          aria-label="Filter by access"
+          class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-300 focus:border-primary-500 focus:outline-none cursor-pointer"
+        >
+          <option value="">All access types</option>
+          <option value="open-source">Open-source</option>
+          <option value="freemium">Freemium</option>
+          <option value="commercial">Commercial</option>
+        </select>
+
+        <!-- Maturity filter -->
+        <select
+          id="filter-maturity"
+          aria-label="Filter by maturity"
+          class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-300 focus:border-primary-500 focus:outline-none cursor-pointer"
+        >
+          <option value="">All maturity levels</option>
+          <option value="enterprise-established">Enterprise established</option>
+          <option value="commercial-product">Commercial product</option>
+          <option value="open-source-active">OSS active</option>
+          <option value="research-prototype">Research prototype</option>
+        </select>
+
+        <!-- Reset -->
+        <button
+          id="tools-reset"
+          class="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs text-slate-400 hover:border-slate-500 hover:text-slate-200 transition-colors"
+        >
+          Reset
+        </button>
+
+        <!-- Result count -->
+        <span id="tools-count" class="text-xs text-slate-500 ml-1">Showing {tools.length} tools</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool grid — grouped by cluster -->
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8" id="tools-grid">
+    {clusters.map(cluster => (
+      <section
+        class="mb-12 cluster-section"
+        data-cluster={cluster}
+      >
+        <div class="mb-5 flex items-center gap-3">
+          <div class={`flex h-8 w-8 items-center justify-center rounded-lg ${clusterGlyphBg(cluster)}`}
+            set:html={clusterGlyphSvg(cluster)}
+          />
+          <h2 class="text-sm font-display font-semibold text-slate-200">{cluster}</h2>
+          <span class={`chip text-[10px] border ${clusterColorCls(cluster)}`}>
+            {byCluster[cluster].length}
+          </span>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {byCluster[cluster].map(tool => (
+            <a
+              href={`/tools/${tool.tool_id.toLowerCase()}`}
+              class="tool-card card card-feature group flex flex-col overflow-hidden no-underline"
+              data-cluster={tool.category_cluster}
+              data-access={tool.access}
+              data-maturity={tool.maturity}
+              data-name={tool.name.toLowerCase()}
+              data-ai={tool.ai_type.toLowerCase()}
+            >
+              <!-- Glyph header -->
+              <div class={`flex h-16 items-center justify-center ${clusterGlyphBg(tool.category_cluster)}`}
+                set:html={clusterGlyphSvg(tool.category_cluster)}
+              />
+
+              <!-- Card body -->
+              <div class="flex flex-col flex-1 p-4 gap-3">
+                <!-- Name + cluster badge -->
+                <div>
+                  <div class="flex items-start justify-between gap-2 mb-1">
+                    <h3 class="font-display font-semibold text-white text-sm leading-snug group-hover:text-primary-300 transition-colors">
+                      {tool.name}
+                    </h3>
+                  </div>
+                  <span class={`chip text-[9px] border ${clusterColorCls(tool.category_cluster)}`}>
+                    {tool.category_cluster}
+                  </span>
+                </div>
+
+                <!-- Description -->
+                <p class="text-xs text-slate-400 leading-relaxed line-clamp-3 flex-1"
+                  set:html={cardDesc(tool.short_description)}
+                />
+
+                <!-- Badges row -->
+                <div class="flex flex-wrap gap-1.5">
+                  <span class={`chip text-[9px] border ${accessCls(tool.access)}`}>
+                    {accessLabel(tool.access)}
+                  </span>
+                  <span class={`chip text-[9px] ${maturityCls(tool.maturity)}`}>
+                    {maturityLabel(tool.maturity)}
+                  </span>
+                  {tool.access === 'commercial' && tool.pricing_tier !== '[VERIFY]' && (
+                    <span class="chip text-[9px] bg-slate-800/60 text-slate-500 border border-slate-700/60">
+                      {tool.pricing_tier === 'freemium' ? 'Freemium' : tool.pricing_tier === 'subscription-published' ? '$ published' : 'Enterprise'}
+                    </span>
+                  )}
+                  {tool.hardware_required && (
+                    <span class="chip text-[9px] bg-rose-950/60 text-rose-300 border border-rose-800/60">
+                      hardware req'd
+                    </span>
+                  )}
+                </div>
+
+                <!-- AI type -->
+                <div class="text-[10px] text-slate-500 font-mono truncate">{tool.ai_type}</div>
+
+                <!-- Use → link -->
+                <div class="flex items-center justify-between pt-1 border-t border-slate-800/80">
+                  <span class="text-[10px] text-slate-600">{tool.tool_id}</span>
+                  <span class="text-[10px] font-semibold text-primary-400 group-hover:text-primary-300 transition-colors flex items-center gap-1">
+                    Details
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M2 6h8M6 2l4 4-4 4"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <!-- No-results message -->
+    <p id="tools-no-results" class="hidden text-center py-16 text-slate-500">
+      No tools match the current filters.
+    </p>
+  </div>
+
+  <!-- Provenance notice -->
+  <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+    <div class="rounded-xl border border-amber-900/40 bg-amber-950/20 p-4 text-xs text-amber-300/80">
+      <strong class="text-amber-300">Provenance:</strong> All 47 tools carry
+      <em>verification_status = "verified (existence)"</em> — URLs confirmed live (DISCOVERER 0.14.6 · VERIFIER 0.5.31).
+      Claimed capabilities (accuracy %, user counts, pricing) are marked <strong>[claimed, VERIFY]</strong>
+      on the detail page and have not been independently verified.
+      9 tools require dedicated hardware (T019/T021/T024/T026–T030/T033) — marked with a badge.
+      T007 (Archilyse) is the ETH Zurich academic open-source pipeline
+      (standfest.science) — not the discontinued commercial entity archilyse.com.
+    </div>
+  </div>
+
+</Layout>
+
+<script is:inline>
+(function () {
+  const searchEl  = document.getElementById('tools-search');
+  const clusterEl = document.getElementById('filter-cluster');
+  const accessEl  = document.getElementById('filter-access');
+  const maturityEl= document.getElementById('filter-maturity');
+  const resetEl   = document.getElementById('tools-reset');
+  const countEl   = document.getElementById('tools-count');
+  const noResults = document.getElementById('tools-no-results');
+
+  const cards = Array.from(document.querySelectorAll('.tool-card'));
+  const sections = Array.from(document.querySelectorAll('.cluster-section'));
+
+  function filter() {
+    const q = searchEl.value.toLowerCase().trim();
+    const cluster = clusterEl.value;
+    const access  = accessEl.value;
+    const maturity= maturityEl.value;
+
+    let visible = 0;
+    cards.forEach(card => {
+      const matchQ      = !q || card.dataset.name.includes(q) || card.dataset.ai.includes(q);
+      const matchCluster= !cluster || card.dataset.cluster === cluster;
+      const matchAccess = !access  || card.dataset.access === access;
+      const matchMat    = !maturity|| card.dataset.maturity === maturity;
+      const show = matchQ && matchCluster && matchAccess && matchMat;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    // Hide/show empty sections
+    sections.forEach(sec => {
+      const anyVisible = Array.from(sec.querySelectorAll('.tool-card'))
+        .some(c => c.style.display !== 'none');
+      sec.style.display = anyVisible ? '' : 'none';
+    });
+
+    countEl.textContent = `Showing ${visible} tool${visible !== 1 ? 's' : ''}`;
+    noResults.classList.toggle('hidden', visible > 0);
+  }
+
+  searchEl.addEventListener('input', filter);
+  clusterEl.addEventListener('change', filter);
+  accessEl.addEventListener('change', filter);
+  maturityEl.addEventListener('change', filter);
+
+  resetEl.addEventListener('click', () => {
+    searchEl.value = '';
+    clusterEl.value = '';
+    accessEl.value  = '';
+    maturityEl.value = '';
+    filter();
+  });
+})();
+</script>

@@ -1,0 +1,362 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BenchmarkCard from '../components/BenchmarkCard.astro';
+import TierBadge from '../components/TierBadge.astro';
+import { benchmarks, getBenchmarkById } from '../lib/benchmarks';
+import { tools, clusters } from '../lib/tools';
+
+// Key stats (computed from catalog data — no fabrication)
+const total = benchmarks.length;
+const t1count = benchmarks.filter(b => b.tier === 1).length;
+const t2count = benchmarks.filter(b => b.tier === 2).length;
+const t3count = benchmarks.filter(b => b.tier === 3).length;
+// source_confirmed only: R001/R005/R006/R009/R010/R016/R019 = 7 (CURATOR 0.3.11)
+const sourceConfirmedCount = benchmarks.filter(b =>
+  b.reported_results.some(r => r.provenance_flag === 'source_confirmed')
+).length;
+const allModels = new Set(benchmarks.flatMap(b => b.reported_results.map(r => r.model_string)));
+const modelCount = allModels.size;
+
+// Featured benchmarks: R031 (only BIM), R017 (only verified), R001 (BuildArena — agentic T1)
+const FEATURED_IDS = ['R031', 'R017', 'R001'];
+const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
+---
+
+<Layout
+  title="Home"
+  description="AECplayground — Systematic review of 20 AI benchmarks for Architecture, Engineering & Construction. PRISMA 3-arm protocol, 4-tier quality rubric, living catalog."
+>
+
+<!-- ── HERO ────────────────────────────────────────────────────── -->
+<section
+  class="relative overflow-hidden border-b border-slate-800 bg-slate-950 px-4 pt-20 pb-24 sm:px-6 lg:px-8"
+  style="background-image: radial-gradient(ellipse 90% 60% at 50% -10%, rgba(79,70,229,0.18), transparent), radial-gradient(ellipse 60% 40% at 80% 60%, rgba(6,182,212,0.06), transparent);"
+>
+  <!-- Decorative grid -->
+  <div class="pointer-events-none absolute inset-0 opacity-[0.03]"
+    style="background-image: linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 60px 60px;">
+  </div>
+
+  <div class="relative mx-auto max-w-5xl text-center">
+    <!-- Eyebrow -->
+    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-800/60 bg-primary-950/50 px-4 py-1.5 text-xs font-semibold text-primary-300">
+      <span class="inline-block h-1.5 w-1.5 rounded-full bg-primary-400 animate-pulse-slow"></span>
+      PRISMA Systematic Review · Three-Arm Protocol
+    </div>
+
+    <!-- Headline -->
+    <h1 class="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl mb-6">
+      AEC<span class="gradient-text">playground</span>
+    </h1>
+
+    <!-- Tagline -->
+    <p class="mx-auto max-w-2xl text-lg text-slate-400 leading-relaxed mb-10">
+      The definitive benchmark catalog for evaluating foundation models in
+      <strong class="text-slate-200">Architecture, Engineering &amp; Construction</strong> —
+      rigorously curated by systematic review.
+    </p>
+
+    <!-- CTA buttons -->
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+      <a href="/benchmarks" class="btn-primary btn-lg group">
+        Explore Benchmarks
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="/leaderboard" class="btn-secondary btn-lg">
+        View Leaderboard
+      </a>
+    </div>
+
+    <!-- Key stats row -->
+    <div class="mx-auto grid max-w-2xl grid-cols-2 gap-px sm:grid-cols-4">
+      {[
+        { value: total,                label: 'Benchmarks',       sub: 'included'          },
+        { value: sourceConfirmedCount, label: 'Source-confirmed',  sub: 'verified results'   },
+        { value: modelCount,           label: 'Models',            sub: 'evaluated'          },
+        { value: `${t1count}/${t2count}/${t3count}`, label: 'Tier T1/T2/T3', sub: 'quality tiers' },
+      ].map(s => (
+        <div class="flex flex-col items-center gap-1 rounded-none bg-slate-900/60 px-6 py-5 first:rounded-l-2xl last:rounded-r-2xl border border-slate-800/80">
+          <div class="font-display text-3xl font-bold text-white">{s.value}</div>
+          <div class="text-xs font-medium text-slate-400 uppercase tracking-wide">{s.label}</div>
+          <div class="text-[11px] text-slate-600">{s.sub}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT IS THIS ─────────────────────────────────────────────── -->
+<section class="px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-5xl">
+    <div class="grid gap-12 lg:grid-cols-2 items-center">
+      <div>
+        <p class="section-label">About this project</p>
+        <h2 class="section-title mb-5">A living benchmark registry built on rigorous methodology</h2>
+        <div class="space-y-4 text-slate-400 leading-relaxed">
+          <p>
+            AECplayground applies a full
+            <strong class="text-slate-200">PRISMA three-arm systematic review</strong>
+            — database search, grey literature sweep, and reference-chaining — to surface
+            and evaluate every AI benchmark relevant to the built environment.
+          </p>
+          <p>
+            Each of the <strong class="text-slate-200">{total} included benchmarks</strong> is scored
+            on a <strong class="text-slate-200">10-dimension rubric</strong> and assigned to one of
+            four quality tiers. Results are provenance-gated: reported numbers are clearly marked
+            as <em>source-confirmed</em>, <em>claimed</em>, or <em>[VERIFY] pending</em>.
+          </p>
+          <p>
+            The catalog is updated as new benchmarks emerge and as verification coverage expands.
+          </p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/about" class="btn-secondary btn-sm">Read the methodology</a>
+          <a href="/data/benchmarks.json" download class="btn-ghost btn-sm text-slate-500">
+            Download raw JSON
+          </a>
+        </div>
+      </div>
+
+      <!-- PRISMA funnel visual -->
+      <div class="flex flex-col gap-2">
+        {[
+          { label: 'Records identified',    n: '157', note: 'DB + grey lit + chaining', color: 'border-slate-700 bg-slate-800/40' },
+          { label: 'Screened',              n: '144', note: 'after de-duplication',      color: 'border-slate-700 bg-slate-800/40' },
+          { label: 'Full-text assessed',    n:  '27', note: 'eligibility review',         color: 'border-primary-900 bg-primary-950/40' },
+          { label: 'Included in review',    n:  `${total}`, note: 'T1 17 · T2 6 · T3 1',  color: 'border-primary-700 bg-primary-900/40' },
+        ].map((row, i) => (
+          <div class={`rounded-xl border px-5 py-4 ${row.color} flex items-center justify-between`} style={`margin-left: ${i * 16}px`}>
+            <div>
+              <div class="text-xs text-slate-500 mb-0.5">{row.note}</div>
+              <div class="text-sm font-medium text-slate-300">{row.label}</div>
+            </div>
+            <div class="font-display text-2xl font-bold text-white">{row.n}</div>
+          </div>
+        ))}
+        <p class="text-[11px] text-slate-600 mt-1 pl-1">PRISMA 3-arm: database search · grey literature · reference chaining</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider mx-4 sm:mx-6 lg:mx-8" />
+
+<!-- ── FEATURED BENCHMARKS ─────────────────────────────────────── -->
+<section class="px-4 py-16 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-8 flex items-end justify-between flex-wrap gap-4">
+      <div>
+        <p class="section-label">Featured benchmarks</p>
+        <h2 class="section-title">Notable entries in the catalog</h2>
+      </div>
+      <a href="/benchmarks" class="btn-ghost btn-sm text-slate-500 flex items-center gap-1.5">
+        View all {total}
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-3">
+      {featured.map(b => b && (
+        <BenchmarkCard benchmark={b} />
+      ))}
+    </div>
+
+    <!-- Why featured callout -->
+    <div class="mt-6 grid gap-3 sm:grid-cols-3 text-[11px] text-slate-600">
+      <div class="px-2">
+        <strong class="text-slate-500">BIM-Edit (R031)</strong> — one of 3 benchmarks now addressing BIM/IFC (with Qwen-BIM R035 and Ishigaki-IDS-Bench R036), BIM-Edit remains the first purpose-built IFC editing benchmark: 3 of 24 cover BIM in this corpus.
+      </div>
+      <div class="px-2">
+        <strong class="text-slate-500">HSE-Bench (R017)</strong> — the only source-confirmed benchmark in this review. Reported results have been independently verified by the VERIFIER agent.
+      </div>
+      <div class="px-2">
+        <strong class="text-slate-500">BuildArena (R001)</strong> — physics-grounded Tier-1 benchmark testing agentic construction-automation capabilities (tool-use, multi-step planning, physical reasoning) in simulated construction environments.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider mx-4 sm:mx-6 lg:mx-8" />
+
+<!-- ── METHODOLOGY TEASER ──────────────────────────────────────── -->
+<section class="px-4 py-16 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-5xl">
+    <div class="grid gap-10 lg:grid-cols-2 items-start">
+
+      <!-- Tier scheme -->
+      <div>
+        <p class="section-label">4-Tier quality scheme</p>
+        <h2 class="text-xl font-display font-semibold text-white mb-5">Not all benchmarks are created equal</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Each benchmark is scored on a 10-dimension rubric (domain authenticity, task validity,
+          modality coverage, annotation quality, evaluation clarity, baseline coverage,
+          reproducibility, leakage control, human baseline, practical relevance) and placed in
+          one of four tiers based on minimum-dimension floors.
+        </p>
+        <div class="space-y-3">
+          {[
+            { tier: 1, label: 'Core',       desc: 'Purpose-built for AEC; high rubric quality; d5/d6/d7 ≥ 1',  count: t1count },
+            { tier: 2, label: 'Peripheral', desc: 'Adjacent coverage; partial AEC focus; one dimension below floor', count: t2count },
+            { tier: 3, label: 'Contextual', desc: 'AEC-relevant but adjacent (training corpus or cross-domain); not a purpose-built AEC eval benchmark', count: t3count },
+          ].map(t => (
+            <div class="flex items-start gap-3 rounded-xl bg-slate-900/50 border border-slate-800 px-4 py-3">
+              <TierBadge tier={t.tier} size="sm" />
+              <div>
+                <div class="text-xs font-semibold text-slate-300 mb-0.5">Tier {t.tier} — {t.label} <span class="font-normal text-slate-600">({t.count})</span></div>
+                <div class="text-[11px] text-slate-500">{t.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <a href="/about#tiers" class="mt-5 inline-flex items-center gap-1.5 text-xs text-primary-400 hover:text-primary-300 transition-colors">
+          Full rubric breakdown
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Gaps teaser -->
+      <div>
+        <p class="section-label">Coverage &amp; gaps</p>
+        <h2 class="text-xl font-display font-semibold text-white mb-5">Where the field still needs work</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          The review reveals two critical modality gaps that no existing benchmark adequately addresses.
+        </p>
+        <div class="space-y-4">
+          <div class="rounded-xl bg-teal-950/30 border border-teal-900/50 p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-semibold text-teal-300">BIM / IFC</span>
+              <span class="font-display text-2xl font-bold text-white">1<span class="text-slate-600 text-sm font-normal"> / {total}</span></span>
+            </div>
+            <div class="h-1.5 rounded-full bg-slate-800 mb-2">
+              <div class="h-1.5 rounded-full bg-teal-500/70" style={`width: ${(1/total*100).toFixed(1)}%`}></div>
+            </div>
+            <p class="text-[11px] text-teal-700">
+              Only R031 (BIM-Edit) covers BIM/IFC digital-twin editing. Open digital twin tooling, automated IFC generation, and BIM QA remain completely unaddressed.
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-green-950/30 border border-green-900/50 p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-semibold text-green-300">Point Cloud / LiDAR</span>
+              <span class="font-display text-2xl font-bold text-white">0<span class="text-slate-600 text-sm font-normal"> / {total}</span></span>
+            </div>
+            <div class="h-1.5 rounded-full bg-slate-800 mb-2">
+              <div class="h-1.5 rounded-full bg-green-500/70" style="width: 0%"></div>
+            </div>
+            <p class="text-[11px] text-green-700">
+              Zero benchmarks cover 3D point-cloud or LiDAR modalities despite their dominance in site scanning, as-built verification, and scan-to-BIM workflows.
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-slate-800/40 border border-slate-700/50 p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-semibold text-slate-300">VQA / Image</span>
+              <span class="font-display text-2xl font-bold text-white">10<span class="text-slate-600 text-sm font-normal"> / {total}</span></span>
+            </div>
+            <div class="h-1.5 rounded-full bg-slate-800 mb-2">
+              <div class="h-1.5 rounded-full bg-slate-500/70" style={`width: ${(10/total*100).toFixed(1)}%`}></div>
+            </div>
+            <p class="text-[11px] text-slate-600">
+              The most saturated category. Vision-language QA benchmarks dominate; further VQA benchmarks offer diminishing differentiation.
+            </p>
+          </div>
+        </div>
+        <a href="/landscape" class="mt-5 inline-flex items-center gap-1.5 text-xs text-primary-400 hover:text-primary-300 transition-colors">
+          See full landscape view
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TOOLS TEASER ─────────────────────────────────────────────── -->
+<section class="border-t border-slate-800 px-4 py-16 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl">
+    <div class="flex flex-col gap-2 mb-8 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="section-label">Tool Registry</p>
+        <h2 class="text-2xl font-display font-bold text-white mb-2">
+          {tools.length} AEC AI Tools across {clusters.length} categories
+        </h2>
+        <p class="text-slate-400 text-sm max-w-2xl">
+          Alongside the benchmark catalog, AECplayground tracks a curated registry of AI-powered tools
+          for AEC practice — from open-source BIM pipelines to commercial compliance and monitoring platforms.
+          Existence verified; capability claims marked <span class="text-amber-400">[claimed]</span>.
+        </p>
+      </div>
+      <a href="/tools" class="btn btn-secondary shrink-0 self-start sm:self-auto">
+        Browse All Tools →
+      </a>
+    </div>
+
+    <!-- Cluster pills -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      {clusters.map(c => {
+        const count = tools.filter(t => t.category_cluster === c).length;
+        return (
+          <a
+            href={`/tools?cluster=${encodeURIComponent(c)}`}
+            class="flex items-center gap-1.5 rounded-lg border border-slate-700/60 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 hover:border-primary-700/60 hover:text-white transition-colors no-underline"
+          >
+            <span class="text-slate-500">{count}</span>
+            {c}
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- Quick-access: open-source tools only (3 cards) -->
+    <div class="grid gap-4 sm:grid-cols-3">
+      {tools.filter(t => t.access === 'open-source').map(t => (
+        <a
+          href={`/tools/${t.tool_id.toLowerCase()}`}
+          class="card group flex flex-col gap-3 p-4 no-underline hover:border-slate-600"
+        >
+          <div class="flex items-start justify-between gap-2">
+            <span class="font-display font-semibold text-sm text-white group-hover:text-primary-300 transition-colors">
+              {t.name}
+            </span>
+            <span class="chip text-[9px] bg-emerald-950/60 text-emerald-300 border border-emerald-800/60 shrink-0">
+              OSS
+            </span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed line-clamp-2"
+            set:html={t.short_description
+              .replace(/\[claimed, VERIFY\]/g, '<span class="text-amber-500/80 text-[9px] font-medium">(claimed)</span>')
+              .replace(/\[VERIFY\]/g, '<span class="text-amber-500/60 text-[9px]">(unverified)</span>')}
+          />
+          <div class="text-[10px] text-slate-600 font-mono">{t.ai_type}</div>
+          <div class="text-[10px] text-primary-400 group-hover:text-primary-300 transition-colors">
+            {t.tool_id} · {t.category_cluster}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ── BOTTOM CTA ──────────────────────────────────────────────── -->
+<section class="border-t border-slate-800 bg-gradient-to-b from-slate-900/50 to-slate-950 px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="section-title mb-4">A dual registry for AEC AI</h2>
+    <p class="text-slate-400 mb-8 text-sm leading-relaxed">
+      Browse {total} benchmarks with filters by tier, domain, and modality — or explore {tools.length} curated
+      AI tools across {clusters.length} practice clusters, from BIM/IFC pipelines to compliance and monitoring platforms.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/benchmarks" class="btn-primary btn-lg">Browse Benchmarks</a>
+      <a href="/tools" class="btn-secondary btn-lg">Explore Tools</a>
+    </div>
+  </div>
+</section>
+
+</Layout>

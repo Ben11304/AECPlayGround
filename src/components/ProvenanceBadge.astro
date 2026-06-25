@@ -1,0 +1,27 @@
+---
+interface Props {
+  verificationStatus: string;
+  provenance?: string;
+  size?: 'sm' | 'md';
+}
+
+const { verificationStatus, provenance = 'claimed', size = 'md' } = Astro.props;
+
+const isVerify = verificationStatus === 'value_unverified' ||
+  verificationStatus.includes('VERIFY') ||
+  verificationStatus.includes('[VERIFY]');
+
+const cls = size === 'sm' ? 'chip text-[10px] py-px px-2' : 'chip';
+
+const badgeCls = isVerify ? 'badge-verify' : provenance === 'verified' ? 'badge-verified' : 'badge-claimed';
+const label = isVerify ? '[VERIFY]' : provenance === 'verified' ? '✓ Verified' : 'Claimed';
+const title = isVerify
+  ? 'Value not independently verified — treat with caution'
+  : provenance === 'verified'
+  ? 'Source-verified provenance'
+  : 'Claimed — sourced from paper but not independently verified';
+---
+
+<span class={`${cls} ${badgeCls}`} title={title}>
+  {label}
+</span>

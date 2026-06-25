@@ -1,0 +1,147 @@
+---
+import { benchmarks } from '../lib/benchmarks';
+
+// Collect unique filter values from the data
+const domains = [...new Set(
+  benchmarks.flatMap((b) =>
+    b.capability.domain.split(';').map((s) => s.trim()).filter(Boolean)
+  )
+)].sort();
+
+const tiers = [1, 2, 3];
+
+const modalities = [
+  { key: 'text',                 label: 'Text' },
+  { key: 'images',               label: 'Images' },
+  { key: 'tables',               label: 'Tables' },
+  { key: 'engineering_drawings', label: 'Eng. Drawings' },
+  { key: 'cad_floor_plans',      label: 'CAD/Plans' },
+  { key: 'bim_ifc_3d',           label: 'BIM/IFC' },
+  { key: 'tool_api_env',         label: 'Tool/API' },
+  { key: 'simulation_plot',      label: 'Sim. Plot' },
+  { key: 'physics_simulation_env', label: 'Physics Sim' },
+];
+---
+
+<div class="sticky top-[57px] z-40 border-b border-slate-800 bg-slate-950/95 backdrop-blur-sm py-3 px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl">
+    <!-- Search -->
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+      <div class="relative flex-1 max-w-sm">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search benchmarks…"
+          class="w-full rounded-lg border border-slate-700 bg-slate-800 pl-9 pr-4 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500/30 transition"
+          autocomplete="off"
+        />
+      </div>
+
+      <!-- Result count -->
+      <span id="result-count" class="text-xs text-slate-500 shrink-0">
+        Showing <span id="count-num" class="font-semibold text-slate-300">20</span> benchmarks
+      </span>
+
+      <!-- Reset -->
+      <button
+        id="reset-filters"
+        class="text-xs text-slate-500 hover:text-slate-300 transition-colors shrink-0 hidden"
+      >
+        ✕ Reset filters
+      </button>
+    </div>
+
+    <!-- Filter chips row -->
+    <div class="mt-2.5 flex flex-wrap gap-1.5 items-center">
+      <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1">Tier</span>
+      {tiers.map((t) => (
+        <button
+          class="filter-btn chip text-[11px] bg-slate-800 text-slate-400 border border-slate-700 hover:border-slate-500 hover:text-slate-200 data-[active]:border-primary-500 data-[active]:bg-primary-950/60 data-[active]:text-primary-300 transition-all"
+          data-filter="tier"
+          data-value={String(t)}
+        >
+          T{t}
+        </button>
+      ))}
+
+      <span class="mx-2 h-4 border-l border-slate-700"></span>
+      <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1">Modality</span>
+      {modalities.map(({ key, label }) => (
+        <button
+          class="filter-btn chip text-[11px] bg-slate-800 text-slate-400 border border-slate-700 hover:border-slate-500 hover:text-slate-200 data-[active]:border-primary-500 data-[active]:bg-primary-950/60 data-[active]:text-primary-300 transition-all"
+          data-filter="modality"
+          data-value={key}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+// Client-side filtering
+const cards = () => Array.from(document.querySelectorAll<HTMLElement>('[data-id]'));
+const searchInput = document.getElementById('search-input') as HTMLInputElement;
+const countNum = document.getElementById('count-num') as HTMLElement;
+const resetBtn = document.getElementById('reset-filters') as HTMLElement;
+const filterBtns = Array.from(document.querySelectorAll<HTMLElement>('.filter-btn'));
+
+const activeFilters: Record<string, Set<string>> = { tier: new Set(), modality: new Set() };
+
+function apply() {
+  const query = searchInput?.value.toLowerCase().trim() ?? '';
+  let visible = 0;
+
+  cards().forEach((card) => {
+    const name = card.dataset.name ?? '';
+    const tier = card.dataset.tier ?? '';
+    const mods = (card.dataset.modality ?? '').split(',');
+    const id = card.dataset.id ?? '';
+
+    const matchSearch = !query || name.includes(query) || id.toLowerCase().includes(query);
+    const matchTier = activeFilters.tier.size === 0 || activeFilters.tier.has(tier);
+    const matchMod = activeFilters.modality.size === 0 ||
+      [...activeFilters.modality].some((m) => mods.includes(m));
+
+    const show = matchSearch && matchTier && matchMod;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  if (countNum) countNum.textContent = String(visible);
+
+  const hasFilter = query || activeFilters.tier.size > 0 || activeFilters.modality.size > 0;
+  if (resetBtn) resetBtn.classList.toggle('hidden', !hasFilter);
+}
+
+// Filter button toggle
+filterBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const type = btn.dataset.filter ?? '';
+    const value = btn.dataset.value ?? '';
+    const set = activeFilters[type];
+    if (set.has(value)) {
+      set.delete(value);
+      delete btn.dataset.active;
+    } else {
+      set.add(value);
+      btn.dataset.active = 'true';
+    }
+    apply();
+  });
+});
+
+searchInput?.addEventListener('input', apply);
+
+resetBtn?.addEventListener('click', () => {
+  searchInput.value = '';
+  filterBtns.forEach((btn) => delete btn.dataset.active);
+  activeFilters.tier.clear();
+  activeFilters.modality.clear();
+  apply();
+});
+</script>

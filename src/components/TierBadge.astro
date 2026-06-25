@@ -1,0 +1,27 @@
+---
+interface Props {
+  tier: 1 | 2 | 3;
+  size?: 'sm' | 'md';
+}
+const { tier, size = 'md' } = Astro.props;
+
+const classMap: Record<number, string> = {
+  1: 'tier-1',
+  2: 'tier-2',
+  3: 'tier-3',
+};
+
+const labelMap: Record<number, string> = {
+  1: 'T1 — Core',
+  2: 'T2 — Peripheral',
+  3: 'T3 — Contextual',
+};
+
+const cls = size === 'sm'
+  ? 'chip text-[10px] py-px px-2'
+  : 'chip';
+---
+
+<span class={`${cls} ${classMap[tier]} font-semibold`}>
+  {labelMap[tier]}
+</span>

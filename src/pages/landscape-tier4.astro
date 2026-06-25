@@ -1,0 +1,337 @@
+---
+import Layout from '../layouts/Layout.astro';
+import tier4Data from '../data/tier4_datasets.json';
+
+type T4Entry = typeof tier4Data[0];
+
+// Category metadata
+const CATEGORIES: Record<number, { label: string; count: number }> = {
+  1:  { label: 'Safety Equipment / PPE Detection',          count: 15 },
+  2:  { label: 'Structural Defect / Rebar Detection',        count: 9  },
+  3:  { label: 'Construction Equipment & Machinery',         count: 12 },
+  4:  { label: 'Activity Recognition & Worker Pose',         count: 5  },
+  5:  { label: 'SLAM / 3D Reconstruction / Point Cloud',    count: 12 },
+  6:  { label: 'BIM / IFC / Floorplan / CAD (Traditional)', count: 11 },
+  7:  { label: 'Aerial / Geospatial / Remote Sensing',       count: 6  },
+  8:  { label: 'Thermal / Specialized Sensor',               count: 2  },
+  9:  { label: 'Materials, Building & Structural Class.',    count: 7  },
+  10: { label: 'Scene Segmentation, Waste & Misc',           count: 8  },
+  11: { label: 'Construction Image Captioning (Pre-FM)',      count: 2  },
+  12: { label: 'Text / Tabular / Project Management',        count: 3  },
+};
+
+// Group entries by category_num
+const byCategory: Record<number, T4Entry[]> = {};
+for (const entry of tier4Data) {
+  if (!byCategory[entry.category_num]) byCategory[entry.category_num] = [];
+  byCategory[entry.category_num].push(entry as T4Entry);
+}
+
+const catNums = Object.keys(byCategory).map(Number).sort((a, b) => a - b);
+const total = tier4Data.length;
+const t3adjCount = tier4Data.filter(e => e.tier3_adjacent).length;
+---
+
+<Layout
+  title="AEC Dataset Landscape — Tier 4 Background"
+  description={`${total} traditional CV/ML AEC datasets — BACKGROUND CONTEXT ONLY. NOT FM-eval benchmarks. NOT counted in the 24-benchmark headline inventory. Sourced from OpenConstruction arXiv:2508.11482.`}
+>
+  <!-- ─── Background / NOT-a-benchmark warning banner ─── -->
+  <div class="border-b border-amber-800/60 bg-amber-950/30">
+    <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
+      <div class="flex items-start gap-3">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" class="mt-0.5 shrink-0 text-amber-500" aria-hidden="true">
+          <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+        </svg>
+        <p class="text-xs text-amber-400/90 leading-relaxed">
+          <span class="font-semibold text-amber-300">Tier 4 — Background Context Only.</span>{' '}
+          These {total} datasets are <strong class="text-amber-200">NOT FM-eval benchmarks</strong> and are{' '}
+          <strong class="text-amber-200">NOT counted in the 24-benchmark headline inventory</strong>.
+          Primary papers use CNN / YOLO / PointNet / LSTM — no foundation-model evaluation (§4 IC3 not met).
+          Sourced from <a href="https://arxiv.org/abs/2508.11482" target="_blank" rel="noopener" class="underline text-amber-400 hover:text-amber-200">OpenConstruction arXiv:2508.11482</a>.
+          The headline FM-eval catalog (24 benchmarks) is at <a href="/benchmarks" class="underline text-amber-400 hover:text-amber-200">/benchmarks</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page header -->
+  <div class="page-header">
+    <div class="mx-auto max-w-7xl">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="text-slate-400" aria-current="page">AEC Dataset Landscape</span>
+      </nav>
+      <p class="section-label">Tier 4 · Background Dataset Catalog</p>
+      <h1 class="font-display text-3xl font-bold text-white mb-2">AEC Dataset Landscape</h1>
+      <p class="text-slate-400 text-sm max-w-2xl">
+        {total} traditional CV/ML AEC datasets across 12 categories (2015–2026).
+        Sourced from the OpenConstruction catalog (Xiong et al., arXiv:2508.11482).
+        These are the background landscape — the 24 FM-evaluation benchmarks are at{' '}
+        <a href="/benchmarks" class="text-primary-400 hover:text-primary-300 transition-colors">/benchmarks</a>.
+      </p>
+
+      <!-- Key stats row -->
+      <div class="mt-5 flex flex-wrap gap-4">
+        <div class="rounded-lg border border-amber-800/50 bg-amber-950/40 px-4 py-2 text-center">
+          <p class="text-2xl font-bold text-amber-300">{total}</p>
+          <p class="text-[10px] text-amber-500 uppercase tracking-wide">Background Datasets</p>
+        </div>
+        <div class="rounded-lg border border-slate-800 bg-slate-900/50 px-4 py-2 text-center">
+          <p class="text-2xl font-bold text-slate-200">12</p>
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide">Categories</p>
+        </div>
+        <div class="rounded-lg border border-slate-800 bg-slate-900/50 px-4 py-2 text-center">
+          <p class="text-2xl font-bold text-slate-200">2015–2026</p>
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide">Year Range</p>
+        </div>
+        <div class="rounded-lg border border-amber-800/40 bg-amber-950/30 px-4 py-2 text-center">
+          <p class="text-2xl font-bold text-amber-400">{t3adjCount}</p>
+          <p class="text-[10px] text-amber-600 uppercase tracking-wide">Tier-3-adj Flagged</p>
+        </div>
+        <div class="rounded-lg border border-slate-800 bg-slate-900/50 px-4 py-2 text-center">
+          <p class="text-2xl font-bold text-slate-200">0</p>
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide">Overlap with 24</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-10">
+
+    <!-- ─── Category distribution table ─── -->
+    <section>
+      <h2 class="text-lg font-semibold text-white mb-4">Category Distribution</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-800">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-900">
+            <tr>
+              <th class="py-2.5 px-4 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-500">#</th>
+              <th class="py-2.5 px-4 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-500">Category</th>
+              <th class="py-2.5 px-4 text-right text-[10px] font-semibold uppercase tracking-wider text-slate-500">Count</th>
+              <th class="py-2.5 px-4 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-500">Bar</th>
+            </tr>
+          </thead>
+          <tbody>
+            {catNums.map((n, i) => {
+              const cat = CATEGORIES[n];
+              const pct = Math.round((cat.count / total) * 100);
+              return (
+                <tr class={i % 2 === 0 ? 'bg-slate-950' : 'bg-slate-900/50'}>
+                  <td class="py-2 px-4 text-slate-500 text-xs">{n}</td>
+                  <td class="py-2 px-4 text-slate-300 text-xs">
+                    <a href={`#cat-${n}`} class="hover:text-amber-300 transition-colors">{cat.label}</a>
+                  </td>
+                  <td class="py-2 px-4 text-right font-semibold text-amber-400">{cat.count}</td>
+                  <td class="py-2 px-4 w-40">
+                    <div class="h-1.5 rounded-full bg-slate-800 overflow-hidden">
+                      <div class="h-full rounded-full bg-amber-600/70" style={`width:${pct}%`}></div>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+            <tr class="bg-slate-800/60 font-semibold">
+              <td class="py-2 px-4 text-slate-300 text-xs"></td>
+              <td class="py-2 px-4 text-slate-200 text-xs font-bold">Total</td>
+              <td class="py-2 px-4 text-right text-amber-300 font-bold">{total}</td>
+              <td class="py-2 px-4"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ─── Tier-3-adjacent callout ─── -->
+    <section>
+      <div class="rounded-xl border border-amber-800/50 bg-amber-950/25 px-5 py-4">
+        <h2 class="text-sm font-semibold text-amber-300 mb-1.5">
+          {t3adjCount} Tier-3-Adjacent Entries — Pending CURATOR Review
+        </h2>
+        <p class="text-xs text-amber-500/90 leading-relaxed mb-3">
+          Under the frozen Tier-3 rule, a dataset escalates to Tier 3 if <em>at least one actual FM/VLM evaluation
+          ON the dataset exists anywhere in the literature, regardless of the original paper's intent</em>.
+          These 4 entries have FM work in adjacent literature — CURATOR must confirm whether a direct on-dataset
+          FM evaluation has been published. <strong class="text-amber-400">Do not promote to Tier 3 without explicit CURATOR
+          escalation + VERIFIER re-gate.</strong> SODA exception: SODA's FM realization IS R019 (already in the 24) —
+          it stays Tier-4 to avoid double-counting.
+        </p>
+        <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+          {(tier4Data as T4Entry[]).filter(e => e.tier3_adjacent).map(e => (
+            <div class="rounded-lg border border-amber-800/40 bg-amber-950/30 px-3 py-2">
+              <div class="flex items-center gap-2 mb-0.5">
+                <span class="font-mono text-[10px] text-amber-600">{e.id}</span>
+                <span class="rounded px-1 py-0.5 text-[9px] font-semibold bg-amber-900/60 text-amber-300 uppercase tracking-wide">T3-adj</span>
+              </div>
+              <p class="text-xs font-medium text-amber-200">{e.name}</p>
+              <p class="text-[10px] text-amber-600/80 leading-tight mt-0.5">{e.category}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Category filter bar ─── -->
+    <section>
+      <div class="mb-4 flex flex-wrap items-center gap-2">
+        <span class="text-xs text-slate-500 mr-1">Filter:</span>
+        <button
+          id="t4-filter-all"
+          data-cat="all"
+          class="t4-filter-btn rounded-full px-3 py-1 text-xs font-medium border border-amber-700 bg-amber-900/40 text-amber-300 transition-all"
+        >All ({total})</button>
+        {catNums.map(n => (
+          <button
+            id={`t4-filter-${n}`}
+            data-cat={String(n)}
+            class="t4-filter-btn rounded-full px-3 py-1 text-xs font-medium border border-slate-700 bg-slate-800/40 text-slate-400 hover:border-amber-700 hover:text-amber-300 transition-all"
+          >{n}. {CATEGORIES[n].label.split('/')[0].trim()} ({CATEGORIES[n].count})</button>
+        ))}
+      </div>
+
+      <!-- ─── Per-category entry tables ─── -->
+      {catNums.map(n => {
+        const entries = byCategory[n];
+        const cat = CATEGORIES[n];
+        return (
+          <div id={`cat-${n}`} class="t4-cat-section mb-8" data-cat={String(n)}>
+            <div class="mb-3 flex items-center gap-3">
+              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-amber-900/50 border border-amber-800/60">
+                <span class="text-[11px] font-bold text-amber-400">{n}</span>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-amber-200">{cat.label}</h3>
+                <p class="text-[10px] text-amber-600">{cat.count} datasets — traditional ML/CV, no FM evaluation</p>
+              </div>
+            </div>
+            <div class="overflow-x-auto rounded-xl border border-slate-800">
+              <table class="min-w-full text-xs">
+                <thead class="bg-slate-900/80">
+                  <tr>
+                    <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-600">ID</th>
+                    <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-600">Name</th>
+                    <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-600">Year</th>
+                    <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-600">Task</th>
+                    <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-600">Modality</th>
+                    <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-600">License</th>
+                    <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-600">Source</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {entries.map((e: T4Entry, i: number) => (
+                    <tr class={[
+                      i % 2 === 0 ? 'bg-slate-950' : 'bg-slate-900/50',
+                      e.tier3_adjacent ? 'ring-1 ring-inset ring-amber-800/50' : '',
+                    ].join(' ')}>
+                      <td class="py-2 px-3 font-mono text-[10px] text-slate-500">{e.id}</td>
+                      <td class="py-2 px-3 text-slate-200 font-medium whitespace-nowrap">
+                        {e.name}
+                        {e.tier3_adjacent && (
+                          <span class="ml-1.5 rounded px-1 py-0.5 text-[9px] font-semibold bg-amber-900/60 text-amber-400 uppercase tracking-wide">T3-adj</span>
+                        )}
+                      </td>
+                      <td class="py-2 px-3 text-slate-400">{e.year}</td>
+                      <td class="py-2 px-3 text-slate-400 max-w-[160px]">{e.task}</td>
+                      <td class="py-2 px-3 text-slate-500 max-w-[140px]">{e.modality}</td>
+                      <td class="py-2 px-3 text-slate-500 whitespace-nowrap">{e.license}</td>
+                      <td class="py-2 px-3">
+                        {e.source.startsWith('doi:') ? (
+                          <a
+                            href={`https://doi.org/${e.source.replace('doi:', '')}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-slate-500 hover:text-primary-400 transition-colors font-mono text-[10px]"
+                          >{e.source}</a>
+                        ) : e.source.startsWith('doi:10.48550/arXiv.') ? (
+                          <a
+                            href={`https://arxiv.org/abs/${e.source.replace('doi:10.48550/arXiv.', '')}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-slate-500 hover:text-primary-400 transition-colors font-mono text-[10px]"
+                          >{e.source}</a>
+                        ) : (
+                          <span class="text-slate-600 font-mono text-[10px]">{e.source}</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        );
+      })}
+    </section>
+
+    <!-- ─── Coverage gap note ─── -->
+    <section>
+      <div class="rounded-xl border border-slate-800 bg-slate-900/50 px-5 py-4">
+        <h2 class="text-sm font-semibold text-slate-300 mb-2">Coverage Gap Note</h2>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          The OpenConstruction live catalog contained <strong class="text-slate-400">118 entries</strong> as of 2026-06-19.
+          The 2026-06-23 WebFetch returned <strong class="text-slate-400">100 unique entries</strong> before API response truncation.
+          <strong class="text-slate-400">18 entries are not captured here</strong> — expected to be recent submissions consistent with the catalog's traditional-ML scope.
+          The true Tier-4 landscape count is therefore <strong class="text-slate-400">≥92</strong> of approximately 118 total OC entries.
+          A future DISCOVERER pass with paginated Supabase API or CSV export will recover the missing entries.
+          <br /><br />
+          Additionally, 8 OC entries were excluded from this catalog because they appear in the PRISMA corpus as FM-eval candidates
+          (R019/R023 are in the 24 included benchmarks; R024/R025/R026/R027/R028/R029 were excluded from PRISMA at Stage 1 or Stage 2).
+          <strong class="text-amber-500/90">Overlap between this catalog and the 24 headline benchmarks: 0</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── Source attribution ─── -->
+    <section>
+      <div class="rounded-xl border border-slate-800 bg-slate-900/40 px-5 py-4">
+        <h2 class="text-sm font-semibold text-slate-300 mb-2">Source</h2>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          All {total} entries sourced from the <strong class="text-slate-400">OpenConstruction</strong> live dataset catalog.
+          Catalog paper: Xiong et al. (2025/2026).
+          "OpenConstruction: A Systematic Synthesis of Open Visual Datasets for Data-Centric Artificial Intelligence in Construction Monitoring."
+          <a href="https://arxiv.org/abs/2508.11482" target="_blank" rel="noopener" class="text-primary-400 hover:text-primary-300 transition-colors">arXiv:2508.11482</a>.
+          doi:10.1016/j.dibe.2026.100909.
+          This page does not redistribute dataset contents — only catalog metadata (name, DOI/URL, task, license)
+          as reported in the OC live catalog.
+          Data file: <a href="/data/tier4_datasets.json" download class="text-primary-400 hover:text-primary-300 transition-colors font-mono">tier4_datasets.json</a>.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+</Layout>
+
+<script>
+// Category filter — show/hide sections by category_num
+const filterBtns = document.querySelectorAll<HTMLButtonElement>('.t4-filter-btn');
+const catSections = document.querySelectorAll<HTMLElement>('.t4-cat-section');
+
+const ACTIVE_CLS = ['border-amber-700', 'bg-amber-900/40', 'text-amber-300'];
+const INACTIVE_CLS = ['border-slate-700', 'bg-slate-800/40', 'text-slate-400'];
+
+function setFilter(cat: string) {
+  filterBtns.forEach(btn => {
+    const isActive = btn.dataset.cat === cat;
+    if (isActive) {
+      btn.classList.remove(...INACTIVE_CLS);
+      btn.classList.add(...ACTIVE_CLS);
+    } else {
+      btn.classList.remove(...ACTIVE_CLS);
+      btn.classList.add(...INACTIVE_CLS);
+    }
+  });
+  catSections.forEach(sec => {
+    const show = cat === 'all' || sec.dataset.cat === cat;
+    sec.style.display = show ? '' : 'none';
+  });
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => setFilter(btn.dataset.cat ?? 'all'));
+});
+
+// Init: all visible
+setFilter('all');
+</script>

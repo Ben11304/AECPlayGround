@@ -1,0 +1,494 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TierBadge from '../../components/TierBadge.astro';
+import ProvenanceBadge from '../../components/ProvenanceBadge.astro';
+import ModalityChips from '../../components/ModalityChips.astro';
+import RadarChart from '../../components/RadarChart.astro';
+import {
+  benchmarks,
+  toSlug,
+  fromSlug,
+  getBenchmarkById,
+  groupResultsByModel,
+  rubricValues,
+  activeModalities,
+  domainChips,
+} from '../../lib/benchmarks';
+import { isNoResults, hasVerifyTag, MODALITY_LABELS, RUBRIC_LABELS, RUBRIC_KEYS } from '../../lib/integrity';
+
+export async function getStaticPaths() {
+  return benchmarks.map((b) => ({ params: { id: toSlug(b.source_record_id) } }));
+}
+
+const { id } = Astro.params;
+const b = getBenchmarkById(fromSlug(id));
+if (!b) return Astro.redirect('/404');
+
+const noResults = isNoResults(b.source_record_id);
+const isVerify = hasVerifyTag(b.verification_status);
+const mods = activeModalities(b);
+const domains = domainChips(b);
+const resultsByModel = groupResultsByModel(b);
+const confirmedResults = b.reported_results.filter((r) => r.provenance_flag === 'source_confirmed');
+const verifyResults = b.reported_results.filter((r) => r.provenance_flag !== 'source_confirmed');
+
+// Identifier link
+function identUrl(b: typeof benchmarks[0]): string | null {
+  const bib = b.bibliographic;
+  if (bib.arxiv_id) return `https://arxiv.org/abs/${bib.arxiv_id}`;
+  if (bib.doi) return `https://doi.org/${bib.doi}`;
+  if (bib.repo_url) return bib.repo_url;
+  if (bib.dataset_url) return bib.dataset_url;
+  return null;
+}
+const url = identUrl(b);
+
+// Rubric dimension scores for display
+const rubricEntries = RUBRIC_KEYS.map((k) => ({
+  key: k,
+  label: RUBRIC_LABELS[k],
+  value: (b.rubric as Record<string, number>)[k] ?? 0,
+}));
+
+// Thumbnail lookup — same set as BenchmarkCard
+const THUMBNAILS: Record<string, { src: string; license: string; creditShort: string; creditUrl: string }> = {
+  'R001': { src: '/thumbnails/r001.jpg', license: 'CC BY 4.0',    creditShort: 'arXiv:2510.16559', creditUrl: 'https://arxiv.org/abs/2510.16559' },
+  'R005': { src: '/thumbnails/r005.png', license: 'MIT',          creditShort: 'HF/DrafterBench',  creditUrl: 'https://huggingface.co/datasets/Eason666/DrafterBench' },
+  'R006': { src: '/thumbnails/r006.png', license: 'Apache 2.0',   creditShort: 'GitHub/nomic-ai',  creditUrl: 'https://github.com/nomic-ai/aec-bench' },
+  'R017': { src: '/thumbnails/r017.png', license: 'CC BY 4.0',    creditShort: 'arXiv:2505.22959', creditUrl: 'https://arxiv.org/abs/2505.22959' },
+  'R023': { src: '/thumbnails/r023.png', license: 'Apache 2.0',   creditShort: 'GitHub/huhuman',   creditUrl: 'https://github.com/huhuman/VL-Con' },
+  'R031': { src: '/thumbnails/r031.png', license: 'CC BY-SA 4.0', creditShort: 'arXiv:2606.20146', creditUrl: 'https://arxiv.org/abs/2606.20146' },
+};
+const thumb = THUMBNAILS[b.source_record_id] ?? null;
+const tierColor = b.tier === 1 ? 'emerald' : b.tier === 2 ? 'amber' : 'orange';
+---
+
+<Layout
+  title={b.name}
+  description={`${b.name} — AEC AI benchmark (Tier ${b.tier}). ${b.bibliographic.paper_title}`}
+>
+  <!-- Page hero banner -->
+  <div class="page-header relative overflow-hidden">
+    {/* Thumbnail background for 6 open-licensed benchmarks */}
+    {thumb && (
+      <div class="absolute inset-0 z-0">
+        <img
+          src={thumb.src}
+          alt=""
+          aria-hidden="true"
+          class="h-full w-full object-cover opacity-10"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/60" />
+      </div>
+    )}
+
+    <div class="relative z-10 mx-auto max-w-7xl">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <a href="/benchmarks">Benchmarks</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="text-slate-400" aria-current="page">{b.source_record_id}</span>
+      </nav>
+
+      <div class="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+        <div class="flex-1">
+          <!-- Badge row -->
+          <div class="mb-3 flex flex-wrap items-center gap-2">
+            <span class="font-mono text-xs text-slate-500 bg-slate-800/60 px-2 py-0.5 rounded">{b.source_record_id}</span>
+            <TierBadge tier={b.tier} />
+            <ProvenanceBadge verificationStatus={b.verification_status} provenance={b.provenance} />
+            {noResults && (
+              <span class="chip bg-slate-800 text-slate-400 border border-slate-700 text-[11px]">
+                no results sourced yet
+              </span>
+            )}
+          </div>
+
+          <h1 class="font-display text-3xl font-bold text-white sm:text-4xl mb-2">{b.name}</h1>
+          <p class="text-slate-400 italic text-sm mb-3">{b.bibliographic.paper_title}</p>
+          <p class="text-xs text-slate-500">
+            {b.bibliographic.authors} · {b.bibliographic.year} · {b.bibliographic.venue}
+          </p>
+
+          <!-- Links -->
+          <div class="mt-4 flex flex-wrap gap-2">
+            {url && (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-secondary btn-sm"
+              >
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+                {b.bibliographic.arxiv_id
+                  ? `arXiv:${b.bibliographic.arxiv_id}`
+                  : b.bibliographic.doi
+                  ? `DOI`
+                  : 'Repo / Dataset'}
+              </a>
+            )}
+            {b.bibliographic.dataset_url && b.bibliographic.dataset_url !== url && (
+              <a href={b.bibliographic.dataset_url} target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm">
+                Dataset ↗
+              </a>
+            )}
+            {b.bibliographic.repo_url && b.bibliographic.repo_url !== url && (
+              <a href={b.bibliographic.repo_url} target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm">
+                Code ↗
+              </a>
+            )}
+          </div>
+
+          {/* Thumbnail attribution */}
+          {thumb && (
+            <p class="mt-3 text-[10px] text-slate-600">
+              Hero image: <a href={thumb.creditUrl} target="_blank" rel="noopener" class="hover:text-slate-400 transition-colors">{thumb.license} · {thumb.creditShort}</a>
+            </p>
+          )}
+        </div>
+
+        <!-- Radar chart -->
+        <div class="shrink-0 flex flex-col items-center gap-2">
+          <RadarChart rubric={b.rubric} size={200} />
+          <p class="text-[10px] text-slate-600">Rubric score: {b.rubric.total}/20</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+
+    <!-- Two-column detail grid -->
+    <div class="grid gap-6 lg:grid-cols-3">
+      <!-- Left column: 2/3 width -->
+      <div class="lg:col-span-2 flex flex-col gap-6">
+
+        <!-- 1. Domain & task -->
+        <section class="card bg-slate-900 border-slate-800 p-5">
+          <h2 class="section-heading">1 · Domain & Task</h2>
+          <dl class="grid gap-3 text-sm sm:grid-cols-2">
+            <div>
+              <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">AEC Subdomain</dt>
+              <dd class="mt-1 text-slate-300">{b.domain_use_case.aec_subdomain}</dd>
+            </div>
+            <div>
+              <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Lifecycle Stage</dt>
+              <dd class="mt-1 text-slate-300">{b.domain_use_case.lifecycle_stage}</dd>
+            </div>
+            <div>
+              <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Task Type</dt>
+              <dd class="mt-1 text-slate-300">{b.task.task_type}</dd>
+            </div>
+            <div>
+              <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Complexity</dt>
+              <dd class="mt-1 text-slate-300">{b.task.task_complexity}</dd>
+            </div>
+            <div class="sm:col-span-2">
+              <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Output Type</dt>
+              <dd class="mt-1 text-slate-300">{b.task.output_type}</dd>
+            </div>
+            <div class="sm:col-span-2">
+              <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Intended Users</dt>
+              <dd class="mt-1 text-slate-300">{b.domain_use_case.intended_user}</dd>
+            </div>
+          </dl>
+        </section>
+
+        <!-- 2. Modality -->
+        <section class="card bg-slate-900 border-slate-800 p-5">
+          <h2 class="section-heading">2 · Modality Coverage</h2>
+          <div class="mb-3">
+            <ModalityChips modality={b.modality} max={12} />
+          </div>
+          {b.modality.notes && (
+            <p class="mt-2 text-xs text-slate-500 border-t border-slate-800 pt-2">
+              {b.modality.notes}
+            </p>
+          )}
+          <!-- Modality boolean grid -->
+          <div class="mt-3 grid grid-cols-3 gap-1.5 text-[10px] sm:grid-cols-4">
+            {Object.entries(b.modality)
+              .filter(([k]) => k !== 'notes')
+              .map(([k, v]) => (
+                <div class={`flex items-center gap-1 rounded px-2 py-1 ${v ? 'bg-blue-950/40 text-blue-300' : 'bg-slate-800/40 text-slate-600'}`}>
+                  <span>{v ? '✓' : '✗'}</span>
+                  <span>{MODALITY_LABELS[k] ?? k}</span>
+                </div>
+              ))}
+          </div>
+        </section>
+
+        <!-- 3. Dataset properties -->
+        <section class="card bg-slate-900 border-slate-800 p-5">
+          <h2 class="section-heading">3 · Dataset Properties</h2>
+          <dl class="grid gap-3 text-sm sm:grid-cols-2">
+            {[
+              ['Samples', b.dataset_properties.n_samples],
+              ['Task Categories', b.dataset_properties.n_tasks_categories],
+              ['Data Source', b.dataset_properties.data_source],
+              ['Annotation Method', b.dataset_properties.annotation_method],
+              ['Expert Validation', b.dataset_properties.expert_validation],
+              ['License', b.dataset_properties.license],
+              ['Accessibility', b.dataset_properties.accessibility],
+              ['Train/Test Split', b.dataset_properties.train_test_split],
+              ['Leakage Risk', b.dataset_properties.leakage_risk],
+            ].map(([label, value]) => (
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">{label}</dt>
+                <dd class="mt-1 text-slate-300 text-xs">{value || '—'}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        <!-- 4. Evaluation -->
+        <section class="card bg-slate-900 border-slate-800 p-5">
+          <h2 class="section-heading">4 · Evaluation Design</h2>
+          <dl class="grid gap-3 text-sm sm:grid-cols-2">
+            {[
+              ['Metrics', b.evaluation.metrics],
+              ['Baseline Models', b.evaluation.baseline_models],
+              ['Prompting Method', b.evaluation.prompting_method],
+              ['Zero/Few-Shot', b.evaluation.zero_few_shot],
+              ['RAG / Tool Use', b.evaluation.rag_tool_use],
+              ['Human Eval', b.evaluation.human_eval_method],
+              ['LLM-as-Judge', b.evaluation.llm_as_judge_method],
+              ['Robustness Tests', b.evaluation.robustness_tests],
+              ['Cost / Latency', b.evaluation.cost_latency_reporting],
+            ].map(([label, value]) => (
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">{label}</dt>
+                <dd class="mt-1 text-slate-300 text-xs">{value || '—'}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        <!-- 5. Reported results -->
+        <section class="card bg-slate-900 border-slate-800 p-5">
+          <h2 class="section-heading">5 · Reported Results</h2>
+
+          {noResults && (
+            <div class="rounded-lg border border-amber-800/40 bg-amber-950/20 p-4 text-sm text-amber-400">
+              <p class="font-medium">No performance results sourced yet</p>
+              <p class="mt-1 text-xs text-amber-600">
+                This benchmark was newly admitted in the 17→20 cascade.
+                Results will be added when sourced and verified.
+              </p>
+            </div>
+          )}
+
+          {!noResults && b.reported_results.length === 0 && (
+            <p class="text-sm text-slate-500">No reported results in catalog for this benchmark.</p>
+          )}
+
+          {confirmedResults.length > 0 && (
+            <div class="mb-4">
+              <div class="mb-2 flex items-center gap-2">
+                <span class="chip badge-verified text-[10px]">✓ Source-Confirmed</span>
+                <span class="text-[10px] text-slate-600">{confirmedResults.length} rows</span>
+              </div>
+              <div class="overflow-x-auto rounded-lg border border-slate-800">
+                <table class="min-w-full text-xs">
+                  <thead class="bg-slate-800/50">
+                    <tr>
+                      <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Model</th>
+                      <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Metric</th>
+                      <th class="py-2 px-3 text-right text-[10px] font-semibold uppercase tracking-wide text-slate-500">Value</th>
+                      <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Source</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {confirmedResults.map((r, i) => (
+                      <tr class={i % 2 === 0 ? 'bg-slate-950' : 'bg-slate-900/40'}>
+                        <td class="py-1.5 px-3 font-medium text-slate-200">{r.model_string}</td>
+                        <td class="py-1.5 px-3 text-slate-400">{r.metric_name}</td>
+                        <td class="py-1.5 px-3 text-right font-mono text-blue-300 font-semibold">{r.value}</td>
+                        <td class="py-1.5 px-3 text-slate-600">{r.source_location}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {verifyResults.length > 0 && (
+            <details class="mt-3">
+              <summary class="cursor-pointer text-xs text-slate-500 hover:text-slate-300 transition-colors">
+                ▸ Show {verifyResults.length} claimed / unverified rows
+                <span class="chip badge-verify text-[10px] ml-2">[VERIFY]</span>
+              </summary>
+              <div class="mt-2 overflow-x-auto rounded-lg border border-amber-800/30">
+                <table class="min-w-full text-xs">
+                  <thead class="bg-amber-950/20">
+                    <tr>
+                      <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Model</th>
+                      <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Metric</th>
+                      <th class="py-2 px-3 text-right text-[10px] font-semibold uppercase tracking-wide text-slate-500">Value</th>
+                      <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Flag</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {verifyResults.map((r, i) => (
+                      <tr class={i % 2 === 0 ? 'bg-amber-950/10' : ''}>
+                        <td class="py-1.5 px-3 text-slate-300">{r.model_string}</td>
+                        <td class="py-1.5 px-3 text-slate-500">{r.metric_name}</td>
+                        <td class="py-1.5 px-3 text-right font-mono text-amber-400">{r.value}</td>
+                        <td class="py-1.5 px-3">
+                          <span class="chip badge-verify text-[10px]">{r.provenance_flag}</span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          )}
+        </section>
+
+        <!-- 6. Examples -->
+        {b.examples && b.examples.length > 0 && (
+          <section class="card bg-slate-900 border-slate-800 p-5">
+            <h2 class="section-heading">6 · Examples (Pilot)</h2>
+            <div class="flex flex-col gap-3">
+              {b.examples.map((ex, i) => (
+                <div class="rounded-lg border border-slate-800 bg-slate-950/50 p-3">
+                  <div class="mb-1.5 flex flex-wrap items-center gap-2">
+                    <span class="font-mono text-[10px] text-slate-500">{ex.id ?? `ex-${i+1}`}</span>
+                    {ex.modality && <span class="chip bg-slate-800 text-slate-400 text-[10px]">{ex.modality}</span>}
+                    {ex.task_type && <span class="chip bg-slate-800 text-slate-400 text-[10px]">{ex.task_type}</span>}
+                  </div>
+                  {ex.text && (
+                    <p class="text-xs text-slate-400 leading-relaxed">{ex.text}</p>
+                  )}
+                  {ex.instruction && (
+                    <pre class="mt-2 overflow-x-auto rounded bg-slate-800/60 p-2 text-[10px] text-slate-300 whitespace-pre-wrap">{String(ex.instruction).slice(0, 300)}{String(ex.instruction).length > 300 ? '…' : ''}</pre>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+      </div>
+
+      <!-- Right column: 1/3 width -->
+      <div class="flex flex-col gap-6">
+
+        <!-- Capability taxonomy -->
+        <section class="card bg-slate-900 border-slate-800 p-5">
+          <h2 class="section-heading">Capability Taxonomy</h2>
+          <div class="flex flex-col gap-3 text-xs">
+            {[
+              ['Domain', b.capability.domain],
+              ['Task Spans', b.capability.task_spans],
+              ['Modality Spans', b.capability.modality_spans],
+              ['Evaluation Spans', b.capability.evaluation_spans],
+              ['Capability Spans', b.capability.capability_spans],
+            ].map(([label, value]) => (
+              <div>
+                <div class="text-[10px] font-semibold uppercase tracking-wide text-slate-600 mb-1">{label}</div>
+                <p class="text-slate-300 leading-relaxed">{value}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Rubric breakdown -->
+        <section class="card bg-slate-900 border-slate-800 p-5">
+          <h2 class="section-heading">Rubric Breakdown</h2>
+          <div class="mb-4 text-center">
+            <span class="text-3xl font-bold text-white">{b.rubric.total}</span>
+            <span class="text-slate-500"> / 20</span>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            {rubricEntries.map(({ key, label, value }) => {
+              const isFloor = key === 'd5' || key === 'd6' || key === 'd7';
+              return (
+              <div class="flex items-center gap-2">
+                <div class="flex-1">
+                  <div class="flex justify-between text-[10px] mb-0.5">
+                    <span class="text-slate-500">
+                      {label}
+                      {isFloor && (
+                        <span
+                          class={`ml-1 text-[9px] font-medium ${value >= 1 ? 'text-emerald-600' : 'text-rose-600'}`}
+                          title="Tier-1 floor: ≥1 required (partial is sufficient; full release =2 preferred but not required)"
+                        >
+                          {value >= 1 ? '★≥1✓' : '★≥1✗'}
+                        </span>
+                      )}
+                    </span>
+                    <span class={`font-semibold ${value === 2 ? 'text-emerald-400' : value === 1 ? 'text-amber-400' : 'text-slate-600'}`}>
+                      {value}
+                    </span>
+                  </div>
+                  <div class="h-1 rounded-full bg-slate-800">
+                    <div
+                      class={`h-1 rounded-full transition-all ${value === 2 ? 'bg-emerald-500' : value === 1 ? 'bg-amber-500' : 'bg-slate-700'}`}
+                      style={`width: ${(value / 2) * 100}%`}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <!-- Identifiers & metadata -->
+        <section class="card bg-slate-900 border-slate-800 p-5">
+          <h2 class="section-heading">Identifiers & Metadata</h2>
+          <div class="flex flex-col gap-2 text-xs">
+            {[
+              ['Record ID', b.source_record_id],
+              ['Identifier', b.identifier],
+              ['Year', String(b.bibliographic.year)],
+              ['License', b.dataset_properties.license],
+              ['Accessibility', b.dataset_properties.accessibility],
+            ].map(([label, value]) => value && (
+              <div class="flex gap-2">
+                <span class="shrink-0 w-24 text-slate-600 font-medium">{label}</span>
+                <span class="text-slate-400 font-mono text-[10px] break-all">{value}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Nav: prev / next -->
+        <div class="flex justify-between gap-2">
+          {(() => {
+            const idx = benchmarks.findIndex((x) => x.source_record_id === b.source_record_id);
+            const prev = benchmarks[idx - 1];
+            const next = benchmarks[idx + 1];
+            return (
+              <>
+                {prev ? (
+                  <a href={`/benchmarks/${toSlug(prev.source_record_id)}`}
+                     class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-3 text-xs text-slate-400 hover:border-slate-600 hover:text-slate-200 transition-all">
+                    <div class="text-[10px] text-slate-600 mb-0.5">← Prev</div>
+                    {prev.name}
+                  </a>
+                ) : <div class="flex-1"></div>}
+                {next ? (
+                  <a href={`/benchmarks/${toSlug(next.source_record_id)}`}
+                     class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-3 text-xs text-slate-400 hover:border-slate-600 hover:text-slate-200 transition-all text-right">
+                    <div class="text-[10px] text-slate-600 mb-0.5">Next →</div>
+                    {next.name}
+                  </a>
+                ) : <div class="flex-1"></div>}
+              </>
+            );
+          })()}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</Layout>

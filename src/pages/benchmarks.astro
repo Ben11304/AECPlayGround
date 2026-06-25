@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FilterBar from '../components/FilterBar.astro';
+import BenchmarkCard from '../components/BenchmarkCard.astro';
+import { benchmarks } from '../lib/benchmarks';
+
+const sorted = [...benchmarks].sort((a, b) => {
+  if (a.tier !== b.tier) return a.tier - b.tier;
+  return (b.rubric?.total ?? 0) - (a.rubric?.total ?? 0);
+});
+
+const t1 = sorted.filter(b => b.tier === 1);
+const t2 = sorted.filter(b => b.tier === 2);
+const t3 = sorted.filter(b => b.tier === 3);
+---
+
+<Layout
+  title="Benchmarks"
+  description="All 24 AEC AI benchmarks from the PRISMA systematic review — filterable by tier, domain, and modality."
+>
+
+  <!-- Page header -->
+  <div class="page-header">
+    <div class="mx-auto max-w-7xl">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="text-slate-400" aria-current="page">Benchmarks</span>
+      </nav>
+
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="section-label">Full Catalog</p>
+          <h1 class="font-display text-3xl font-bold text-white sm:text-4xl mb-2">
+            All AEC Benchmarks
+          </h1>
+          <p class="text-slate-400 text-sm max-w-2xl">
+            {benchmarks.length} benchmarks curated by a PRISMA 3-arm systematic review
+            (157 identified → 144 screened → 27 full-text → {benchmarks.length} included).
+            Sorted by tier, then rubric score descending.
+          </p>
+        </div>
+        <div class="flex gap-6 shrink-0">
+          {[
+            { label: 'Tier 1', value: String(t1.length), sub: 'core',       cls: 'text-emerald-300' },
+            { label: 'Tier 2', value: String(t2.length), sub: 'peripheral', cls: 'text-amber-300' },
+            { label: 'Tier 3', value: String(t3.length), sub: 'contextual', cls: 'text-orange-300' },
+          ].map(s => (
+            <div class="text-center">
+              <div class={`font-display text-2xl font-bold ${s.cls}`}>{s.value}</div>
+              <div class="text-[10px] font-medium text-slate-400 uppercase tracking-wide">{s.label}</div>
+              <div class="text-[10px] text-slate-600">{s.sub}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter bar (sticky) -->
+  <FilterBar />
+
+  <!-- Card grid -->
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+
+    <!-- T1 -->
+    <section class="mb-12">
+      <div class="mb-5 flex items-center gap-3">
+        <h2 class="text-sm font-display font-semibold text-slate-200">Tier 1 — Core Benchmarks</h2>
+        <span class="chip tier-1 text-[10px]">{t1.length}</span>
+        <span class="hidden sm:inline text-xs text-slate-600">Purpose-built for AEC · high rubric quality</span>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {t1.map(b => <BenchmarkCard benchmark={b} />)}
+      </div>
+    </section>
+
+    <!-- T2 -->
+    <section class="mb-12">
+      <div class="mb-5 flex items-center gap-3">
+        <h2 class="text-sm font-display font-semibold text-slate-200">Tier 2 — Peripheral Benchmarks</h2>
+        <span class="chip tier-2 text-[10px]">{t2.length}</span>
+        <span class="hidden sm:inline text-xs text-slate-600">Adjacent coverage · partial AEC focus</span>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {t2.map(b => <BenchmarkCard benchmark={b} />)}
+      </div>
+    </section>
+
+    <!-- T3 -->
+    {t3.length > 0 && (
+      <section class="mb-12">
+        <div class="mb-5 flex items-center gap-3">
+          <h2 class="text-sm font-display font-semibold text-slate-200">Tier 3 — Contextual</h2>
+          <span class="chip tier-3 text-[10px]">{t3.length}</span>
+          <span class="hidden sm:inline text-xs text-slate-600">Cross-domain context · non-AEC primary</span>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {t3.map(b => <BenchmarkCard benchmark={b} />)}
+        </div>
+      </section>
+    )}
+
+    <!-- No-results message -->
+    <div id="no-results-msg" class="hidden py-20 text-center text-slate-500">
+      <p class="text-lg mb-2">No benchmarks match your filters.</p>
+      <button
+        onclick="document.getElementById('reset-filters')?.click()"
+        class="text-sm text-primary-400 hover:text-primary-300 transition-colors"
+      >
+        Reset filters
+      </button>
+    </div>
+  </div>
+</Layout>
+
+<script>
+const observer = new MutationObserver(() => {
+  const visible = Array.from(document.querySelectorAll('[data-id]'))
+    .filter(el => (el as HTMLElement).style.display !== 'none');
+  const msg = document.getElementById('no-results-msg');
+  if (msg) msg.classList.toggle('hidden', visible.length > 0);
+});
+document.querySelectorAll('[data-id]').forEach(card => {
+  observer.observe(card, { attributes: true, attributeFilter: ['style'] });
+});
+</script>

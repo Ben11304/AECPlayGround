@@ -1,0 +1,166 @@
+---
+import type { Rubric } from '../lib/types';
+import { RUBRIC_LABELS, RUBRIC_KEYS, RUBRIC_MAX } from '../lib/integrity';
+
+interface Props {
+  rubric: Rubric;
+  size?: number;
+}
+
+const { rubric, size = 220 } = Astro.props;
+
+const cx = size / 2;
+const cy = size / 2;
+const r = (size / 2) * 0.72;   // radius of outermost ring
+const labelR = r + 22;          // radius for labels
+
+const N = RUBRIC_KEYS.length;   // 10 dimensions
+
+function polarToXY(angle: number, radius: number) {
+  // Start at top (-π/2), go clockwise
+  const a = (angle * Math.PI * 2) / N - Math.PI / 2;
+  return {
+    x: cx + radius * Math.cos(a),
+    y: cy + radius * Math.sin(a),
+  };
+}
+
+// Concentric rings (0, 1, 2)
+const rings = [0, 1, 2].map((level) => {
+  const rr = (r * level) / RUBRIC_MAX;
+  return Array.from({ length: N }, (_, i) => {
+    const p = polarToXY(i, rr);
+    return `${i === 0 ? 'M' : 'L'}${p.x.toFixed(2)},${p.y.toFixed(2)}`;
+  }).join(' ') + ' Z';
+});
+
+// Axis lines
+const axes = Array.from({ length: N }, (_, i) => {
+  const p = polarToXY(i, r);
+  return { x1: cx, y1: cy, x2: p.x, y2: p.y };
+});
+
+// Data polygon
+const values = RUBRIC_KEYS.map((k) => (rubric as Record<string, number>)[k] ?? 0);
+const dataPath = values
+  .map((v, i) => {
+    const p = polarToXY(i, (r * v) / RUBRIC_MAX);
+    return `${i === 0 ? 'M' : 'L'}${p.x.toFixed(2)},${p.y.toFixed(2)}`;
+  })
+  .join(' ') + ' Z';
+
+// Label positions
+const labels = RUBRIC_KEYS.map((k, i) => {
+  const p = polarToXY(i, labelR);
+  const shortLabel = RUBRIC_LABELS[k]
+    .replace('Domain Auth.', 'Dom.Auth')
+    .replace('Task Validity', 'Task Val.')
+    .replace('Modality Cov.', 'Mod.Cov')
+    .replace('Annotation Q.', 'Annot.Q')
+    .replace('Eval. Clarity', 'Eval.Clr')
+    .replace('Baseline Cov.', 'Base.Cov')
+    .replace('Reproducibility', 'Repro.')
+    .replace('Leakage Ctrl', 'Leakage')
+    .replace('Human Baseline', 'Human')
+    .replace('Practical Rel.', 'Pract.');
+  const val = values[i];
+  const anchor =
+    Math.abs(p.x - cx) < 4 ? 'middle' : p.x < cx ? 'end' : 'start';
+  return { x: p.x, y: p.y, label: shortLabel, val, anchor };
+});
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox={`0 0 ${size} ${size}`}
+  role="img"
+  aria-label={`Radar chart: rubric total ${rubric.total}/20`}
+  class="overflow-visible"
+>
+  <!-- Background rings -->
+  {rings.map((d, i) => (
+    <path
+      d={d}
+      fill="none"
+      stroke={i === 0 ? 'transparent' : '#334155'}
+      stroke-width="1"
+      opacity={i === 0 ? 0 : 0.6}
+    />
+  ))}
+
+  <!-- Axis lines -->
+  {axes.map((ax) => (
+    <line
+      x1={ax.x1} y1={ax.y1} x2={ax.x2} y2={ax.y2}
+      stroke="#334155" stroke-width="1" opacity="0.5"
+    />
+  ))}
+
+  <!-- Ring labels (0, 1, 2) at right axis -->
+  {[1, 2].map((lvl) => {
+    const p = polarToXY(0, (r * lvl) / RUBRIC_MAX);
+    return (
+      <text
+        x={p.x + 4} y={p.y}
+        font-size="8" fill="#64748b"
+        dominant-baseline="middle"
+      >{lvl}</text>
+    );
+  })}
+
+  <!-- Data area -->
+  <path
+    d={dataPath}
+    fill="rgba(59,130,246,0.15)"
+    stroke="#3b82f6"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+
+  <!-- Data points -->
+  {values.map((v, i) => {
+    const p = polarToXY(i, (r * v) / RUBRIC_MAX);
+    return (
+      <circle
+        cx={p.x} cy={p.y} r="3"
+        fill="#3b82f6" stroke="#1e293b" stroke-width="1.5"
+      />
+    );
+  })}
+
+  <!-- Labels -->
+  {labels.map(({ x, y, label, val, anchor }) => (
+    <g>
+      <text
+        x={x} y={y - 4}
+        font-size="8.5"
+        fill="#94a3b8"
+        text-anchor={anchor}
+        dominant-baseline="auto"
+      >{label}</text>
+      <text
+        x={x} y={y + 7}
+        font-size="8"
+        fill="#60a5fa"
+        font-weight="600"
+        text-anchor={anchor}
+        dominant-baseline="auto"
+      >{val}/{RUBRIC_MAX}</text>
+    </g>
+  ))}
+
+  <!-- Center total -->
+  <text
+    x={cx} y={cy - 6}
+    font-size="18" font-weight="700"
+    fill="#f1f5f9"
+    text-anchor="middle" dominant-baseline="middle"
+  >{rubric.total}</text>
+  <text
+    x={cx} y={cy + 10}
+    font-size="9"
+    fill="#64748b"
+    text-anchor="middle"
+  >/20</text>
+</svg>

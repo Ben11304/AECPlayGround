@@ -1,0 +1,249 @@
+---
+import type { Benchmark } from '../lib/types';
+import { toSlug, activeModalities, domainChips } from '../lib/benchmarks';
+import { isNoResults } from '../lib/integrity';
+import TierBadge from './TierBadge.astro';
+import ProvenanceBadge from './ProvenanceBadge.astro';
+import ModalityChips from './ModalityChips.astro';
+
+interface Props {
+  benchmark: Benchmark;
+}
+
+// Real thumbnails: 6 entries with confirmed open-redistribution licenses.
+// VERIFIER 0.5.30 F-061 (2026-06-22): R017 (arXiv non-exclusive, NOT CC-BY) and
+// R011 (CC-BY-NC-SA, NOT CC-BY-4.0 as previously labeled) REMOVED — no redistribution right.
+// R011 may be re-added if DISCOVERER confirms OpenReview camera-ready is genuinely CC-BY.
+// R031 (CC-BY-SA) retained pending user decision on ShareAlike clause.
+// DO NOT add NC/SA/ND or arXiv-distrib records here without VERIFIER confirmation.
+const THUMBNAILS: Record<string, { src: string; license: string; creditShort: string; creditUrl: string }> = {
+  'R001': { src: '/thumbnails/r001.jpg', license: 'CC BY 4.0',    creditShort: 'arXiv:2510.16559',          creditUrl: 'https://arxiv.org/abs/2510.16559' },
+  'R003': { src: '/thumbnails/r003.png', license: 'MIT',          creditShort: 'GitHub/drags99/bridge-eqa', creditUrl: 'https://github.com/drags99/bridge-eqa' },
+  'R005': { src: '/thumbnails/r005.png', license: 'MIT',          creditShort: 'HF/DrafterBench',           creditUrl: 'https://huggingface.co/datasets/Eason666/DrafterBench' },
+  'R006': { src: '/thumbnails/r006.png', license: 'Apache 2.0',   creditShort: 'GitHub/nomic-ai',           creditUrl: 'https://github.com/nomic-ai/aec-bench' },
+  'R023': { src: '/thumbnails/r023.png', license: 'Apache 2.0',   creditShort: 'GitHub/huhuman/VL-Con',     creditUrl: 'https://github.com/huhuman/VL-Con' },
+  'R031': { src: '/thumbnails/r031.png', license: 'CC BY-SA 4.0', creditShort: 'arXiv:2606.20146',          creditUrl: 'https://arxiv.org/abs/2606.20146' },
+};
+
+const { benchmark: b } = Astro.props;
+const slug = toSlug(b.source_record_id);
+const noResults = isNoResults(b.source_record_id);
+const domains = domainChips(b);
+const mods = activeModalities(b);
+const thumb = THUMBNAILS[b.source_record_id] ?? null;
+
+// Domain → SVG glyph paths
+function domainGlyph(domain: string): string {
+  const d = domain.toLowerCase();
+  if (d.includes('bim') || d.includes('digital twin')) return 'bim';
+  if (d.includes('structural') || d.includes('civil')) return 'structural';
+  if (d.includes('infrastructure') || d.includes('inspection')) return 'inspection';
+  if (d.includes('hse') || d.includes('safety')) return 'safety';
+  if (d.includes('construction management')) return 'construction';
+  if (d.includes('energy') || d.includes('sustainability') || d.includes('bem')) return 'energy';
+  if (d.includes('architecture') || d.includes('design')) return 'architecture';
+  if (d.includes('code') || d.includes('regulatory') || d.includes('certification')) return 'codes';
+  if (d.includes('building science') || d.includes('simulation')) return 'simulation';
+  return 'generic';
+}
+
+const glyphKey = domainGlyph(b.capability.domain);
+
+// Domain label → chip color
+function domainCls(d: string): string {
+  const dl = d.toLowerCase();
+  if (dl.includes('bim')) return 'bg-teal-900/40 text-teal-300';
+  if (dl.includes('structural')) return 'bg-indigo-900/40 text-indigo-300';
+  if (dl.includes('inspection')) return 'bg-violet-900/40 text-violet-300';
+  if (dl.includes('hse') || dl.includes('safety')) return 'bg-red-900/40 text-red-300';
+  if (dl.includes('construction management')) return 'bg-orange-900/40 text-orange-300';
+  if (dl.includes('energy') || dl.includes('sustainability')) return 'bg-lime-900/40 text-lime-300';
+  if (dl.includes('architecture')) return 'bg-sky-900/40 text-sky-300';
+  if (dl.includes('code') || dl.includes('cert')) return 'bg-slate-700 text-slate-300';
+  if (dl.includes('simulation')) return 'bg-green-900/40 text-green-300';
+  return 'bg-slate-700 text-slate-300';
+}
+
+const identifier = b.identifier ?? '';
+const identLabel = identifier.startsWith('arXiv:')
+  ? identifier
+  : identifier.startsWith('doi:')
+  ? identifier
+  : identifier.length > 30
+  ? identifier.slice(0, 28) + '…'
+  : identifier;
+
+const rubricTotal = b.rubric?.total ?? 0;
+---
+
+<a
+  href={`/benchmarks/${slug}`}
+  class="card group flex flex-col overflow-hidden no-underline bg-slate-900 border-slate-800 hover:border-slate-600 transition-all"
+  data-tier={b.tier}
+  data-domain={b.capability.domain}
+  data-modality={mods.join(',')}
+  data-name={b.name.toLowerCase()}
+  data-id={b.source_record_id}
+>
+  <!-- Thumbnail header -->
+  <div class="relative flex h-32 items-center justify-center overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-800">
+    {thumb ? (
+      /* Real photograph/figure for the 6 open-licensed benchmarks */
+      <>
+        <img
+          src={thumb.src}
+          alt={`${b.name} benchmark figure`}
+          class="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+          loading="lazy"
+          decoding="async"
+        />
+        {/* Dark gradient so overlaid badges stay readable */}
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent pointer-events-none" />
+        {/* Attribution caption — span avoids nested <a> inside card <a> (nested anchors are invalid HTML; browser closes outer <a> early, breaking the card layout) */}
+        <span
+          role="link"
+          tabindex="0"
+          class="absolute bottom-1 left-0 right-0 px-2 text-center text-[9px] text-slate-400 hover:text-slate-200 transition-colors truncate z-10 cursor-pointer select-none"
+          title={`${thumb.license} · ${thumb.creditShort}`}
+          onclick={`event.stopPropagation(); window.open('${thumb.creditUrl}', '_blank', 'noopener,noreferrer');`}
+        >
+          {thumb.license} · {thumb.creditShort}
+        </span>
+      </>
+    ) : (
+      /* Schematic SVG glyph for all other 14 benchmarks */
+      <div class="text-slate-600 opacity-70 group-hover:opacity-90 transition-opacity">
+        {glyphKey === 'bim' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <path d="M28 8 L46 18 L46 38 L28 48 L10 38 L10 18 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M28 8 L28 28 M46 18 L28 28 M10 18 L28 28 M28 28 L28 48" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <circle cx="28" cy="28" r="3" fill="currentColor" opacity="0.8"/>
+          </svg>
+        )}
+        {glyphKey === 'structural' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <path d="M4 42 L14 22 L28 14 L42 22 L52 42" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M14 22 L28 30 L42 22" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+            <path d="M28 14 L28 30 L28 44" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="22" y="40" width="12" height="4" rx="1" fill="currentColor" opacity="0.4"/>
+          </svg>
+        )}
+        {glyphKey === 'inspection' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <line x1="34" y1="34" x2="48" y2="48" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M16 24 Q24 16 32 24" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          </svg>
+        )}
+        {glyphKey === 'safety' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <path d="M28 6 L48 16 L48 30 C48 40 38 48 28 52 C18 48 8 40 8 30 L8 16 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M20 28 L25 33 L37 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        )}
+        {glyphKey === 'construction' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <ellipse cx="28" cy="20" rx="20" ry="6" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M8 20 L8 44 C8 47 17 50 28 50 C39 50 48 47 48 44 L48 20" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="28" y1="14" x2="28" y2="8" stroke="currentColor" stroke-width="2"/>
+            <line x1="22" y1="8" x2="34" y2="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        )}
+        {glyphKey === 'architecture' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <path d="M28 8 L50 28 L50 50 L6 50 L6 28 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <rect x="20" y="36" width="16" height="14" rx="1" stroke="currentColor" stroke-width="1" fill="none"/>
+            <rect x="12" y="28" width="8" height="8" rx="0.5" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+            <rect x="36" y="28" width="8" height="8" rx="0.5" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+          </svg>
+        )}
+        {glyphKey === 'codes' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <rect x="10" y="6" width="36" height="44" rx="3" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <line x1="18" y1="18" x2="38" y2="18" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="18" y1="26" x2="38" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="18" y1="34" x2="30" y2="34" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="36" cy="40" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M34 40 L36 42 L39 38" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+        )}
+        {glyphKey === 'simulation' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <polyline points="6,42 16,28 24,34 32,18 40,26 50,14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <line x1="6" y1="46" x2="50" y2="46" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+            <line x1="6" y1="10" x2="6" y2="46" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          </svg>
+        )}
+        {glyphKey === 'energy' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            {/* Lightning bolt — energy/sustainability */}
+            <path d="M32 6 L18 30 L27 30 L24 50 L38 26 L29 26 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+            <circle cx="14" cy="42" r="4" stroke="currentColor" stroke-width="1" opacity="0.35" fill="none"/>
+            <circle cx="42" cy="14" r="4" stroke="currentColor" stroke-width="1" opacity="0.35" fill="none"/>
+          </svg>
+        )}
+        {glyphKey === 'generic' && (
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <rect x="8" y="8" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <rect x="30" y="8" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <rect x="8" y="30" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <rect x="30" y="30" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
+        )}
+      </div>
+    )}
+
+    <!-- Record ID badge -->
+    <span class="absolute top-2 left-2 rounded bg-slate-800/80 px-1.5 py-0.5 font-mono text-[10px] text-slate-400 z-10">
+      {b.source_record_id}
+    </span>
+
+    <!-- Rubric score -->
+    <span class="absolute top-2 right-2 rounded bg-slate-800/80 px-1.5 py-0.5 text-[10px] text-slate-400 z-10">
+      {rubricTotal}/20
+    </span>
+
+    <!-- No-results badge -->
+    {noResults && (
+      <span class="absolute bottom-6 right-2 chip bg-slate-700 text-slate-400 text-[10px] z-10">
+        no results yet
+      </span>
+    )}
+  </div>
+
+  <!-- Card body -->
+  <div class="flex flex-1 flex-col gap-3 p-4">
+    <!-- Title + tier + year row -->
+    <div class="flex items-start justify-between gap-2">
+      <h3 class="text-sm font-semibold text-slate-100 group-hover:text-primary-300 transition-colors leading-tight">
+        {b.name}
+      </h3>
+      <div class="flex shrink-0 flex-col items-end gap-1">
+        <TierBadge tier={b.tier} size="sm" />
+        <span class="text-[10px] text-slate-500">{b.bibliographic.year}</span>
+      </div>
+    </div>
+
+    <!-- Domain chips -->
+    <div class="flex flex-wrap gap-1">
+      {domains.slice(0, 2).map((d) => (
+        <span class={`chip text-[10px] ${domainCls(d)}`}>{d}</span>
+      ))}
+    </div>
+
+    <!-- Modality chips -->
+    <ModalityChips modality={b.modality} max={4} />
+
+    <!-- Footer: identifier + provenance -->
+    <div class="mt-auto flex items-center justify-between gap-2 pt-2 border-t border-slate-800">
+      <span class="truncate font-mono text-[10px] text-slate-500" title={identifier}>
+        {identLabel}
+      </span>
+      <ProvenanceBadge
+        verificationStatus={b.verification_status}
+        provenance={b.provenance}
+        size="sm"
+      />
+    </div>
+  </div>
+</a>

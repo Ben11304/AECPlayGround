@@ -1,0 +1,48 @@
+---
+import type { ModalityInfo } from '../lib/types';
+
+interface Props {
+  modality: ModalityInfo;
+  max?: number;
+}
+
+const { modality, max = 5 } = Astro.props;
+
+const MOD_CONFIG: Record<string, { label: string; cls: string; icon: string }> = {
+  text:                   { label: 'Text',          cls: 'mod-text',        icon: '¶' },
+  tables:                 { label: 'Tables',        cls: 'mod-tables',      icon: '⊞' },
+  images:                 { label: 'Images',        cls: 'mod-images',      icon: '⬚' },
+  engineering_drawings:   { label: 'Drawings',      cls: 'mod-eng-draw',    icon: '△' },
+  cad_floor_plans:        { label: 'CAD/Plans',     cls: 'mod-cad',         icon: '⊡' },
+  bim_ifc_3d:             { label: 'BIM/IFC',       cls: 'mod-bim',         icon: '◈' },
+  point_cloud:            { label: 'Point Cloud',   cls: 'mod-point-cloud', icon: '⋮' },
+  video_multi_image:      { label: 'Video',         cls: 'mod-video',       icon: '▶' },
+  simulation_plot:        { label: 'Sim. Plot',     cls: 'mod-sim',         icon: '~' },
+  symbolic_layout:        { label: 'Symbolic',      cls: 'mod-text',        icon: '⟨⟩' },
+  tool_api_env:           { label: 'Tool/API',      cls: 'mod-tool',        icon: '⚙' },
+  physics_simulation_env: { label: 'Physics Sim',   cls: 'mod-sim',         icon: '⟳' },
+};
+
+const active = Object.entries(modality)
+  .filter(([k, v]) => k !== 'notes' && v === true)
+  .map(([k]) => k);
+
+const shown = active.slice(0, max);
+const remainder = active.length - shown.length;
+---
+
+<div class="flex flex-wrap gap-1">
+  {shown.map((key) => {
+    const cfg = MOD_CONFIG[key];
+    if (!cfg) return null;
+    return (
+      <span class={`chip ${cfg.cls} text-[11px]`} title={key.replace(/_/g, ' ')}>
+        <span aria-hidden="true">{cfg.icon}</span>
+        {cfg.label}
+      </span>
+    );
+  })}
+  {remainder > 0 && (
+    <span class="chip mod-text text-[11px] opacity-60">+{remainder}</span>
+  )}
+</div>

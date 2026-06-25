@@ -1,0 +1,2026 @@
+[
+  {
+    "tool_id": "T001",
+    "name": "Speckle",
+    "category": "BIM/IFC Data Platform",
+    "category_cluster": "BIM/IFC AI",
+    "aec_task": [
+      "BIM data exchange",
+      "cross-tool collaboration",
+      "BIM analytics"
+    ],
+    "ai_type": "RAG/LLM",
+    "input_modality": [
+      "3d-model-ifc",
+      "3d-model-proprietary",
+      "text"
+    ],
+    "output_modality": [
+      "structured-data",
+      "dashboard",
+      "text"
+    ],
+    "license": "Apache-2.0",
+    "access": "open-source",
+    "pricing_tier": "freemium",
+    "resolvable_url": "https://speckle.systems",
+    "github_url": "https://github.com/specklesystems/speckle-server",
+    "integration_ecosystem": [
+      "Revit",
+      "Rhino",
+      "Grasshopper",
+      "AutoCAD",
+      "IFC",
+      "Power BI"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Open-source AEC data interop platform (Apache 2.0) with BIM versioning across Revit, Rhino, AutoCAD, and IFC. 'Speckle Intelligence' adds an LLM layer (OpenAI integration) for natural-language querying of structured BIM objects.",
+    "notes": "5,000+ GitHub stars. Hosted cloud tier available alongside self-hosted OSS core.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T002",
+    "name": "BIM LLM Code Agent",
+    "category": "BIM/IFC LLM Query",
+    "category_cluster": "BIM/IFC AI",
+    "aec_task": [
+      "BIM data extraction",
+      "IFC natural-language querying"
+    ],
+    "ai_type": "LLM agent + Vector RAG (FAISS)",
+    "input_modality": [
+      "3d-model-ifc",
+      "text",
+      "structured-data"
+    ],
+    "output_modality": [
+      "code",
+      "structured-data",
+      "text"
+    ],
+    "license": "MIT",
+    "access": "open-source",
+    "pricing_tier": "free",
+    "resolvable_url": "https://github.com/mac999/BIM_LLM_code_agent",
+    "github_url": "https://github.com/mac999/BIM_LLM_code_agent",
+    "integration_ecosystem": [
+      "IFC",
+      "standalone"
+    ],
+    "maturity": "research-prototype",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "RAG agent that queries IFC/BIM data using local LLMs (Llama3, Qwen2.5-Coder, Gemma3 via Ollama) with FAISS-based vector search (Vector RAG). v0.4 (Sept 2025); MIT license.",
+    "notes": "28 GitHub stars. Known hallucination risk with small models. Directly relevant to AI benchmarking focus — queries IFC data programmatically.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T003",
+    "name": "Text2BIM",
+    "category": "Text-to-BIM / Multi-agent",
+    "category_cluster": "BIM/IFC AI",
+    "aec_task": [
+      "BIM authoring from natural language",
+      "design intent to 3D model"
+    ],
+    "ai_type": "Multi-agent LLM",
+    "input_modality": [
+      "text"
+    ],
+    "output_modality": [
+      "3d-model-ifc",
+      "3d-model-proprietary"
+    ],
+    "license": "MIT",
+    "access": "open-source",
+    "pricing_tier": "free",
+    "resolvable_url": "https://github.com/dcy0577/Text2BIM",
+    "github_url": "https://github.com/dcy0577/Text2BIM",
+    "integration_ecosystem": [
+      "Vectorworks",
+      "IFC",
+      "Solibri"
+    ],
+    "maturity": "research-prototype",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Multi-agent LLM pipeline (2025) that converts natural-language building descriptions to 3D BIM models (Vectorworks, IFC-exportable), with a Repairer Agent that iterates until Solibri validation passes. Supports GPT-4o, Claude, Gemini-2.5-pro, o1-mini.",
+    "notes": "104 GitHub stars. Directly comparable to R006 AEC-Bench evaluation scope. Agent loop = interesting design for benchmarking.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T004",
+    "name": "UpCodes Copilot",
+    "category": "Code/Compliance AI",
+    "category_cluster": "Code/Compliance AI",
+    "aec_task": [
+      "building code research",
+      "compliance checking",
+      "specification writing"
+    ],
+    "ai_type": "LLM + RAG",
+    "input_modality": [
+      "text"
+    ],
+    "output_modality": [
+      "text",
+      "report"
+    ],
+    "license": "Commercial (freemium)",
+    "access": "commercial",
+    "pricing_tier": "freemium",
+    "resolvable_url": "https://up.codes/features/ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "standalone"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "LLM + RAG code-compliance platform over 6,000+ US building codes corpus. Claims 93% accuracy on code Q&A [claimed, VERIFY]. 800K+ monthly users; 94% of US top-100 design firms [claimed, VERIFY].",
+    "notes": "Largest AEC code-AI platform by user base. Strong candidate as a benchmark target model for compliance QA tasks.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T005",
+    "name": "Archistar AI PreCheck",
+    "category": "Automated Plan Review",
+    "category_cluster": "Code/Compliance AI",
+    "aec_task": [
+      "building permit compliance",
+      "zoning analysis",
+      "planning approval"
+    ],
+    "ai_type": "Generative AI + CV + ML",
+    "input_modality": [
+      "image",
+      "structured-data"
+    ],
+    "output_modality": [
+      "report",
+      "dashboard"
+    ],
+    "license": "Commercial SaaS",
+    "access": "commercial",
+    "pricing_tier": "subscription-enterprise",
+    "resolvable_url": "https://www.archistar.ai/aiprecheck/",
+    "github_url": null,
+    "integration_ecosystem": [
+      "standalone"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Multimodal AI (generative + CV + ML) for automated building permit compliance and zoning analysis from PDF/CAD/BIM design files. 30+ cities globally use it for plan review.",
+    "notes": "Notable for government/municipality adoption — rare in this set. Covers zoning compliance, not just building codes. Inputs include 2D and 3D design files.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T006",
+    "name": "Togal.AI",
+    "category": "Drawing Analysis / QTO",
+    "category_cluster": "Drawing/Takeoff AI",
+    "aec_task": [
+      "quantity takeoff",
+      "floor plan measurement",
+      "drawing comparison"
+    ],
+    "ai_type": "CV + LLM",
+    "input_modality": [
+      "image",
+      "text"
+    ],
+    "output_modality": [
+      "structured-data",
+      "report",
+      "text"
+    ],
+    "license": "Commercial SaaS",
+    "access": "commercial",
+    "pricing_tier": "subscription-published",
+    "resolvable_url": "https://togal.ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "standalone"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "CV-based quantity takeoff from construction drawings (PDF/image, ~98% accuracy [claimed, VERIFY]) with LLM chat layer (Togal.CHAT) for natural-language queries over measured drawings. Published pricing: $199–$299/user/month [claimed, VERIFY].",
+    "notes": "Only tool in seed with published per-user pricing — unusual transparency in this space. Claims 5× faster vs manual QTO.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T007",
+    "name": "Archilyse",
+    "category": "Floor Plan Analytics",
+    "category_cluster": "Drawing/Takeoff AI",
+    "aec_task": [
+      "design quality scoring",
+      "daylight/viewout analysis",
+      "spatial simulation"
+    ],
+    "ai_type": "simulation + ML",
+    "input_modality": [
+      "3d-model-ifc",
+      "image"
+    ],
+    "output_modality": [
+      "structured-data",
+      "dashboard",
+      "3d-model-ifc"
+    ],
+    "license": "AGPL-3.0; datasets CC-BY-4.0",
+    "access": "open-source",
+    "pricing_tier": "open-source",
+    "resolvable_url": "https://archilyse.standfest.science/",
+    "github_url": "https://github.com/Archilyse/Archilyse",
+    "integration_ecosystem": [
+      "IFC",
+      "standalone"
+    ],
+    "maturity": "open-source-active",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "ACADEMIC open-source pipeline (ETH Zurich / standfest.science) — NOT archilyse.com (commercial proptech entity, now discontinued). Physically-grounded simulation + ML for floor plan spatial analysis (daylight, viewshed, acoustics, connectivity); AGPL pipeline actively maintained. Swiss Dwellings (3,100 buildings) and MSD (ECCV 2024) datasets released CC-BY-4.0.",
+    "notes": "VERIFIER 0.5.29 F-060: github_url confirmed https://github.com/Archilyse/Archilyse; ArchilyseAuto repo also exists (related automation pipeline, same org). ENTITY DISAMBIGUATION: this record = ETH academic open-source pipeline (standfest.science), NOT archilyse.com (separate commercial proptech entity, SaaS discontinued). MSD dataset (ECCV 2024) strong research credentials for benchmarking. One of two purely open-source production tools in seed.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T008",
+    "name": "Autodesk Forma",
+    "category": "Generative / Early-stage Design",
+    "category_cluster": "Generative Design AI",
+    "aec_task": [
+      "site planning",
+      "schematic design",
+      "environmental performance analysis"
+    ],
+    "ai_type": "AI-assisted simulation + generative",
+    "input_modality": [
+      "3d-model-ifc",
+      "3d-model-proprietary",
+      "structured-data"
+    ],
+    "output_modality": [
+      "3d-model-proprietary",
+      "report",
+      "dashboard"
+    ],
+    "license": "Commercial (Autodesk subscription)",
+    "access": "commercial",
+    "pricing_tier": "subscription-enterprise",
+    "resolvable_url": "https://www.autodesk.com/products/forma/overview",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Revit",
+      "Rhino",
+      "IFC",
+      "Autodesk"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Autodesk cloud design platform (acquired Spacemaker 2020) for early-stage site planning with real-time AI-assisted simulation of daylight, wind, noise, and carbon. Handoff to Revit; 'Forma Building Design' announced AU 2025.",
+    "notes": "Largest commercial platform in seed. Acquired Spacemaker (Oslo, $240M, 2020). Environmental analysis distinguishes it from pure-generative constraint tools.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T009",
+    "name": "TestFit",
+    "category": "Generative Site Planning",
+    "category_cluster": "Generative Design AI",
+    "aec_task": [
+      "site programming",
+      "building yield analysis",
+      "pre-development feasibility"
+    ],
+    "ai_type": "generative constraint-based optimization",
+    "input_modality": [
+      "structured-data",
+      "text"
+    ],
+    "output_modality": [
+      "3d-model-proprietary",
+      "structured-data",
+      "report"
+    ],
+    "license": "Commercial SaaS",
+    "access": "commercial",
+    "pricing_tier": "subscription-enterprise",
+    "resolvable_url": "https://testfit.io",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Revit",
+      "AutoCAD",
+      "SketchUp"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Generative constraint-based site planning tool (not LLM) that generates ~3,000 site plan variants in ~3 s from site boundary + zoning constraints + program targets. Outputs include ranked 2D/3D layouts, pro forma financials, and exports to Revit/AutoCAD/SketchUp.",
+    "notes": "Pro forma financial output is unique in this seed set. 'Generative Design' feature shipped July 2024. Covers single-family to high-rise multifamily to industrial.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T010",
+    "name": "OpenSpace",
+    "category": "Construction Site Monitoring",
+    "category_cluster": "Construction Site Monitoring AI",
+    "aec_task": [
+      "progress tracking",
+      "BIM-to-field comparison",
+      "schedule risk detection"
+    ],
+    "ai_type": "CV",
+    "input_modality": [
+      "video",
+      "3d-model-ifc",
+      "structured-data"
+    ],
+    "output_modality": [
+      "dashboard",
+      "report",
+      "structured-data"
+    ],
+    "license": "Commercial SaaS",
+    "access": "commercial",
+    "pricing_tier": "subscription-enterprise",
+    "resolvable_url": "https://www.openspace.ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Procore",
+      "IFC",
+      "standalone"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "CV platform that auto-pins 360° photos/video to floor plans using AI (no manual tagging). 52B+ sq ft captured, 75,000+ projects, 124 countries. 'Visual Intelligence Platform' (Sept 2025) adds milestone-based progress inference and AI-generated field tasks.",
+    "notes": "Key differentiator vs manual photo management = AI-based auto-location. Differentiated from T011 Buildots by documentation focus vs BIM-comparison focus. VERIFIER 0.5.29 F-060: figures (52B+ sq ft, 75,000+ projects, 124 countries) reflect DISCOVERER pass snapshot; current product-page figures exceed these (growth trend, not a record error). Stats remain [claimed, VERIFY].",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T011",
+    "name": "Buildots",
+    "category": "Construction Progress AI",
+    "category_cluster": "Construction Site Monitoring AI",
+    "aec_task": [
+      "progress monitoring",
+      "schedule deviation detection",
+      "delay forecasting"
+    ],
+    "ai_type": "CV + ML",
+    "input_modality": [
+      "video",
+      "3d-model-ifc",
+      "structured-data"
+    ],
+    "output_modality": [
+      "dashboard",
+      "report"
+    ],
+    "license": "Commercial SaaS",
+    "access": "commercial",
+    "pricing_tier": "subscription-enterprise",
+    "resolvable_url": "https://www.buildots.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "IFC",
+      "standalone"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "CV (BIM-comparison model) + predictive analytics for construction progress monitoring via helmet-mounted 360° camera; detects schedule deviations and forecasts delays. $45M Series D (2025); reported 50% delay reduction across deployments.",
+    "notes": "Passive capture during routine walkthroughs = key UX differentiator. Turner Construction, JE Dunn deployments. Differentiated from T010 OpenSpace by BIM-comparison vs documentation focus.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T012",
+    "name": "Procore AI (Assist + Agents)",
+    "category": "PM / Agentic LLM Assistant",
+    "category_cluster": "PM/RAG Assistants",
+    "aec_task": [
+      "project management",
+      "RFI/submittal automation",
+      "schedule/compliance risk prediction"
+    ],
+    "ai_type": "LLM + agentic",
+    "input_modality": [
+      "text",
+      "structured-data"
+    ],
+    "output_modality": [
+      "text",
+      "report",
+      "structured-data"
+    ],
+    "license": "Commercial (bundled in Procore platform)",
+    "access": "commercial",
+    "pricing_tier": "subscription-enterprise",
+    "resolvable_url": "https://www.procore.com/ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Procore platform",
+      "standalone"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "LLM + agentic workflow platform embedded in Procore (18+ pre-built agents + Agent Builder GA 2025) for RFI/submittal automation, risk summaries, and custom agent creation. Acquired Newmetrix (formerly Smartvid.io) safety AI.",
+    "notes": "Agent Builder makes this a platform for third-party AEC AI agents, not just a point solution. 18+ pre-built agents documented publicly.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T013",
+    "name": "ALICE Technologies",
+    "category": "Generative Scheduling / Cost AI",
+    "category_cluster": "PM/RAG Assistants",
+    "aec_task": [
+      "preconstruction scheduling",
+      "cost modeling",
+      "what-if scenario analysis"
+    ],
+    "ai_type": "generative constraint-based optimization",
+    "input_modality": [
+      "structured-data",
+      "3d-model-ifc",
+      "text"
+    ],
+    "output_modality": [
+      "report",
+      "structured-data",
+      "text"
+    ],
+    "license": "Commercial SaaS (enterprise)",
+    "access": "commercial",
+    "pricing_tier": "subscription-enterprise",
+    "resolvable_url": "https://www.alicetechnologies.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Primavera P6",
+      "MS Project",
+      "IFC"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Generative constraint-based optimization engine (millions of schedule scenarios) for preconstruction scheduling and cost modeling. 'Schedule Insights Agent' (natural-language Q&A over optimization outputs) [claimed, VERIFY — LLM component unconfirmed as core vs. optional feature]. Stanford-origin; McKinsey partnership.",
+    "notes": "Reports 17% duration reduction + 14% labor cost savings across 35+ projects [claimed, VERIFY]. Dual-category (scheduling + cost). VERIFIER 0.5.29 F-060: ai_type LLM component removed — core is constraint-based optimization scheduler; 'Schedule Insights Agent' LLM layer unconfirmed as core vs. optional/separate feature.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T014",
+    "name": "T2D2",
+    "category": "Structural Inspection AI",
+    "category_cluster": "Structural AI",
+    "aec_task": [
+      "structural damage detection",
+      "façade condition assessment",
+      "infrastructure monitoring"
+    ],
+    "ai_type": "deep-learning CV",
+    "input_modality": [
+      "image",
+      "video"
+    ],
+    "output_modality": [
+      "report",
+      "structured-data",
+      "dashboard"
+    ],
+    "license": "Commercial SaaS",
+    "access": "commercial",
+    "pricing_tier": "subscription-enterprise",
+    "resolvable_url": "https://t2d2.ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "standalone"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Deep learning CV for structural damage detection and classification from mobile/camera/drone images — damage-type tags, severity classifications, and 3D-mapped condition records. Spun out of Thornton Tomasetti in 2021.",
+    "notes": "Bridges structural engineering and inspection/maintenance domains. Only structural inspection tool in seed. 3D-mapped condition records are a distinguishing output. VERIFIER 0.5.29 F-060: primary URL corrected to https://t2d2.ai (independent product site since spin-out 2021); https://www.thorntontomasetti.com/capability/t2d2 is a partner/capability page, not the primary product URL.",
+    "provenance": "DISCOVERER 0.14.4 / tools_seed.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T015",
+    "name": "Cove.tool + Vitras.AI",
+    "category": "Energy Modeling + LLM Reporting",
+    "category_cluster": "Energy/Sustainability AI",
+    "aec_task": [
+      "energy modeling",
+      "daylight analysis",
+      "carbon/cost optimization",
+      "LEED/code compliance",
+      "zoning reports"
+    ],
+    "ai_type": "ML (reduced-order energy model) + LLM reporting (Vitras.AI / Azure OpenAI)",
+    "input_modality": [
+      "3d-model-proprietary",
+      "structured-data",
+      "text"
+    ],
+    "output_modality": [
+      "dashboard",
+      "report"
+    ],
+    "license": "Commercial SaaS (DOE SBIR recipient; Vitras.AI 10 free reports/mo on free tier)",
+    "access": "freemium",
+    "pricing_tier": "Freemium (Vitras.AI 10 free reports/mo); full platform commercial [VERIFY]",
+    "resolvable_url": "https://cove.inc",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Revit",
+      "ArchiCAD",
+      "Rhino",
+      "SketchUp",
+      "standalone web"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "ML-based energy modeling platform (analysis.tool) + LLM zoning/compliance report generator (Vitras.AI on Azure OpenAI). '150h→30min for zoning reports' [claimed, VERIFY]. DOE SBIR recipient. Revit/ArchiCAD/Rhino/SketchUp plugins.",
+    "notes": "VERIFIER 0.5.31 F-062: company rebranded from \"Cove.tool\" → \"Cove Inc\" (cove.inc); Vitras.AI is the LLM reporting sub-product (also independently branded as vitras.ai). Two sub-products: analysis.tool = reduced-order ML energy model; Vitras.AI = LLM report generation layer (Azure OpenAI). 10 free Vitras.AI reports/mo on free tier [confirmed on pricing page]. \"150 hours → 30 minutes\" for zoning reports [claimed, VERIFY — vendor marketing].",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T016",
+    "name": "One Click LCA",
+    "category": "LCA / Embodied Carbon AI",
+    "category_cluster": "Energy/Sustainability AI",
+    "aec_task": [
+      "whole-life carbon LCA",
+      "embodied carbon calculation",
+      "EPD generation",
+      "early-design carbon estimation",
+      "BIM material mapping"
+    ],
+    "ai_type": "ML (AI material mapping: BIM→EPD auto-match; multi-language synonym learning) + ML early-design carbon estimation (Carbon Designer 3D)",
+    "input_modality": [
+      "3d-model-ifc",
+      "3d-model-proprietary",
+      "structured-data"
+    ],
+    "output_modality": [
+      "report",
+      "structured-data",
+      "dashboard"
+    ],
+    "license": "Commercial SaaS (500,000+ EPD database; 20+ BIM integrations)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://oneclicklca.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Revit",
+      "ArchiCAD",
+      "Tekla",
+      "Rhino",
+      "Grasshopper",
+      "Procore",
+      "Autodesk Takeoff",
+      "SAP S/4HANA",
+      "API"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Market leader for construction LCA. ML auto-maps BIM elements to EPDs (500,000+ database); Carbon Designer 3D module provides early-design embodied carbon from comparable-building ML database. 20+ BIM integrations.",
+    "notes": "AI material mapping page confirmed at oneclicklca.com/why-us/capabilities/powered-by-ai. Carbon Designer 3D = distinct from full LCA module (early-design comparative, not detailed). 500,000+ EPD database is key differentiator.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T017",
+    "name": "HVAKR",
+    "category": "HVAC Design AI",
+    "category_cluster": "HVAC/MEP AI",
+    "aec_task": [
+      "HVAC load calculations",
+      "space detection from floor plans",
+      "duct layout generation",
+      "code-compliant equipment schedules",
+      "psychrometric analysis"
+    ],
+    "ai_type": "OCR + AI agent (floor plan parsing) + LLM-style NL interface (bulk edit, analytical queries)",
+    "input_modality": [
+      "image",
+      "text"
+    ],
+    "output_modality": [
+      "report",
+      "drawing-annotation",
+      "structured-data"
+    ],
+    "license": "Commercial SaaS",
+    "access": "commercial",
+    "pricing_tier": "~$1,500/mo Solo; ~$10,000/mo Team; Enterprise API [claimed, VERIFY]",
+    "resolvable_url": "https://www.hvakr.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "standalone cloud",
+      "enterprise API"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "AI agent that detects spaces from architectural PDFs and generates HVAC load calcs, duct layouts with CFM, and code-compliant equipment schedules via NL interface. Techstars 2024. No Revit plugin yet.",
+    "notes": "Techstars 2024 batch confirmed. No Revit plugin (standalone cloud + API only). Pricing tiers [claimed, VERIFY — not confirmed independently].",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T018",
+    "name": "Augmenta ACP",
+    "category": "Electrical VDC AI",
+    "category_cluster": "HVAC/MEP AI",
+    "aec_task": [
+      "electrical raceway routing",
+      "conduit layout generation",
+      "clash-free coordination",
+      "BIM model population",
+      "electrical VDC pre-construction"
+    ],
+    "ai_type": "Spatial AI / geometry-native ML (3D routing — NOT LLM; proprietary geometry-native ML)",
+    "input_modality": [
+      "3d-model-proprietary",
+      "text"
+    ],
+    "output_modality": [
+      "3d-model"
+    ],
+    "license": "Commercial SaaS (enterprise; ACP 2.0 GA June 2026)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.augmenta.ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Revit-compatible output",
+      "browser-native input"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Geometry-native spatial AI for automated clash-free 3D electrical raceway routing and BIM model population. ACP 2.0 GA Jun 2026. 'Foundation Model for Construction' = vendor marketing [claimed]; core is geometry-native ML, not LLM. Claims 3x speed vs manual [claimed, VERIFY].",
+    "notes": "ACP 2.0 released June 17, 2026 (GlobeNewswire confirmed). 'Foundation Model for Construction' = [claimed marketing language — not a language foundation model]. Autodesk University 2025 case study confirmed. Mechanical + plumbing support on roadmap.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T019",
+    "name": "NavVis IVION",
+    "category": "Mobile LiDAR Scan-to-BIM",
+    "category_cluster": "Scan-to-BIM/Reality-Capture AI",
+    "aec_task": [
+      "as-built documentation",
+      "scan-to-BIM",
+      "construction verification",
+      "design-vs-reality comparison",
+      "remote site access"
+    ],
+    "ai_type": "CV (AI-based auto floor plan generation — Xray Maps; automated point cloud registration + alignment; QA reporting)",
+    "input_modality": [
+      "3d-model-proprietary",
+      "video"
+    ],
+    "output_modality": [
+      "3d-model",
+      "report",
+      "structured-data"
+    ],
+    "license": "Proprietary SaaS (IVION Core bundled with hardware; IVION Enterprise subscription)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.navvis.com/ivion/scan-to-bim",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Autodesk Revit (native add-in)",
+      "BIM 360",
+      "AutoCAD",
+      "API (Enterprise)"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Mobile LiDAR scan-to-BIM platform. AI Xray Maps for auto floor plan generation; automated point cloud registration + QA. Output: LOD 300 BIM-ready models, E57/LAS/RCS/PLY. ISO 9001/27001/SOC 2 certified.",
+    "notes": "hardware_required=true: IVION Core is bundled with NavVis VLX/MLX scanner hardware — cannot operate without it. IVION Enterprise subscription includes API. LOD 300 BIM-ready output.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": true
+  },
+  {
+    "tool_id": "T020",
+    "name": "Naska.AI",
+    "category": "Construction QC / BIM-vs-Reality",
+    "category_cluster": "Construction Site Monitoring AI",
+    "aec_task": [
+      "quality assurance",
+      "construction progress tracking",
+      "deviation detection vs BIM",
+      "schedule compliance",
+      "rework prevention"
+    ],
+    "ai_type": "CV + BIM-diff algorithms (automated deviation detection; AI priority ranking; schedule-linked tracking)",
+    "input_modality": [
+      "3d-model-ifc",
+      "image",
+      "structured-data"
+    ],
+    "output_modality": [
+      "report",
+      "dashboard"
+    ],
+    "license": "Proprietary SaaS",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://naska.ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Autodesk Construction Cloud",
+      "Revitzo"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Hardware-agnostic construction QC platform: tracks progress and detects deviations AGAINST existing BIM — NOT a scan-to-BIM generator (rebranded from Scaled Robotics Jan 2023 — robot hardware sold, pivoted to pure software). Morgan Sindall, Gammon, AF Gruppen deployments confirmed.",
+    "notes": "VERIFIER 0.5.31 F-062: recategorized Scan-to-BIM/Reality-Capture AI → Construction Site Monitoring AI — Naska.AI tracks progress and QC AGAINST existing BIM; it does NOT generate BIM from scans (distinct use-case from T019 NavVis IVION and T021 Hexagon GeoCloud which produce BIM/point-clouds from scan input). Originally Scaled Robotics (robot hardware sold Jan 2023; pure software pivot). Hardware-agnostic: any photogrammetry/3D scan input. Autodesk APS customer story confirmed (aps.autodesk.com/customer-stories/naskaai). Distinct from T010 OpenSpace (documentation focus) and T011 Buildots (helmet-cam BIM-comparison).",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T021",
+    "name": "Hexagon HxDR (Leica Reality Cloud Studio)",
+    "category": "Multi-Sensor Reality-Capture AI",
+    "category_cluster": "Scan-to-BIM/Reality-Capture AI",
+    "aec_task": [
+      "site survey",
+      "construction monitoring",
+      "building analysis",
+      "automated point cloud meshing",
+      "change detection vs CAD model"
+    ],
+    "ai_type": "CV/ML (automated meshing; AI point cloud classification; SLAM for GPS-denied capture; dedicated plant/piping ML model)",
+    "input_modality": [
+      "3d-model-proprietary",
+      "video",
+      "image",
+      "point-cloud"
+    ],
+    "output_modality": [
+      "3d-model",
+      "report",
+      "dashboard"
+    ],
+    "license": "Proprietary SaaS (content credits for city scans; enterprise subscription; white-label API)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://geocloud.hexagon.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Leica BLK hardware family",
+      "Boston Dynamics Spot (BLK ARC payload)",
+      "Autodesk ReCap",
+      "Cyclone 3DR",
+      "Hexagon/Bricsys BIM",
+      "white-label API"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Hexagon/Leica multi-sensor reality capture cloud platform. AI point cloud classification, automated Supermesh generation, SLAM for GPS-denied environments, plant/piping ML model. 3.6+ petabytes captured [claimed]. White-label API. AWS partnership confirmed.",
+    "notes": "VERIFIER 0.5.31 F-062: hxdr.com 301-redirects to Hexagon GeoCloud (geocloud.hexagon.com) — product rebranded from HxDR / Leica Reality Cloud Studio → Hexagon GeoCloud as of 2025. resolvable_url updated to canonical. hardware_required=true: primary workflow requires Leica BLK hardware (BLK2GO, BLK2FLY, BLK ARC); white-label API can consume third-party data. 3.6+ petabytes captured [claimed, VERIFY]. Spot ARC payload links T021↔T029 in deployment stack.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": true
+  },
+  {
+    "tool_id": "T022",
+    "name": "Bentley iTwin Platform",
+    "category": "Infrastructure Digital Twin SDK + AI",
+    "category_cluster": "Digital Twin AI",
+    "aec_task": [
+      "infrastructure digital twin development",
+      "AI project data search",
+      "site grading optimization",
+      "4D scheduling",
+      "defect detection",
+      "drawing automation"
+    ],
+    "ai_type": "ML + LLM + Generative AI (Bentley Copilot NLU; ML label optimizer; generative site grading; RAG for ProjectWise; Gaussian Splats; automated feature extraction)",
+    "input_modality": [
+      "3d-model-ifc",
+      "3d-model-proprietary",
+      "structured-data",
+      "text",
+      "image",
+      "point-cloud"
+    ],
+    "output_modality": [
+      "3d-model",
+      "dashboard",
+      "structured-data",
+      "report"
+    ],
+    "license": "Freemium SDK (pay-as-you-grow; iTwin.js Apache 2.0 OSS); Bentley Plus apps separately licensed",
+    "access": "freemium",
+    "pricing_tier": "Freemium SDK (pay-as-you-grow); OpenSite+, Synchro+ separately licensed",
+    "resolvable_url": "https://www.bentley.com/software/itwin-platform/",
+    "github_url": "https://github.com/iTwin",
+    "integration_ecosystem": [
+      "MicroStation",
+      "OpenRoads",
+      "OpenRail",
+      "ProjectWise",
+      "AssetWise",
+      "SYNCHRO",
+      "Cesium",
+      "50+ format connectors"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "yes (iTwin.js SDK open; REST API)",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Infrastructure digital twin SDK and AI platform. iTwin.js SDK = Apache 2.0 (github.com/iTwin). Bentley Copilot NLU, generative site grading (OpenSite+), 4D scheduling (Synchro+), Gaussian Splatting reality modeling. Dominant non-building AEC platform (roads/rail/utilities).",
+    "notes": "iTwin.js SDK genuinely open-source (Apache 2.0). Commercial value in Plus apps (OpenSite+, Synchro+). Bentley Copilot and generative site grading confirmed via YII 2025/AEC Magazine. Cesium integration confirmed. 50+ format connectors. Largest open ecosystem in this expansion.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T023",
+    "name": "DroneDeploy",
+    "category": "Drone Data Platform — Construction AI",
+    "category_cluster": "Drone/Aerial AI",
+    "aec_task": [
+      "3D mapping",
+      "progress tracking",
+      "earthworks quantification",
+      "safety hazard detection",
+      "defect detection",
+      "site documentation"
+    ],
+    "ai_type": "Vision-language AI (VLM + Progress AI + Safety AI + Earthworks AI — CV-based object/defect detection + schedule-matching)",
+    "input_modality": [
+      "image",
+      "video",
+      "3d-model-proprietary"
+    ],
+    "output_modality": [
+      "3d-model",
+      "report",
+      "dashboard"
+    ],
+    "license": "Proprietary SaaS (enterprise)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.dronedeploy.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "DJI",
+      "Skydio",
+      "Wingtra",
+      "Procore",
+      "Autodesk BIM 360",
+      "Esri",
+      "docked drone automation"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Construction drone data platform with Progress AI (BIM schedule comparison), Safety AI (PPE/toe board CV detection), Earthworks AI (volume quantification). 3M sites, 180 countries [claimed]. Turner, Skanska, DPR clients confirmed. Hardware-agnostic (DJI/Skydio/Wingtra).",
+    "notes": "3M sites, 180 countries [claimed, VERIFY]. VLM layer for NL querying over site imagery. Docked drone automation (autonomous repeatability) differentiates from manual capture. Safety AI confirmed operational (PPE, toe boards). Hardware-agnostic drone platform.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T024",
+    "name": "Skydio",
+    "category": "Autonomous Drone AI — AEC Inspection",
+    "category_cluster": "Drone/Aerial AI",
+    "aec_task": [
+      "construction progress monitoring",
+      "infrastructure inspection",
+      "3D scanning",
+      "autonomous repeatable flight missions"
+    ],
+    "ai_type": "Deep learning obstacle avoidance (detects ½\" wires) + Pathfinder AI (autonomous flight path planning: terrain, buildings, geofences, airspace)",
+    "input_modality": [
+      "image",
+      "video"
+    ],
+    "output_modality": [
+      "image",
+      "3d-model",
+      "report"
+    ],
+    "license": "Proprietary commercial (NDAA-compliant US-made)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.skydio.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Pix4D",
+      "DroneDeploy",
+      "Esri SiteScan",
+      "Propeller Aero",
+      "Bentley",
+      "Trimble Business Center"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "NDAA-compliant US-made autonomous drone. Deep learning obstacle avoidance (½\" wire detection) + Pathfinder AI for autonomous path planning through complex structures. R10 (wide-area photogrammetry) GA target H1 2026. Critical for US federal AEC (bridges, highways, federal buildings).",
+    "notes": "hardware_required=true: Skydio drone hardware required. NDAA compliance increasingly mandatory for US federal AEC projects. X10 = current model; R10 target H1 2026 (wide-area sensor, photogrammetry-grade). Pathfinder AI is trained ML (not rule-based).",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": true
+  },
+  {
+    "tool_id": "T025",
+    "name": "Pix4D / PIX4Dmatic",
+    "category": "Photogrammetry AI",
+    "category_cluster": "Drone/Aerial AI",
+    "aec_task": [
+      "large-scale site mapping",
+      "point cloud generation",
+      "orthomosaic production",
+      "BIM-to-reality comparison",
+      "volumetric survey",
+      "3D reconstruction"
+    ],
+    "ai_type": "ML photogrammetry (auto GCP detection; Sky Segmentation; Intersection Tie Points — ML trained on wall/floor junctures; SAM integration; Gaussian Splatting)",
+    "input_modality": [
+      "image",
+      "point-cloud"
+    ],
+    "output_modality": [
+      "3d-model",
+      "structured-data",
+      "image"
+    ],
+    "license": "Proprietary commercial (perpetual + subscription); PIX4Dcloud = SaaS",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.pix4d.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "DJI",
+      "Skydio",
+      "Wingtra",
+      "Esri",
+      "Autodesk",
+      "Trimble",
+      "Bentley",
+      "PIX4Dcloud collaboration"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "EPFL spinout photogrammetry platform (2011). ML: Intersection Tie Points (wall/floor juncture ML), auto-GCP, Sky Segmentation, SAM (Segment Anything Model) integration, Gaussian Splatting (georeferenced). PIX4Dmatic 2.0 released 2025. Most technically transparent drone/aerial tool in catalog.",
+    "notes": "EPFL spinout 2011. Publishes specific ML techniques on Pix4D Labs blog. SAM integration brings open-source FM into production photogrammetry. Hardware-agnostic (DJI, Skydio, Wingtra, any drone). PIX4Dmatic 2.0 released 2025 for large-scale processing.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T026",
+    "name": "Built Robotics (Exosystem)",
+    "category": "Autonomous Heavy Equipment AI",
+    "category_cluster": "Construction Robotics/Automation",
+    "aec_task": [
+      "autonomous trenching",
+      "grading",
+      "site prep",
+      "utility-scale solar foundation pile driving"
+    ],
+    "ai_type": "RTK-GNSS + IMU sensor fusion + kinematic motion-planning + 360° CV obstacle detection",
+    "input_modality": [
+      "structured-data",
+      "image"
+    ],
+    "output_modality": [
+      "structured-data",
+      "report"
+    ],
+    "license": "Proprietary commercial",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.builtrobotics.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Caterpillar",
+      "Hitachi",
+      "John Deere",
+      "Volvo excavators",
+      "IUOE partnership"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Autonomous heavy equipment AI kit (Exosystem) for trenching, grading, site prep, and utility-scale solar pile driving (RPD 35). RTK-GNSS+IMU sensor fusion + kinematic motion planning + 360° CV obstacle detection. Series C $112M raised.",
+    "notes": "hardware_required=true: requires proprietary Exosystem hardware kit + compatible excavator (Caterpillar/Hitachi/John Deere/Volvo). Series C $112M raised (confirmed). Exosystem shipping since 2021. 3-year enterprise contract signed Sept 2025. RPD 35 = Robotic Pile Driver for solar utility scale. IUOE (union) partnership confirmed.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": true
+  },
+  {
+    "tool_id": "T027",
+    "name": "Dusty Robotics (FieldPrinter)",
+    "category": "Robotic Layout Printing",
+    "category_cluster": "Construction Robotics/Automation",
+    "aec_task": [
+      "multi-trade construction layout",
+      "MEP layout",
+      "structural layout",
+      "architectural layout",
+      "data center construction",
+      "healthcare construction"
+    ],
+    "ai_type": "BIM-to-path planning + localization (SLAM/positioning sensors)",
+    "input_modality": [
+      "3d-model-proprietary"
+    ],
+    "output_modality": [
+      "structured-data",
+      "report"
+    ],
+    "license": "Proprietary commercial (robot-as-a-service)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.dustyrobotics.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Autodesk Revit (native)",
+      "AutoCAD",
+      "Dusty Portal",
+      "Autodesk App Store"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Robotic BIM-to-field layout printer (robot-as-a-service). BIM→path planning→inkjet floor markings on concrete slabs. Multi-trade: MEP, structural, architectural. Turner Construction, Skanska, DPR clients confirmed. Dusty AutoCAD Plugin on Autodesk App Store.",
+    "notes": "hardware_required=true: FieldPrinter robot is the product (robot-as-a-service; not a software subscription). SLAM-based indoor positioning. No purchase — per-project subscription. Dusty AutoCAD Plugin on Autodesk App Store confirmed.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": true
+  },
+  {
+    "tool_id": "T028",
+    "name": "Hilti Jaibot",
+    "category": "Robotic MEP Drilling",
+    "category_cluster": "Construction Robotics/Automation",
+    "aec_task": [
+      "overhead MEP anchor drilling",
+      "ceiling installation layout",
+      "concrete ceiling drilling",
+      "corrugated metal deck drilling",
+      "concrete wall drilling"
+    ],
+    "ai_type": "BIM-driven coordinate execution; indoor localization via Hilti PLT 300 total station + laser guidance; depth-sensing accuracy control",
+    "input_modality": [
+      "3d-model-proprietary"
+    ],
+    "output_modality": [
+      "report",
+      "structured-data"
+    ],
+    "license": "Proprietary commercial",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.hilti.com/content/hilti/W1/US/en/business/business/trends/jaibot.html",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Hilti Cloud",
+      "Autodesk Revit",
+      "AutoCAD"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Robotic MEP anchor drilling system (BIM-driven). Autonomous overhead drilling of concrete ceilings/corrugated metal deck. Hilti PLT 300 total station for indoor positioning + laser depth control. Color-coded trade marking. Launched 2020; V2 ~2022; global Hilti distribution.",
+    "notes": "hardware_required=true: Jaibot robot + PLT 300 total station both required. Single-task robot (drilling only — not general-purpose). Color-coded marking enables multi-trade coordination. Available globally through Hilti network. BIM/Revit/AutoCAD files imported via Hilti Cloud.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": true
+  },
+  {
+    "tool_id": "T029",
+    "name": "Boston Dynamics Spot (Construction)",
+    "category": "Legged Inspection Robot",
+    "category_cluster": "Construction Robotics/Automation",
+    "aec_task": [
+      "autonomous site progress monitoring",
+      "360° imaging",
+      "3D laser scanning",
+      "hazardous gas detection",
+      "remote site access",
+      "safety monitoring"
+    ],
+    "ai_type": "AIVI Learning + Google Gemini Robotics (visual AI, Jun 2025); dynamic legged locomotion; autonomous navigation; payload-dependent CV",
+    "input_modality": [
+      "image",
+      "video",
+      "structured-data"
+    ],
+    "output_modality": [
+      "image",
+      "3d-model",
+      "structured-data",
+      "report"
+    ],
+    "license": "Proprietary commercial (robot); SDK Apache 2.0 (github.com/boston-dynamics/spot-sdk)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://bostondynamics.com/industry/construction/",
+    "github_url": "https://github.com/boston-dynamics/spot-sdk",
+    "integration_ecosystem": [
+      "HoloBuilder (Procore)",
+      "FARO",
+      "Trimble",
+      "BIM platforms",
+      "Leica BLK ARC payload (links T021)"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "yes (SDK Apache 2.0)",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Legged inspection robot with AIVI Learning + Google Gemini Robotics (announced Jun 2025). Autonomous site monitoring, 3D scanning (FARO/Leica payloads), gas detection. SDK Apache 2.0. Turner, Brasfield & Gorrie, Acciona, STRABAG confirmed. Leica BLK ARC payload links T029↔T021.",
+    "notes": "hardware_required=true: Spot robot hardware required; SDK is open but robot is the product. AIVI Learning + Google Gemini Robotics announced June 2025. SDK (github.com/boston-dynamics/spot-sdk) = Apache 2.0 — open mission programming. BLK ARC payload (Leica BLK scanner on Spot) links T029↔T021 in deployment stack.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": true
+  },
+  {
+    "tool_id": "T030",
+    "name": "Exodigo",
+    "category": "Underground Utility Mapping AI",
+    "category_cluster": "Surveying/Geospatial AI",
+    "aec_task": [
+      "pre-excavation utility conflict detection",
+      "subsurface 3D mapping",
+      "pothole planning optimization",
+      "civil/rail infrastructure feasibility"
+    ],
+    "ai_type": "ML/Deep Learning (multi-sensor geophysical data fusion: EMI/GPR/gradiometer; physics-based simulation; automated anomaly detection)",
+    "input_modality": [
+      "structured-data",
+      "image"
+    ],
+    "output_modality": [
+      "3d-model",
+      "report",
+      "structured-data"
+    ],
+    "license": "Proprietary commercial (service model — Exodigo deploys field teams)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.exodigo.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "GIS workflows",
+      "CAD design workflows"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Underground utility mapping via proprietary multi-sensor geophysical array (MFIPE+GPR+gradiometer, sampling every 0.4 inches). ML fusion for 3D subsurface maps + design-ready GIS/CAD output. $214M raised ($96M Series B Jul 2025). Amtrak, CA High-Speed Rail, FL DOT, LA Metro, National Grid clients confirmed.",
+    "notes": "hardware_required=true: proprietary multi-sensor array required (service model — Exodigo deploys field teams). $96M Series B confirmed (GlobeNewswire Jul 2025); ~$700M estimated valuation. All utility detection performance claims [claimed, VERIFY — vendor press; no independent third-party audit found].",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": true
+  },
+  {
+    "tool_id": "T031",
+    "name": "Seequent Leapfrog (Bentley Systems)",
+    "category": "3D Geological + Geotechnical Modeling AI",
+    "category_cluster": "Geotechnical AI",
+    "aec_task": [
+      "3D subsurface geological modeling",
+      "geotechnical site characterization",
+      "civil site investigation",
+      "environmental contamination modeling",
+      "slope stability",
+      "linear infrastructure ground modeling"
+    ],
+    "ai_type": "ML (AutoCrop for core image logging; implicit modeling algorithms; early-access ML geological trend detection)",
+    "input_modality": [
+      "structured-data",
+      "image",
+      "3d-model-proprietary"
+    ],
+    "output_modality": [
+      "3d-model",
+      "report",
+      "dashboard"
+    ],
+    "license": "Commercial annual license (named or shared; enterprise multi-year)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.seequent.com/products-solutions/leapfrog-geo/",
+    "github_url": null,
+    "integration_ecosystem": [
+      "ArcGIS Pro",
+      "Seequent Central",
+      "MODFLOW/FEFLOW",
+      "Bentley OpenSite+ (civil integration 2025)"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "3D geological and geotechnical modeling platform (Bentley Systems subsidiary; ~$1.05B acquisition 2021). ML AutoCrop for drill core image logging; implicit modeling; early-access ML geological trend detection. G2 #1 Geology & Seismic Software Summer 2026.",
+    "notes": "Bentley Systems acquired Seequent ~$1.05B (2021). G2 #1 Geology & Seismic Software Summer 2026 (confirmed). AutoCrop (ML for core image logging) = primary AI feature. ML geological trend detection is early-access (not GA). Civil integration with Bentley OpenSite+ launched 2025.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T032",
+    "name": "viAct",
+    "category": "Computer Vision Construction Safety",
+    "category_cluster": "Safety AI",
+    "aec_task": [
+      "PPE compliance",
+      "fall protection",
+      "work-at-height",
+      "crane/hoisting safety",
+      "equipment collision prevention",
+      "confined space monitoring",
+      "scaffolding hazard detection",
+      "restricted zone intrusion"
+    ],
+    "ai_type": "CV + IoT sensor fusion + GenAI (viGent report drafting agent)",
+    "input_modality": [
+      "video",
+      "image",
+      "structured-data"
+    ],
+    "output_modality": [
+      "report",
+      "dashboard",
+      "text"
+    ],
+    "license": "Commercial SaaS",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.viact.ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Autodesk APS (confirmed)",
+      "hardware-agnostic CCTV/IP cameras",
+      "edge processing"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "CV + IoT safety AI for construction sites (PPE, fall protection, crane safety, restricted zones, confined space). viGent GenAI agent for automated incident report drafting. 400+ sites [claimed]. Autodesk APS customer story confirmed. Hardware-agnostic (existing CCTV/IP cameras via RTSP).",
+    "notes": "400+ sites [claimed, VERIFY]. Autodesk APS customer story confirmed (aps.autodesk.com). viGent = GenAI agent for automated report drafting (distinct feature). Edge processing available (not cloud-only). Hardware-agnostic: RTSP-compatible CCTV/IP cameras.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T033",
+    "name": "Versatile (AI-Powered Crane Intelligence)",
+    "category": "Crane IoT + ML Analytics",
+    "category_cluster": "Safety AI",
+    "aec_task": [
+      "crane utilization monitoring",
+      "lift sequencing and bottleneck detection",
+      "construction progress tracking",
+      "overtime avoidance",
+      "material flow optimization"
+    ],
+    "ai_type": "ML time-series analytics on IoT sensor data (passive under-hook sensor: accelerometer, load, GPS)",
+    "input_modality": [
+      "structured-data"
+    ],
+    "output_modality": [
+      "dashboard",
+      "report"
+    ],
+    "license": "Commercial SaaS + hardware (proprietary IoT device)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.versatile.ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "SOC 2 Type II + ISO certified; integrations not publicly documented"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Passive IoT sensor (mounted under crane hook) + ML time-series analytics for crane utilization, lift sequencing, bottleneck detection, and progress tracking. No active crane control (passive monitoring only). $100M+ raised. Turner Construction, SME Steel, Cooper Steel clients confirmed. Prior product branding \"CraneView\" not confirmed on current homepage; current branding \"AI-Powered Crane Intelligence\" [VERIFY product name].",
+    "notes": "VERIFIER 0.5.31 F-062: \"CraneView\" product name NOT confirmed on current homepage (versatile.ai now shows \"AI-Powered Crane Intelligence\"); prior \"CraneView\" name tagged [VERIFY]. Company name \"Versatile\" and URL versatile.ai confirmed. hardware_required=true: proprietary passive IoT sensor mounted under crane hook. $100M+ raised: $20M Series A + $80M Series B (confirmed Crunchbase/press). SOC 2 Type II + ISO certified. Named clients (Turner, SME Steel, Cooper Steel) confirmed.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": true
+  },
+  {
+    "tool_id": "T034",
+    "name": "Oracle CIC Safety Risk Forecast (Newmetrix)",
+    "category": "Predictive Safety Risk Scoring",
+    "category_cluster": "Safety AI",
+    "aec_task": [
+      "proactive safety risk forecasting",
+      "100-hazard photo detection",
+      "incident prevention analytics",
+      "schedule-risk integration"
+    ],
+    "ai_type": "ML (predictive analytics) + CV (photo-based hazard detection; originally Newmetrix 'Vinnie' system)",
+    "input_modality": [
+      "image",
+      "structured-data",
+      "text"
+    ],
+    "output_modality": [
+      "report",
+      "dashboard"
+    ],
+    "license": "Commercial SaaS (Oracle SKU; sold through Oracle C&E channel)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.oracle.com/construction-engineering/intelligence/",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Oracle Primavera",
+      "Oracle C&E suite",
+      "Autodesk",
+      "Procore",
+      "SharePoint"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "ML predictive safety risk scoring + CV hazard photo detection (100 hazard types). Originally Newmetrix 'Vinnie' system. Oracle-acquired Dec 2022; relaunched on Oracle Cloud Infrastructure 2024. NOTE: Core Newmetrix AI is an Oracle product — NOT Procore (see T012 amendment note).",
+    "notes": "ENTITY CLARIFICATION: Oracle acquired Newmetrix Dec 2022 (not Procore). T012 (Procore) footnote in original seed is incorrect on this point — Procore absorbed some Smartvid.io safety capabilities separately. Core Newmetrix AI continues as this Oracle CIC product. Relaunched on Oracle Cloud Infrastructure 2024.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T035",
+    "name": "IBM Maximo Application Suite (MAS)",
+    "category": "Predictive Maintenance + FM AI",
+    "category_cluster": "FM/Operations AI",
+    "aec_task": [
+      "facility condition assessment",
+      "predictive maintenance",
+      "space management",
+      "capital planning",
+      "BIM-to-asset handover (Revit→Maximo)",
+      "work order management"
+    ],
+    "ai_type": "LLM (IBM Granite) for NL asset queries (Maximo Assistant) + ML time-series (Condition Insights Agent for IoT anomaly detection)",
+    "input_modality": [
+      "structured-data",
+      "text",
+      "3d-model-proprietary"
+    ],
+    "output_modality": [
+      "report",
+      "dashboard",
+      "text",
+      "structured-data"
+    ],
+    "license": "Commercial (IBM cloud subscription; on-prem options)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.ibm.com/products/maximo",
+    "github_url": null,
+    "integration_ecosystem": [
+      "BIM/Revit connector (building handover)",
+      "ERP (SAP/Oracle)",
+      "IoT/SCADA",
+      "ServiceNow"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Enterprise FM AI platform (Maximo 30+ years; MAS 9.1 with AI agents 2025–2026). IBM Granite LLM for natural-language asset queries (Maximo Assistant) + ML Condition Insights Agent for IoT time-series anomaly detection. BIM/Revit connector for building asset handover workflow.",
+    "notes": "MAS 9.1 with AI agents released 2025–2026. IBM Granite = IBM's open-source LLM used in Maximo Assistant. BIM/Revit connector enables building-handover workflow (Revit→Maximo asset registration). ServiceNow integration for enterprise ITSM workflows. On-prem options available (rare in this catalog).",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T036",
+    "name": "Planon IWMS",
+    "category": "Smart Building FM AI",
+    "category_cluster": "FM/Operations AI",
+    "aec_task": [
+      "predictive maintenance scheduling",
+      "space utilization optimization",
+      "energy monitoring",
+      "sustainability reporting",
+      "facility condition data",
+      "data center FM"
+    ],
+    "ai_type": "ML (adaptive predictive maintenance models) + NLP (Planon Assistant for NL ticket creation) + IoT-driven anomaly detection",
+    "input_modality": [
+      "structured-data",
+      "text"
+    ],
+    "output_modality": [
+      "report",
+      "dashboard",
+      "structured-data"
+    ],
+    "license": "Commercial SaaS (enterprise subscription)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://planonsoftware.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "IoT sensors",
+      "BMS (building management systems)",
+      "ERP",
+      "sustainability platforms"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Enterprise IWMS with ML adaptive predictive maintenance, NLP assistant (Planon Assistant for NL ticket creation), IoT-driven anomaly detection. 35+ years; Netherlands-based; Planon for Data Centers launched Jun 2026. Global enterprise clients.",
+    "notes": "35+ years in market. Planon for Data Centers launched June 2026 (new vertical expansion). Adaptive predictive maintenance (models adjust over time from IoT data). NLP work order creation via Planon Assistant. Sensors: air quality, temp, humidity, occupancy, energy.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T037",
+    "name": "RIB SpecLink.AI",
+    "category": "AEC Specification LLM Assistant",
+    "category_cluster": "Code/Compliance AI",
+    "aec_task": [
+      "spec section drafting",
+      "quality control",
+      "risk identification",
+      "compliance checking",
+      "specification knowledge management"
+    ],
+    "ai_type": "LLM (Azure OpenAI Service; fine-tuned 2 years on proprietary + public construction datasets; stateless — no customer data retraining)",
+    "input_modality": [
+      "text"
+    ],
+    "output_modality": [
+      "text",
+      "report"
+    ],
+    "license": "Commercial SaaS (waitlist/early access 2025–2026)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.rib-software.com/en/rib-speclink/ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "RIB 4.0 platform",
+      "RIB SpecLive",
+      "910+ content sections",
+      "3,000+ reference standards"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "LLM spec assistant (Azure OpenAI, fine-tuned 2 years on construction datasets). Stateless — customer data NOT used for retraining (Azure OpenAI DPA confirmed). Drafts spec sections, flags risks, compliance checks across 910+ content sections + 3,000+ reference standards. Early access 2025–2026.",
+    "notes": "Stateless confirmed per Azure OpenAI DPA. Core SpecLink platform (established enterprise) already has 910+ content sections + 3,000+ reference standards; AI layer wraps this corpus. Early access as of 2025–2026. Distinct from T004 UpCodes (code Q&A) — SpecLink is specification authoring.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T038",
+    "name": "DESTINI Estimator (Beck Technology)",
+    "category": "AI-Powered QTO + Estimating",
+    "category_cluster": "Drawing/Takeoff AI",
+    "aec_task": [
+      "automated quantity takeoff from 2D/3D drawings",
+      "cost estimation",
+      "estimate benchmarking against historical data",
+      "subcontractor bid leveling"
+    ],
+    "ai_type": "ML (AI-powered takeoff from drawings) + data intelligence (historical cost benchmarking)",
+    "input_modality": [
+      "image",
+      "3d-model-proprietary",
+      "structured-data"
+    ],
+    "output_modality": [
+      "report",
+      "structured-data",
+      "dashboard"
+    ],
+    "license": "Commercial SaaS (SOC 2 certified)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.beck-technology.com/destini-estimator-preconstruction-software",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Autodesk",
+      "Procore",
+      "Microsoft Power BI",
+      "Join",
+      "Eos Cortex"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "AI-powered GC estimating platform. ML takeoff from 2D/3D drawings + historical cost benchmarking + subcontractor bid leveling. SOC 2 certified. Balfour Beatty, Gilbane, Brasfield & Gorrie, Swinerton, Ryan Companies clients confirmed.",
+    "notes": "Named client roster (Balfour Beatty, Gilbane, Brasfield & Gorrie, Swinerton, Ryan Companies) provides strong external validation. SOC 2 certified. Power BI integration for analytics. Distinct from T006 Togal.AI (floor plan QTO) — DESTINI targets GC estimating with historical cost benchmarking.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T039",
+    "name": "Glodon Cubicost",
+    "category": "BIM QTO + 5D Cost AI",
+    "category_cluster": "Drawing/Takeoff AI",
+    "aec_task": [
+      "automated quantity takeoff (civil, rebar, MEP)",
+      "5D BIM cost management",
+      "bid pricing",
+      "project cost control"
+    ],
+    "ai_type": "ML-based automated element recognition for QTO from BIM models; 'Industrial AI' framework for cost predictions [claimed]",
+    "input_modality": [
+      "3d-model-ifc",
+      "3d-model-proprietary",
+      "image"
+    ],
+    "output_modality": [
+      "report",
+      "structured-data"
+    ],
+    "license": "Commercial subscription (QuantifAI branded Indonesia; Cubicost for Asia/Middle East)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.glodon.com/en",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Autodesk Revit",
+      "IFC",
+      "RIB CostX",
+      "SoftwareOne marketplace"
+    ],
+    "maturity": "enterprise-established",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Dominant Asia/ME BIM QTO and 5D cost platform (Glodon; 25+ years; China market leader). ML automated element recognition for QTO. \"QuantifAI\" Indonesia sub-brand [claimed, VERIFY — not confirmed on glodon.com homepage]. \"Up to 80% efficiency reduction\" [claimed, VERIFY — vendor marketing; no independent benchmark]. International expansion 2023-2026: Vietnam/Philippines/Thailand/Indonesia/Middle East.",
+    "notes": "VERIFIER 0.5.31 F-062: \"QuantifAI\" Indonesia sub-brand NOT confirmed on glodon.com homepage [VERIFY before citing]; Glodon and Cubicost brand names confirmed. \"80% efficiency reduction\" [claimed, VERIFY — vendor marketing; no independent benchmark]. Geographic reach: Asia-dominant (China market leader 25+ years; Asia/ME international); NOT a US/EU domestic tool as of mid-2026. Western AEC encounters this in international JVs in SE Asia + Middle East.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T040",
+    "name": "BIMLOGIQ Copilot",
+    "category": "NL-to-Revit-API Code Generator",
+    "category_cluster": "AEC Code-Gen Copilots",
+    "aec_task": [
+      "workset management",
+      "parameter configuration",
+      "MEP modeling automation",
+      "structural automation",
+      "view/sheet creation",
+      "dimensioning",
+      "tagging"
+    ],
+    "ai_type": "LLM (proprietary Revit-API code-generation model; base model undisclosed)",
+    "input_modality": [
+      "text"
+    ],
+    "output_modality": [
+      "code",
+      "structured-data"
+    ],
+    "license": "Commercial ($35/mo or $400/yr; 30-day free trial; enterprise custom)",
+    "access": "commercial",
+    "pricing_tier": "$35/mo or $400/yr; 30-day free trial; enterprise custom [confirmed on website]",
+    "resolvable_url": "https://bimlogiq.com/copilot/homepage",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Revit 2022–2026 (Autodesk App Store)",
+      "Revit 2027 (MCP protocol support)"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "LLM-powered NL-to-Revit-API code generator. Executes workset mgmt, MEP modeling, view/sheet creation, dimensioning inside Revit without user coding. Saved commands re-run without LLM. Autodesk App Store (Revit 2022–2026). MCP protocol support for Revit 2027.",
+    "notes": "Autodesk App Store listing confirmed (Revit 2022–2026). MCP protocol support planned for Revit 2027 — unique forward compatibility. Saved commands persist AI-generated automation without re-prompting (efficiency feature). Base LLM provider undisclosed. $35/mo or $400/yr pricing confirmed.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T041",
+    "name": "BIBIM (SquareZero Inc.)",
+    "category": "OSS Dynamo Python LLM Copilot",
+    "category_cluster": "AEC Code-Gen Copilots",
+    "aec_task": [
+      "Dynamo script generation",
+      "Revit API automation via Dynamo Python nodes",
+      "GH graph analysis"
+    ],
+    "ai_type": "LLM (Claude Sonnet 4.6 primary; OpenAI GPT-5.5 + Gemini 3.1 Pro routing — v1.1 pending regression testing) + local RAG on Revit API docs",
+    "input_modality": [
+      "text"
+    ],
+    "output_modality": [
+      "code"
+    ],
+    "license": "Apache 2.0 (open source — BYOK: user supplies own API key)",
+    "access": "open-source",
+    "pricing_tier": "Free (BYOK — user brings own Anthropic/OpenAI/Google API key; zero vendor AI cost)",
+    "resolvable_url": "https://github.com/SquareZero-Inc/bibim-dynamo",
+    "github_url": "https://github.com/SquareZero-Inc/bibim-dynamo",
+    "integration_ecosystem": [
+      "Revit 2022–2027 + Dynamo 3.3–4.0",
+      "multi-LLM provider (Anthropic/OpenAI/Google)"
+    ],
+    "maturity": "research-prototype",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "yes (BYOK REST via user's key)",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "OSS (Apache 2.0) Dynamo Python LLM copilot (BYOK). Claude Sonnet 4.6 = primary + only fully field-verified provider as of v1.0.2 (per release notes). Local RAG on Revit API docs. Zero vendor data retention. v1.0.2 released Apr 28, 2026; Revit 2022–2027 + Dynamo 3.3–4.0.",
+    "notes": "BYOK = zero vendor AI API cost (user brings own Anthropic/OpenAI key). Claude Sonnet 4.6 = only fully field-verified provider end-to-end as of v1.0.2 (per BIBIM release notes). Apache 2.0 = maximally permissive. resolvable_url = github_url (no separate website). Only OSS Dynamo-native LLM copilot in this catalog.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T042",
+    "name": "Ant for Grasshopper",
+    "category": "GH Copilot — Canvas-Native LLM",
+    "category_cluster": "AEC Code-Gen Copilots",
+    "aec_task": [
+      "Grasshopper definition creation/modification",
+      "C# and Python script generation inside GH",
+      "parametric geometry logic explanation"
+    ],
+    "ai_type": "LLM (provider undisclosed); serializes GH graph state → structured LLM-readable format → executes changes back on canvas",
+    "input_modality": [
+      "text"
+    ],
+    "output_modality": [
+      "code",
+      "structured-data"
+    ],
+    "license": "Commercial (food4Rhino listed; pricing undisclosed)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://rhino-ant.ai/",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Rhino 7 and 8 / Grasshopper",
+      "food4Rhino marketplace"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Canvas-native GH LLM copilot. Serializes Grasshopper graph state into structured format for LLM, then executes changes back on canvas (bidirectional — not text code snippets for copy-paste). food4Rhino listed; active May 2026 per McNeel blog.",
+    "notes": "Bidirectional graph manipulation (GH state→LLM→GH changes) differentiates from generic code-gen tools. LLM provider undisclosed. Available on food4Rhino (food4rhino.com/en/app/ant) confirmed. McNeel blog coverage May 2026 confirmed. GH_mcp_server (github.com/veoery/GH_mcp_server) = related community primitive; cited as T042 ecosystem, not a separate T-id.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T043",
+    "name": "Swapp",
+    "category": "Revit Documentation Automation AI",
+    "category_cluster": "AEC Code-Gen Copilots",
+    "aec_task": [
+      "automated Revit documentation",
+      "floor plans",
+      "elevations",
+      "annotations",
+      "dimensioning/tagging",
+      "schedules",
+      "casework",
+      "stairs",
+      "curtain walls"
+    ],
+    "ai_type": "ML + LLM (firm-specific model trained on client's own project history and QA rules)",
+    "input_modality": [
+      "3d-model-proprietary",
+      "structured-data"
+    ],
+    "output_modality": [
+      "drawing-annotation",
+      "report"
+    ],
+    "license": "Commercial SaaS (tiered; Starter waitlist; pricing not disclosed)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://swapp.ai",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Revit (core workflow)"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Firm-specific Revit documentation automation AI. Trained on client's own project history + QA rules to enforce firm standards for annotations, dimensioning, schedules, curtain walls, stairs. 22.7M+ sq ft delivered [claimed]. Page, MOREgroup, VLK, Woolpert clients listed.",
+    "notes": "22.7M+ sq ft delivered [claimed, VERIFY]. Firm-specific model training = key differentiator (learns firm's own standards, not generic). Starter tier = waitlist. Named clients (Page, MOREgroup, VLK, Woolpert) listed on website.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T044",
+    "name": "Snaptrude",
+    "category": "AI-Native Cloud BIM Platform",
+    "category_cluster": "Generative Design AI",
+    "aec_task": [
+      "conceptual massing",
+      "space programming",
+      "AI floor plan generation",
+      "site analysis",
+      "building code/ADA checking",
+      "Revit/Rhino export",
+      "multi-user BIM (concept → LOD 300)"
+    ],
+    "ai_type": "Generative AI + LLM agents (multiple specialized delegates per task; Veo 3 for design presentation video)",
+    "input_modality": [
+      "text",
+      "structured-data",
+      "image"
+    ],
+    "output_modality": [
+      "3d-model",
+      "report"
+    ],
+    "license": "Freemium (3 free projects; Pro $499/yr; Org $1,199/yr; Education free)",
+    "access": "freemium",
+    "pricing_tier": "Freemium: 3 free projects; Pro $499/yr; Org $1,199/yr; Education free [confirmed on website]",
+    "resolvable_url": "https://www.snaptrude.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Revit export",
+      "IFC",
+      "Rhino export",
+      "cloud-native (browser-based)"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "AI-native cloud BIM platform (concept → LOD 300). Autonomous Mode: RFP→LOD300 via specialized LLM delegates (launched Oct 2025, Dezeen confirmed). Veo 3 for design video generation. Freemium (Pro $499/yr). Revit/IFC/Rhino export. Cloud-native (browser-based).",
+    "notes": "Autonomous Mode (RFP→LOD300) launched Oct 2025 (Dezeen coverage confirmed). Multiple specialized 'delegate' LLM agents per task. Veo 3 integration for design presentation video. Pricing published on website [confirmed]. Free education tier. No desktop install required.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T045",
+    "name": "Finch3D",
+    "category": "Residential Floor Plan Optimization AI",
+    "category_cluster": "Generative Design AI",
+    "aec_task": [
+      "floor plan layout generation",
+      "unit layout optimization",
+      "daylight/area compliance",
+      "early-stage schematic design",
+      "BIM model generation from layouts"
+    ],
+    "ai_type": "Generative (Graph Rules engine + AI optimization algorithms; constraint-based generative — NOT LLM-based)",
+    "input_modality": [
+      "structured-data",
+      "3d-model-proprietary"
+    ],
+    "output_modality": [
+      "3d-model",
+      "report"
+    ],
+    "license": "Commercial (pricing not disclosed; enterprise includes BIM export)",
+    "access": "commercial",
+    "pricing_tier": "[VERIFY]",
+    "resolvable_url": "https://www.finch3d.com",
+    "github_url": null,
+    "integration_ecosystem": [
+      "Revit 2022–2025 (Autodesk App Store)",
+      "Rhino",
+      "Grasshopper",
+      "Autodesk Forma"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "[VERIFY]",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Constraint-based generative AI for residential floor plan optimization (Graph Rules engine — NOT LLM-based). 130,000+ projects created. Sweco Denmark enterprise deployment. Autodesk App Store (Revit 2022–2025). Autodesk Forma integration confirmed.",
+    "notes": "RECONSIDERED from seed borderline ('enterprise-waitlist only'): Autodesk App Store listing confirmed, Sweco Denmark enterprise, 130,000+ projects. Core AI = Graph Rules constraint-based generative (not LLM). Optimized for residential floor plan generation upstream of Revit. Autodesk Forma integration confirmed.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T046",
+    "name": "Hypar",
+    "category": "Generative Cloud BIM Platform",
+    "category_cluster": "Generative Design AI",
+    "aec_task": [
+      "space planning",
+      "structural grid/column layout",
+      "furniture placement",
+      "IFC/Revit model generation",
+      "custom function authoring (C#/.NET SDK)"
+    ],
+    "ai_type": "Generative (parametric function engine + AI suggestions layer, Hypar 2.0 Sep 2024); NOTE: original text-to-BIM NLP is DISCONTINUED",
+    "input_modality": [
+      "structured-data",
+      "text"
+    ],
+    "output_modality": [
+      "3d-model",
+      "structured-data"
+    ],
+    "license": "Commercial ($79/mo per user); open-source C#/.NET SDK + element libraries",
+    "access": "commercial",
+    "pricing_tier": "$79/mo per user [confirmed]; open-source SDK (free)",
+    "resolvable_url": "https://hypar.io",
+    "github_url": "https://github.com/hypar-io",
+    "integration_ecosystem": [
+      "Revit (import/export)",
+      "IFC",
+      "web-based cloud-native",
+      "REST API"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "yes (REST API; open C#/.NET SDK)",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Commercial cloud BIM platform ($79/mo; Hypar 2.0 Sep 2024). Generative AI suggestions layer + open C#/.NET SDK. IMPORTANT: original text-to-BIM NLP is DISCONTINUED. Parametric function engine + REST API. Founded 2018 by ex-Autodesk head of Revit + 'father of Dynamo'.",
+    "notes": "IMPORTANT: text-to-BIM via NLP is NO LONGER AVAILABLE (discontinued early experiment). Hypar 2.0 (Sep 2024) = generative AI suggestions layer, not free-text BIM generation. RECONSIDERED from seed borderline ('near-include'): distinct from T003 Text2BIM (research prototype); Hypar is commercial cloud BIM at $79/mo. Open-source C#/.NET SDK (github.com/hypar-io). $79/mo pricing confirmed on website.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  },
+  {
+    "tool_id": "T047",
+    "name": "SkyCiv",
+    "category": "Cloud Structural Analysis + AI Assistant",
+    "category_cluster": "Structural AI",
+    "aec_task": [
+      "structural analysis (beams, frames, trusses)",
+      "member design",
+      "load combinations",
+      "code compliance (AISC/AS/Eurocode)",
+      "structural report generation",
+      "beam optimization"
+    ],
+    "ai_type": "ML/rule-based AI assistant for validation + report automation; open REST API",
+    "input_modality": [
+      "structured-data",
+      "text"
+    ],
+    "output_modality": [
+      "report",
+      "structured-data"
+    ],
+    "license": "Freemium (free tier; paid plans for full analysis + API access)",
+    "access": "freemium",
+    "pricing_tier": "Freemium (free tier; paid plans; pricing at skyciv.com/pricing) [confirmed]",
+    "resolvable_url": "https://skyciv.com",
+    "github_url": "https://github.com/skyciv/skyciv-api",
+    "integration_ecosystem": [
+      "standalone cloud",
+      "open REST API",
+      "VIKTOR.AI optimization",
+      "mobile app",
+      "Strand7/Multiframe/Microstran import"
+    ],
+    "maturity": "commercial-product",
+    "paper_doi": null,
+    "arxiv_id": null,
+    "api_available": "yes (open REST API; github.com/skyciv/skyciv-api)",
+    "benchmark_target": "[VERIFY]",
+    "short_description": "Cloud structural analysis platform with AI assistant (introduced 2025) for validation, member design, and PDF report automation. Freemium (free tier + paid API). AISC/AS/Eurocode. Strand7/Multiframe/Microstran import (Sep 2025). Open REST API (github.com/skyciv/skyciv-api).",
+    "notes": "AI assistant introduced 2025. Strand7/Multiframe/Microstran model import confirmed (Sep 2025 release). VIKTOR.AI integration for optimization workflows. REST API spec open (github.com/skyciv/skyciv-api). Most accessible structural AI in catalog (freemium). Freemium pricing published at skyciv.com/pricing.",
+    "provenance": "DISCOVERER 0.14.6 tools_seed_expansion.md",
+    "verification_status": "verified (existence)",
+    "hardware_required": false
+  }
+]
