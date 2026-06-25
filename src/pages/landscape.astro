@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import TierBadge from '../components/TierBadge.astro';
 import { benchmarks, toSlug } from '../lib/benchmarks';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 // Group by year, then by tier within year
 const years = [...new Set(benchmarks.map((b) => b.bibliographic.year).filter(Boolean))].sort() as number[];
 
@@ -83,7 +85,7 @@ const tierLabel = { 1: 'T1 — Core', 2: 'T2 — Peripheral', 3: 'T3 — Context
                 <div class="flex flex-col gap-2">
                   {items.map((b) => (
                     <a
-                      href={`/benchmarks/${toSlug(b.source_record_id)}`}
+                      href={`${base}/benchmarks/${toSlug(b.source_record_id)}`}
                       class={`rounded-lg border px-3 py-2 transition-all cursor-pointer no-underline ${tierColors[tier]}`}
                     >
                       <div class="flex items-start justify-between gap-2">

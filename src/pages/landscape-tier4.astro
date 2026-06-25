@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import tier4Data from '../data/tier4_datasets.json';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 type T4Entry = typeof tier4Data[0];
 
 // Category metadata
@@ -49,7 +51,7 @@ const t3adjCount = tier4Data.filter(e => e.tier3_adjacent).length;
           <strong class="text-amber-200">NOT counted in the 24-benchmark headline inventory</strong>.
           Primary papers use CNN / YOLO / PointNet / LSTM — no foundation-model evaluation (§4 IC3 not met).
           Sourced from <a href="https://arxiv.org/abs/2508.11482" target="_blank" rel="noopener" class="underline text-amber-400 hover:text-amber-200">OpenConstruction arXiv:2508.11482</a>.
-          The headline FM-eval catalog (24 benchmarks) is at <a href="/benchmarks" class="underline text-amber-400 hover:text-amber-200">/benchmarks</a>.
+          The headline FM-eval catalog (24 benchmarks) is at <a href={`${base}/benchmarks`} class="underline text-amber-400 hover:text-amber-200">/benchmarks</a>.
         </p>
       </div>
     </div>
@@ -69,7 +71,7 @@ const t3adjCount = tier4Data.filter(e => e.tier3_adjacent).length;
         {total} traditional CV/ML AEC datasets across 12 categories (2015–2026).
         Sourced from the OpenConstruction catalog (Xiong et al., arXiv:2508.11482).
         These are the background landscape — the 24 FM-evaluation benchmarks are at{' '}
-        <a href="/benchmarks" class="text-primary-400 hover:text-primary-300 transition-colors">/benchmarks</a>.
+        <a href={`${base}/benchmarks`} class="text-primary-400 hover:text-primary-300 transition-colors">/benchmarks</a>.
       </p>
 
       <!-- Key stats row -->
@@ -294,7 +296,7 @@ const t3adjCount = tier4Data.filter(e => e.tier3_adjacent).length;
           doi:10.1016/j.dibe.2026.100909.
           This page does not redistribute dataset contents — only catalog metadata (name, DOI/URL, task, license)
           as reported in the OC live catalog.
-          Data file: <a href="/data/tier4_datasets.json" download class="text-primary-400 hover:text-primary-300 transition-colors font-mono">tier4_datasets.json</a>.
+          Data file: <a href={`${base}/data/tier4_datasets.json`} download class="text-primary-400 hover:text-primary-300 transition-colors font-mono">tier4_datasets.json</a>.
         </p>
       </div>
     </section>

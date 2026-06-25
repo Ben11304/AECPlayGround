@@ -10,6 +10,8 @@ interface Props {
   benchmark: Benchmark;
 }
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 // Real thumbnails: 6 entries with confirmed open-redistribution licenses.
 // VERIFIER 0.5.30 F-061 (2026-06-22): R017 (arXiv non-exclusive, NOT CC-BY) and
 // R011 (CC-BY-NC-SA, NOT CC-BY-4.0 as previously labeled) REMOVED — no redistribution right.
@@ -17,12 +19,12 @@ interface Props {
 // R031 (CC-BY-SA) retained pending user decision on ShareAlike clause.
 // DO NOT add NC/SA/ND or arXiv-distrib records here without VERIFIER confirmation.
 const THUMBNAILS: Record<string, { src: string; license: string; creditShort: string; creditUrl: string }> = {
-  'R001': { src: '/thumbnails/r001.jpg', license: 'CC BY 4.0',    creditShort: 'arXiv:2510.16559',          creditUrl: 'https://arxiv.org/abs/2510.16559' },
-  'R003': { src: '/thumbnails/r003.png', license: 'MIT',          creditShort: 'GitHub/drags99/bridge-eqa', creditUrl: 'https://github.com/drags99/bridge-eqa' },
-  'R005': { src: '/thumbnails/r005.png', license: 'MIT',          creditShort: 'HF/DrafterBench',           creditUrl: 'https://huggingface.co/datasets/Eason666/DrafterBench' },
-  'R006': { src: '/thumbnails/r006.png', license: 'Apache 2.0',   creditShort: 'GitHub/nomic-ai',           creditUrl: 'https://github.com/nomic-ai/aec-bench' },
-  'R023': { src: '/thumbnails/r023.png', license: 'Apache 2.0',   creditShort: 'GitHub/huhuman/VL-Con',     creditUrl: 'https://github.com/huhuman/VL-Con' },
-  'R031': { src: '/thumbnails/r031.png', license: 'CC BY-SA 4.0', creditShort: 'arXiv:2606.20146',          creditUrl: 'https://arxiv.org/abs/2606.20146' },
+  'R001': { src: `${base}/thumbnails/r001.jpg`, license: 'CC BY 4.0',    creditShort: 'arXiv:2510.16559',          creditUrl: 'https://arxiv.org/abs/2510.16559' },
+  'R003': { src: `${base}/thumbnails/r003.png`, license: 'MIT',          creditShort: 'GitHub/drags99/bridge-eqa', creditUrl: 'https://github.com/drags99/bridge-eqa' },
+  'R005': { src: `${base}/thumbnails/r005.png`, license: 'MIT',          creditShort: 'HF/DrafterBench',           creditUrl: 'https://huggingface.co/datasets/Eason666/DrafterBench' },
+  'R006': { src: `${base}/thumbnails/r006.png`, license: 'Apache 2.0',   creditShort: 'GitHub/nomic-ai',           creditUrl: 'https://github.com/nomic-ai/aec-bench' },
+  'R023': { src: `${base}/thumbnails/r023.png`, license: 'Apache 2.0',   creditShort: 'GitHub/huhuman/VL-Con',     creditUrl: 'https://github.com/huhuman/VL-Con' },
+  'R031': { src: `${base}/thumbnails/r031.png`, license: 'CC BY-SA 4.0', creditShort: 'arXiv:2606.20146',          creditUrl: 'https://arxiv.org/abs/2606.20146' },
 };
 
 const { benchmark: b } = Astro.props;
@@ -77,7 +79,7 @@ const rubricTotal = b.rubric?.total ?? 0;
 ---
 
 <a
-  href={`/benchmarks/${slug}`}
+  href={`${base}/benchmarks/${slug}`}
   class="card group flex flex-col overflow-hidden no-underline bg-slate-900 border-slate-800 hover:border-slate-600 transition-all"
   data-tier={b.tier}
   data-domain={b.capability.domain}

@@ -115,8 +115,8 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
           </p>
         </div>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="/about" class="btn-secondary btn-sm">Read the methodology</a>
-          <a href="/data/benchmarks.json" download class="btn-ghost btn-sm text-slate-500">
+          <a href={link("/about")} class="btn-secondary btn-sm">Read the methodology</a>
+          <a href={`${base}/data/benchmarks.json`} download class="btn-ghost btn-sm text-slate-500">
             Download raw JSON
           </a>
         </div>
@@ -154,7 +154,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
         <p class="section-label">Featured benchmarks</p>
         <h2 class="section-title">Notable entries in the catalog</h2>
       </div>
-      <a href="/benchmarks" class="btn-ghost btn-sm text-slate-500 flex items-center gap-1.5">
+      <a href={link("/benchmarks")} class="btn-ghost btn-sm text-slate-500 flex items-center gap-1.5">
         View all {total}
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -215,7 +215,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
             </div>
           ))}
         </div>
-        <a href="/about#tiers" class="mt-5 inline-flex items-center gap-1.5 text-xs text-primary-400 hover:text-primary-300 transition-colors">
+        <a href={`${base}/about#tiers`} class="mt-5 inline-flex items-center gap-1.5 text-xs text-primary-400 hover:text-primary-300 transition-colors">
           Full rubric breakdown
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -270,7 +270,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
             </p>
           </div>
         </div>
-        <a href="/landscape" class="mt-5 inline-flex items-center gap-1.5 text-xs text-primary-400 hover:text-primary-300 transition-colors">
+        <a href={link("/landscape")} class="mt-5 inline-flex items-center gap-1.5 text-xs text-primary-400 hover:text-primary-300 transition-colors">
           See full landscape view
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -296,7 +296,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
           Existence verified; capability claims marked <span class="text-amber-400">[claimed]</span>.
         </p>
       </div>
-      <a href="/tools" class="btn btn-secondary shrink-0 self-start sm:self-auto">
+      <a href={link("/tools")} class="btn btn-secondary shrink-0 self-start sm:self-auto">
         Browse All Tools →
       </a>
     </div>
@@ -356,8 +356,8 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
       AI tools across {clusters.length} practice clusters, from BIM/IFC pipelines to compliance and monitoring platforms.
     </p>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/benchmarks" class="btn-primary btn-lg">Browse Benchmarks</a>
-      <a href="/tools" class="btn-secondary btn-lg">Explore Tools</a>
+      <a href={link("/benchmarks")} class="btn-primary btn-lg">Browse Benchmarks</a>
+      <a href={link("/tools")} class="btn-secondary btn-lg">Explore Tools</a>
     </div>
   </div>
 </section>

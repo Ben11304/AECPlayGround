@@ -50,14 +50,16 @@ const rubricEntries = RUBRIC_KEYS.map((k) => ({
   value: (b.rubric as Record<string, number>)[k] ?? 0,
 }));
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 // Thumbnail lookup — same set as BenchmarkCard
 const THUMBNAILS: Record<string, { src: string; license: string; creditShort: string; creditUrl: string }> = {
-  'R001': { src: '/thumbnails/r001.jpg', license: 'CC BY 4.0',    creditShort: 'arXiv:2510.16559', creditUrl: 'https://arxiv.org/abs/2510.16559' },
-  'R005': { src: '/thumbnails/r005.png', license: 'MIT',          creditShort: 'HF/DrafterBench',  creditUrl: 'https://huggingface.co/datasets/Eason666/DrafterBench' },
-  'R006': { src: '/thumbnails/r006.png', license: 'Apache 2.0',   creditShort: 'GitHub/nomic-ai',  creditUrl: 'https://github.com/nomic-ai/aec-bench' },
-  'R017': { src: '/thumbnails/r017.png', license: 'CC BY 4.0',    creditShort: 'arXiv:2505.22959', creditUrl: 'https://arxiv.org/abs/2505.22959' },
-  'R023': { src: '/thumbnails/r023.png', license: 'Apache 2.0',   creditShort: 'GitHub/huhuman',   creditUrl: 'https://github.com/huhuman/VL-Con' },
-  'R031': { src: '/thumbnails/r031.png', license: 'CC BY-SA 4.0', creditShort: 'arXiv:2606.20146', creditUrl: 'https://arxiv.org/abs/2606.20146' },
+  'R001': { src: `${base}/thumbnails/r001.jpg`, license: 'CC BY 4.0',    creditShort: 'arXiv:2510.16559', creditUrl: 'https://arxiv.org/abs/2510.16559' },
+  'R005': { src: `${base}/thumbnails/r005.png`, license: 'MIT',          creditShort: 'HF/DrafterBench',  creditUrl: 'https://huggingface.co/datasets/Eason666/DrafterBench' },
+  'R006': { src: `${base}/thumbnails/r006.png`, license: 'Apache 2.0',   creditShort: 'GitHub/nomic-ai',  creditUrl: 'https://github.com/nomic-ai/aec-bench' },
+  'R017': { src: `${base}/thumbnails/r017.png`, license: 'CC BY 4.0',    creditShort: 'arXiv:2505.22959', creditUrl: 'https://arxiv.org/abs/2505.22959' },
+  'R023': { src: `${base}/thumbnails/r023.png`, license: 'Apache 2.0',   creditShort: 'GitHub/huhuman',   creditUrl: 'https://github.com/huhuman/VL-Con' },
+  'R031': { src: `${base}/thumbnails/r031.png`, license: 'CC BY-SA 4.0', creditShort: 'arXiv:2606.20146', creditUrl: 'https://arxiv.org/abs/2606.20146' },
 };
 const thumb = THUMBNAILS[b.source_record_id] ?? null;
 const tierColor = b.tier === 1 ? 'emerald' : b.tier === 2 ? 'amber' : 'orange';
@@ -87,7 +89,7 @@ const tierColor = b.tier === 1 ? 'emerald' : b.tier === 2 ? 'amber' : 'orange';
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href={`${import.meta.env.BASE_URL}`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
-        <a href="/benchmarks">Benchmarks</a>
+        <a href={`${base}/benchmarks`}>Benchmarks</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <span class="text-slate-400" aria-current="page">{b.source_record_id}</span>
       </nav>
@@ -470,14 +472,14 @@ const tierColor = b.tier === 1 ? 'emerald' : b.tier === 2 ? 'amber' : 'orange';
             return (
               <>
                 {prev ? (
-                  <a href={`/benchmarks/${toSlug(prev.source_record_id)}`}
+                  <a href={`${base}/benchmarks/${toSlug(prev.source_record_id)}`}
                      class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-3 text-xs text-slate-400 hover:border-slate-600 hover:text-slate-200 transition-all">
                     <div class="text-[10px] text-slate-600 mb-0.5">← Prev</div>
                     {prev.name}
                   </a>
                 ) : <div class="flex-1"></div>}
                 {next ? (
-                  <a href={`/benchmarks/${toSlug(next.source_record_id)}`}
+                  <a href={`${base}/benchmarks/${toSlug(next.source_record_id)}`}
                      class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-3 text-xs text-slate-400 hover:border-slate-600 hover:text-slate-200 transition-all text-right">
                     <div class="text-[10px] text-slate-600 mb-0.5">Next →</div>
                     {next.name}

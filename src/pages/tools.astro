@@ -338,7 +338,7 @@ function pricingLabel(tier: string, access: string): string {
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {byCluster[cluster].map(tool => (
             <a
-              href={`/tools/${tool.tool_id.toLowerCase()}`}
+              href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/tools/${tool.tool_id.toLowerCase()}`}
               class="tool-card card card-feature group flex flex-col overflow-hidden no-underline"
               data-cluster={tool.category_cluster}
               data-access={tool.access}

@@ -7,6 +7,8 @@ import { YEAR_LOOKUP } from '../lib/year_lookup';
 // Integrity gating — mirrors preview.html exactly
 const LB_PENDING_SET = new Set(['R002','R003','R007','R011','R023']);
 const LB_NO_RESULTS_SET = LB_NO_RESULTS;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 // Chartable = in BM_ORDER and not in PENDING/NO_RESULTS
 const BM_ORDER = ['R001','R002','R003','R005','R006','R007','R009','R010','R011','R016','R019','R023','R030','R031','R033'];
 const LB_PILOT = BM_ORDER.filter(r => !LB_PENDING_SET.has(r) && !LB_NO_RESULTS_SET.has(r));
@@ -140,7 +142,7 @@ const _bmOrder = JSON.stringify(BM_ORDER);
           {[...LB_PENDING_SET].map(rid => {
             const b = benchmarks.find(x => x.source_record_id === rid);
             return b ? (
-              <a href={`/benchmarks/${rid.toLowerCase()}`}
+              <a href={`${base}/benchmarks/${rid.toLowerCase()}`}
                  class="chip bg-amber-900/30 text-amber-400 border border-amber-800/50 font-mono text-[10px] hover:bg-amber-900/50">
                 {rid} {b.name}
               </a>
@@ -156,7 +158,7 @@ const _bmOrder = JSON.stringify(BM_ORDER);
           {[...LB_NO_RESULTS_SET].map(rid => {
             const b = benchmarks.find(x => x.source_record_id === rid);
             return b ? (
-              <a href={`/benchmarks/${rid.toLowerCase()}`}
+              <a href={`${base}/benchmarks/${rid.toLowerCase()}`}
                  class="chip bg-slate-700/50 text-slate-400 border border-slate-700 font-mono text-[10px] hover:bg-slate-700/80">
                 {rid} {b.name}
               </a>
@@ -188,7 +190,7 @@ const _bmOrder = JSON.stringify(BM_ORDER);
               return (
                 <tr class={i % 2 === 0 ? 'bg-slate-950' : 'bg-slate-900/40'}>
                   <td class="py-2 px-4">
-                    <a href={`/benchmarks/${rid.toLowerCase()}`}
+                    <a href={`${base}/benchmarks/${rid.toLowerCase()}`}
                        class="text-slate-300 hover:text-blue-300 transition-colors">
                       {b.name}
                     </a>
