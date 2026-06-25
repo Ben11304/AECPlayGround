@@ -1,18 +1,21 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const navLinks = [
-  { href: '/',               label: 'Home' },
-  { href: '/benchmarks',     label: 'Benchmarks' },
-  { href: '/tools',          label: 'Tools' },
-  { href: '/landscape',      label: 'Landscape' },
-  { href: '/landscape-tier4',label: 'AEC Datasets' },
-  { href: '/leaderboard',    label: 'Leaderboard' },
-  { href: '/about',          label: 'About' },
+  { href: `${base}/`,               label: 'Home' },
+  { href: `${base}/benchmarks`,     label: 'Benchmarks' },
+  { href: `${base}/tools`,          label: 'Tools' },
+  { href: `${base}/landscape`,      label: 'Landscape' },
+  { href: `${base}/landscape-tier4`,label: 'AEC Datasets' },
+  { href: `${base}/leaderboard`,    label: 'Leaderboard' },
+  { href: `${base}/about`,          label: 'About' },
 ];
 
 const currentPath = Astro.url.pathname;
 function isActive(href: string) {
-  if (href === '/') return currentPath === '/' || currentPath === '';
-  return currentPath.startsWith(href);
+  const normalized = href.replace(base, '') || '/';
+  if (normalized === '/') return currentPath === '/' || currentPath === '' || currentPath === base || currentPath === base + '/';
+  return currentPath.startsWith(normalized) || currentPath.startsWith(base + normalized);
 }
 ---
 
@@ -20,7 +23,7 @@ function isActive(href: string) {
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
 
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-3 group shrink-0">
+    <a href={`${base}/`} class="flex items-center gap-3 group shrink-0">
       <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 text-white shadow-glow-sm transition-all group-hover:shadow-glow">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
           <rect x="1" y="9" width="3" height="6" rx="0.5" fill="white" opacity="0.55"/>
@@ -59,7 +62,7 @@ function isActive(href: string) {
     <div class="flex items-center gap-1.5">
       <!-- Data download link -->
       <a
-        href="/data/benchmarks.json"
+        href={`${base}/data/benchmarks.json`}
         download
         class="hidden sm:flex rounded-lg px-3 py-1.5 text-xs font-medium text-slate-400 border border-slate-800 hover:border-slate-600 hover:text-slate-200 hover:bg-slate-800 transition-all gap-1.5 items-center"
         aria-label="Download benchmark data JSON"
@@ -106,7 +109,7 @@ function isActive(href: string) {
       </a>
     ))}
     <div class="mt-3 pt-3 border-t border-slate-800">
-      <a href="/data/benchmarks.json" download class="flex items-center gap-2 px-3 py-2 text-xs text-slate-500 hover:text-slate-300 transition-colors">
+      <a href={`${base}/data/benchmarks.json`} download class="flex items-center gap-2 px-3 py-2 text-xs text-slate-500 hover:text-slate-300 transition-colors">
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M8 1v10M4 7l4 4 4-4"/><path d="M2 13h12" stroke-linecap="round"/>
         </svg>

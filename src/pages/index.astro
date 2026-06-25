@@ -5,6 +5,9 @@ import TierBadge from '../components/TierBadge.astro';
 import { benchmarks, getBenchmarkById } from '../lib/benchmarks';
 import { tools, clusters } from '../lib/tools';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const link = (p: string) => `${base}${p}`;
+
 // Key stats (computed from catalog data — no fabrication)
 const total = benchmarks.length;
 const t1count = benchmarks.filter(b => b.tier === 1).length;
@@ -58,13 +61,13 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
 
     <!-- CTA buttons -->
     <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
-      <a href="/benchmarks" class="btn-primary btn-lg group">
+      <a href={link("/benchmarks")} class="btn-primary btn-lg group">
         Explore Benchmarks
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
       </a>
-      <a href="/leaderboard" class="btn-secondary btn-lg">
+      <a href={link("/leaderboard")} class="btn-secondary btn-lg">
         View Leaderboard
       </a>
     </div>

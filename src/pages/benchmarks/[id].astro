@@ -85,7 +85,7 @@ const tierColor = b.tier === 1 ? 'emerald' : b.tier === 2 ? 'amber' : 'orange';
     <div class="relative z-10 mx-auto max-w-7xl">
       <!-- Breadcrumb -->
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a>
+        <a href={`${import.meta.env.BASE_URL}`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <a href="/benchmarks">Benchmarks</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
