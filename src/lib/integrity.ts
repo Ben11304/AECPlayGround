@@ -1,8 +1,8 @@
 // Integrity constants — single source of truth for gating rules
 // Mirrors preview.html LB_NO_RESULTS / EXCLUDED sets
 
-/** New benchmarks admitted in 20→24 cascade; no performance results sourced yet */
-export const LB_NO_RESULTS = new Set(['R030', 'R031', 'R033', 'R035', 'R036', 'R037', 'R039']);
+/** New benchmarks admitted in 24→26 cascade; no performance results sourced yet */
+export const LB_NO_RESULTS = new Set(['R030', 'R031', 'R033', 'R035', 'R036', 'R037', 'R039', 'R040', 'R041']);
 
 /** Excluded records — must NEVER appear in catalog or inventory listings */
 export const EXCLUDED = new Set(['R032']);

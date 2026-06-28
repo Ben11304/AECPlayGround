@@ -27,7 +27,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
 
 <Layout
   title="Home"
-  description="AECplayground — Systematic review of 20 AI benchmarks for Architecture, Engineering & Construction. PRISMA 3-arm protocol, 4-tier quality rubric, living catalog."
+  description="AECplayground — Systematic review of 26 AI benchmarks for Architecture, Engineering & Construction. PRISMA 4-arm protocol, 4-tier quality rubric, living catalog."
 >
 
 <!-- ── HERO ────────────────────────────────────────────────────── -->
@@ -100,8 +100,8 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
         <div class="space-y-4 text-slate-400 leading-relaxed">
           <p>
             AECplayground applies a full
-            <strong class="text-slate-200">PRISMA three-arm systematic review</strong>
-            — database search, grey literature sweep, and reference-chaining — to surface
+            <strong class="text-slate-200">PRISMA four-arm systematic review</strong>
+            — database search, grey literature sweep, reference-chaining, and forward-search — to surface
             and evaluate every AI benchmark relevant to the built environment.
           </p>
           <p>
@@ -127,8 +127,8 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
         {[
           { label: 'Records identified',    n: '157', note: 'DB + grey lit + chaining', color: 'border-slate-700 bg-slate-800/40' },
           { label: 'Screened',              n: '144', note: 'after de-duplication',      color: 'border-slate-700 bg-slate-800/40' },
-          { label: 'Full-text assessed',    n:  '27', note: 'eligibility review',         color: 'border-primary-900 bg-primary-950/40' },
-          { label: 'Included in review',    n:  `${total}`, note: 'T1 17 · T2 6 · T3 1',  color: 'border-primary-700 bg-primary-900/40' },
+          { label: 'Full-text assessed',    n:  '34', note: 'eligibility review',         color: 'border-primary-900 bg-primary-950/40' },
+          { label: 'Included in review',    n:  `${total}`, note: 'T1 18 · T2 7 · T3 1',  color: 'border-primary-700 bg-primary-900/40' },
         ].map((row, i) => (
           <div class={`rounded-xl border px-5 py-4 ${row.color} flex items-center justify-between`} style={`margin-left: ${i * 16}px`}>
             <div>
@@ -138,7 +138,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
             <div class="font-display text-2xl font-bold text-white">{row.n}</div>
           </div>
         ))}
-        <p class="text-[11px] text-slate-600 mt-1 pl-1">PRISMA 3-arm: database search · grey literature · reference chaining</p>
+        <p class="text-[11px] text-slate-600 mt-1 pl-1">PRISMA 4-arm: database search · grey literature · reference chaining · forward-search (+7 direct FT)</p>
       </div>
     </div>
   </div>

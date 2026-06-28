@@ -7416,5 +7416,179 @@
       "total": 13
     },
     "reported_results": []
+  },
+  {
+    "name": "DreamHouse",
+    "identifier": "https://luluyuyuyang.github.io/dreamhouse [VERIFY — arXiv ID not captured]",
+    "verification_status": "screened (Stage 2 INCLUDE; DISCOVERER 0.15.1 Consensus existence + §4-fit) — PROVISIONAL; all fields from DISCOVERER briefing; [VERIFY] full-text pending VERIFIER re-gate; arXiv ID [VERIFY]",
+    "tier": 1,
+    "source_record_id": "R040",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "How Far Are Vision-Language Models from Constructing the Real World? A Benchmark for Physical Generative Reasoning",
+      "authors": "Luyu Yang et al. [VERIFY]",
+      "year": 2026,
+      "venue": "unknown (preprint) [VERIFY]",
+      "doi": null,
+      "arxiv_id": "[VERIFY]",
+      "repo_url": "https://luluyuyuyang.github.io/dreamhouse [VERIFY — GitHub/HF repo URL not captured]",
+      "dataset_url": "[VERIFY]",
+      "version_accessed": "DISCOVERER 0.15.1 / 2026-06-27"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Architecture / Residential building construction (timber-frame; LOD 350)",
+      "lifecycle_stage": "Design → Construction",
+      "intended_user": "AEC researchers, VLM developers evaluating physical reasoning and constructability [VERIFY]"
+    },
+    "task": {
+      "task_type": "Physical generative reasoning — VLMs generate constructable timber-frame structures satisfying geometric, structural, and building-code-compliance constraints; iterative agentic interaction (observe intermediate build states → generate construction actions → receive deterministic validation feedback)",
+      "task_complexity": "Embodied/agentic (iterative observe-act-validate loop) [VERIFY]",
+      "output_type": "3D construction specification / structural design sequence [VERIFY]"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": null,
+      "point_cloud": false,
+      "video_multi_image": null,
+      "simulation_plot": false,
+      "symbolic_layout": null,
+      "tool_api_env": true,
+      "physics_simulation_env": null,
+      "notes": "Text + images (intermediate construction state visual representations [VERIFY]); tool_api_env=True (iterative agentic interaction with deterministic structural validation oracle). bim_ifc_3d=null: LOD 350 may involve 3D representation [VERIFY]. All flags [VERIFY] against full text."
+    },
+    "dataset_properties": {
+      "n_samples": "26,000 structures × 13 architectural styles [VERIFY]",
+      "n_tasks_categories": "13 architectural styles; 10 deterministic structural validation tests [VERIFY]",
+      "data_source": "Algorithmically generated timber-frame structures to LOD 350 construction-document standards [VERIFY]",
+      "annotation_method": "Deterministic 10-test structural validation framework (automated structural checking) [VERIFY]",
+      "expert_validation": "[VERIFY]",
+      "license": "[VERIFY]",
+      "accessibility": "Website: https://luluyuyuyang.github.io/dreamhouse [VERIFY — data/code release not confirmed]",
+      "train_test_split": "[VERIFY]",
+      "leakage_risk": "[VERIFY — algorithmically generated structures may reduce contamination risk vs real photographs]"
+    },
+    "evaluation": {
+      "metrics": "Deterministic 10-test structural validation framework — pass/fail per test + aggregate score [VERIFY full metric definition]",
+      "baseline_models": "State-of-the-art VLMs [VERIFY model list]",
+      "prompting_method": "Iterative agentic (observe-act-feedback loop) [VERIFY]",
+      "zero_few_shot": "[VERIFY]",
+      "rag_tool_use": "Agentic interaction with structural validation oracle [VERIFY]",
+      "human_eval_method": "[VERIFY]",
+      "llm_as_judge_method": "None (deterministic validation, not LLM-as-judge) [VERIFY]",
+      "robustness_tests": "[VERIFY]",
+      "cost_latency_reporting": "[VERIFY]"
+    },
+    "capability": {
+      "domain": "Architecture / Construction",
+      "task_spans": "Physical generative reasoning; agentic tool use; constructability verification",
+      "modality_spans": "text; images; tool/structural-oracle interaction",
+      "evaluation_spans": "Deterministic 10-test structural validation; agentic pass/fail",
+      "capability_spans": "Physical reasoning; constructability verification; agentic multi-step planning [VERIFY]"
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 2,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 1,
+      "d7_reproducibility": 1,
+      "d8_leakage_control": 1,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 15
+    },
+    "reported_results": []
+  },
+  {
+    "name": "ConstructionWorker-VLM [VERIFY]",
+    "identifier": "IEEE Access 2026; DOI [VERIFY]",
+    "verification_status": "screened (Stage 2 INCLUDE; DISCOVERER 0.15.1 Consensus existence + §4-fit; §4 IC1 borderline — action recognition anchors AEC inclusion) — PROVISIONAL; all fields from DISCOVERER briefing; [VERIFY] full-text pending VERIFIER re-gate; DOI [VERIFY]",
+    "tier": 2,
+    "source_record_id": "R041",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Can Vision-Language Models Understand Construction Workers? An Exploratory Study",
+      "authors": "H. Bui et al. [VERIFY — full author list not captured]",
+      "year": 2026,
+      "venue": "IEEE Access",
+      "doi": "[VERIFY]",
+      "arxiv_id": null,
+      "repo_url": "[VERIFY — no GitHub/HF mentioned]",
+      "dataset_url": "[VERIFY — dataset release not confirmed]",
+      "version_accessed": "DISCOVERER 0.15.1 / 2026-06-27"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Construction / Construction site worker monitoring (safety and productivity behavioral analysis)",
+      "lifecycle_stage": "Construction",
+      "intended_user": "Construction site safety managers, productivity analysts, AEC researchers in AI-enabled site monitoring [VERIFY]"
+    },
+    "task": {
+      "task_type": "Zero-shot VLM classification — (1) construction worker action recognition (10 categories) + (2) emotion recognition (10 categories) from static construction site images [VERIFY exact category lists]",
+      "task_complexity": "Single-image classification (multi-class); zero-shot",
+      "output_type": "Category label (action class or emotion class) per image [VERIFY]"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Single-modality: static images only (1,000 construction site images). Text prompt + category label output. No depth, video, or multi-sensor data."
+    },
+    "dataset_properties": {
+      "n_samples": "1,000 images [VERIFY]",
+      "n_tasks_categories": "20 categories (10 action + 10 emotion) [VERIFY exact category lists]",
+      "data_source": "Construction site images [VERIFY — acquisition source not stated in briefing]",
+      "annotation_method": "[VERIFY — annotator type, inter-annotator agreement]",
+      "expert_validation": "[VERIFY]",
+      "license": "[VERIFY — IEEE Access paper open-access; dataset license unknown]",
+      "accessibility": "[VERIFY — no GitHub/HF mentioned; dataset release status unknown → d7=0 provisional]",
+      "train_test_split": "[VERIFY]",
+      "leakage_risk": "[VERIFY — construction site images may overlap with VLM training data via web-scraped safety datasets]"
+    },
+    "evaluation": {
+      "metrics": "F1 score (macro) + accuracy [VERIFY per-class breakdown and averaging method]",
+      "baseline_models": "GPT-4o, Florence 2, LLaVA-1.5 [VERIFY model versions]",
+      "prompting_method": "Zero-shot [VERIFY exact prompt template]",
+      "zero_few_shot": "Zero-shot",
+      "rag_tool_use": "None",
+      "human_eval_method": "[VERIFY]",
+      "llm_as_judge_method": "None (classification with ground-truth labels)",
+      "robustness_tests": "[VERIFY]",
+      "cost_latency_reporting": "[VERIFY]"
+    },
+    "capability": {
+      "domain": "Construction management",
+      "task_spans": "Worker action recognition; emotion recognition; site monitoring",
+      "modality_spans": "text; images (static construction site)",
+      "evaluation_spans": "Zero-shot classification; F1; accuracy",
+      "capability_spans": "Behavioral analysis; construction site monitoring [VERIFY]"
+    },
+    "rubric": {
+      "d1_domain_authenticity": 1,
+      "d2_task_validity": 1,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 1,
+      "d5_evaluation_clarity": 1,
+      "d6_baseline_coverage": 1,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 1,
+      "total": 7
+    },
+    "reported_results": []
   }
 ]

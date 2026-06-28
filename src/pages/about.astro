@@ -65,7 +65,7 @@ import Layout from '../layouts/Layout.astro';
           {
             arm: 'D',
             title: 'VERIFIER Forward-Search',
-            desc: 'VERIFIER 0.5.33 forward-search pass (2026-06-23) targeting AEC AI benchmark preprints from arXiv 2025-09 through 2026-06. Added R035 (Qwen-BIM), R036 (Ishigaki-IDS-Bench), R037 (Blueprint-Bench), R039 (BEMEval-Doc2Schema); R038 excluded as EX-CONSOL dup-of-R008.',
+            desc: 'VERIFIER 0.5.33 forward-search pass (2026-06-23) targeting AEC AI benchmark preprints. Added R035 (Qwen-BIM), R036 (Ishigaki-IDS-Bench), R037 (Blueprint-Bench), R039 (BEMEval-Doc2Schema). Later DISCOVERER 0.15.1 NS1–NS9 pass added R040 (DreamHouse) and R041 (ConstructionWorker-VLM provisional). R038 excluded as EX-CONSOL dup-of-R008.',
             color: 'border-violet-800/40 bg-violet-950/20',
             dot:  'bg-violet-400',
           },
@@ -86,10 +86,10 @@ import Layout from '../layouts/Layout.astro';
         <h3 class="text-sm font-semibold text-slate-300 mb-4">Screening Flow</h3>
         <div class="flex flex-col gap-2 max-w-xl">
           {[
-            { stage: 'Identified',         n: '162', note: 'Four arms combined (A 33 + B 118 + C 6 + D 5), 13 dups removed → 149 screened',  bar: '100' },
-            { stage: 'Screened',           n: '149', note: 'Title/abstract screen (AEC-relevance + benchmark criteria)',                          bar: '92'  },
-            { stage: 'Full-text reviewed', n:  '32', note: 'Eligibility assessment: must be a published AEC FM-eval benchmark',                   bar: '20'  },
-            { stage: 'Included',           n:  '24', note: 'Passed rubric scoring; 8 excluded (incl. R032 F-054, R038 EX-CONSOL dup-of-R008)',   bar: '15'  },
+            { stage: 'Identified',         n: '157', note: 'Four arms combined (A 33 + B 118 + C 6) + 7 direct FT (Arm D)',  bar: '100' },
+            { stage: 'Screened',           n: '144', note: 'Title/abstract screen (AEC-relevance + benchmark criteria)',                          bar: '92'  },
+            { stage: 'Full-text reviewed', n:  '34', note: 'Eligibility assessment: must be a published AEC FM-eval benchmark',                   bar: '22'  },
+            { stage: 'Included',           n:  '26', note: 'Passed rubric scoring; 8 excluded (incl. R032 F-054, R038 EX-CONSOL dup-of-R008)',   bar: '17'  },
           ].map(s => (
             <div class="flex items-center gap-4">
               <div class="w-32 shrink-0 text-right text-[11px] text-slate-500">{s.stage}</div>
@@ -122,22 +122,22 @@ import Layout from '../layouts/Layout.astro';
           {
             tier: 'Tier 1',
             label: 'Core',
-            count: '17',
+            count: '18',
             cls: 'border-emerald-800/60 bg-emerald-950/20',
             dot: 'bg-emerald-500',
             desc: 'Purpose-built for AEC tasks; primary objective is AEC AI evaluation; all d5/d6/d7 floors met.',
             floor: 'd5 ≥ 1, d6 ≥ 1, d7 ≥ 1 (evaluation clarity, baseline coverage, reproducibility — partial is sufficient)',
-            examples: 'BuildArena (R001), DrafterBench (R005), HSE-Bench (R017), BIM-Edit (R031), CEQuest (R030)',
+            examples: 'BuildArena (R001), DrafterBench (R005), HSE-Bench (R017), BIM-Edit (R031), DreamHouse (R040)',
           },
           {
             tier: 'Tier 2',
             label: 'Peripheral',
-            count: '6',
+            count: '7',
             cls: 'border-amber-800/60 bg-amber-950/20',
             dot: 'bg-amber-500',
             desc: 'AEC-relevant benchmarks that miss at least one d5/d6/d7 floor (floor dimension = 0) or whose primary scope is only partially AEC.',
             floor: 'At least one of d5/d6/d7 = 0, OR primary AEC scope is partial',
-            examples: 'PE Civil Bench (R013), Construction Safety Poster Benchmark (R033), FloorplanQA (R011)',
+            examples: 'PE Civil Bench (R013), Construction Safety Poster Benchmark (R033), ConstructionWorker-VLM (R041 provisional)',
           },
           {
             tier: 'Tier 3',
