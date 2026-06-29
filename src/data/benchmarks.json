@@ -1067,702 +1067,712 @@
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.51",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Google Gemini 3 Pro",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.39",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Google Gemini 3 Pro",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.34",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Google Gemini 3 Pro",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.89",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Google Gemini 3 Pro",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.82",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.49",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.28",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.27",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.91",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.76",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.42",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.16",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.16",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.91",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.76",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.37",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.09",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.17",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.73",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.67",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.32",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.09",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.06",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.65",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.70",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.29",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.10",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.08",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.60",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.55",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.39",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.09",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.03",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.79",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.82",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.39",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.09",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.10",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.76",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.81",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.38",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.12",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.18",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.70",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.75",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting Exact-Match Accuracy (Mean)",
         "value": "0.32",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting Exact-Match Accuracy (Door)",
         "value": "0.10",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting Exact-Match Accuracy (Window)",
         "value": "0.09",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting Exact-Match Accuracy (Bedroom)",
         "value": "0.74",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting Exact-Match Accuracy (Toilet)",
         "value": "0.46",
         "source_location": "Table 1, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Google Gemini 3 Pro",
         "metric_name": "Counting MAPE Mean",
         "value": "16.0%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Google Gemini 3 Pro",
         "metric_name": "Counting MAPE Door",
         "value": "15.0%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Google Gemini 3 Pro",
         "metric_name": "Counting MAPE Window",
         "value": "20.4%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Google Gemini 3 Pro",
         "metric_name": "Counting MAPE Bedroom",
         "value": "4.8%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Google Gemini 3 Pro",
         "metric_name": "Counting MAPE Toilet",
         "value": "11.9%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting MAPE Mean",
         "value": "19.4%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting MAPE Door",
         "value": "20.0%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting MAPE Window",
         "value": "24.7%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting MAPE Bedroom",
         "value": "4.6%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "OpenAI GPT-5.2",
         "metric_name": "Counting MAPE Toilet",
         "value": "18.1%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting MAPE Mean",
         "value": "24.9%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting MAPE Door",
         "value": "30.7%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting MAPE Window",
         "value": "37.3%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting MAPE Bedroom",
         "value": "2.8%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Opus 4.5",
         "metric_name": "Counting MAPE Toilet",
         "value": "21.1%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting MAPE Mean",
         "value": "28.4%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting MAPE Door",
         "value": "35.1%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting MAPE Window",
         "value": "42.8%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting MAPE Bedroom",
         "value": "14.6%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4.1 Fast",
         "metric_name": "Counting MAPE Toilet",
         "value": "23.6%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting MAPE Mean",
         "value": "38.4%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting MAPE Door",
         "value": "39.9%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting MAPE Window",
         "value": "51.7%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting MAPE Bedroom",
         "value": "14.3%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Amazon Nova 2 Lite v1",
         "metric_name": "Counting MAPE Toilet",
         "value": "57.3%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting MAPE Mean",
         "value": "50.8%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting MAPE Door",
         "value": "69.0%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting MAPE Window",
         "value": "61.4%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting MAPE Bedroom",
         "value": "33.4%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Cohere Command A Vision",
         "metric_name": "Counting MAPE Toilet",
         "value": "42.1%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting MAPE Mean",
         "value": "29.5%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting MAPE Door",
         "value": "41.1%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting MAPE Window",
         "value": "40.8%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting MAPE Bedroom",
         "value": "13.4%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GLM-4.6V",
         "metric_name": "Counting MAPE Toilet",
         "value": "18.5%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting MAPE Mean",
         "value": "30.5%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting MAPE Door",
         "value": "46.2%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting MAPE Window",
         "value": "53.5%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting MAPE Bedroom",
         "value": "11.3%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Qwen3-VL-8B Instruct",
         "metric_name": "Counting MAPE Toilet",
         "value": "13.6%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting MAPE Mean",
         "value": "35.4%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting MAPE Door",
         "value": "50.7%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting MAPE Window",
         "value": "69.3%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting MAPE Bedroom",
         "value": "15.0%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "NVIDIA Nemotron Nano 12B v2 VL",
         "metric_name": "Counting MAPE Toilet",
         "value": "13.2%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting MAPE Mean",
         "value": "39.2%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting MAPE Door",
         "value": "51.8%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting MAPE Window",
         "value": "62.4%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting MAPE Bedroom",
         "value": "26.6%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Mistral Large 3",
         "metric_name": "Counting MAPE Toilet",
         "value": "22.1%",
         "source_location": "Table 2, arXiv:2601.04819",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "reported_performance": {
+      "best_model": "Object counting: Gemini 3 Pro (mean accuracy 0.51, mean MAPE 16.0%); QA: Gemini 3 (overall accuracy 0.854) [source-confirmed VERIFIER F-075: counting Table 1/Table 2; QA overall 0.854 stated in Fig. 5 only ≈0.85 — figure-read, not tabular]",
+      "worst_model": "Object counting: Cohere Command A Vision (accuracy 0.29, MAPE 50.8%); QA: Grok 4.1 Fast (0.312) (claimed)",
+      "average_performance": "Models plateau 0.4–0.55 exact-match for counting; strong models ~0.85 on QA (claimed)",
+      "performance_by_task": "Text-labeled categories (bedrooms, toilets) far outperform graphical (doors, windows) (claimed)",
+      "performance_by_modality": "N/A (images only)",
+      "reported_failure_modes": "Door/window hallucination; difficulty in dense regions; OCR > spatial > symbol enumeration gap (claimed)",
+      "human_baseline": null,
+      "practical_interpretation": "Current VLMs have significant gap in AEC drawing understanding, especially symbol-level object recognition vs. text-based categories (claimed)"
+    }
   },
   {
     "name": "BridgeEQA",
@@ -1855,212 +1865,222 @@
         "metric_name": "Answer Correctness — Multi-Frame VLM",
         "value": "0.507",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash Lite",
         "metric_name": "Answer Correctness — Socratic LLM w/ SG",
         "value": "0.542",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash Lite",
         "metric_name": "Answer Correctness — Multi-Frame w/ SG",
         "value": "0.581",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash Lite",
         "metric_name": "Answer Correctness — EMVR SG Only",
         "value": "0.512",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash Lite",
         "metric_name": "Answer Correctness — EMVR Images+SG",
         "value": "0.497",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Answer Correctness — Multi-Frame VLM",
         "value": "0.484",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Answer Correctness — Socratic LLM w/ SG",
         "value": "0.588",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Answer Correctness — Multi-Frame w/ SG",
         "value": "0.548",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Answer Correctness — EMVR SG Only",
         "value": "0.609",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Answer Correctness — EMVR Images+SG",
         "value": "0.551",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Answer Correctness — Multi-Frame VLM",
         "value": "0.576",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Answer Correctness — Socratic LLM w/ SG",
         "value": "0.614",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Answer Correctness — Multi-Frame w/ SG",
         "value": "0.622",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Answer Correctness — EMVR SG Only",
         "value": "0.638",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Answer Correctness — EMVR Images+SG",
         "value": "0.648",
         "source_location": "Table 1, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash Lite",
         "metric_name": "Image Citation Relevance — Multi-Frame VLM",
         "value": "0.717",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash Lite",
         "metric_name": "Image Citation Relevance — Socratic LLM w/ SG",
         "value": "0.775",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash Lite",
         "metric_name": "Image Citation Relevance — Multi-Frame w/ SG",
         "value": "0.802",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash Lite",
         "metric_name": "Image Citation Relevance — EMVR SG Only",
         "value": "0.798",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash Lite",
         "metric_name": "Image Citation Relevance — EMVR Images+SG",
         "value": "0.849",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Image Citation Relevance — Multi-Frame VLM",
         "value": "0.694",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Image Citation Relevance — Socratic LLM w/ SG",
         "value": "0.767",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Image Citation Relevance — Multi-Frame w/ SG",
         "value": "0.778",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Image Citation Relevance — EMVR SG Only",
         "value": "0.836",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Gemini 2.5 Flash",
         "metric_name": "Image Citation Relevance — EMVR Images+SG",
         "value": "0.803",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Image Citation Relevance — Multi-Frame VLM",
         "value": "0.687",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Image Citation Relevance — Socratic LLM w/ SG",
         "value": "0.838",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Image Citation Relevance — Multi-Frame w/ SG",
         "value": "0.833",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Image Citation Relevance — EMVR SG Only",
         "value": "0.876",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Grok 4 Fast",
         "metric_name": "Image Citation Relevance — EMVR Images+SG",
         "value": "0.889",
         "source_location": "Table 2, arXiv:2511.12676",
-        "provenance_flag": "claimed [VERIFY]"
+        "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "reported_performance": {
+      "best_model": "Grok 4 Fast with EMVR (w/ Images + Scene Graph): Answer Correctness 0.648, Image Citation Relevance 0.889, +9.34 pp condition rating accuracy vs baseline [source-confirmed VERIFIER F-075]",
+      "worst_model": "Gemini 2.5 Flash Lite Multi-Frame: Answer Correctness 0.507, Image Citation Relevance 0.717 (claimed)",
+      "average_performance": "Answer correctness range 0.507-0.648 across baselines (claimed)",
+      "performance_by_task": "Comparative / Relational / Integrative / Spatial breakdown reported (claimed)",
+      "performance_by_modality": "N/A (multi-image scenes only)",
+      "reported_failure_modes": "Poor image citations (irrelevant citations → incorrect answers); hallucinated citations for non-existent images (claimed)",
+      "human_baseline": "Expert inspectors 98% consistency ±1 condition rating (upper bound reference) (claimed)",
+      "practical_interpretation": "EMVR outperforms direct VLM approaches; retrieval bottleneck is key challenge; 50% answer correctness gap vs expert inspectors (claimed)"
+    }
   },
   {
     "name": "ArchPlanVQA",
@@ -3025,7 +3045,7 @@
         "metric_name": "Accuracy (%) — Task 1-1 (Code Memorization)",
         "value": "87.27",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3033,7 +3053,7 @@
         "metric_name": "Accuracy (%) — Task 1-1",
         "value": "83.64",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3041,7 +3061,7 @@
         "metric_name": "Accuracy (%) — Task 1-1",
         "value": "82.73",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3049,7 +3069,7 @@
         "metric_name": "Accuracy (%) — Task 1-2 (Terminology)",
         "value": "97.5",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3057,7 +3077,7 @@
         "metric_name": "Accuracy (%) — Task 1-2",
         "value": "98.5",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3065,7 +3085,7 @@
         "metric_name": "Accuracy (%) — Task 1-2",
         "value": "98.0",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3073,7 +3093,7 @@
         "metric_name": "Accuracy (%) — Task 2-1 (Code Provision Interp.)",
         "value": "55.24",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3081,7 +3101,7 @@
         "metric_name": "Accuracy (%) — Task 2-1",
         "value": "84.02",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3089,7 +3109,7 @@
         "metric_name": "Accuracy (%) — Task 2-1",
         "value": "60.05",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3097,7 +3117,7 @@
         "metric_name": "Accuracy (%) — Task 2-3 (Tabular Data Interp.)",
         "value": "63.49",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3105,7 +3125,7 @@
         "metric_name": "Accuracy (%) — Task 3-1 (Design Decision)",
         "value": "82.60",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3113,7 +3133,7 @@
         "metric_name": "Accuracy (%) — Task 3-1",
         "value": "60.77",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3121,7 +3141,7 @@
         "metric_name": "Accuracy (%) — Task 3-2 (Building Type Inference)",
         "value": "91.0",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3129,7 +3149,7 @@
         "metric_name": "Accuracy (%) — Task 3-3",
         "value": "34.65",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3137,7 +3157,7 @@
         "metric_name": "Accuracy (%) — Task 4-2 (MEP Design Calculation)",
         "value": "96.15",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3145,7 +3165,7 @@
         "metric_name": "Accuracy (%) — Task 4-2",
         "value": "88.46",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3153,7 +3173,7 @@
         "metric_name": "Accuracy (%) — Task 4-2",
         "value": "92.31",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3161,7 +3181,7 @@
         "metric_name": "Accuracy (%) — Task 4-2",
         "value": "34.62",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3169,7 +3189,7 @@
         "metric_name": "F1 — Task 5-1-1 (F1 task)",
         "value": "89.72",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3177,7 +3197,7 @@
         "metric_name": "F1 — Task 5-1-1",
         "value": "87.78",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       },
       {
@@ -3185,10 +3205,20 @@
         "metric_name": "F0.5/Soft-F1 — Task 5-1-2 (F0.5/Soft-F1 task)",
         "value": "93.24",
         "source_location": "Table 2, arXiv:2509.18776",
-        "provenance_flag": "claimed [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "SAMPLE ROWS ONLY — full table has 207 rows (9 models × 23 tasks); complete extraction requires full table fetch"
       }
-    ]
+    ],
+    "reported_performance": {
+      "best_model": "DeepSeek-R1: best in 14/23 tasks; 96.15% on MEP Calculation (Task 4-2) [source-confirmed VERIFIER F-075]",
+      "worst_model": "GLM-4-Plus on Compliance Checking (Task 5-1-3): 7.66% (claimed)",
+      "average_performance": "Wide variance by task; memorization tasks >90%; application tasks often <50%; creation tasks <60% across all models (claimed)",
+      "performance_by_task": "Full 23-task × 9-model table available in paper (all values cited as claimed)",
+      "performance_by_modality": "N/A (text only)",
+      "reported_failure_modes": "Tabular data (Tasks 2-3, 3-3 all models drastic underperformance); compliance checking (Task 5-1-3); brand compliance (5-1-4); knowledge-application gap; professional document generation <60% threshold (claimed)",
+      "human_baseline": null,
+      "practical_interpretation": "Reasoning models (DeepSeek-R1, QwQ-32B) outperform standard LLMs on calculation/application; standard LLMs outperform reasoning models on proofreading; all models fail at complex creation tasks (claimed)"
+    }
   },
   {
     "name": "Arch-Eval",
@@ -3984,283 +4014,293 @@
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Pair Distance (K room)",
         "value": "99.8%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Pair Distance (LR room)",
         "value": "99.5%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Pair Distance (B room)",
         "value": "99.7%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Pair Distance (HSSD room)",
         "value": "88.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Placement (K room)",
         "value": "87.8%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Placement (LR room)",
         "value": "80.5%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Placement (B room)",
         "value": "68.8%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Placement (HSSD room)",
         "value": "72.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Repositioning (K room)",
         "value": "73.8%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Repositioning (LR room)",
         "value": "79.3%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Repositioning (B room)",
         "value": "71.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Repositioning (HSSD room)",
         "value": "42.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Free Space (K room)",
         "value": "97.8%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Free Space (LR room)",
         "value": "0.2%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Free Space (B room)",
         "value": "2.7%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Free Space (HSSD room)",
         "value": "35.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Visibility (K room)",
         "value": "87.7%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Visibility (LR room)",
         "value": "81.7%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Visibility (B room)",
         "value": "74.8%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Visibility (HSSD room)",
         "value": "46.5%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — View Angle (K room)",
         "value": "92.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — View Angle (LR room)",
         "value": "87.7%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — View Angle (B room)",
         "value": "88.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — View Angle (HSSD room)",
         "value": "67.5%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Max Box (K room)",
         "value": "47.2%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Max Box (LR room)",
         "value": "7.8%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Max Box (B room)",
         "value": "5.8%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Max Box (HSSD room)",
         "value": "5.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Shortest Path (Valid) (K room)",
         "value": "59.2%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Shortest Path (Valid) (LR room)",
         "value": "53.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Shortest Path (Valid) (B room)",
         "value": "48.5%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Shortest Path (Valid) (HSSD room)",
         "value": "28.5%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Shortest Path (Fréchet) (K room)",
         "value": "45.3%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Shortest Path (Fréchet) (LR room)",
         "value": "24.7%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Shortest Path (Fréchet) (B room)",
         "value": "23.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "Claude Sonnet 4",
         "metric_name": "Accuracy — Shortest Path (Fréchet) (HSSD room)",
         "value": "15.5%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GPT-4.1",
         "metric_name": "Accuracy — Pair Distance (K room)",
         "value": "96.5%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GPT-4.1",
         "metric_name": "Accuracy — Pair Distance (LR room)",
         "value": "95.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GPT-4.1",
         "metric_name": "Accuracy — Pair Distance (B room)",
         "value": "96.3%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "GPT-4.1",
         "metric_name": "Accuracy — Pair Distance (HSSD room)",
         "value": "56.0%",
-        "source_location": "Table 6, arXiv:2507.07644",
-        "provenance_flag": "claimed [VERIFY]"
+        "source_location": "Table 7+8, arXiv:2507.07644",
+        "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "reported_performance": {
+      "best_model": "GPT-OSS-120B on Pair Distance (Kitchens): 99.3% [source-confirmed VERIFIER F-075]",
+      "worst_model": "Devstral-Small on Max Box (Living Rooms): 0.5% (claimed)",
+      "average_performance": "Reasoning models generally outperform general models; wide variance by question type (claimed)",
+      "performance_by_task": "Pair Distance generally higher; Max Box and Repositioning harder; detailed per-type per-room breakdown available (claimed)",
+      "performance_by_modality": "N/A (text only)",
+      "reported_failure_modes": "Constraint violations, centroid errors, clearance errors, token truncation for reasoning models (claimed)",
+      "human_baseline": null,
+      "practical_interpretation": "Spatial reasoning over symbolic floor plans remains challenging; best models near-perfect on distance but fail on space optimization (claimed)"
+    }
   },
   {
     "name": "DefectBench",
@@ -6544,7 +6584,7 @@
         "metric_name": "Image Retrieval Correct (Total)",
         "value": "37.7%",
         "source_location": "Table 1, ISARC 2024 p. 1130, doi:10.22260/ISARC2024/0146",
-        "provenance_flag": "value_unverified [VERIFY]",
+        "provenance_flag": "source_confirmed",
         "note": "NOTE: VL-Con is a DATASET CONSTRUCTION paper, not a multi-VLM leaderboard. Results reflect CLIP image retrieval quality and a ResNet-18 construction semantic filter — NOT head-to-head VLM evaluation."
       },
       {
@@ -6552,44 +6592,54 @@
         "metric_name": "Image Retrieval Incorrect but related (Total)",
         "value": "16.5%",
         "source_location": "Table 1, ISARC 2024 p. 1130, doi:10.22260/ISARC2024/0146",
-        "provenance_flag": "value_unverified [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "CLIP (prompt: \"{activity}\")",
         "metric_name": "Image Retrieval Incorrect (Total)",
         "value": "45.8%",
         "source_location": "Table 1, ISARC 2024 p. 1130, doi:10.22260/ISARC2024/0146",
-        "provenance_flag": "value_unverified [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "CLIP (prompt: \"{activity} in construction\")",
         "metric_name": "Image Retrieval Correct (Total)",
         "value": "36.4%",
         "source_location": "Table 1, ISARC 2024 p. 1130, doi:10.22260/ISARC2024/0146",
-        "provenance_flag": "value_unverified [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "CLIP (prompt: \"{activity} in construction\")",
         "metric_name": "Image Retrieval Incorrect but related (Total)",
         "value": "32.6%",
         "source_location": "Table 1, ISARC 2024 p. 1130, doi:10.22260/ISARC2024/0146",
-        "provenance_flag": "value_unverified [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "CLIP (prompt: \"{activity} in construction\")",
         "metric_name": "Image Retrieval Incorrect (Total)",
         "value": "31.1%",
         "source_location": "Table 1, ISARC 2024 p. 1130, doi:10.22260/ISARC2024/0146",
-        "provenance_flag": "value_unverified [VERIFY]"
+        "provenance_flag": "source_confirmed"
       },
       {
         "model_string": "ResNet-18 (construction semantic filter)",
         "metric_name": "Validation Accuracy",
         "value": "73.63%",
         "source_location": "Body text p. 1132, ISARC 2024, doi:10.22260/ISARC2024/0146",
-        "provenance_flag": "value_unverified [VERIFY]"
+        "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "reported_performance": {
+      "best_model": "CLIP zero-shot image retrieval on BCS dataset: 37.7% correct (prompt \"{activity}\"), 36.4% correct (prompt \"{activity} in construction\"); ResNet-18 construction semantic filter 73.63% validation accuracy [source-confirmed VERIFIER F-075 against ISARC 2024 proceedings doi:10.22260/ISARC2024/0146, Table 1 p.1130 + body p.1132; Tier-3 caveat: dataset-construction paper, CLIP retrieval + ResNet-18 filter, NOT a multi-VLM leaderboard]",
+      "worst_model": null,
+      "average_performance": "Domain gap documented between LAION-pretrained CLIP and construction-specific imagery; VL-Con proposed to bridge this gap (claimed)",
+      "performance_by_task": null,
+      "performance_by_modality": null,
+      "reported_failure_modes": "Performance degradation of VLMs on construction-specific visual concepts due to domain gap with LAION general-domain pretraining (claimed)",
+      "human_baseline": null,
+      "practical_interpretation": "VL-Con enables VLM domain adaptation for construction monitoring; ASTM Uniformat II taxonomy provides structured coverage of AEC activities (claimed)"
+    }
   },
   {
     "name": "VizArQA",
@@ -6895,7 +6945,88 @@
       "d10_practical_relevance": 2,
       "total": 12
     },
-    "reported_results": []
+    "reported_results": [
+      {
+        "model_string": "Gemma3:4b",
+        "metric_name": "Accuracy (%)",
+        "value": "61.83 ± 0.30",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemma3:4b",
+        "metric_name": "Evaluation Time (s)",
+        "value": "11.04 ± 0.73",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Phi4:14b",
+        "metric_name": "Accuracy (%)",
+        "value": "64.02 ± 0.55",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Phi4:14b",
+        "metric_name": "Evaluation Time (s)",
+        "value": "70.00 ± 4.06",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "LLaVA:34b",
+        "metric_name": "Accuracy (%)",
+        "value": "62.56 ± 1.06",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "LLaVA:34b",
+        "metric_name": "Evaluation Time (s)",
+        "value": "29.24 ± 4.36",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Llama 3.3:70b",
+        "metric_name": "Accuracy (%)",
+        "value": "65.37 ± 0.60",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Llama 3.3:70b",
+        "metric_name": "Evaluation Time (s)",
+        "value": "175.00 ± 2.52",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4.1",
+        "metric_name": "Accuracy (%)",
+        "value": "75.37 ± 1.13",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4.1",
+        "metric_name": "Evaluation Time (s)",
+        "value": "86.26 ± 5.21",
+        "source_location": "Table 2, arXiv:2508.16081",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "reported_performance": {
+      "best_model": "GPT-4.1 (75.37 ± 1.13% accuracy) [claimed]",
+      "worst_model": "Gemma3:4b (61.83 ± 0.30% accuracy) [claimed]",
+      "average_performance": "Range 61.83%–75.37%; all models below 80% [claimed]",
+      "performance_by_task": "[VERIFY — MCQ vs T/F breakdown not available]",
+      "performance_by_modality": "N/A (text-only evaluation)",
+      "reported_failure_modes": "Not reported",
+      "human_baseline": "Not reported",
+      "practical_interpretation": "14pp gap between best/worst; sub-80% ceiling on construction estimation knowledge suggests current LLMs have domain knowledge gaps [claimed]"
+    }
   },
   {
     "name": "BIM-Edit",
@@ -6981,7 +7112,319 @@
       "d10_practical_relevance": 2,
       "total": 16
     },
-    "reported_results": []
+    "reported_results": [
+      {
+        "model_string": "Gemini 3.0 Flash",
+        "metric_name": "BIM-Edit Score Final",
+        "value": "49.48 ± 32.72",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 3.0 Flash",
+        "metric_name": "BIM-Edit Score Geometry",
+        "value": "68.87 ± 43.55",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 3.0 Flash",
+        "metric_name": "BIM-Edit Score Semantics",
+        "value": "41.81 ± 46.67",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 3.0 Flash",
+        "metric_name": "BIM-Edit Score Topology",
+        "value": "37.77 ± 38.46",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen 3.6 Plus",
+        "metric_name": "BIM-Edit Score Final",
+        "value": "47.63 ± 35.35",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen 3.6 Plus",
+        "metric_name": "BIM-Edit Score Geometry",
+        "value": "59.21 ± 46.87",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen 3.6 Plus",
+        "metric_name": "BIM-Edit Score Semantics",
+        "value": "35.93 ± 44.14",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen 3.6 Plus",
+        "metric_name": "BIM-Edit Score Topology",
+        "value": "47.77 ± 42.65",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Sonnet 4.6",
+        "metric_name": "BIM-Edit Score Final",
+        "value": "45.31 ± 34.72",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Sonnet 4.6",
+        "metric_name": "BIM-Edit Score Geometry",
+        "value": "55.90 ± 47.95",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Sonnet 4.6",
+        "metric_name": "BIM-Edit Score Semantics",
+        "value": "33.85 ± 44.10",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Sonnet 4.6",
+        "metric_name": "BIM-Edit Score Topology",
+        "value": "46.19 ± 43.66",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Pro",
+        "metric_name": "BIM-Edit Score Final",
+        "value": "43.94 ± 34.35",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Pro",
+        "metric_name": "BIM-Edit Score Geometry",
+        "value": "50.14 ± 47.86",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Pro",
+        "metric_name": "BIM-Edit Score Semantics",
+        "value": "38.69 ± 44.64",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Pro",
+        "metric_name": "BIM-Edit Score Topology",
+        "value": "42.97 ± 40.89",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "DeepSeek V3.2",
+        "metric_name": "BIM-Edit Score Final",
+        "value": "43.21 ± 35.19",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "DeepSeek V3.2",
+        "metric_name": "BIM-Edit Score Geometry",
+        "value": "50.97 ± 47.30",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "DeepSeek V3.2",
+        "metric_name": "BIM-Edit Score Semantics",
+        "value": "34.80 ± 44.41",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "DeepSeek V3.2",
+        "metric_name": "BIM-Edit Score Topology",
+        "value": "43.86 ± 42.73",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Mini",
+        "metric_name": "BIM-Edit Score Final",
+        "value": "39.79 ± 34.21",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Mini",
+        "metric_name": "BIM-Edit Score Geometry",
+        "value": "45.18 ± 47.29",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Mini",
+        "metric_name": "BIM-Edit Score Semantics",
+        "value": "38.80 ± 45.89",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Mini",
+        "metric_name": "BIM-Edit Score Topology",
+        "value": "35.38 ± 39.46",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemma 4 31B",
+        "metric_name": "BIM-Edit Score Final",
+        "value": "37.54 ± 36.17",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemma 4 31B",
+        "metric_name": "BIM-Edit Score Geometry",
+        "value": "44.94 ± 48.07",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemma 4 31B",
+        "metric_name": "BIM-Edit Score Semantics",
+        "value": "29.94 ± 44.61",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemma 4 31B",
+        "metric_name": "BIM-Edit Score Topology",
+        "value": "37.75 ± 41.94",
+        "source_location": "Table 1, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen 3.6 Plus",
+        "metric_name": "Strict Solve Rate All (324)",
+        "value": "3.4%",
+        "source_location": "Table 2, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen 3.6 Plus",
+        "metric_name": "Strict Solve Rate Direct (108)",
+        "value": "4.63%",
+        "source_location": "Table 2, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "DeepSeek V3.2",
+        "metric_name": "Strict Solve Rate All (324)",
+        "value": "2.2%",
+        "source_location": "Table 2, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Sonnet 4.6",
+        "metric_name": "Strict Solve Rate All (324)",
+        "value": "1.9%",
+        "source_location": "Table 2, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 3.0 Flash",
+        "metric_name": "Strict Solve Rate All (324)",
+        "value": "1.5%",
+        "source_location": "Table 2, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Pro",
+        "metric_name": "Strict Solve Rate All (324)",
+        "value": "1.2%",
+        "source_location": "Table 2, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemma 4 31B",
+        "metric_name": "Strict Solve Rate All (324)",
+        "value": "0.9%",
+        "source_location": "Table 2, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Mini",
+        "metric_name": "Strict Solve Rate All (324)",
+        "value": "0.6%",
+        "source_location": "Table 2, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Sonnet 4.6",
+        "metric_name": "Failure Rate Overall",
+        "value": "46.3%",
+        "source_location": "Table 3, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen 3.6 Plus",
+        "metric_name": "Failure Rate Overall",
+        "value": "24.4%",
+        "source_location": "Table 3, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "DeepSeek V3.2",
+        "metric_name": "Failure Rate Overall",
+        "value": "20.7%",
+        "source_location": "Table 3, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemma 4 31B",
+        "metric_name": "Failure Rate Overall",
+        "value": "14.8%",
+        "source_location": "Table 3, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 3.0 Flash",
+        "metric_name": "Failure Rate Overall",
+        "value": "14.5%",
+        "source_location": "Table 3, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Pro",
+        "metric_name": "Failure Rate Overall",
+        "value": "0.6%",
+        "source_location": "Table 3, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.4 Mini",
+        "metric_name": "Failure Rate Overall",
+        "value": "0.0%",
+        "source_location": "Table 3, arXiv:2606.20146",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "reported_performance": {
+      "best_model": "Gemini 3.0 Flash (Composite Score: 49.48 ± 32.72%) [claimed]",
+      "worst_model": "Gemma 4 31B (Composite Score: 37.54 ± 36.17%) [claimed]",
+      "average_performance": "All 7 models below 50% composite; highest perfect-task rate (≥98% on all axes): Qwen 3.6 Plus at 3.4% [claimed]",
+      "performance_by_task": "Geometry Score highest (~40–69% across models); Semantic + Topology substantially lower (~30–48%); create tasks typically easier than delete/update [claimed]",
+      "performance_by_modality": "N/A",
+      "reported_failure_modes": "High within-model variance (SD ~32–37pp); topological and semantic understanding weaker than geometric manipulation; complex scenes significantly harder than simple [claimed]",
+      "human_baseline": "Not reported",
+      "practical_interpretation": "IFC BIM editing remains largely unsolved for current LLMs; geometric manipulation more tractable than semantic/topological constraints [claimed]"
+    }
   },
   {
     "name": "Construction Safety Poster Benchmark",
