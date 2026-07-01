@@ -57,6 +57,7 @@ const pricing = pricingDisplay(tool);
 
 // Has any claimed stats in description
 const hasClaimedStats = tool.short_description.includes('[claimed, VERIFY]') || tool.notes.includes('[claimed, VERIFY]');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -87,9 +88,9 @@ const hasClaimedStats = tool.short_description.includes('[claimed, VERIFY]') || 
   <div class="page-header">
     <div class="mx-auto max-w-5xl">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href={`${import.meta.env.BASE_URL}`}>Home</a>
+        <a href={`${base}/`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
-        <a href="/tools">Tools</a>
+        <a href={`${base}/tools`}>Tools</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <span class="text-slate-400" aria-current="page">{tool.name}</span>
       </nav>
@@ -406,7 +407,7 @@ const hasClaimedStats = tool.short_description.includes('[claimed, VERIFY]') || 
       </div>
 
       <!-- Back link -->
-      <a href="/tools" class="btn btn-secondary text-xs justify-center">
+      <a href={`${base}/tools`} class="btn btn-secondary text-xs justify-center">
         ← All tools
       </a>
     </div>

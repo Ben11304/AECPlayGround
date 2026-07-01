@@ -2,6 +2,7 @@
 import type { Benchmark } from '../lib/types';
 import { toSlug, activeModalities, domainChips } from '../lib/benchmarks';
 import { isNoResults } from '../lib/integrity';
+import { getThumbnail } from '../lib/thumbnails';
 import TierBadge from './TierBadge.astro';
 import ProvenanceBadge from './ProvenanceBadge.astro';
 import ModalityChips from './ModalityChips.astro';
@@ -10,29 +11,12 @@ interface Props {
   benchmark: Benchmark;
 }
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-// Real thumbnails: 6 entries with confirmed open-redistribution licenses.
-// VERIFIER 0.5.30 F-061 (2026-06-22): R017 (arXiv non-exclusive, NOT CC-BY) and
-// R011 (CC-BY-NC-SA, NOT CC-BY-4.0 as previously labeled) REMOVED — no redistribution right.
-// R011 may be re-added if DISCOVERER confirms OpenReview camera-ready is genuinely CC-BY.
-// R031 (CC-BY-SA) retained pending user decision on ShareAlike clause.
-// DO NOT add NC/SA/ND or arXiv-distrib records here without VERIFIER confirmation.
-const THUMBNAILS: Record<string, { src: string; license: string; creditShort: string; creditUrl: string }> = {
-  'R001': { src: `${base}/thumbnails/r001.jpg`, license: 'CC BY 4.0',    creditShort: 'arXiv:2510.16559',          creditUrl: 'https://arxiv.org/abs/2510.16559' },
-  'R003': { src: `${base}/thumbnails/r003.png`, license: 'MIT',          creditShort: 'GitHub/drags99/bridge-eqa', creditUrl: 'https://github.com/drags99/bridge-eqa' },
-  'R005': { src: `${base}/thumbnails/r005.png`, license: 'MIT',          creditShort: 'HF/DrafterBench',           creditUrl: 'https://huggingface.co/datasets/Eason666/DrafterBench' },
-  'R006': { src: `${base}/thumbnails/r006.png`, license: 'Apache 2.0',   creditShort: 'GitHub/nomic-ai',           creditUrl: 'https://github.com/nomic-ai/aec-bench' },
-  'R023': { src: `${base}/thumbnails/r023.png`, license: 'Apache 2.0',   creditShort: 'GitHub/huhuman/VL-Con',     creditUrl: 'https://github.com/huhuman/VL-Con' },
-  'R031': { src: `${base}/thumbnails/r031.png`, license: 'CC BY-SA 4.0', creditShort: 'arXiv:2606.20146',          creditUrl: 'https://arxiv.org/abs/2606.20146' },
-};
-
 const { benchmark: b } = Astro.props;
 const slug = toSlug(b.source_record_id);
 const noResults = isNoResults(b.source_record_id);
 const domains = domainChips(b);
 const mods = activeModalities(b);
-const thumb = THUMBNAILS[b.source_record_id] ?? null;
+const thumb = getThumbnail(b.source_record_id);
 
 // Domain → SVG glyph paths
 function domainGlyph(domain: string): string {
@@ -76,6 +60,7 @@ const identLabel = identifier.startsWith('arXiv:')
   : identifier;
 
 const rubricTotal = b.rubric?.total ?? 0;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <a
@@ -90,7 +75,7 @@ const rubricTotal = b.rubric?.total ?? 0;
   <!-- Thumbnail header -->
   <div class="relative flex h-32 items-center justify-center overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-800">
     {thumb ? (
-      /* Real photograph/figure for the 6 open-licensed benchmarks */
+      /* Real photograph/figure for the 5 open-licensed benchmarks */
       <>
         <img
           src={thumb.src}

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -11,7 +12,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="page-header">
     <div class="mx-auto max-w-5xl">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href={`${import.meta.env.BASE_URL}`}>Home</a>
+        <a href={`${base}/`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <span class="text-slate-400" aria-current="page">About &amp; Methodology</span>
       </nav>
@@ -64,8 +65,8 @@ import Layout from '../layouts/Layout.astro';
           },
           {
             arm: 'D',
-            title: 'VERIFIER Forward-Search',
-            desc: 'VERIFIER 0.5.33 forward-search pass (2026-06-23) targeting AEC AI benchmark preprints. Added R035 (Qwen-BIM), R036 (Ishigaki-IDS-Bench), R037 (Blueprint-Bench), R039 (BEMEval-Doc2Schema). Later DISCOVERER 0.15.1 NS1–NS9 pass added R040 (DreamHouse) and R041 (ConstructionWorker-VLM provisional). R038 excluded as EX-CONSOL dup-of-R008.',
+            title: 'Forward-Search & Expansion',
+            desc: 'VERIFIER 0.5.33 forward-search (2026-06-23): Added R035 (Qwen-BIM), R036 (Ishigaki-IDS-Bench), R037 (Blueprint-Bench), R039 (BEMEval-Doc2Schema); R038 excluded as EX-CONSOL dup-of-R008. DISCOVERER 0.15.1 NS1–NS9 expansion (2026-06-27): Added R040 (DreamHouse), R041 (ConstructionWorker-VLM).',
             color: 'border-violet-800/40 bg-violet-950/20',
             dot:  'bg-violet-400',
           },
@@ -86,10 +87,10 @@ import Layout from '../layouts/Layout.astro';
         <h3 class="text-sm font-semibold text-slate-300 mb-4">Screening Flow</h3>
         <div class="flex flex-col gap-2 max-w-xl">
           {[
-            { stage: 'Identified',         n: '157', note: 'Four arms combined (A 33 + B 118 + C 6) + 7 direct FT (Arm D)',  bar: '100' },
-            { stage: 'Screened',           n: '144', note: 'Title/abstract screen (AEC-relevance + benchmark criteria)',                          bar: '92'  },
-            { stage: 'Full-text reviewed', n:  '34', note: 'Eligibility assessment: must be a published AEC FM-eval benchmark',                   bar: '22'  },
-            { stage: 'Included',           n:  '26', note: 'Passed rubric scoring; 8 excluded (incl. R032 F-054, R038 EX-CONSOL dup-of-R008)',   bar: '17'  },
+            { stage: 'Identified',         n: '164', note: 'Four arms + DISCOV expansion (A 33 + B 118 + C 6 + D 7), 13 dups removed',         bar: '100' },
+            { stage: 'Screened',           n: '151', note: 'Title/abstract screen (AEC-relevance + benchmark criteria)',                          bar: '92'  },
+            { stage: 'Full-text reviewed', n:  '34', note: 'Eligibility assessment: must be a published AEC FM-eval benchmark',                   bar: '21'  },
+            { stage: 'Included',           n:  '26', note: 'Passed rubric scoring; 8 excluded (incl. R032 F-054, R038 EX-CONSOL dup-of-R008)',   bar: '16'  },
           ].map(s => (
             <div class="flex items-center gap-4">
               <div class="w-32 shrink-0 text-right text-[11px] text-slate-500">{s.stage}</div>
@@ -137,7 +138,7 @@ import Layout from '../layouts/Layout.astro';
             dot: 'bg-amber-500',
             desc: 'AEC-relevant benchmarks that miss at least one d5/d6/d7 floor (floor dimension = 0) or whose primary scope is only partially AEC.',
             floor: 'At least one of d5/d6/d7 = 0, OR primary AEC scope is partial',
-            examples: 'PE Civil Bench (R013), Construction Safety Poster Benchmark (R033), ConstructionWorker-VLM (R041 provisional)',
+            examples: 'PE Civil Bench (R013), Construction Safety Poster Benchmark (R033), ConstructionWorker-VLM (R041)',
           },
           {
             tier: 'Tier 3',

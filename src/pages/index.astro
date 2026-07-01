@@ -5,9 +5,6 @@ import TierBadge from '../components/TierBadge.astro';
 import { benchmarks, getBenchmarkById } from '../lib/benchmarks';
 import { tools, clusters } from '../lib/tools';
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const link = (p: string) => `${base}${p}`;
-
 // Key stats (computed from catalog data — no fabrication)
 const total = benchmarks.length;
 const t1count = benchmarks.filter(b => b.tier === 1).length;
@@ -23,6 +20,7 @@ const modelCount = allModels.size;
 // Featured benchmarks: R031 (only BIM), R017 (only verified), R001 (BuildArena — agentic T1)
 const FEATURED_IDS = ['R031', 'R017', 'R001'];
 const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -44,7 +42,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
     <!-- Eyebrow -->
     <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-800/60 bg-primary-950/50 px-4 py-1.5 text-xs font-semibold text-primary-300">
       <span class="inline-block h-1.5 w-1.5 rounded-full bg-primary-400 animate-pulse-slow"></span>
-      PRISMA Systematic Review · Three-Arm Protocol
+      PRISMA Systematic Review · Four-Arm Protocol
     </div>
 
     <!-- Headline -->
@@ -61,13 +59,13 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
 
     <!-- CTA buttons -->
     <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
-      <a href={link("/benchmarks")} class="btn-primary btn-lg group">
+      <a href={`${base}/benchmarks`} class="btn-primary btn-lg group">
         Explore Benchmarks
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
       </a>
-      <a href={link("/leaderboard")} class="btn-secondary btn-lg">
+      <a href={`${base}/leaderboard`} class="btn-secondary btn-lg">
         View Leaderboard
       </a>
     </div>
@@ -101,7 +99,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
           <p>
             AECplayground applies a full
             <strong class="text-slate-200">PRISMA four-arm systematic review</strong>
-            — database search, grey literature sweep, reference-chaining, and forward-search — to surface
+            — database search, grey literature sweep, targeted new search, and forward-search expansion — to surface
             and evaluate every AI benchmark relevant to the built environment.
           </p>
           <p>
@@ -115,7 +113,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
           </p>
         </div>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href={link("/about")} class="btn-secondary btn-sm">Read the methodology</a>
+          <a href={`${base}/about`} class="btn-secondary btn-sm">Read the methodology</a>
           <a href={`${base}/data/benchmarks.json`} download class="btn-ghost btn-sm text-slate-500">
             Download raw JSON
           </a>
@@ -125,8 +123,8 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
       <!-- PRISMA funnel visual -->
       <div class="flex flex-col gap-2">
         {[
-          { label: 'Records identified',    n: '157', note: 'DB + grey lit + chaining', color: 'border-slate-700 bg-slate-800/40' },
-          { label: 'Screened',              n: '144', note: 'after de-duplication',      color: 'border-slate-700 bg-slate-800/40' },
+          { label: 'Records identified',    n: '164', note: 'A 33 + B 118 + C 6 + D 7', color: 'border-slate-700 bg-slate-800/40' },
+          { label: 'Screened',              n: '151', note: 'after de-duplication',      color: 'border-slate-700 bg-slate-800/40' },
           { label: 'Full-text assessed',    n:  '34', note: 'eligibility review',         color: 'border-primary-900 bg-primary-950/40' },
           { label: 'Included in review',    n:  `${total}`, note: 'T1 18 · T2 7 · T3 1',  color: 'border-primary-700 bg-primary-900/40' },
         ].map((row, i) => (
@@ -138,7 +136,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
             <div class="font-display text-2xl font-bold text-white">{row.n}</div>
           </div>
         ))}
-        <p class="text-[11px] text-slate-600 mt-1 pl-1">PRISMA 4-arm: database search · grey literature · reference chaining · forward-search (+7 direct FT)</p>
+        <p class="text-[11px] text-slate-600 mt-1 pl-1">PRISMA 4-arm: database search · grey literature · targeted search · forward-search expansion</p>
       </div>
     </div>
   </div>
@@ -154,7 +152,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
         <p class="section-label">Featured benchmarks</p>
         <h2 class="section-title">Notable entries in the catalog</h2>
       </div>
-      <a href={link("/benchmarks")} class="btn-ghost btn-sm text-slate-500 flex items-center gap-1.5">
+      <a href={`${base}/benchmarks`} class="btn-ghost btn-sm text-slate-500 flex items-center gap-1.5">
         View all {total}
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -171,7 +169,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
     <!-- Why featured callout -->
     <div class="mt-6 grid gap-3 sm:grid-cols-3 text-[11px] text-slate-600">
       <div class="px-2">
-        <strong class="text-slate-500">BIM-Edit (R031)</strong> — one of 3 benchmarks now addressing BIM/IFC (with Qwen-BIM R035 and Ishigaki-IDS-Bench R036), BIM-Edit remains the first purpose-built IFC editing benchmark: 3 of 24 cover BIM in this corpus.
+        <strong class="text-slate-500">BIM-Edit (R031)</strong> — one of 3 benchmarks now addressing BIM/IFC (with Qwen-BIM R035 and Ishigaki-IDS-Bench R036), BIM-Edit remains the first purpose-built IFC editing benchmark: 3 of 26 cover BIM in this corpus.
       </div>
       <div class="px-2">
         <strong class="text-slate-500">HSE-Bench (R017)</strong> — the only source-confirmed benchmark in this review. Reported results have been independently verified by the VERIFIER agent.
@@ -270,7 +268,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
             </p>
           </div>
         </div>
-        <a href={link("/landscape")} class="mt-5 inline-flex items-center gap-1.5 text-xs text-primary-400 hover:text-primary-300 transition-colors">
+        <a href={`${base}/landscape`} class="mt-5 inline-flex items-center gap-1.5 text-xs text-primary-400 hover:text-primary-300 transition-colors">
           See full landscape view
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -296,7 +294,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
           Existence verified; capability claims marked <span class="text-amber-400">[claimed]</span>.
         </p>
       </div>
-      <a href={link("/tools")} class="btn btn-secondary shrink-0 self-start sm:self-auto">
+      <a href={`${base}/tools`} class="btn btn-secondary shrink-0 self-start sm:self-auto">
         Browse All Tools →
       </a>
     </div>
@@ -307,7 +305,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
         const count = tools.filter(t => t.category_cluster === c).length;
         return (
           <a
-            href={`/tools?cluster=${encodeURIComponent(c)}`}
+            href={`${base}/tools?cluster=${encodeURIComponent(c)}`}
             class="flex items-center gap-1.5 rounded-lg border border-slate-700/60 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 hover:border-primary-700/60 hover:text-white transition-colors no-underline"
           >
             <span class="text-slate-500">{count}</span>
@@ -321,7 +319,7 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
     <div class="grid gap-4 sm:grid-cols-3">
       {tools.filter(t => t.access === 'open-source').map(t => (
         <a
-          href={`/tools/${t.tool_id.toLowerCase()}`}
+          href={`${base}/tools/${t.tool_id.toLowerCase()}`}
           class="card group flex flex-col gap-3 p-4 no-underline hover:border-slate-600"
         >
           <div class="flex items-start justify-between gap-2">
@@ -356,8 +354,8 @@ const featured = FEATURED_IDS.map(id => getBenchmarkById(id)).filter(Boolean);
       AI tools across {clusters.length} practice clusters, from BIM/IFC pipelines to compliance and monitoring platforms.
     </p>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href={link("/benchmarks")} class="btn-primary btn-lg">Browse Benchmarks</a>
-      <a href={link("/tools")} class="btn-secondary btn-lg">Explore Tools</a>
+      <a href={`${base}/benchmarks`} class="btn-primary btn-lg">Browse Benchmarks</a>
+      <a href={`${base}/tools`} class="btn-secondary btn-lg">Explore Tools</a>
     </div>
   </div>
 </section>

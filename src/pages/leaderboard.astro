@@ -7,8 +7,6 @@ import { YEAR_LOOKUP } from '../lib/year_lookup';
 // Integrity gating — mirrors preview.html exactly
 const LB_PENDING_SET = new Set(['R002','R003','R007','R011','R023']);
 const LB_NO_RESULTS_SET = LB_NO_RESULTS;
-
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 // Chartable = in BM_ORDER and not in PENDING/NO_RESULTS
 const BM_ORDER = ['R001','R002','R003','R005','R006','R007','R009','R010','R011','R016','R019','R023','R030','R031','R033'];
 const LB_PILOT = BM_ORDER.filter(r => !LB_PENDING_SET.has(r) && !LB_NO_RESULTS_SET.has(r));
@@ -39,6 +37,7 @@ const _lbPending = JSON.stringify([...LB_PENDING_SET]);
 const _lbNoResults = JSON.stringify([...LB_NO_RESULTS_SET]);
 const _lbPilot = JSON.stringify(LB_PILOT);
 const _bmOrder = JSON.stringify(BM_ORDER);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="Leaderboard" description="AEC Benchmark Leaderboard — model performance across source-confirmed benchmarks: bar, scatter, year-axis charts.">
@@ -46,7 +45,7 @@ const _bmOrder = JSON.stringify(BM_ORDER);
   <div class="page-header">
     <div class="mx-auto max-w-7xl">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href={`${import.meta.env.BASE_URL}`}>Home</a>
+        <a href={`${base}/`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <span class="text-slate-400" aria-current="page">Leaderboard</span>
       </nav>

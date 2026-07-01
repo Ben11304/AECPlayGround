@@ -1,22 +1,20 @@
 ---
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-
 const navLinks = [
-  { href: `${base}/`,               label: 'Home' },
-  { href: `${base}/benchmarks`,     label: 'Benchmarks' },
-  { href: `${base}/tools`,          label: 'Tools' },
-  { href: `${base}/landscape`,      label: 'Landscape' },
-  { href: `${base}/landscape-tier4`,label: 'AEC Datasets' },
-  { href: `${base}/leaderboard`,    label: 'Leaderboard' },
-  { href: `${base}/about`,          label: 'About' },
+  { href: '/',               label: 'Home' },
+  { href: '/benchmarks',     label: 'Benchmarks' },
+  { href: '/tools',          label: 'Tools' },
+  { href: '/landscape',      label: 'Landscape' },
+  { href: '/landscape-tier4',label: 'AEC Datasets' },
+  { href: '/leaderboard',    label: 'Leaderboard' },
+  { href: '/about',          label: 'About' },
 ];
 
 const currentPath = Astro.url.pathname;
 function isActive(href: string) {
-  const normalized = href.replace(base, '') || '/';
-  if (normalized === '/') return currentPath === '/' || currentPath === '' || currentPath === base || currentPath === base + '/';
-  return currentPath.startsWith(normalized) || currentPath.startsWith(base + normalized);
+  if (href === '/') return currentPath === '/' || currentPath === '';
+  return currentPath.startsWith(href);
 }
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md">

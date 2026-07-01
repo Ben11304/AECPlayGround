@@ -15,6 +15,7 @@ import {
   domainChips,
 } from '../../lib/benchmarks';
 import { isNoResults, hasVerifyTag, MODALITY_LABELS, RUBRIC_LABELS, RUBRIC_KEYS } from '../../lib/integrity';
+import { getThumbnail } from '../../lib/thumbnails';
 
 export async function getStaticPaths() {
   return benchmarks.map((b) => ({ params: { id: toSlug(b.source_record_id) } }));
@@ -50,19 +51,10 @@ const rubricEntries = RUBRIC_KEYS.map((k) => ({
   value: (b.rubric as Record<string, number>)[k] ?? 0,
 }));
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-// Thumbnail lookup — same set as BenchmarkCard
-const THUMBNAILS: Record<string, { src: string; license: string; creditShort: string; creditUrl: string }> = {
-  'R001': { src: `${base}/thumbnails/r001.jpg`, license: 'CC BY 4.0',    creditShort: 'arXiv:2510.16559', creditUrl: 'https://arxiv.org/abs/2510.16559' },
-  'R005': { src: `${base}/thumbnails/r005.png`, license: 'MIT',          creditShort: 'HF/DrafterBench',  creditUrl: 'https://huggingface.co/datasets/Eason666/DrafterBench' },
-  'R006': { src: `${base}/thumbnails/r006.png`, license: 'Apache 2.0',   creditShort: 'GitHub/nomic-ai',  creditUrl: 'https://github.com/nomic-ai/aec-bench' },
-  'R017': { src: `${base}/thumbnails/r017.png`, license: 'CC BY 4.0',    creditShort: 'arXiv:2505.22959', creditUrl: 'https://arxiv.org/abs/2505.22959' },
-  'R023': { src: `${base}/thumbnails/r023.png`, license: 'Apache 2.0',   creditShort: 'GitHub/huhuman',   creditUrl: 'https://github.com/huhuman/VL-Con' },
-  'R031': { src: `${base}/thumbnails/r031.png`, license: 'CC BY-SA 4.0', creditShort: 'arXiv:2606.20146', creditUrl: 'https://arxiv.org/abs/2606.20146' },
-};
-const thumb = THUMBNAILS[b.source_record_id] ?? null;
+// Thumbnail lookup — single-sourced from lib/thumbnails.ts (same set as BenchmarkCard)
+const thumb = getThumbnail(b.source_record_id);
 const tierColor = b.tier === 1 ? 'emerald' : b.tier === 2 ? 'amber' : 'orange';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -71,7 +63,7 @@ const tierColor = b.tier === 1 ? 'emerald' : b.tier === 2 ? 'amber' : 'orange';
 >
   <!-- Page hero banner -->
   <div class="page-header relative overflow-hidden">
-    {/* Thumbnail background for 6 open-licensed benchmarks */}
+    {/* Thumbnail background for 5 open-licensed benchmarks */}
     {thumb && (
       <div class="absolute inset-0 z-0">
         <img
@@ -87,7 +79,7 @@ const tierColor = b.tier === 1 ? 'emerald' : b.tier === 2 ? 'amber' : 'orange';
     <div class="relative z-10 mx-auto max-w-7xl">
       <!-- Breadcrumb -->
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href={`${import.meta.env.BASE_URL}`}>Home</a>
+        <a href={`${base}/`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <a href={`${base}/benchmarks`}>Benchmarks</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>

@@ -6644,7 +6644,7 @@
   {
     "name": "VizArQA",
     "identifier": "doi:10.1115/1.4071865",
-    "verification_status": "verified",
+    "verification_status": "verified — R012 reported_results extracted F-090 (pdftotext, +24 source_confirmed rows); remaining [VERIFY] = authors, annotation method, leakage, license, human baseline",
     "tier": 1,
     "source_record_id": "R012",
     "provenance": "claimed",
@@ -6771,7 +6771,176 @@
         "provenance_flag": "real_public_item"
       }
     ],
-    "reported_results": []
+    "reported_results": [
+      {
+        "model_string": "Qwen3-VL-235B",
+        "metric_name": "Overall Accuracy",
+        "value": "84.30%",
+        "source_location": "Fig. 7, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5",
+        "metric_name": "Overall Accuracy",
+        "value": "80.99%",
+        "source_location": "Fig. 7, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen3-VL-8B",
+        "metric_name": "Overall Accuracy",
+        "value": "80.99%",
+        "source_location": "Fig. 7, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5-Mini",
+        "metric_name": "Overall Accuracy",
+        "value": "74.38%",
+        "source_location": "Fig. 7, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen3-VL-2B",
+        "metric_name": "Overall Accuracy",
+        "value": "61.98%",
+        "source_location": "Fig. 7, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5-Nano",
+        "metric_name": "Overall Accuracy",
+        "value": "57.02%",
+        "source_location": "Fig. 7, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5-Mini",
+        "metric_name": "Binary Accuracy",
+        "value": "68.0%",
+        "source_location": "Fig. 8, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5",
+        "metric_name": "Binary Accuracy",
+        "value": "78.0%",
+        "source_location": "Fig. 8, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen3-VL-2B",
+        "metric_name": "Binary Accuracy",
+        "value": "66.0%",
+        "source_location": "Fig. 8, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5-Mini",
+        "metric_name": "Multiple-Choice Accuracy",
+        "value": "78.87%",
+        "source_location": "Fig. 8, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5",
+        "metric_name": "Multiple-Choice Accuracy",
+        "value": "83.10%",
+        "source_location": "Fig. 8, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen3-VL-2B",
+        "metric_name": "Multiple-Choice Accuracy",
+        "value": "59.15%",
+        "source_location": "Fig. 8, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5-Mini",
+        "metric_name": "Wind Rose Accuracy",
+        "value": "100.00%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5-Nano",
+        "metric_name": "Wind Rose Accuracy",
+        "value": "73.91%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5-Nano",
+        "metric_name": "Radiation Rose Accuracy",
+        "value": "40.0%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5",
+        "metric_name": "Radiation Rose Accuracy",
+        "value": "76.0%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen3-VL-235B",
+        "metric_name": "Radiation Rose Accuracy",
+        "value": "76.0%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen3-VL-8B",
+        "metric_name": "Illuminance Accuracy",
+        "value": "82.61%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5-Nano",
+        "metric_name": "Illuminance Accuracy",
+        "value": "47.83%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen3-VL-2B",
+        "metric_name": "Illuminance Accuracy",
+        "value": "47.83%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5",
+        "metric_name": "Solar Insolation Accuracy",
+        "value": "92.0%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen3-VL-8B",
+        "metric_name": "Solar Insolation Accuracy",
+        "value": "92.0%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen3-VL-235B",
+        "metric_name": "Solar Insolation Accuracy",
+        "value": "92.0%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5-Mini",
+        "metric_name": "Solar Insolation Accuracy",
+        "value": "80.0%",
+        "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
+        "provenance_flag": "source_confirmed"
+      }
+    ]
   },
   {
     "name": "PE Civil Bench",
@@ -7633,14 +7802,14 @@
       "images": false,
       "engineering_drawings": false,
       "cad_floor_plans": false,
-      "bim_ifc_3d": null,
+      "bim_ifc_3d": true,
       "point_cloud": false,
       "video_multi_image": false,
       "simulation_plot": false,
       "symbolic_layout": null,
       "tool_api_env": null,
       "physics_simulation_env": false,
-      "notes": "Primary: text → structured XML. Input: NL BIM requirements in Japanese + English (bilingual) [from briefing]. Output: IDS-XML. IDS is a buildingSMART open standard for defining information requirements in IFC-based BIM workflows. bim_ifc_3d [VERIFY — IDS links to IFC schema; may count if IFC context is input]."
+      "notes": "Primary: text → structured XML. Input: NL BIM requirements in Japanese + English (bilingual) [from briefing]. Output: IDS-XML. IDS is a buildingSMART open standard for defining information requirements in IFC-based BIM workflows. bim_ifc_3d set True per SYNTHESIZER 0.6.2 figureA authoritative mapping (native BIM/IFC = {R031, R036} = 2/26, user-confirmed framing); CURATOR field remains [VERIFY] pending full-text re-gate."
     },
     "dataset_properties": {
       "n_samples": "166 expert examples (bilingual JA + EN) [from VERIFIER briefing]",
@@ -7862,8 +8031,8 @@
   },
   {
     "name": "DreamHouse",
-    "identifier": "https://luluyuyuyang.github.io/dreamhouse [VERIFY — arXiv ID not captured]",
-    "verification_status": "screened (Stage 2 INCLUDE; DISCOVERER 0.15.1 Consensus existence + §4-fit) — PROVISIONAL; all fields from DISCOVERER briefing; [VERIFY] full-text pending VERIFIER re-gate; arXiv ID [VERIFY]",
+    "identifier": "arXiv:2603.24866",
+    "verification_status": "screened (Stage 2 INCLUDE; DISCOVERER 0.15.1 Consensus existence + §4-fit) — PROVISIONAL; all fields from DISCOVERER briefing; [VERIFY] full-text pending VERIFIER re-gate; paper/code/project URLs corrected F-088 (user-authoritative) — remaining [VERIFY] = model list, human baseline, exact sample/metric details",
     "tier": 1,
     "source_record_id": "R040",
     "provenance": "claimed",
@@ -7872,11 +8041,11 @@
       "authors": "Luyu Yang et al. [VERIFY]",
       "year": 2026,
       "venue": "unknown (preprint) [VERIFY]",
-      "doi": null,
-      "arxiv_id": "[VERIFY]",
-      "repo_url": "https://luluyuyuyang.github.io/dreamhouse [VERIFY — GitHub/HF repo URL not captured]",
-      "dataset_url": "[VERIFY]",
-      "version_accessed": "DISCOVERER 0.15.1 / 2026-06-27"
+      "doi": "10.48550/arXiv.2603.24866",
+      "arxiv_id": "2603.24866",
+      "repo_url": "https://github.com/SalesforceAIResearch/DreamHouse",
+      "dataset_url": "https://luluyuyuyang.github.io/dreamhouse/",
+      "version_accessed": "DISCOVERER 0.15.1 / 2026-06-27; paper/code/project URLs corrected F-088 (user-authoritative) 2026-06-29"
     },
     "domain_use_case": {
       "aec_subdomain": "Architecture / Residential building construction (timber-frame; LOD 350)",
@@ -7910,7 +8079,7 @@
       "annotation_method": "Deterministic 10-test structural validation framework (automated structural checking) [VERIFY]",
       "expert_validation": "[VERIFY]",
       "license": "[VERIFY]",
-      "accessibility": "Website: https://luluyuyuyang.github.io/dreamhouse [VERIFY — data/code release not confirmed]",
+      "accessibility": "Project page https://luluyuyuyang.github.io/dreamhouse/; code repo CONFIRMED https://github.com/SalesforceAIResearch/DreamHouse (F-088); canonical dataset archive + license still [VERIFY]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — algorithmically generated structures may reduce contamination risk vs real photographs]"
     },

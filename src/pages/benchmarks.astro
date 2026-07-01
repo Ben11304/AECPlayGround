@@ -12,6 +12,7 @@ const sorted = [...benchmarks].sort((a, b) => {
 const t1 = sorted.filter(b => b.tier === 1);
 const t2 = sorted.filter(b => b.tier === 2);
 const t3 = sorted.filter(b => b.tier === 3);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -24,7 +25,7 @@ const t3 = sorted.filter(b => b.tier === 3);
     <div class="mx-auto max-w-7xl">
       <!-- Breadcrumb -->
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href={`${import.meta.env.BASE_URL}`}>Home</a>
+        <a href={`${base}/`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <span class="text-slate-400" aria-current="page">Benchmarks</span>
       </nav>
@@ -36,8 +37,8 @@ const t3 = sorted.filter(b => b.tier === 3);
             All AEC Benchmarks
           </h1>
           <p class="text-slate-400 text-sm max-w-2xl">
-            {benchmarks.length} benchmarks curated by a PRISMA 4-arm systematic review
-            (157 identified → 144 screened → 34 full-text → {benchmarks.length} included).
+            {benchmarks.length} benchmarks curated by a PRISMA 3-arm systematic review
+            (157 identified → 144 screened → 27 full-text → {benchmarks.length} included).
             Sorted by tier, then rubric score descending.
           </p>
         </div>
