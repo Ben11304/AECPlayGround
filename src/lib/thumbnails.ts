@@ -4,11 +4,12 @@
 // TWO usage classes:
 //   - 'open-license'  : openly-redistributable (CC-BY-4.0 / MIT / Apache-2.0). 5 records.
 //   - 'fair-use'      : paper Figure 1 shown for identification under fair use
-//                       (BOSS D46 Path B, user-authorized 2026-07-01). 7 records.
+//                       (BOSS D46 Path B, user-authorized 2026-07-01; batch-2 +3 2026-07-01). 10 records.
 //                       Copyright belongs to the original authors; each card carries attribution;
 //                       a site-wide disclaimer is rendered in the footer + About page.
-// EXCLUDED (VERIFIER 0.5.30 F-061; user decision 2026-07-01): R011 (CC-BY-NC-SA),
-// R031 (CC-BY-SA ShareAlike) — not open AND not elected for fair-use display.
+// EXCLUDED (VERIFIER 0.5.30 F-061; user decision 2026-07-01): R011 (CC-BY-NC-SA).
+// NOTE: R031 (BIM-Edit, arXiv:2606.20146) was excluded at 0.7.38 under its CC-BY-SA
+// open-license basis, then re-added at 0.7.41 as a fair-use Fig.1 (same image, fair-use framing).
 
 export interface Thumbnail {
   src: string;
@@ -38,6 +39,10 @@ const THUMBNAILS: Record<string, Thumbnail> = {
   'R019': { src: '/thumbnails/r019.png', usage: 'fair-use', license: 'Fair use', creditShort: 'arXiv:2508.11011',    creditUrl: 'https://arxiv.org/abs/2508.11011',    caption: 'Fig.1 — ConstructionSite-10k (arXiv:2508.11011), used under fair use.' },
   'R036': { src: '/thumbnails/r036.png', usage: 'fair-use', license: 'Fair use', creditShort: 'arXiv:2605.22079',    creditUrl: 'https://arxiv.org/abs/2605.22079',    caption: 'Fig.1 — Ishigaki-IDS-Bench (arXiv:2605.22079), used under fair use.' },
   'R040': { src: '/thumbnails/r040.png', usage: 'fair-use', license: 'Fair use', creditShort: 'arXiv:2603.24866',    creditUrl: 'https://arxiv.org/abs/2603.24866',    caption: 'Fig.1 — DreamHouse (arXiv:2603.24866), used under fair use.' },
+  // --- batch-2 fair-use (+3, 2026-07-01) ---
+  'R002': { src: '/thumbnails/r002.png', usage: 'fair-use', license: 'Fair use', creditShort: 'arXiv:2601.04819',    creditUrl: 'https://arxiv.org/abs/2601.04819',    caption: 'Fig.1 — AECV-Bench (arXiv:2601.04819), used under fair use.' },
+  'R031': { src: '/thumbnails/r031.png', usage: 'fair-use', license: 'Fair use', creditShort: 'arXiv:2606.20146',    creditUrl: 'https://arxiv.org/abs/2606.20146',    caption: 'Fig.1 — BIM-Edit (arXiv:2606.20146), used under fair use.' },
+  'R037': { src: '/thumbnails/r037.png', usage: 'fair-use', license: 'Fair use', creditShort: 'arXiv:2509.25229',    creditUrl: 'https://arxiv.org/abs/2509.25229',    caption: 'Fig.1 — Blueprint-Bench (arXiv:2509.25229), used under fair use.' },
 };
 
 /** Returns the thumbnail metadata for a benchmark source_record_id, or null if none.
