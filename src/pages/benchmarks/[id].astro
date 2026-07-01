@@ -63,7 +63,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 >
   <!-- Page hero banner -->
   <div class="page-header relative overflow-hidden">
-    {/* Thumbnail background for 5 open-licensed benchmarks */}
+    {/* Thumbnail background for 12 benchmarks (5 openly-licensed + 7 fair-use Fig.1) */}
     {thumb && (
       <div class="absolute inset-0 z-0">
         <img
@@ -141,7 +141,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           {/* Thumbnail attribution */}
           {thumb && (
             <p class="mt-3 text-[10px] text-slate-600">
-              Hero image: <a href={thumb.creditUrl} target="_blank" rel="noopener" class="hover:text-slate-400 transition-colors">{thumb.license} · {thumb.creditShort}</a>
+              Hero image: <a href={thumb.creditUrl} target="_blank" rel="noopener" class="hover:text-slate-400 transition-colors">{thumb.caption}</a>
             </p>
           )}
         </div>
