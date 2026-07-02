@@ -72,7 +72,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           aria-hidden="true"
           class="h-full w-full object-cover opacity-10"
         />
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/60" />
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/50" />
       </div>
     )}
 
@@ -83,25 +83,25 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <a href={`${base}/benchmarks`}>Benchmarks</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
-        <span class="text-slate-400" aria-current="page">{b.source_record_id}</span>
+        <span class="text-slate-600" aria-current="page">{b.source_record_id}</span>
       </nav>
 
       <div class="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
         <div class="flex-1">
           <!-- Badge row -->
           <div class="mb-3 flex flex-wrap items-center gap-2">
-            <span class="font-mono text-xs text-slate-500 bg-slate-800/60 px-2 py-0.5 rounded">{b.source_record_id}</span>
+            <span class="font-mono text-xs text-slate-500 bg-slate-100/60 px-2 py-0.5 rounded">{b.source_record_id}</span>
             <TierBadge tier={b.tier} />
             <ProvenanceBadge verificationStatus={b.verification_status} provenance={b.provenance} />
             {noResults && (
-              <span class="chip bg-slate-800 text-slate-400 border border-slate-700 text-[11px]">
+              <span class="chip bg-slate-100 text-slate-600 border border-slate-300 text-[11px]">
                 no results sourced yet
               </span>
             )}
           </div>
 
-          <h1 class="font-display text-3xl font-bold text-white sm:text-4xl mb-2">{b.name}</h1>
-          <p class="text-slate-400 italic text-sm mb-3">{b.bibliographic.paper_title}</p>
+          <h1 class="font-display text-3xl font-bold text-slate-900 sm:text-4xl mb-2">{b.name}</h1>
+          <p class="text-slate-600 italic text-sm mb-3">{b.bibliographic.paper_title}</p>
           <p class="text-xs text-slate-500">
             {b.bibliographic.authors} · {b.bibliographic.year} · {b.bibliographic.venue}
           </p>
@@ -141,7 +141,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           {/* Thumbnail attribution */}
           {thumb && (
             <p class="mt-3 text-[10px] text-slate-600">
-              Hero image: <a href={thumb.creditUrl} target="_blank" rel="noopener" class="hover:text-slate-400 transition-colors">{thumb.caption}</a>
+              Hero image: <a href={thumb.creditUrl} target="_blank" rel="noopener" class="hover:text-slate-600 transition-colors">{thumb.caption}</a>
             </p>
           )}
         </div>
@@ -163,44 +163,44 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="lg:col-span-2 flex flex-col gap-6">
 
         <!-- 1. Domain & task -->
-        <section class="card bg-slate-900 border-slate-800 p-5">
+        <section class="card bg-white border-slate-200 p-5">
           <h2 class="section-heading">1 · Domain & Task</h2>
           <dl class="grid gap-3 text-sm sm:grid-cols-2">
             <div>
               <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">AEC Subdomain</dt>
-              <dd class="mt-1 text-slate-300">{b.domain_use_case.aec_subdomain}</dd>
+              <dd class="mt-1 text-slate-700">{b.domain_use_case.aec_subdomain}</dd>
             </div>
             <div>
               <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Lifecycle Stage</dt>
-              <dd class="mt-1 text-slate-300">{b.domain_use_case.lifecycle_stage}</dd>
+              <dd class="mt-1 text-slate-700">{b.domain_use_case.lifecycle_stage}</dd>
             </div>
             <div>
               <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Task Type</dt>
-              <dd class="mt-1 text-slate-300">{b.task.task_type}</dd>
+              <dd class="mt-1 text-slate-700">{b.task.task_type}</dd>
             </div>
             <div>
               <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Complexity</dt>
-              <dd class="mt-1 text-slate-300">{b.task.task_complexity}</dd>
+              <dd class="mt-1 text-slate-700">{b.task.task_complexity}</dd>
             </div>
             <div class="sm:col-span-2">
               <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Output Type</dt>
-              <dd class="mt-1 text-slate-300">{b.task.output_type}</dd>
+              <dd class="mt-1 text-slate-700">{b.task.output_type}</dd>
             </div>
             <div class="sm:col-span-2">
               <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">Intended Users</dt>
-              <dd class="mt-1 text-slate-300">{b.domain_use_case.intended_user}</dd>
+              <dd class="mt-1 text-slate-700">{b.domain_use_case.intended_user}</dd>
             </div>
           </dl>
         </section>
 
         <!-- 2. Modality -->
-        <section class="card bg-slate-900 border-slate-800 p-5">
+        <section class="card bg-white border-slate-200 p-5">
           <h2 class="section-heading">2 · Modality Coverage</h2>
           <div class="mb-3">
             <ModalityChips modality={b.modality} max={12} />
           </div>
           {b.modality.notes && (
-            <p class="mt-2 text-xs text-slate-500 border-t border-slate-800 pt-2">
+            <p class="mt-2 text-xs text-slate-500 border-t border-slate-200 pt-2">
               {b.modality.notes}
             </p>
           )}
@@ -209,7 +209,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             {Object.entries(b.modality)
               .filter(([k]) => k !== 'notes')
               .map(([k, v]) => (
-                <div class={`flex items-center gap-1 rounded px-2 py-1 ${v ? 'bg-blue-950/40 text-blue-300' : 'bg-slate-800/40 text-slate-600'}`}>
+                <div class={`flex items-center gap-1 rounded px-2 py-1 ${v ? 'bg-blue-50 text-blue-700' : 'bg-slate-100/40 text-slate-600'}`}>
                   <span>{v ? '✓' : '✗'}</span>
                   <span>{MODALITY_LABELS[k] ?? k}</span>
                 </div>
@@ -218,7 +218,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </section>
 
         <!-- 3. Dataset properties -->
-        <section class="card bg-slate-900 border-slate-800 p-5">
+        <section class="card bg-white border-slate-200 p-5">
           <h2 class="section-heading">3 · Dataset Properties</h2>
           <dl class="grid gap-3 text-sm sm:grid-cols-2">
             {[
@@ -234,14 +234,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             ].map(([label, value]) => (
               <div>
                 <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">{label}</dt>
-                <dd class="mt-1 text-slate-300 text-xs">{value || '—'}</dd>
+                <dd class="mt-1 text-slate-700 text-xs">{value || '—'}</dd>
               </div>
             ))}
           </dl>
         </section>
 
         <!-- 4. Evaluation -->
-        <section class="card bg-slate-900 border-slate-800 p-5">
+        <section class="card bg-white border-slate-200 p-5">
           <h2 class="section-heading">4 · Evaluation Design</h2>
           <dl class="grid gap-3 text-sm sm:grid-cols-2">
             {[
@@ -257,18 +257,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             ].map(([label, value]) => (
               <div>
                 <dt class="text-[10px] font-semibold uppercase tracking-wide text-slate-600">{label}</dt>
-                <dd class="mt-1 text-slate-300 text-xs">{value || '—'}</dd>
+                <dd class="mt-1 text-slate-700 text-xs">{value || '—'}</dd>
               </div>
             ))}
           </dl>
         </section>
 
         <!-- 5. Reported results -->
-        <section class="card bg-slate-900 border-slate-800 p-5">
+        <section class="card bg-white border-slate-200 p-5">
           <h2 class="section-heading">5 · Reported Results</h2>
 
           {noResults && (
-            <div class="rounded-lg border border-amber-800/40 bg-amber-950/20 p-4 text-sm text-amber-400">
+            <div class="rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-700">
               <p class="font-medium">No performance results sourced yet</p>
               <p class="mt-1 text-xs text-amber-600">
                 This benchmark was newly admitted in the 17→20 cascade.
@@ -287,9 +287,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 <span class="chip badge-verified text-[10px]">✓ Source-Confirmed</span>
                 <span class="text-[10px] text-slate-600">{confirmedResults.length} rows</span>
               </div>
-              <div class="overflow-x-auto rounded-lg border border-slate-800">
+              <div class="overflow-x-auto rounded-lg border border-slate-200">
                 <table class="min-w-full text-xs">
-                  <thead class="bg-slate-800/50">
+                  <thead class="bg-slate-100/50">
                     <tr>
                       <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Model</th>
                       <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Metric</th>
@@ -299,10 +299,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                   </thead>
                   <tbody>
                     {confirmedResults.map((r, i) => (
-                      <tr class={i % 2 === 0 ? 'bg-slate-950' : 'bg-slate-900/40'}>
-                        <td class="py-1.5 px-3 font-medium text-slate-200">{r.model_string}</td>
-                        <td class="py-1.5 px-3 text-slate-400">{r.metric_name}</td>
-                        <td class="py-1.5 px-3 text-right font-mono text-blue-300 font-semibold">{r.value}</td>
+                      <tr class={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/40'}>
+                        <td class="py-1.5 px-3 font-medium text-slate-800">{r.model_string}</td>
+                        <td class="py-1.5 px-3 text-slate-600">{r.metric_name}</td>
+                        <td class="py-1.5 px-3 text-right font-mono text-blue-700 font-semibold">{r.value}</td>
                         <td class="py-1.5 px-3 text-slate-600">{r.source_location}</td>
                       </tr>
                     ))}
@@ -314,13 +314,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
           {verifyResults.length > 0 && (
             <details class="mt-3">
-              <summary class="cursor-pointer text-xs text-slate-500 hover:text-slate-300 transition-colors">
+              <summary class="cursor-pointer text-xs text-slate-500 hover:text-slate-700 transition-colors">
                 ▸ Show {verifyResults.length} claimed / unverified rows
                 <span class="chip badge-verify text-[10px] ml-2">[VERIFY]</span>
               </summary>
-              <div class="mt-2 overflow-x-auto rounded-lg border border-amber-800/30">
+              <div class="mt-2 overflow-x-auto rounded-lg border border-amber-300">
                 <table class="min-w-full text-xs">
-                  <thead class="bg-amber-950/20">
+                  <thead class="bg-amber-50">
                     <tr>
                       <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Model</th>
                       <th class="py-2 px-3 text-left text-[10px] font-semibold uppercase tracking-wide text-slate-500">Metric</th>
@@ -330,10 +330,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                   </thead>
                   <tbody>
                     {verifyResults.map((r, i) => (
-                      <tr class={i % 2 === 0 ? 'bg-amber-950/10' : ''}>
-                        <td class="py-1.5 px-3 text-slate-300">{r.model_string}</td>
+                      <tr class={i % 2 === 0 ? 'bg-amber-50' : ''}>
+                        <td class="py-1.5 px-3 text-slate-700">{r.model_string}</td>
                         <td class="py-1.5 px-3 text-slate-500">{r.metric_name}</td>
-                        <td class="py-1.5 px-3 text-right font-mono text-amber-400">{r.value}</td>
+                        <td class="py-1.5 px-3 text-right font-mono text-amber-700">{r.value}</td>
                         <td class="py-1.5 px-3">
                           <span class="chip badge-verify text-[10px]">{r.provenance_flag}</span>
                         </td>
@@ -348,21 +348,21 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
         <!-- 6. Examples -->
         {b.examples && b.examples.length > 0 && (
-          <section class="card bg-slate-900 border-slate-800 p-5">
+          <section class="card bg-white border-slate-200 p-5">
             <h2 class="section-heading">6 · Examples (Pilot)</h2>
             <div class="flex flex-col gap-3">
               {b.examples.map((ex, i) => (
-                <div class="rounded-lg border border-slate-800 bg-slate-950/50 p-3">
+                <div class="rounded-lg border border-slate-200 bg-white/50 p-3">
                   <div class="mb-1.5 flex flex-wrap items-center gap-2">
                     <span class="font-mono text-[10px] text-slate-500">{ex.id ?? `ex-${i+1}`}</span>
-                    {ex.modality && <span class="chip bg-slate-800 text-slate-400 text-[10px]">{ex.modality}</span>}
-                    {ex.task_type && <span class="chip bg-slate-800 text-slate-400 text-[10px]">{ex.task_type}</span>}
+                    {ex.modality && <span class="chip bg-slate-100 text-slate-600 text-[10px]">{ex.modality}</span>}
+                    {ex.task_type && <span class="chip bg-slate-100 text-slate-600 text-[10px]">{ex.task_type}</span>}
                   </div>
                   {ex.text && (
-                    <p class="text-xs text-slate-400 leading-relaxed">{ex.text}</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">{ex.text}</p>
                   )}
                   {ex.instruction && (
-                    <pre class="mt-2 overflow-x-auto rounded bg-slate-800/60 p-2 text-[10px] text-slate-300 whitespace-pre-wrap">{String(ex.instruction).slice(0, 300)}{String(ex.instruction).length > 300 ? '…' : ''}</pre>
+                    <pre class="mt-2 overflow-x-auto rounded bg-slate-100/60 p-2 text-[10px] text-slate-700 whitespace-pre-wrap">{String(ex.instruction).slice(0, 300)}{String(ex.instruction).length > 300 ? '…' : ''}</pre>
                   )}
                 </div>
               ))}
@@ -376,7 +376,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="flex flex-col gap-6">
 
         <!-- Capability taxonomy -->
-        <section class="card bg-slate-900 border-slate-800 p-5">
+        <section class="card bg-white border-slate-200 p-5">
           <h2 class="section-heading">Capability Taxonomy</h2>
           <div class="flex flex-col gap-3 text-xs">
             {[
@@ -388,17 +388,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             ].map(([label, value]) => (
               <div>
                 <div class="text-[10px] font-semibold uppercase tracking-wide text-slate-600 mb-1">{label}</div>
-                <p class="text-slate-300 leading-relaxed">{value}</p>
+                <p class="text-slate-700 leading-relaxed">{value}</p>
               </div>
             ))}
           </div>
         </section>
 
         <!-- Rubric breakdown -->
-        <section class="card bg-slate-900 border-slate-800 p-5">
+        <section class="card bg-white border-slate-200 p-5">
           <h2 class="section-heading">Rubric Breakdown</h2>
           <div class="mb-4 text-center">
-            <span class="text-3xl font-bold text-white">{b.rubric.total}</span>
+            <span class="text-3xl font-bold text-slate-900">{b.rubric.total}</span>
             <span class="text-slate-500"> / 20</span>
           </div>
           <div class="flex flex-col gap-1.5">
@@ -419,13 +419,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         </span>
                       )}
                     </span>
-                    <span class={`font-semibold ${value === 2 ? 'text-emerald-400' : value === 1 ? 'text-amber-400' : 'text-slate-600'}`}>
+                    <span class={`font-semibold ${value === 2 ? 'text-emerald-700' : value === 1 ? 'text-amber-700' : 'text-slate-600'}`}>
                       {value}
                     </span>
                   </div>
-                  <div class="h-1 rounded-full bg-slate-800">
+                  <div class="h-1 rounded-full bg-slate-100">
                     <div
-                      class={`h-1 rounded-full transition-all ${value === 2 ? 'bg-emerald-500' : value === 1 ? 'bg-amber-500' : 'bg-slate-700'}`}
+                      class={`h-1 rounded-full transition-all ${value === 2 ? 'bg-emerald-500' : value === 1 ? 'bg-amber-500' : 'bg-slate-300'}`}
                       style={`width: ${(value / 2) * 100}%`}
                     ></div>
                   </div>
@@ -437,7 +437,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </section>
 
         <!-- Identifiers & metadata -->
-        <section class="card bg-slate-900 border-slate-800 p-5">
+        <section class="card bg-white border-slate-200 p-5">
           <h2 class="section-heading">Identifiers & Metadata</h2>
           <div class="flex flex-col gap-2 text-xs">
             {[
@@ -449,7 +449,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             ].map(([label, value]) => value && (
               <div class="flex gap-2">
                 <span class="shrink-0 w-24 text-slate-600 font-medium">{label}</span>
-                <span class="text-slate-400 font-mono text-[10px] break-all">{value}</span>
+                <span class="text-slate-600 font-mono text-[10px] break-all">{value}</span>
               </div>
             ))}
           </div>
@@ -465,14 +465,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               <>
                 {prev ? (
                   <a href={`${base}/benchmarks/${toSlug(prev.source_record_id)}`}
-                     class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-3 text-xs text-slate-400 hover:border-slate-600 hover:text-slate-200 transition-all">
+                     class="flex-1 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-600 hover:border-slate-600 hover:text-slate-800 transition-all">
                     <div class="text-[10px] text-slate-600 mb-0.5">← Prev</div>
                     {prev.name}
                   </a>
                 ) : <div class="flex-1"></div>}
                 {next ? (
                   <a href={`${base}/benchmarks/${toSlug(next.source_record_id)}`}
-                     class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-3 text-xs text-slate-400 hover:border-slate-600 hover:text-slate-200 transition-all text-right">
+                     class="flex-1 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-600 hover:border-slate-600 hover:text-slate-800 transition-all text-right">
                     <div class="text-[10px] text-slate-600 mb-0.5">Next →</div>
                     {next.name}
                   </a>

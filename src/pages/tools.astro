@@ -164,25 +164,25 @@ function clusterGlyphSvg(cluster: string): string {
 // Cluster → background color for glyph area
 function clusterGlyphBg(cluster: string): string {
   switch (cluster) {
-    case 'BIM/IFC AI':                     return 'bg-teal-950/60 text-teal-400';
-    case 'Code/Compliance AI':             return 'bg-indigo-950/60 text-indigo-400';
-    case 'Drawing/Takeoff AI':             return 'bg-violet-950/60 text-violet-400';
-    case 'Generative Design AI':           return 'bg-purple-950/60 text-purple-400';
-    case 'Construction Site Monitoring AI':return 'bg-orange-950/60 text-orange-400';
-    case 'PM/RAG Assistants':              return 'bg-emerald-950/60 text-emerald-400';
-    case 'Structural AI':                  return 'bg-red-950/60 text-red-400';
-    case 'Energy/Sustainability AI':       return 'bg-lime-950/60 text-lime-400';
-    case 'HVAC/MEP AI':                    return 'bg-cyan-950/60 text-cyan-400';
-    case 'Scan-to-BIM/Reality-Capture AI': return 'bg-blue-950/60 text-blue-400';
-    case 'Digital Twin AI':                return 'bg-sky-950/60 text-sky-400';
-    case 'Drone/Aerial AI':                return 'bg-fuchsia-950/60 text-fuchsia-400';
-    case 'Construction Robotics/Automation':return 'bg-amber-950/60 text-amber-400';
-    case 'Surveying/Geospatial AI':        return 'bg-green-950/60 text-green-400';
-    case 'Geotechnical AI':                return 'bg-yellow-950/60 text-yellow-400';
-    case 'Safety AI':                      return 'bg-rose-950/60 text-rose-400';
-    case 'FM/Operations AI':               return 'bg-zinc-900/60 text-zinc-400';
-    case 'AEC Code-Gen Copilots':          return 'bg-pink-950/60 text-pink-400';
-    default:                               return 'bg-slate-800/60 text-slate-400';
+    case 'BIM/IFC AI':                     return 'bg-teal-50 text-teal-700';
+    case 'Code/Compliance AI':             return 'bg-indigo-50 text-indigo-700';
+    case 'Drawing/Takeoff AI':             return 'bg-violet-50 text-violet-700';
+    case 'Generative Design AI':           return 'bg-purple-50 text-purple-700';
+    case 'Construction Site Monitoring AI':return 'bg-orange-50 text-orange-700';
+    case 'PM/RAG Assistants':              return 'bg-emerald-50 text-emerald-700';
+    case 'Structural AI':                  return 'bg-red-50 text-red-700';
+    case 'Energy/Sustainability AI':       return 'bg-lime-50 text-lime-700';
+    case 'HVAC/MEP AI':                    return 'bg-cyan-50 text-cyan-700';
+    case 'Scan-to-BIM/Reality-Capture AI': return 'bg-blue-50 text-blue-700';
+    case 'Digital Twin AI':                return 'bg-sky-50 text-sky-700';
+    case 'Drone/Aerial AI':                return 'bg-fuchsia-50 text-fuchsia-700';
+    case 'Construction Robotics/Automation':return 'bg-amber-50 text-amber-700';
+    case 'Surveying/Geospatial AI':        return 'bg-green-50 text-green-700';
+    case 'Geotechnical AI':                return 'bg-yellow-50 text-yellow-700';
+    case 'Safety AI':                      return 'bg-rose-50 text-rose-700';
+    case 'FM/Operations AI':               return 'bg-zinc-50 text-zinc-700';
+    case 'AEC Code-Gen Copilots':          return 'bg-pink-50 text-pink-700';
+    default:                               return 'bg-slate-100/60 text-slate-600';
   }
 }
 
@@ -220,32 +220,32 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href={`${base}/`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
-        <span class="text-slate-400" aria-current="page">Tools</span>
+        <span class="text-slate-600" aria-current="page">Tools</span>
       </nav>
 
       <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p class="section-label">Tool Registry</p>
-          <h1 class="font-display text-3xl font-bold text-white sm:text-4xl mb-2">
+          <h1 class="font-display text-3xl font-bold text-slate-900 sm:text-4xl mb-2">
             AEC AI Tools
           </h1>
-          <p class="text-slate-400 text-sm max-w-2xl">
+          <p class="text-slate-600 text-sm max-w-2xl">
             {tools.length} curated AI-powered tools across {clusters.length} practice clusters —
             seeded by DISCOVERER 0.14.6, existence-verified by VERIFIER 0.5.31.
-            Capability claims marked <span class="text-amber-400 font-medium">[claimed]</span> are unverified.
+            Capability claims marked <span class="text-amber-700 font-medium">[claimed]</span> are unverified.
             9 tools require dedicated hardware — marked with a badge.
           </p>
         </div>
         <div class="flex gap-6 shrink-0">
           {[
-            { label: 'Total',       value: String(tools.length),       sub: 'tools',            cls: 'text-primary-300' },
-            { label: 'Open-source', value: String(openCount),          sub: 'free/OSS',         cls: 'text-emerald-300' },
-            { label: 'Commercial',  value: String(commercialCount),    sub: 'commercial/SaaS',  cls: 'text-sky-300'     },
-            { label: 'Clusters',    value: String(clusters.length),    sub: 'practice areas',   cls: 'text-violet-300'  },
+            { label: 'Total',       value: String(tools.length),       sub: 'tools',            cls: 'text-primary-700' },
+            { label: 'Open-source', value: String(openCount),          sub: 'free/OSS',         cls: 'text-emerald-700' },
+            { label: 'Commercial',  value: String(commercialCount),    sub: 'commercial/SaaS',  cls: 'text-sky-700'     },
+            { label: 'Clusters',    value: String(clusters.length),    sub: 'practice areas',   cls: 'text-violet-700'  },
           ].map(s => (
             <div class="text-center">
               <div class={`font-display text-2xl font-bold ${s.cls}`}>{s.value}</div>
-              <div class="text-[10px] font-medium text-slate-400 uppercase tracking-wide">{s.label}</div>
+              <div class="text-[10px] font-medium text-slate-600 uppercase tracking-wide">{s.label}</div>
               <div class="text-[10px] text-slate-600">{s.sub}</div>
             </div>
           ))}
@@ -257,7 +257,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- Filter bar -->
   <div
     id="tools-filter-bar"
-    class="sticky top-[57px] z-30 border-b border-slate-800/80 bg-slate-950/95 backdrop-blur-md"
+    class="sticky top-[57px] z-30 border-b border-slate-200/80 bg-white/95 backdrop-blur-md"
   >
     <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
       <div class="flex flex-wrap items-center gap-2">
@@ -267,14 +267,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           type="search"
           placeholder="Search tools…"
           aria-label="Search tools"
-          class="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-primary-500 focus:outline-none w-44"
+          class="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm text-slate-800 placeholder-slate-500 focus:border-primary-500 focus:outline-none w-44"
         />
 
         <!-- Cluster filter -->
         <select
           id="filter-cluster"
           aria-label="Filter by cluster"
-          class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-300 focus:border-primary-500 focus:outline-none cursor-pointer"
+          class="rounded-lg border border-slate-300 bg-white px-2 py-1.5 text-sm text-slate-700 focus:border-primary-500 focus:outline-none cursor-pointer"
         >
           <option value="">All clusters</option>
           {clusters.map(c => <option value={c}>{c}</option>)}
@@ -284,7 +284,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <select
           id="filter-access"
           aria-label="Filter by access"
-          class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-300 focus:border-primary-500 focus:outline-none cursor-pointer"
+          class="rounded-lg border border-slate-300 bg-white px-2 py-1.5 text-sm text-slate-700 focus:border-primary-500 focus:outline-none cursor-pointer"
         >
           <option value="">All access types</option>
           <option value="open-source">Open-source</option>
@@ -296,7 +296,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <select
           id="filter-maturity"
           aria-label="Filter by maturity"
-          class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-300 focus:border-primary-500 focus:outline-none cursor-pointer"
+          class="rounded-lg border border-slate-300 bg-white px-2 py-1.5 text-sm text-slate-700 focus:border-primary-500 focus:outline-none cursor-pointer"
         >
           <option value="">All maturity levels</option>
           <option value="enterprise-established">Enterprise established</option>
@@ -308,7 +308,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <!-- Reset -->
         <button
           id="tools-reset"
-          class="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs text-slate-400 hover:border-slate-500 hover:text-slate-200 transition-colors"
+          class="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs text-slate-600 hover:border-slate-500 hover:text-slate-800 transition-colors"
         >
           Reset
         </button>
@@ -330,7 +330,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <div class={`flex h-8 w-8 items-center justify-center rounded-lg ${clusterGlyphBg(cluster)}`}
             set:html={clusterGlyphSvg(cluster)}
           />
-          <h2 class="text-sm font-display font-semibold text-slate-200">{cluster}</h2>
+          <h2 class="text-sm font-display font-semibold text-slate-800">{cluster}</h2>
           <span class={`chip text-[10px] border ${clusterColorCls(cluster)}`}>
             {byCluster[cluster].length}
           </span>
@@ -357,7 +357,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 <!-- Name + cluster badge -->
                 <div>
                   <div class="flex items-start justify-between gap-2 mb-1">
-                    <h3 class="font-display font-semibold text-white text-sm leading-snug group-hover:text-primary-300 transition-colors">
+                    <h3 class="font-display font-semibold text-slate-900 text-sm leading-snug group-hover:text-primary-700 transition-colors">
                       {tool.name}
                     </h3>
                   </div>
@@ -367,7 +367,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 </div>
 
                 <!-- Description -->
-                <p class="text-xs text-slate-400 leading-relaxed line-clamp-3 flex-1"
+                <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 flex-1"
                   set:html={cardDesc(tool.short_description)}
                 />
 
@@ -380,12 +380,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                     {maturityLabel(tool.maturity)}
                   </span>
                   {tool.access === 'commercial' && tool.pricing_tier !== '[VERIFY]' && (
-                    <span class="chip text-[9px] bg-slate-800/60 text-slate-500 border border-slate-700/60">
+                    <span class="chip text-[9px] bg-slate-100/60 text-slate-500 border border-slate-300/60">
                       {tool.pricing_tier === 'freemium' ? 'Freemium' : tool.pricing_tier === 'subscription-published' ? '$ published' : 'Enterprise'}
                     </span>
                   )}
                   {tool.hardware_required && (
-                    <span class="chip text-[9px] bg-rose-950/60 text-rose-300 border border-rose-800/60">
+                    <span class="chip text-[9px] bg-rose-50 text-rose-700 border border-rose-300">
                       hardware req'd
                     </span>
                   )}
@@ -395,9 +395,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 <div class="text-[10px] text-slate-500 font-mono truncate">{tool.ai_type}</div>
 
                 <!-- Use → link -->
-                <div class="flex items-center justify-between pt-1 border-t border-slate-800/80">
+                <div class="flex items-center justify-between pt-1 border-t border-slate-200/80">
                   <span class="text-[10px] text-slate-600">{tool.tool_id}</span>
-                  <span class="text-[10px] font-semibold text-primary-400 group-hover:text-primary-300 transition-colors flex items-center gap-1">
+                  <span class="text-[10px] font-semibold text-primary-700 group-hover:text-primary-700 transition-colors flex items-center gap-1">
                     Details
                     <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M2 6h8M6 2l4 4-4 4"/>
@@ -419,8 +419,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <!-- Provenance notice -->
   <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-    <div class="rounded-xl border border-amber-900/40 bg-amber-950/20 p-4 text-xs text-amber-300/80">
-      <strong class="text-amber-300">Provenance:</strong> All 47 tools carry
+    <div class="rounded-xl border border-amber-300 bg-amber-50 p-4 text-xs text-amber-700">
+      <strong class="text-amber-700">Provenance:</strong> All 47 tools carry
       <em>verification_status = "verified (existence)"</em> — URLs confirmed live (DISCOVERER 0.14.6 · VERIFIER 0.5.31).
       Claimed capabilities (accuracy %, user counts, pricing) are marked <strong>[claimed, VERIFY]</strong>
       on the detail page and have not been independently verified.

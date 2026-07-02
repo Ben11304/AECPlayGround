@@ -23,7 +23,7 @@ const modalities = [
 ];
 ---
 
-<div class="sticky top-[57px] z-40 border-b border-slate-800 bg-slate-950/95 backdrop-blur-sm py-3 px-4 sm:px-6 lg:px-8">
+<div class="sticky top-[57px] z-40 border-b border-slate-200 bg-white/95 backdrop-blur-sm py-3 px-4 sm:px-6 lg:px-8">
   <div class="mx-auto max-w-7xl">
     <!-- Search -->
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -35,20 +35,20 @@ const modalities = [
           id="search-input"
           type="search"
           placeholder="Search benchmarks…"
-          class="w-full rounded-lg border border-slate-700 bg-slate-800 pl-9 pr-4 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500/30 transition"
+          class="w-full rounded-lg border border-slate-300 bg-slate-100 pl-9 pr-4 py-1.5 text-sm text-slate-800 placeholder-slate-500 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500/30 transition"
           autocomplete="off"
         />
       </div>
 
       <!-- Result count -->
       <span id="result-count" class="text-xs text-slate-500 shrink-0">
-        Showing <span id="count-num" class="font-semibold text-slate-300">20</span> benchmarks
+        Showing <span id="count-num" class="font-semibold text-slate-700">20</span> benchmarks
       </span>
 
       <!-- Reset -->
       <button
         id="reset-filters"
-        class="text-xs text-slate-500 hover:text-slate-300 transition-colors shrink-0 hidden"
+        class="text-xs text-slate-500 hover:text-slate-700 transition-colors shrink-0 hidden"
       >
         ✕ Reset filters
       </button>
@@ -59,7 +59,7 @@ const modalities = [
       <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1">Tier</span>
       {tiers.map((t) => (
         <button
-          class="filter-btn chip text-[11px] bg-slate-800 text-slate-400 border border-slate-700 hover:border-slate-500 hover:text-slate-200 data-[active]:border-primary-500 data-[active]:bg-primary-950/60 data-[active]:text-primary-300 transition-all"
+          class="filter-btn chip text-[11px] bg-slate-100 text-slate-600 border border-slate-300 hover:border-slate-500 hover:text-slate-800 data-[active]:border-primary-500 data-[active]:bg-primary-50 data-[active]:text-primary-700 transition-all"
           data-filter="tier"
           data-value={String(t)}
         >
@@ -67,11 +67,11 @@ const modalities = [
         </button>
       ))}
 
-      <span class="mx-2 h-4 border-l border-slate-700"></span>
+      <span class="mx-2 h-4 border-l border-slate-300"></span>
       <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1">Modality</span>
       {modalities.map(({ key, label }) => (
         <button
-          class="filter-btn chip text-[11px] bg-slate-800 text-slate-400 border border-slate-700 hover:border-slate-500 hover:text-slate-200 data-[active]:border-primary-500 data-[active]:bg-primary-950/60 data-[active]:text-primary-300 transition-all"
+          class="filter-btn chip text-[11px] bg-slate-100 text-slate-600 border border-slate-300 hover:border-slate-500 hover:text-slate-800 data-[active]:border-primary-500 data-[active]:bg-primary-50 data-[active]:text-primary-700 transition-all"
           data-filter="modality"
           data-value={key}
         >

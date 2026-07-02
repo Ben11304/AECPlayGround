@@ -41,16 +41,16 @@ const isArchilyse = tool.tool_id === 'T007';
 // Pricing display
 function pricingDisplay(tool: AECTool): { label: string; cls: string } {
   if (tool.access === 'open-source') {
-    return { label: tool.pricing_tier === 'freemium' ? 'Freemium (OSS core free)' : 'Free / open-source', cls: 'text-emerald-300' };
+    return { label: tool.pricing_tier === 'freemium' ? 'Freemium (OSS core free)' : 'Free / open-source', cls: 'text-emerald-700' };
   }
   if (tool.access === 'freemium') {
-    return { label: tool.pricing_tier.includes('[VERIFY]') ? 'Freemium — pricing details [VERIFY]' : `Freemium — ${tool.pricing_tier}`, cls: 'text-teal-300' };
+    return { label: tool.pricing_tier.includes('[VERIFY]') ? 'Freemium — pricing details [VERIFY]' : `Freemium — ${tool.pricing_tier}`, cls: 'text-teal-700' };
   }
   switch (tool.pricing_tier) {
-    case 'freemium': return { label: 'Freemium (free tier + paid)', cls: 'text-sky-300' };
-    case 'subscription-published': return { label: 'Subscription (public pricing — see product page)', cls: 'text-amber-300' };
-    case 'subscription-enterprise': return { label: 'Enterprise subscription (contact sales)', cls: 'text-slate-400' };
-    default: return { label: tool.pricing_tier, cls: 'text-slate-400' };
+    case 'freemium': return { label: 'Freemium (free tier + paid)', cls: 'text-sky-700' };
+    case 'subscription-published': return { label: 'Subscription (public pricing — see product page)', cls: 'text-amber-700' };
+    case 'subscription-enterprise': return { label: 'Enterprise subscription (contact sales)', cls: 'text-slate-600' };
+    default: return { label: tool.pricing_tier, cls: 'text-slate-600' };
   }
 }
 const pricing = pricingDisplay(tool);
@@ -92,16 +92,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <a href={`${base}/tools`}>Tools</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
-        <span class="text-slate-400" aria-current="page">{tool.name}</span>
+        <span class="text-slate-600" aria-current="page">{tool.name}</span>
       </nav>
 
       <div class="flex flex-col sm:flex-row sm:items-start gap-5 mt-2">
         <div class="flex-1">
           <p class="section-label">{tool.category_cluster} · {tool.tool_id}</p>
-          <h1 class="font-display text-3xl font-bold text-white sm:text-4xl mb-3">
+          <h1 class="font-display text-3xl font-bold text-slate-900 sm:text-4xl mb-3">
             {tool.name}
           </h1>
-          <p class="text-slate-400 text-sm leading-relaxed max-w-2xl">
+          <p class="text-slate-600 text-sm leading-relaxed max-w-2xl">
             {tool.category}
           </p>
 
@@ -114,14 +114,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               {accessLabel(tool.access)}
             </span>
             {tool.hardware_required && (
-              <span class="chip text-xs bg-rose-950/60 text-rose-300 border border-rose-800/60">
+              <span class="chip text-xs bg-rose-50 text-rose-700 border border-rose-300">
                 Hardware required
               </span>
             )}
             <span class={`chip text-xs ${maturityCls(tool.maturity)}`}>
               {maturityLabel(tool.maturity)}
             </span>
-            <span class="chip text-xs bg-slate-800/60 text-slate-400 border border-slate-700/60">
+            <span class="chip text-xs bg-slate-100/60 text-slate-600 border border-slate-300/60">
               {tool.verification_status}
             </span>
           </div>
@@ -162,12 +162,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- Entity disambiguation alert for T007 -->
   {isArchilyse && (
     <div class="mx-auto max-w-5xl px-4 pt-6 sm:px-6 lg:px-8">
-      <div class="rounded-xl border border-amber-700/50 bg-amber-950/30 p-4 text-sm">
-        <strong class="text-amber-300">⚠ Entity disambiguation (VERIFIER F-060):</strong>
-        <span class="text-amber-200/80">
-          {' '}This record is the <strong class="text-amber-200">ETH Zurich academic open-source pipeline</strong>
-          at <a href="https://archilyse.standfest.science/" target="_blank" rel="noopener noreferrer" class="underline text-amber-300">archilyse.standfest.science</a> and
-          <a href="https://github.com/Archilyse/Archilyse" target="_blank" rel="noopener noreferrer" class="underline text-amber-300">github.com/Archilyse/Archilyse</a> —
+      <div class="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm">
+        <strong class="text-amber-700">⚠ Entity disambiguation (VERIFIER F-060):</strong>
+        <span class="text-amber-700">
+          {' '}This record is the <strong class="text-amber-700">ETH Zurich academic open-source pipeline</strong>
+          at <a href="https://archilyse.standfest.science/" target="_blank" rel="noopener noreferrer" class="underline text-amber-700">archilyse.standfest.science</a> and
+          <a href="https://github.com/Archilyse/Archilyse" target="_blank" rel="noopener noreferrer" class="underline text-amber-700">github.com/Archilyse/Archilyse</a> —
           <em>not</em> archilyse.com, which was a separate commercial proptech entity (SaaS now discontinued).
         </span>
       </div>
@@ -177,9 +177,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- Claimed-stats provenance warning -->
   {hasClaimedStats && (
     <div class="mx-auto max-w-5xl px-4 pt-4 sm:px-6 lg:px-8">
-      <div class="rounded-xl border border-amber-900/40 bg-amber-950/20 p-3 text-xs text-amber-300/80">
-        <strong class="text-amber-300">Provenance note:</strong> This tool carries claimed statistics
-        (marked <span class="bg-amber-900/30 text-amber-300 px-1 rounded">[claimed, VERIFY]</span> below).
+      <div class="rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-700">
+        <strong class="text-amber-700">Provenance note:</strong> This tool carries claimed statistics
+        (marked <span class="bg-amber-50 text-amber-700 px-1 rounded">[claimed, VERIFY]</span> below).
         Verification_status = "verified (existence)" — the tool exists and URLs resolve, but
         accuracy figures, user counts, and pricing have not been independently confirmed.
       </div>
@@ -194,30 +194,30 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       <!-- Description -->
       <div class="card p-6">
-        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
           Description
         </h2>
         <p
-          class="text-sm text-slate-300 leading-relaxed"
+          class="text-sm text-slate-700 leading-relaxed"
           set:html={renderDescription(tool.short_description)}
         />
       </div>
 
       <!-- AEC tasks -->
       <div class="card p-6">
-        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
           AEC Tasks
         </h2>
         <div class="flex flex-wrap gap-2">
           {tool.aec_task.map(t => (
-            <span class="chip text-xs bg-slate-800/60 text-slate-300 border border-slate-700/60">{t}</span>
+            <span class="chip text-xs bg-slate-100/60 text-slate-700 border border-slate-300/60">{t}</span>
           ))}
         </div>
       </div>
 
       <!-- I/O modality -->
       <div class="card p-6">
-        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
           Input / Output Modality
         </h2>
         <div class="grid grid-cols-2 gap-4">
@@ -225,7 +225,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-2">Input</p>
             <div class="flex flex-col gap-1">
               {tool.input_modality.map(m => (
-                <span class="flex items-center gap-2 text-xs text-slate-300">
+                <span class="flex items-center gap-2 text-xs text-slate-700">
                   <span class="h-1.5 w-1.5 rounded-full bg-primary-500 shrink-0" />
                   {mLabel(m)}
                 </span>
@@ -236,7 +236,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-2">Output</p>
             <div class="flex flex-col gap-1">
               {tool.output_modality.map(m => (
-                <span class="flex items-center gap-2 text-xs text-slate-300">
+                <span class="flex items-center gap-2 text-xs text-slate-700">
                   <span class="h-1.5 w-1.5 rounded-full bg-accent-500 shrink-0" />
                   {mLabel(m)}
                 </span>
@@ -249,12 +249,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <!-- Integration ecosystem -->
       {tool.integration_ecosystem.length > 0 && (
         <div class="card p-6">
-          <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
             Integration Ecosystem
           </h2>
           <div class="flex flex-wrap gap-2">
             {tool.integration_ecosystem.map(e => (
-              <span class="chip text-xs bg-slate-800/60 text-slate-300 border border-slate-700/60">{e}</span>
+              <span class="chip text-xs bg-slate-100/60 text-slate-700 border border-slate-300/60">{e}</span>
             ))}
           </div>
         </div>
@@ -263,11 +263,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <!-- Notes -->
       {tool.notes && (
         <div class="card p-6">
-          <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+          <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
             Curator Notes
           </h2>
           <p
-            class="text-sm text-slate-400 leading-relaxed"
+            class="text-sm text-slate-600 leading-relaxed"
             set:html={renderDescription(tool.notes)}
           />
         </div>
@@ -279,7 +279,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       <!-- Key metadata card -->
       <div class="card p-5">
-        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
           Tool Metadata
         </h2>
         <dl class="flex flex-col gap-3 text-xs">
@@ -293,7 +293,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           ].map(row => (
             <div class="flex gap-2">
               <dt class="w-24 shrink-0 text-slate-500 font-medium">{row.k}</dt>
-              <dd class="text-slate-300 break-words">{row.v}</dd>
+              <dd class="text-slate-700 break-words">{row.v}</dd>
             </div>
           ))}
         </dl>
@@ -301,7 +301,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       <!-- Access & pricing -->
       <div class="card p-5">
-        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
           Access &amp; Pricing
         </h2>
         <div class="flex flex-col gap-2 text-xs">
@@ -316,13 +316,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <span class={pricing.cls}>{pricing.label}</span>
           </div>
           {tool.pricing_tier === 'subscription-published' && (
-            <p class="text-amber-400/80 text-[10px]">
+            <p class="text-amber-700 text-[10px]">
               Published pricing — see product page. Figures in description marked [claimed, VERIFY] reflect DISCOVERER snapshot and may not reflect current rates.
             </p>
           )}
           <div class="flex gap-2">
             <span class="w-24 shrink-0 text-slate-500 font-medium">API</span>
-            <span class={tool.api_available === '[VERIFY]' ? 'text-amber-400' : 'text-slate-300'}>
+            <span class={tool.api_available === '[VERIFY]' ? 'text-amber-700' : 'text-slate-700'}>
               {tool.api_available === '[VERIFY]' ? '[VERIFY] — not confirmed' : tool.api_available}
             </span>
           </div>
@@ -331,7 +331,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       <!-- Links -->
       <div class="card p-5">
-        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
           Links
         </h2>
         <div class="flex flex-col gap-2">
@@ -339,7 +339,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             href={tool.resolvable_url}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2 text-xs text-primary-400 hover:text-primary-300 transition-colors"
+            class="flex items-center gap-2 text-xs text-primary-700 hover:text-primary-700 transition-colors"
           >
             <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M6 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-3"/>
@@ -352,7 +352,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               href={tool.github_url}
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-xs text-primary-400 hover:text-primary-300 transition-colors"
+              class="flex items-center gap-2 text-xs text-primary-700 hover:text-primary-700 transition-colors"
             >
               <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
@@ -365,7 +365,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               href={`https://doi.org/${tool.paper_doi}`}
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-xs text-primary-400 hover:text-primary-300 transition-colors"
+              class="flex items-center gap-2 text-xs text-primary-700 hover:text-primary-700 transition-colors"
             >
               Paper (DOI)
             </a>
@@ -375,7 +375,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               href={`https://arxiv.org/abs/${tool.arxiv_id}`}
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-xs text-primary-400 hover:text-primary-300 transition-colors"
+              class="flex items-center gap-2 text-xs text-primary-700 hover:text-primary-700 transition-colors"
             >
               arXiv:{tool.arxiv_id}
             </a>
@@ -385,10 +385,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       <!-- Benchmark target -->
       <div class="card p-5">
-        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
           Benchmark Target
         </h2>
-        <p class="text-xs text-amber-400/80">
+        <p class="text-xs text-amber-700">
           {tool.benchmark_target === '[VERIFY]'
             ? '[VERIFY] — no AEC benchmark coverage confirmed. Strong candidates for future evaluation.'
             : tool.benchmark_target}
@@ -397,7 +397,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       <!-- Provenance -->
       <div class="card p-5">
-        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-800">
+        <h2 class="section-head text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 pb-2 border-b border-slate-200">
           Record Provenance
         </h2>
         <p class="text-[10px] text-slate-500 leading-relaxed">{tool.provenance}</p>

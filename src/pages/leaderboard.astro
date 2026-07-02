@@ -47,11 +47,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href={`${base}/`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
-        <span class="text-slate-400" aria-current="page">Leaderboard</span>
+        <span class="text-slate-600" aria-current="page">Leaderboard</span>
       </nav>
       <p class="section-label">Model Performance</p>
-      <h1 class="font-display text-3xl font-bold text-white mb-2">Model Leaderboard</h1>
-      <p class="text-slate-400 text-sm max-w-xl">
+      <h1 class="font-display text-3xl font-bold text-slate-900 mb-2">Model Leaderboard</h1>
+      <p class="text-slate-600 text-sm max-w-xl">
         Source-confirmed results only · Bar / Scatter / Year-axis charts · Integrity-gated
       </p>
     </div>
@@ -60,9 +60,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
     <!-- Integrity caveat bar -->
-    <div class="mb-4 flex flex-wrap items-center gap-3 rounded-lg border border-slate-800 bg-slate-900/60 px-4 py-3 text-xs">
+    <div class="mb-4 flex flex-wrap items-center gap-3 rounded-lg border border-slate-200 bg-slate-50/60 px-4 py-3 text-xs">
       <span class="chip badge-verified text-[11px]">✓ source-confirmed</span>
-      <span class="text-slate-400">Sourced as of 2026-06</span>
+      <span class="text-slate-600">Sourced as of 2026-06</span>
       <span class="text-slate-700">·</span>
       <span class="text-slate-500">Model strings verbatim from 2026 papers</span>
       <span class="text-slate-700">·</span>
@@ -70,10 +70,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
 
     <!-- Main interactive chart card -->
-    <div class="rounded-xl border border-slate-800 bg-slate-900 overflow-hidden">
+    <div class="rounded-xl border border-slate-200 bg-white overflow-hidden">
 
       <!-- Controls bar -->
-      <div class="border-b border-slate-800 bg-slate-900/80 px-4 py-3 flex flex-wrap items-center gap-3">
+      <div class="border-b border-slate-200 bg-slate-50/80 px-4 py-3 flex flex-wrap items-center gap-3">
         <!-- Benchmark select -->
         <div class="flex items-center gap-2">
           <label for="lbBmSel" class="text-[10px] font-semibold uppercase tracking-wider text-slate-500 shrink-0">Benchmark</label>
@@ -83,11 +83,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </div>
 
         <!-- Mode toggle -->
-        <div id="lb-mode-toggle" class="flex rounded-lg border border-slate-700 overflow-hidden text-xs">
+        <div id="lb-mode-toggle" class="flex rounded-lg border border-slate-300 overflow-hidden text-xs">
           <button id="modeBar" class="lb-mode-btn px-3 py-1.5 font-medium transition-colors active" aria-pressed="true">
             Bar
           </button>
-          <button id="modeScatter" class="lb-mode-btn px-3 py-1.5 font-medium transition-colors border-l border-slate-700" aria-pressed="false">
+          <button id="modeScatter" class="lb-mode-btn px-3 py-1.5 font-medium transition-colors border-l border-slate-300" aria-pressed="false">
             Scatter
           </button>
         </div>
@@ -115,7 +115,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </div>
 
       <!-- Legend row -->
-      <div class="border-t border-slate-800 px-4 py-2 flex flex-wrap gap-4 text-xs text-slate-500">
+      <div class="border-t border-slate-200 px-4 py-2 flex flex-wrap gap-4 text-xs text-slate-500">
         <div class="flex items-center gap-1.5">
           <div class="h-3 w-3 rounded bg-blue-500 opacity-90"></div>
           <span>AI model</span>
@@ -134,15 +134,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <!-- Integrity gating notices -->
     <div class="mt-6 grid gap-4 sm:grid-cols-2">
       <!-- LB_PENDING -->
-      <div class="rounded-xl border border-amber-800/40 bg-amber-950/20 p-4">
-        <h3 class="text-xs font-semibold text-amber-400 mb-2">⏳ Pending verification</h3>
+      <div class="rounded-xl border border-amber-300 bg-amber-50 p-4">
+        <h3 class="text-xs font-semibold text-amber-700 mb-2">⏳ Pending verification</h3>
         <p class="text-[11px] text-slate-500 mb-2">Disabled in selector — results not yet source-confirmed:</p>
         <div class="flex flex-wrap gap-1">
           {[...LB_PENDING_SET].map(rid => {
             const b = benchmarks.find(x => x.source_record_id === rid);
             return b ? (
               <a href={`${base}/benchmarks/${rid.toLowerCase()}`}
-                 class="chip bg-amber-900/30 text-amber-400 border border-amber-800/50 font-mono text-[10px] hover:bg-amber-900/50">
+                 class="chip bg-amber-50 text-amber-700 border border-amber-300 font-mono text-[10px] hover:bg-amber-50">
                 {rid} {b.name}
               </a>
             ) : null;
@@ -150,15 +150,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </div>
       </div>
       <!-- LB_NO_RESULTS -->
-      <div class="rounded-xl border border-slate-700/40 bg-slate-800/20 p-4">
-        <h3 class="text-xs font-semibold text-slate-400 mb-2">⟨no results sourced yet⟩</h3>
+      <div class="rounded-xl border border-slate-300/40 bg-slate-100/20 p-4">
+        <h3 class="text-xs font-semibold text-slate-600 mb-2">⟨no results sourced yet⟩</h3>
         <p class="text-[11px] text-slate-500 mb-2">Newly admitted (17→20 cascade); no performance data:</p>
         <div class="flex flex-wrap gap-1">
           {[...LB_NO_RESULTS_SET].map(rid => {
             const b = benchmarks.find(x => x.source_record_id === rid);
             return b ? (
               <a href={`${base}/benchmarks/${rid.toLowerCase()}`}
-                 class="chip bg-slate-700/50 text-slate-400 border border-slate-700 font-mono text-[10px] hover:bg-slate-700/80">
+                 class="chip bg-slate-300/50 text-slate-600 border border-slate-300 font-mono text-[10px] hover:bg-slate-300/80">
                 {rid} {b.name}
               </a>
             ) : null;
@@ -168,13 +168,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
 
     <!-- Coverage summary -->
-    <div class="mt-6 rounded-xl border border-slate-800 overflow-hidden">
-      <div class="bg-slate-900 px-4 py-3">
-        <h3 class="text-sm font-semibold text-slate-200">Coverage summary — chartable benchmarks</h3>
+    <div class="mt-6 rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-white px-4 py-3">
+        <h3 class="text-sm font-semibold text-slate-800">Coverage summary — chartable benchmarks</h3>
       </div>
       <div class="overflow-x-auto">
         <table class="min-w-full text-xs">
-          <thead class="bg-slate-900/60">
+          <thead class="bg-slate-50/60">
             <tr>
               <th class="py-2 px-4 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-500">Benchmark</th>
               <th class="py-2 px-4 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-500">ID</th>
@@ -187,15 +187,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               if (!b) return null;
               const cnt = confirmedCounts[rid] ?? 0;
               return (
-                <tr class={i % 2 === 0 ? 'bg-slate-950' : 'bg-slate-900/40'}>
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/40'}>
                   <td class="py-2 px-4">
                     <a href={`${base}/benchmarks/${rid.toLowerCase()}`}
-                       class="text-slate-300 hover:text-blue-300 transition-colors">
+                       class="text-slate-700 hover:text-blue-700 transition-colors">
                       {b.name}
                     </a>
                   </td>
                   <td class="py-2 px-4 font-mono text-[11px] text-slate-500">{rid}</td>
-                  <td class="py-2 px-4 text-center font-semibold text-emerald-400">{cnt}</td>
+                  <td class="py-2 px-4 text-center font-semibold text-emerald-700">{cnt}</td>
                 </tr>
               );
             })}
@@ -215,21 +215,21 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <!-- Inline styles for the chart UI -->
 <style>
 .lb-select {
-  @apply rounded-lg border border-slate-700 bg-slate-800 px-2.5 py-1.5
-         text-xs text-slate-200 focus:border-blue-500 focus:outline-none
+  @apply rounded-lg border border-slate-300 bg-slate-100 px-2.5 py-1.5
+         text-xs text-slate-800 focus:border-blue-500 focus:outline-none
          focus:ring-1 focus:ring-blue-500/30 transition max-w-[280px];
 }
 .lb-mode-btn {
-  @apply bg-slate-900 text-slate-400 hover:text-slate-200;
+  @apply bg-white text-slate-600 hover:text-slate-800;
 }
 .lb-mode-btn.active {
   @apply bg-blue-700 text-white;
 }
 .lb-warn {
-  @apply rounded-lg border border-amber-800/40 bg-amber-950/20 p-4 text-sm text-amber-400;
+  @apply rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-700;
 }
 .lb-info {
-  @apply rounded-lg border border-slate-700/40 bg-slate-800/20 p-3 text-xs text-slate-500 mt-2;
+  @apply rounded-lg border border-slate-300/40 bg-slate-100/20 p-3 text-xs text-slate-500 mt-2;
 }
 </style>
 
@@ -362,9 +362,9 @@ function buildBarChart(rid, metric) {
   const BH = 22, GAP = 5, RH = BH + GAP, TM = 36, BM = 22;
   const SVG_H = TM + allRows.length * RH + BM;
 
-  const textC = '#e2e8f0';
-  const dimC  = '#64748b';
-  const gridC = '#2d3748';
+  const textC = '#1e293b';
+  const dimC  = '#475569';
+  const gridC = '#e2e8f0';
   const aiC   = '#3b82f6';
   const humC  = '#f59e0b';
 
@@ -422,7 +422,7 @@ function buildBarChart(rid, metric) {
 // ── SCATTER CHART ──────────────────────────────────────────────────────────
 function buildScatterChart(rid, xMetric, yMetric) {
   if (xMetric === yMetric) {
-    return '<p class="text-amber-400 text-sm p-4">⚠ X and Y axes are the same — select different metrics to reveal trade-offs.</p>';
+    return '<p class="text-amber-700 text-sm p-4">⚠ X and Y axes are the same — select different metrics to reveal trade-offs.</p>';
   }
 
   const d = DATA.find(x => x.source_record_id === rid);
@@ -499,13 +499,13 @@ function buildScatterChart(rid, xMetric, yMetric) {
   const toSx = x => ML + (x - xLo) / (xHi - xLo) * PA;
   const toSy = y => MT + PH - (y - yLo) / (yHi - yLo) * PH;
 
-  const textC   = '#e2e8f0';
-  const dimC    = '#64748b';
-  const gridC   = '#2d3748';
+  const textC   = '#1e293b';
+  const dimC    = '#475569';
+  const gridC   = '#e2e8f0';
   const aiC     = '#3b82f6';
   const humC    = '#f59e0b';
   const approxC = '#a78bfa';
-  const bgC     = '#1a1d2e';
+  const bgC     = '#ffffff';
 
   function niceTicks(lo, hi, n) {
     const range = hi - lo;
@@ -593,13 +593,13 @@ function buildScatterChart(rid, xMetric, yMetric) {
 
   let notes = '';
   if (metricDropped > 0) {
-    notes += `<p class="text-amber-400 text-xs mt-2">⚠ ${metricDropped} model${metricDropped > 1 ? 's' : ''} omitted — no value for both "${xDispName}" and "${yDispName}"</p>`;
+    notes += `<p class="text-amber-700 text-xs mt-2">⚠ ${metricDropped} model${metricDropped > 1 ? 's' : ''} omitted — no value for both "${xDispName}" and "${yDispName}"</p>`;
   }
   if (yearOmitCount > 0) {
-    notes += `<p class="text-amber-400 text-xs mt-1">⚠ ${yearOmitCount} model${yearOmitCount > 1 ? 's' : ''} omitted — no verified release date (plot_flag=omit)</p>`;
+    notes += `<p class="text-amber-700 text-xs mt-1">⚠ ${yearOmitCount} model${yearOmitCount > 1 ? 's' : ''} omitted — no verified release date (plot_flag=omit)</p>`;
   }
   if (plotModels.some(m => m._approx)) {
-    notes += `<p class="text-violet-400 text-xs mt-1">◈ = year estimated from indirect evidence (approximate)</p>`;
+    notes += `<p class="text-violet-700 text-xs mt-1">◈ = year estimated from indirect evidence (approximate)</p>`;
   }
 
   const yearNote = (IS_YR_X || IS_YR_Y)

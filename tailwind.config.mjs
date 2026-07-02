@@ -84,10 +84,11 @@ export default {
           'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(99,102,241,0.12), transparent)',
       },
       boxShadow: {
-        'card':    '0 1px 3px 0 rgba(0,0,0,0.3), 0 1px 2px -1px rgba(0,0,0,0.3)',
-        'card-lg': '0 4px 16px 0 rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.3)',
-        'glow-sm': '0 0 12px rgba(99,102,241,0.25)',
-        'glow':    '0 0 24px rgba(99,102,241,0.35)',
+        // Lightened for bright-white theme (was 0.3-0.4 alpha — too heavy on white)
+        'card':    '0 1px 2px 0 rgba(15,23,42,0.06), 0 1px 3px -1px rgba(15,23,42,0.05)',
+        'card-lg': '0 4px 12px 0 rgba(15,23,42,0.08), 0 2px 4px -1px rgba(15,23,42,0.05)',
+        'glow-sm': '0 0 12px rgba(99,102,241,0.18)',
+        'glow':    '0 0 24px rgba(99,102,241,0.22)',
       },
       animation: {
         'fade-in':  'fadeIn 0.3s ease-out',
@@ -104,9 +105,17 @@ export default {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
+      // Reduced radii (user directive 2026-07-01: "cards more square").
+      // Overrides Tailwind defaults so rounded-lg/xl/2xl/3xl are uniformly
+      // squarer across every component; rounded-full (chips/badges) stays round.
       borderRadius: {
-        '2xl': '1rem',
-        '3xl': '1.25rem',
+        'sm':    '0.125rem',
+        DEFAULT: '0.125rem',
+        'md':    '0.25rem',
+        'lg':    '0.25rem',
+        'xl':    '0.375rem',
+        '2xl':   '0.5rem',
+        '3xl':   '0.625rem',
       },
     },
   },

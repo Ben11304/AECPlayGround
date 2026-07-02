@@ -14,13 +14,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href={`${base}/`}>Home</a>
         <span class="breadcrumb-sep" aria-hidden="true">›</span>
-        <span class="text-slate-400" aria-current="page">About &amp; Methodology</span>
+        <span class="text-slate-600" aria-current="page">About &amp; Methodology</span>
       </nav>
       <p class="section-label">Methodology</p>
-      <h1 class="font-display text-4xl font-bold text-white mb-3">
+      <h1 class="font-display text-4xl font-bold text-slate-900 mb-3">
         About AECplayground
       </h1>
-      <p class="text-slate-400 max-w-2xl leading-relaxed">
+      <p class="text-slate-600 max-w-2xl leading-relaxed">
         A PRISMA-compliant systematic review of AI benchmarks for the built environment,
         with a 4-tier quality scheme, 10-dimension scoring rubric, and strict provenance gating.
       </p>
@@ -46,45 +46,45 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             arm: 'A',
             title: 'Academic Database Search',
             desc: 'Systematic queries across ACM Digital Library, IEEE Xplore, arXiv, Semantic Scholar, and Scopus with AEC × benchmark × AI/LLM/VLM terms.',
-            color: 'border-primary-800/60 bg-primary-950/30',
+            color: 'border-primary-300 bg-primary-50',
             dot:  'bg-primary-500',
           },
           {
             arm: 'B',
             title: 'OpenConstruction Snowball',
             desc: 'Domain-specific sweep via OpenConstruction.ai and related AEC AI registries, grey-literature repositories (HuggingFace Datasets, GitHub), and AEC-focused workshop proceedings not indexed by Arm A databases.',
-            color: 'border-accent-800/40 bg-slate-900/40',
+            color: 'border-accent-300 bg-slate-50/40',
             dot:  'bg-accent-500',
           },
           {
             arm: 'C',
             title: 'Targeted New Search',
             desc: 'Late-stage targeted search (2026-06-21) that surfaced records not found in Arms A or B. Added R030 (CEQuest), R031 (BIM-Edit), R033 (Construction Safety Poster Benchmark); R032 found but excluded (VERIFIER F-054).',
-            color: 'border-slate-700 bg-slate-900/40',
+            color: 'border-slate-300 bg-slate-50/40',
             dot:  'bg-slate-400',
           },
           {
             arm: 'D',
             title: 'Forward-Search & Expansion',
             desc: 'VERIFIER 0.5.33 forward-search (2026-06-23): Added R035 (Qwen-BIM), R036 (Ishigaki-IDS-Bench), R037 (Blueprint-Bench), R039 (BEMEval-Doc2Schema); R038 excluded as EX-CONSOL dup-of-R008. DISCOVERER 0.15.1 NS1–NS9 expansion (2026-06-27): Added R040 (DreamHouse), R041 (ConstructionWorker-VLM).',
-            color: 'border-violet-800/40 bg-violet-950/20',
+            color: 'border-violet-300 bg-violet-50',
             dot:  'bg-violet-400',
           },
         ].map(arm => (
           <div class={`rounded-2xl border p-6 ${arm.color}`}>
             <div class="flex items-center gap-3 mb-3">
               <span class={`h-2 w-2 rounded-full ${arm.dot}`}></span>
-              <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Arm {arm.arm}</span>
+              <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest">Arm {arm.arm}</span>
             </div>
-            <h3 class="text-base font-display font-semibold text-white mb-2">{arm.title}</h3>
+            <h3 class="text-base font-display font-semibold text-slate-900 mb-2">{arm.title}</h3>
             <p class="text-sm text-slate-500 leading-relaxed">{arm.desc}</p>
           </div>
         ))}
       </div>
 
       <!-- PRISMA funnel -->
-      <div class="rounded-2xl bg-slate-900/50 border border-slate-800 p-6">
-        <h3 class="text-sm font-semibold text-slate-300 mb-4">Screening Flow</h3>
+      <div class="rounded-2xl bg-slate-50/50 border border-slate-200 p-6">
+        <h3 class="text-sm font-semibold text-slate-700 mb-4">Screening Flow</h3>
         <div class="flex flex-col gap-2 max-w-xl">
           {[
             { stage: 'Identified',         n: '164', note: 'Four arms + DISCOV expansion (A 33 + B 118 + C 6 + D 7), 13 dups removed',         bar: '100' },
@@ -95,10 +95,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <div class="flex items-center gap-4">
               <div class="w-32 shrink-0 text-right text-[11px] text-slate-500">{s.stage}</div>
               <div class="flex-1 flex items-center gap-3">
-                <div class="flex-1 h-2 rounded-full bg-slate-800">
+                <div class="flex-1 h-2 rounded-full bg-slate-100">
                   <div class="h-2 rounded-full bg-primary-600/70 transition-all" style={`width: ${s.bar}%`}></div>
                 </div>
-                <span class="w-8 text-right font-display text-sm font-semibold text-white">{s.n}</span>
+                <span class="w-8 text-right font-display text-sm font-semibold text-slate-900">{s.n}</span>
               </div>
               <div class="hidden sm:block w-52 text-[10px] text-slate-600">{s.note}</div>
             </div>
@@ -124,7 +124,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             tier: 'Tier 1',
             label: 'Core',
             count: '18',
-            cls: 'border-emerald-800/60 bg-emerald-950/20',
+            cls: 'border-emerald-300 bg-emerald-50',
             dot: 'bg-emerald-500',
             desc: 'Purpose-built for AEC tasks; primary objective is AEC AI evaluation; all d5/d6/d7 floors met.',
             floor: 'd5 ≥ 1, d6 ≥ 1, d7 ≥ 1 (evaluation clarity, baseline coverage, reproducibility — partial is sufficient)',
@@ -134,7 +134,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             tier: 'Tier 2',
             label: 'Peripheral',
             count: '7',
-            cls: 'border-amber-800/60 bg-amber-950/20',
+            cls: 'border-amber-300 bg-amber-50',
             dot: 'bg-amber-500',
             desc: 'AEC-relevant benchmarks that miss at least one d5/d6/d7 floor (floor dimension = 0) or whose primary scope is only partially AEC.',
             floor: 'At least one of d5/d6/d7 = 0, OR primary AEC scope is partial',
@@ -144,7 +144,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             tier: 'Tier 3',
             label: 'Contextual',
             count: '1',
-            cls: 'border-orange-800/60 bg-orange-950/20',
+            cls: 'border-orange-300 bg-orange-50',
             dot: 'bg-orange-500',
             desc: 'AEC-relevant but adjacent — a training corpus or cross-domain resource with documented FM evidence of use, not a purpose-built AEC evaluation benchmark.',
             floor: 'Not a purpose-built evaluation benchmark; included as contextual resource only',
@@ -156,10 +156,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               <span class={`mt-1 h-3 w-3 rounded-full shrink-0 ${t.dot}`}></span>
               <div class="flex-1">
                 <div class="flex items-center gap-3 mb-1">
-                  <h3 class="font-display text-base font-semibold text-white">{t.tier} — {t.label}</h3>
+                  <h3 class="font-display text-base font-semibold text-slate-900">{t.tier} — {t.label}</h3>
                   <span class="text-xs text-slate-500">({t.count} benchmarks)</span>
                 </div>
-                <p class="text-sm text-slate-400 mb-2">{t.desc}</p>
+                <p class="text-sm text-slate-600 mb-2">{t.desc}</p>
                 <div class="text-[11px] text-slate-600 mb-1">
                   <strong class="text-slate-500">Floor: </strong>{t.floor}
                 </div>
@@ -197,10 +197,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           { d: 'd9', name: 'Human Baseline',         desc: 'A credible human-performance reference point is reported, enabling calibration of model scores.' },
           { d: 'd10',name: 'Practical Relevance',    desc: 'Benchmark results map to actionable performance estimates for real deployments; not purely academic.' },
         ].map(dim => (
-          <div class="rounded-xl bg-slate-900/60 border border-slate-800 px-4 py-3">
+          <div class="rounded-xl bg-slate-50/60 border border-slate-200 px-4 py-3">
             <div class="flex items-center gap-2 mb-1">
-              <code class="font-mono text-[10px] text-primary-400 bg-primary-950/50 px-1.5 py-0.5 rounded">{dim.d}</code>
-              <span class="text-sm font-medium text-slate-200">{dim.name}</span>
+              <code class="font-mono text-[10px] text-primary-700 bg-primary-50 px-1.5 py-0.5 rounded">{dim.d}</code>
+              <span class="text-sm font-medium text-slate-800">{dim.name}</span>
               {(dim.d === 'd5' || dim.d === 'd6' || dim.d === 'd7') && (
                 <span class="text-[10px] text-emerald-500 font-medium" title="Tier 1 requires ≥1 on this dimension (partial is sufficient)">★ T1 ≥1</span>
               )}
@@ -224,32 +224,32 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         {[
           {
             status: 'Source-Confirmed',
-            badge: 'bg-primary-950/50 text-primary-300 border-primary-800/60',
+            badge: 'bg-primary-50 text-primary-700 border-primary-300',
             desc: 'Results have been verified against source files (raw logs, supplementary tables, or leaderboard APIs) by the VERIFIER agent.',
             note: 'Currently: HSE-Bench (R017) only — the single benchmark where source artifact verification was completed.',
           },
           {
             status: 'Claimed',
-            badge: 'bg-slate-800/60 text-slate-400 border-slate-700/60',
+            badge: 'bg-slate-100/60 text-slate-600 border-slate-300/60',
             desc: 'Numbers are taken directly from the published paper\'s tables or abstract. No cross-checking against raw data or replication.',
             note: 'Most results in the catalog are in this state. Values should be treated as author-reported, not independently verified.',
           },
           {
             status: '[VERIFY] Pending',
-            badge: 'bg-amber-950/50 text-amber-400 border-amber-800/60',
+            badge: 'bg-amber-50 text-amber-700 border-amber-300',
             desc: 'A number or identifier is present in the source but could not be confirmed from available artifacts. Requires VERIFIER resolution before catalog entry is finalized.',
             note: 'Example: R013 (PE Civil Bench) — paper title, dataset size, and performance figures require source confirmation from CACAIE proceedings (paywall). R033 (Construction Safety Poster Benchmark) has similar outstanding items.',
           },
         ].map(p => (
-          <div class="rounded-2xl bg-slate-900/50 border border-slate-800 p-5">
+          <div class="rounded-2xl bg-slate-50/50 border border-slate-200 p-5">
             <span class={`chip text-xs border mb-3 ${p.badge}`}>{p.status}</span>
-            <p class="text-sm text-slate-400 leading-relaxed mb-3">{p.desc}</p>
+            <p class="text-sm text-slate-600 leading-relaxed mb-3">{p.desc}</p>
             <p class="text-[11px] text-slate-600 leading-relaxed">{p.note}</p>
           </div>
         ))}
       </div>
 
-      <div class="rounded-2xl bg-amber-950/20 border border-amber-900/40 px-6 py-4">
+      <div class="rounded-2xl bg-amber-50 border border-amber-300 px-6 py-4">
         <p class="text-sm text-amber-700/90 leading-relaxed">
           <strong class="text-amber-500">No data is fabricated.</strong>
           Every number in this catalog traces to a specific CURATOR extraction or SYNTHESIZER aggregate.
@@ -303,10 +303,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             role: 'AEC-specific ML evaluation methodology reference for HSE/safety task design.',
           },
         ].map(ref => (
-          <div class="flex gap-4 rounded-xl bg-slate-900/40 border border-slate-800 px-5 py-4">
-            <code class="font-mono text-[10px] text-primary-400 shrink-0 mt-0.5">[{ref.key}]</code>
+          <div class="flex gap-4 rounded-xl bg-slate-50/40 border border-slate-200 px-5 py-4">
+            <code class="font-mono text-[10px] text-primary-700 shrink-0 mt-0.5">[{ref.key}]</code>
             <div>
-              <p class="text-xs text-slate-400 leading-relaxed mb-1">{ref.citation}</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-1">{ref.citation}</p>
               <p class="text-[11px] text-slate-600">{ref.role}</p>
             </div>
           </div>
@@ -330,8 +330,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           { name: 'CRAFTER',    role: 'Write manuscript sections and build this living catalog' },
           { name: 'VERIFIER',   role: 'Resolve [VERIFY] tags; confirm identifiers, URLs, metrics' },
         ].map(a => (
-          <div class="rounded-xl bg-slate-900/50 border border-slate-800 px-4 py-3">
-            <div class="font-mono text-xs text-primary-300 font-semibold mb-1">{a.name}</div>
+          <div class="rounded-xl bg-slate-50/50 border border-slate-200 px-4 py-3">
+            <div class="font-mono text-xs text-primary-700 font-semibold mb-1">{a.name}</div>
             <p class="text-[11px] text-slate-500 leading-relaxed">{a.role}</p>
           </div>
         ))}

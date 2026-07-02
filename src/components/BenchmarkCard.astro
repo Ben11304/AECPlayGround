@@ -38,16 +38,16 @@ const glyphKey = domainGlyph(b.capability.domain);
 // Domain label → chip color
 function domainCls(d: string): string {
   const dl = d.toLowerCase();
-  if (dl.includes('bim')) return 'bg-teal-900/40 text-teal-300';
-  if (dl.includes('structural')) return 'bg-indigo-900/40 text-indigo-300';
-  if (dl.includes('inspection')) return 'bg-violet-900/40 text-violet-300';
-  if (dl.includes('hse') || dl.includes('safety')) return 'bg-red-900/40 text-red-300';
-  if (dl.includes('construction management')) return 'bg-orange-900/40 text-orange-300';
-  if (dl.includes('energy') || dl.includes('sustainability')) return 'bg-lime-900/40 text-lime-300';
-  if (dl.includes('architecture')) return 'bg-sky-900/40 text-sky-300';
-  if (dl.includes('code') || dl.includes('cert')) return 'bg-slate-700 text-slate-300';
-  if (dl.includes('simulation')) return 'bg-green-900/40 text-green-300';
-  return 'bg-slate-700 text-slate-300';
+  if (dl.includes('bim')) return 'bg-teal-50 text-teal-700';
+  if (dl.includes('structural')) return 'bg-indigo-50 text-indigo-700';
+  if (dl.includes('inspection')) return 'bg-violet-50 text-violet-700';
+  if (dl.includes('hse') || dl.includes('safety')) return 'bg-red-50 text-red-700';
+  if (dl.includes('construction management')) return 'bg-orange-50 text-orange-700';
+  if (dl.includes('energy') || dl.includes('sustainability')) return 'bg-lime-50 text-lime-700';
+  if (dl.includes('architecture')) return 'bg-sky-50 text-sky-700';
+  if (dl.includes('code') || dl.includes('cert')) return 'bg-slate-300 text-slate-700';
+  if (dl.includes('simulation')) return 'bg-green-50 text-green-700';
+  return 'bg-slate-300 text-slate-700';
 }
 
 const identifier = b.identifier ?? '';
@@ -65,7 +65,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <a
   href={`${base}/benchmarks/${slug}`}
-  class="card group flex flex-col overflow-hidden no-underline bg-slate-900 border-slate-800 hover:border-slate-600 transition-all"
+  class="card group flex flex-col overflow-hidden no-underline bg-white border-slate-200 hover:border-slate-600 transition-all"
   data-tier={b.tier}
   data-domain={b.capability.domain}
   data-modality={mods.join(',')}
@@ -73,7 +73,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   data-id={b.source_record_id}
 >
   <!-- Thumbnail header -->
-  <div class="relative flex h-32 items-center justify-center overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-800">
+  <div class="relative flex h-32 items-center justify-center overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 border-b border-slate-200">
     {thumb ? (
       /* Real figure for the 12 thumbnailed benchmarks (5 openly-licensed + 7 fair-use Fig.1) */
       <>
@@ -90,7 +90,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <span
           role="link"
           tabindex="0"
-          class="absolute bottom-1 left-0 right-0 px-2 text-center text-[9px] text-slate-400 hover:text-slate-200 transition-colors truncate z-10 cursor-pointer select-none"
+          class="absolute bottom-1 left-0 right-0 px-2 text-center text-[9px] text-slate-200 hover:text-white transition-colors truncate z-10 cursor-pointer select-none"
           title={thumb.caption}
           onclick={`event.stopPropagation(); window.open('${thumb.creditUrl}', '_blank', 'noopener,noreferrer');`}
         >
@@ -181,18 +181,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     )}
 
     <!-- Record ID badge -->
-    <span class="absolute top-2 left-2 rounded bg-slate-800/80 px-1.5 py-0.5 font-mono text-[10px] text-slate-400 z-10">
+    <span class="absolute top-2 left-2 rounded bg-slate-100/80 px-1.5 py-0.5 font-mono text-[10px] text-slate-600 z-10">
       {b.source_record_id}
     </span>
 
     <!-- Rubric score -->
-    <span class="absolute top-2 right-2 rounded bg-slate-800/80 px-1.5 py-0.5 text-[10px] text-slate-400 z-10">
+    <span class="absolute top-2 right-2 rounded bg-slate-100/80 px-1.5 py-0.5 text-[10px] text-slate-600 z-10">
       {rubricTotal}/20
     </span>
 
     <!-- No-results badge -->
     {noResults && (
-      <span class="absolute bottom-6 right-2 chip bg-slate-700 text-slate-400 text-[10px] z-10">
+      <span class="absolute bottom-6 right-2 chip bg-slate-300 text-slate-600 text-[10px] z-10">
         no results yet
       </span>
     )}
@@ -202,7 +202,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <div class="flex flex-1 flex-col gap-3 p-4">
     <!-- Title + tier + year row -->
     <div class="flex items-start justify-between gap-2">
-      <h3 class="text-sm font-semibold text-slate-100 group-hover:text-primary-300 transition-colors leading-tight">
+      <h3 class="text-sm font-semibold text-slate-900 group-hover:text-primary-700 transition-colors leading-tight">
         {b.name}
       </h3>
       <div class="flex shrink-0 flex-col items-end gap-1">
@@ -222,7 +222,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <ModalityChips modality={b.modality} max={4} />
 
     <!-- Footer: identifier + provenance -->
-    <div class="mt-auto flex items-center justify-between gap-2 pt-2 border-t border-slate-800">
+    <div class="mt-auto flex items-center justify-between gap-2 pt-2 border-t border-slate-200">
       <span class="truncate font-mono text-[10px] text-slate-500" title={identifier}>
         {identLabel}
       </span>
