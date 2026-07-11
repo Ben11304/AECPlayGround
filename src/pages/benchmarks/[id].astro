@@ -381,16 +381,28 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <div class="flex flex-col gap-3 text-xs">
             {[
               ['Domain', b.capability.domain],
-              ['Task Spans', b.capability.task_spans],
-              ['Modality Spans', b.capability.modality_spans],
-              ['Evaluation Spans', b.capability.evaluation_spans],
-              ['Capability Spans', b.capability.capability_spans],
+              ['Dim1 Task', b.capability.task_spans],
+              ['Dim3 Modality', b.capability.modality_spans],
+              ['Dim4 Evaluation', b.capability.evaluation_spans],
+              ['Dim2 Capability', b.capability.capability_spans],
+              ['Dim5 Profession', b.capability.profession_label ?? '—'],
+              ['Dim6 Building-system', b.capability.building_system_label ?? '—'],
             ].map(([label, value]) => (
               <div>
                 <div class="text-[10px] font-semibold uppercase tracking-wide text-slate-600 mb-1">{label}</div>
                 <p class="text-slate-700 leading-relaxed">{value}</p>
               </div>
             ))}
+            {b.capability.profession_provenance === 'proposal_unverified' && (
+              <p class="text-[10px] text-amber-700 italic border-t border-slate-200 pt-2">
+                Profession/Building-system are a <strong>provisional</strong> placement — {b.capability.profession_note}
+              </p>
+            )}
+            {b.capability.profession_provenance === 'verified' && (
+              <p class="text-[10px] text-emerald-700 italic border-t border-slate-200 pt-2">
+                {b.capability.profession_note}
+              </p>
+            )}
           </div>
         </section>
 

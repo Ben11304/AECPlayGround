@@ -61,6 +61,13 @@ const identLabel = identifier.startsWith('arXiv:')
 
 const rubricTotal = b.rubric?.total ?? 0;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const splitSpans = (s: string) => s.split(';').map((x) => x.trim()).filter(Boolean);
+const taskSpans = splitSpans(b.capability.task_spans ?? '');
+const capabilitySpans = splitSpans(b.capability.capability_spans ?? '');
+const evalSpans = splitSpans(b.capability.evaluation_spans ?? '');
+const professionCodes = b.capability.profession ?? [];
+const buildingSystemCodes = b.capability.building_system ?? [];
 ---
 
 <a
@@ -69,6 +76,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   data-tier={b.tier}
   data-domain={b.capability.domain}
   data-modality={mods.join(',')}
+  data-task={taskSpans.join('|')}
+  data-capability-dim={capabilitySpans.join('|')}
+  data-eval={evalSpans.join('|')}
+  data-profession={professionCodes.join(',')}
+  data-building-system={buildingSystemCodes.join(',')}
   data-name={b.name.toLowerCase()}
   data-id={b.source_record_id}
 >

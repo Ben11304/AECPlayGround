@@ -65,11 +65,23 @@
       "cost_latency_reporting": "Token counts reported (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "structural/civil",
       "task_spans": "physics-grounded construction; agentic tool use",
       "modality_spans": "text; tool/API env",
       "evaluation_spans": "task success; physical validity; cost/latency",
-      "capability_spans": "planning; physical reasoning; tool use"
+      "capability_spans": "planning; physical reasoning; tool use",
+      "profession": [
+        "A2"
+      ],
+      "profession_label": "A2",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -1049,11 +1061,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "architecture/design",
       "task_spans": "drawing/floor-plan understanding; counting/symbol recognition",
       "modality_spans": "text; images; engineering drawings; CAD/floor plans",
       "evaluation_spans": "exact correctness; accuracy; MAPE/numeric error; LLM-as-judge rubric",
-      "capability_spans": "OCR/text extraction; perception; spatial reasoning; multimodal grounding"
+      "capability_spans": "OCR/text extraction; perception; spatial reasoning; multimodal grounding",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -1854,11 +1878,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "infrastructure inspection",
       "task_spans": "embodied inspection; RAG/evidence-grounded",
       "modality_spans": "text; images; video/sequences",
       "evaluation_spans": "accuracy; citation relevance; LLM-as-judge rubric",
-      "capability_spans": "perception; spatial reasoning; retrieval grounding; multimodal grounding"
+      "capability_spans": "perception; spatial reasoning; retrieval grounding; multimodal grounding",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -2169,11 +2205,23 @@
       "cost_latency_reporting": "[VERIFY]"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "architecture/design",
       "task_spans": "drawing/floor-plan understanding",
       "modality_spans": "text; images; CAD/floor plans",
       "evaluation_spans": "exact correctness; accuracy",
-      "capability_spans": "OCR/text extraction; perception; domain knowledge; quantitative reasoning"
+      "capability_spans": "OCR/text extraction; perception; domain knowledge; quantitative reasoning",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -2264,11 +2312,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "structural/civil",
       "task_spans": "drawing revision; agentic tool use",
       "modality_spans": "text; tables; tool/API env",
       "evaluation_spans": "task success; tool-call correctness; code/drawing-edit correctness",
-      "capability_spans": "planning; tool use; domain knowledge"
+      "capability_spans": "planning; tool use; domain knowledge",
+      "profession": [
+        "A4"
+      ],
+      "profession_label": "A4",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -2463,11 +2523,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "architecture/design; construction management; structural/civil",
       "task_spans": "agentic tool use; drawing/floor-plan understanding",
       "modality_spans": "text; images; engineering drawings; CAD/floor plans; tool/API env",
       "evaluation_spans": "task success; tool-call correctness",
-      "capability_spans": "planning; tool use; cross-document/cross-sheet; retrieval grounding; multimodal grounding"
+      "capability_spans": "planning; tool use; cross-document/cross-sheet; retrieval grounding; multimodal grounding",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B5"
+      ],
+      "building_system_label": "B5",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3063,11 +3135,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "architecture/design; construction management; structural/civil; codes/regulatory",
       "task_spans": "domain-knowledge QA; exam reasoning",
       "modality_spans": "text; tables",
       "evaluation_spans": "accuracy; F1; LLM-as-judge rubric",
-      "capability_spans": "domain knowledge; quantitative reasoning; spatial reasoning"
+      "capability_spans": "domain knowledge; quantitative reasoning; spatial reasoning",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B0"
+      ],
+      "building_system_label": "B0",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3337,11 +3421,23 @@
       "cost_latency_reporting": "Response time reported (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "architecture/design; codes/regulatory; education/certification",
       "task_spans": "exam reasoning; domain-knowledge QA",
       "modality_spans": "text",
       "evaluation_spans": "accuracy; robustness/consistency; cost/latency",
-      "capability_spans": "domain knowledge"
+      "capability_spans": "domain knowledge",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B0"
+      ],
+      "building_system_label": "B0",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3432,11 +3528,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "construction management; education/certification",
       "task_spans": "exam reasoning",
       "modality_spans": "text; tables; figures",
       "evaluation_spans": "accuracy; human-expert score",
-      "capability_spans": "domain knowledge; quantitative reasoning"
+      "capability_spans": "domain knowledge; quantitative reasoning",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B0"
+      ],
+      "building_system_label": "B0",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3654,11 +3762,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "architecture/design",
       "task_spans": "spatial reasoning; drawing/floor-plan understanding",
       "modality_spans": "text; images; engineering drawings; CAD/floor plans",
       "evaluation_spans": "accuracy; human-expert score",
-      "capability_spans": "spatial reasoning; perception; multimodal grounding"
+      "capability_spans": "spatial reasoning; perception; multimodal grounding",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -4037,11 +4157,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "architecture/design",
       "task_spans": "spatial reasoning",
       "modality_spans": "text; symbolic layouts",
       "evaluation_spans": "exact correctness; MAPE/numeric error",
-      "capability_spans": "spatial reasoning; quantitative reasoning"
+      "capability_spans": "spatial reasoning; quantitative reasoning",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -4447,11 +4579,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "infrastructure inspection",
       "task_spans": "embodied inspection",
       "modality_spans": "text; images",
       "evaluation_spans": "F1/mAP/IoU; accuracy; MAPE/numeric error",
-      "capability_spans": "perception; spatial reasoning; multimodal grounding"
+      "capability_spans": "perception; spatial reasoning; multimodal grounding",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -5313,11 +5457,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "codes/regulatory; construction management",
       "task_spans": "compliance checking; domain-knowledge QA; RAG/evidence-grounded",
       "modality_spans": "text; video/sequences",
       "evaluation_spans": "accuracy; robustness/consistency",
-      "capability_spans": "domain knowledge; retrieval grounding; safety-critical judgment"
+      "capability_spans": "domain knowledge; retrieval grounding; safety-critical judgment",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B0"
+      ],
+      "building_system_label": "B0",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -5408,11 +5564,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "construction management",
       "task_spans": "compliance checking; embodied inspection",
       "modality_spans": "text; images",
       "evaluation_spans": "accuracy; F1/mAP/IoU; human-expert score; LLM-as-judge rubric",
-      "capability_spans": "perception; multimodal grounding; safety-critical judgment"
+      "capability_spans": "perception; multimodal grounding; safety-critical judgment",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -6658,11 +6826,23 @@
       "cost_latency_reporting": "None"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "construction management",
       "task_spans": "embodied inspection",
       "modality_spans": "text; images",
       "evaluation_spans": "accuracy",
-      "capability_spans": "perception; multimodal grounding; domain knowledge"
+      "capability_spans": "perception; multimodal grounding; domain knowledge",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -6814,11 +6994,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "building science/simulation",
       "task_spans": "simulation interpretation",
       "modality_spans": "text; images; simulation viz",
       "evaluation_spans": "accuracy",
-      "capability_spans": "perception; multimodal grounding; quantitative reasoning"
+      "capability_spans": "perception; multimodal grounding; quantitative reasoning",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7123,11 +7315,23 @@
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "education/certification; structural/civil",
       "task_spans": "exam reasoning; RAG/evidence-grounded; agentic tool use",
       "modality_spans": "text",
       "evaluation_spans": "exact correctness; LLM-as-judge rubric",
-      "capability_spans": "domain knowledge; retrieval grounding; quantitative reasoning"
+      "capability_spans": "domain knowledge; retrieval grounding; quantitative reasoning",
+      "profession": [
+        "A2"
+      ],
+      "profession_label": "A2",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B0"
+      ],
+      "building_system_label": "B0",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7217,11 +7421,23 @@
       "robustness_tests": "Repeated runs with variance reported (±σ); e.g. GPT-4.1: 75.37 ± 1.13% (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "construction management",
-      "task_spans": "domain knowledge QA",
+      "task_spans": "domain-knowledge QA",
       "modality_spans": "text",
       "evaluation_spans": "accuracy",
-      "capability_spans": "domain knowledge; professional estimation reasoning"
+      "capability_spans": "domain knowledge; quantitative reasoning",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B5"
+      ],
+      "building_system_label": "B5",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7391,11 +7607,23 @@
       "robustness_tests": "3 instruction phrasings per edit implicitly test robustness to language variation; results reported by instruction type (claimed)"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "BIM & digital twins",
-      "task_spans": "BIM editing; IFC manipulation; structured building model understanding",
-      "modality_spans": "text; BIM/IFC structured data",
-      "evaluation_spans": "geometric accuracy; semantic agreement; topological correctness; composite score",
-      "capability_spans": "structured data understanding; spatial reasoning; IFC schema comprehension; instruction following"
+      "task_spans": "BIM/IFC reasoning",
+      "modality_spans": "text; IFC structured data",
+      "evaluation_spans": "geometry+semantic+topology composite score (0–1 each; unweighted mean)",
+      "capability_spans": "domain knowledge; spatial reasoning",
+      "profession": [
+        "A4"
+      ],
+      "profession_label": "A4",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7796,11 +8024,23 @@
       "robustness_tests": "[VERIFY]"
     },
     "capability": {
-      "domain": "HSE / construction safety",
-      "task_spans": "safety poster understanding; visual classification",
+      "scheme": "v1",
+      "domain": "codes/regulatory & safety",
+      "task_spans": "compliance checking",
       "modality_spans": "text; images",
-      "evaluation_spans": "[VERIFY]",
-      "capability_spans": "safety knowledge; multimodal visual understanding; regulatory compliance recognition"
+      "evaluation_spans": "accuracy [VERIFY — metric paywalled; matching accuracy or similar]",
+      "capability_spans": "perception; domain knowledge",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B0"
+      ],
+      "building_system_label": "B0",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7891,11 +8131,23 @@
       "cost_latency_reporting": "[VERIFY]"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "BIM & digital twins",
-      "task_spans": "BIM design QA; LLM evaluation on BIM tasks [VERIFY]",
-      "modality_spans": "text; BIM/IFC data [VERIFY]",
-      "evaluation_spans": "G-Eval (LLM-as-judge) [VERIFY]",
-      "capability_spans": "BIM design reasoning; structured building model understanding [VERIFY]"
+      "task_spans": "BIM/IFC reasoning",
+      "modality_spans": "text [bim_ifc_3d VERIFY — may involve BIM-structured data]",
+      "evaluation_spans": "G-Eval (LLM-as-judge) [VERIFY: exact rubric and scoring protocol]",
+      "capability_spans": "domain knowledge; spatial reasoning [VERIFY: specific BIM spatial capabilities]",
+      "profession": [
+        "A4"
+      ],
+      "profession_label": "A4",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7986,11 +8238,23 @@
       "cost_latency_reporting": "[VERIFY]"
     },
     "capability": {
+      "scheme": "v1",
       "domain": "BIM & digital twins",
-      "task_spans": "BIM/IFC reasoning; structured code generation; IDS-XML generation [VERIFY]",
-      "modality_spans": "text; BIM/IFC structured data [VERIFY]",
-      "evaluation_spans": "[VERIFY — IDS-XML validity / structural overlap metric]",
-      "capability_spans": "BIM specification authoring; IFC schema knowledge; NL-to-structured-format generation [VERIFY]"
+      "task_spans": "BIM/IFC reasoning",
+      "modality_spans": "text; IDS-XML structured output [VERIFY: bim_ifc_3d counted per user-confirmed 'BIM/IFC modality'; CURATOR field [VERIFY]]",
+      "evaluation_spans": "IDS-XML validity / structural accuracy [VERIFY — metric not fully specified in CURATOR; may be exact-match or schema overlap]",
+      "capability_spans": "domain knowledge; structured output generation [VERIFY]",
+      "profession": [
+        "A4"
+      ],
+      "profession_label": "A4",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8081,11 +8345,23 @@
       "cost_latency_reporting": "[VERIFY — code agents likely report token/step costs]"
     },
     "capability": {
-      "domain": "Architecture",
-      "task_spans": "drawing/floor-plan understanding; agentic tool use; image-to-structure reconstruction [VERIFY]",
-      "modality_spans": "text; images; CAD/floor plans; tool API [from briefing, VERIFY]",
-      "evaluation_spans": "[VERIFY — floor plan accuracy metrics]",
-      "capability_spans": "spatial reasoning; floor plan generation; architectural documentation; multi-paradigm evaluation [VERIFY]"
+      "scheme": "v1",
+      "domain": "architecture/design",
+      "task_spans": "drawing/floor-plan understanding; agentic tool use",
+      "modality_spans": "text; images; CAD/floor plans; tool/API env",
+      "evaluation_spans": "floor plan reconstruction accuracy [VERIFY — room IoU? topology? custom metric?]",
+      "capability_spans": "perception; multimodal grounding; spatial reasoning; planning; tool use",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -8176,11 +8452,23 @@
       "cost_latency_reporting": "[VERIFY]"
     },
     "capability": {
-      "domain": "Energy & sustainability",
-      "task_spans": "BEM document schema extraction; structured information extraction [VERIFY]",
-      "modality_spans": "text [from briefing, VERIFY]",
-      "evaluation_spans": "KVOR (Key-Value Object Recognition) [from VERIFIER briefing, VERIFY]",
-      "capability_spans": "building energy modeling domain knowledge; document understanding; schema comprehension [VERIFY]"
+      "scheme": "v1",
+      "domain": "building science/simulation",
+      "task_spans": "RAG/evidence-grounded; domain-knowledge QA",
+      "modality_spans": "text [tables VERIFY; simulation_plot VERIFY]",
+      "evaluation_spans": "KVOR (Key-Value Object Recognition) [custom metric; from VERIFIER briefing; VERIFY full definition and scoring range]",
+      "capability_spans": "domain knowledge; retrieval grounding [VERIFY — BEM domain expertise required]",
+      "profession": [
+        "A3"
+      ],
+      "profession_label": "A3",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B2"
+      ],
+      "building_system_label": "B2",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8271,11 +8559,23 @@
       "cost_latency_reporting": "[VERIFY]"
     },
     "capability": {
-      "domain": "Architecture / Construction",
-      "task_spans": "Physical generative reasoning; agentic tool use; constructability verification",
-      "modality_spans": "text; images; tool/structural-oracle interaction",
-      "evaluation_spans": "Deterministic 10-test structural validation; agentic pass/fail",
-      "capability_spans": "Physical reasoning; constructability verification; agentic multi-step planning [VERIFY]"
+      "scheme": "v1",
+      "domain": "architecture/design",
+      "task_spans": "physics-grounded construction; agentic tool use",
+      "modality_spans": "text; images [VERIFY: image modality in agentic loop]; tool/API env (structural validation oracle — iterative observe-act-feedback)",
+      "evaluation_spans": "task success / agentic (structural validation oracle: 10 deterministic validation tests; 13 architectural style categories) [VERIFY exact metrics]",
+      "capability_spans": "spatial reasoning; planning; tool use; structural domain knowledge",
+      "profession": [
+        "A2"
+      ],
+      "profession_label": "A2",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B1"
+      ],
+      "building_system_label": "B1",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8366,11 +8666,23 @@
       "cost_latency_reporting": "[VERIFY]"
     },
     "capability": {
-      "domain": "Construction management",
-      "task_spans": "Worker action recognition; emotion recognition; site monitoring",
-      "modality_spans": "text; images (static construction site)",
-      "evaluation_spans": "Zero-shot classification; F1; accuracy",
-      "capability_spans": "Behavioral analysis; construction site monitoring [VERIFY]"
+      "scheme": "v1",
+      "domain": "construction management",
+      "task_spans": "embodied inspection",
+      "modality_spans": "text; images (1K static construction site images)",
+      "evaluation_spans": "F1 accuracy (action recognition; emotion recognition — 10 categories each) [claimed: GPT-4o action F1=0.756; emotion F1=0.712; VERIFY against primary source]",
+      "capability_spans": "perception; domain knowledge [borderline IC1: action recognition anchors AEC inclusion; emotion recognition peripheral]",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -8432,8 +8744,23 @@
       "_note": "pending"
     },
     "capability": {
-      "domain": "domain knowledge",
-      "_note": "professional-knowledge QA; full capability coding pending"
+      "scheme": "v2",
+      "domain": "education/certification (MEP)",
+      "task_spans": "Output Quality (exam QA)",
+      "modality_spans": "4.1 Text",
+      "evaluation_spans": "Code-based (exam accuracy) [VERIFY]",
+      "capability_spans": "Domain Knowledge + Planning & Reasoning",
+      "profession": [
+        "A3"
+      ],
+      "profession_label": "A3 Building-sys/MEP Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2"
+      ],
+      "building_system_label": "B2 Facility Services (HVAC, Div 23)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -8485,8 +8812,23 @@
       "_note": "pending"
     },
     "capability": {
-      "domain": "domain knowledge",
-      "_note": "professional-knowledge QA; full capability coding pending"
+      "scheme": "v2",
+      "domain": "education/certification (MEP)",
+      "task_spans": "Output Quality (exam QA)",
+      "modality_spans": "4.1 Text (+partial 4.3 for figure Qs)",
+      "evaluation_spans": "Code-based (exam score) + Reliability (Consistency)",
+      "capability_spans": "Domain Knowledge + Planning & Reasoning",
+      "profession": [
+        "A3"
+      ],
+      "profession_label": "A3 Building-sys/MEP Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2"
+      ],
+      "building_system_label": "B2 Facility Services (Div 23)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -8538,8 +8880,23 @@
       "_note": "pending"
     },
     "capability": {
-      "domain": "domain knowledge",
-      "_note": "professional-knowledge QA; full capability coding pending"
+      "scheme": "v2",
+      "domain": "education/certification (geotech)",
+      "task_spans": "Output Quality (problem-solving QA)",
+      "modality_spans": "4.1 Text (+partial 4.3)",
+      "evaluation_spans": "Code-based (accuracy) + Human-in-the-loop",
+      "capability_spans": "Planning & Reasoning + Domain Knowledge",
+      "profession": [
+        "A2"
+      ],
+      "profession_label": "A2 Civil/Structural/Geotech Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3 Site & Infrastructure (geotech/foundations)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -8592,8 +8949,24 @@
       "_note": "pending"
     },
     "capability": {
-      "domain": "domain knowledge",
-      "_note": "provisional; full capability coding pending"
+      "scheme": "v2",
+      "domain": "infrastructure inspection (transport CI)",
+      "task_spans": "Task Completion (perception) + Output Quality (VQA)",
+      "modality_spans": "4.3 2D Visual (highway pavement images)",
+      "evaluation_spans": "Code-based (accuracy/mAP/mIoU) + LLM-as-a-Judge/Human [VERIFY]",
+      "capability_spans": "Perception/OCR (AEC-VLM) + Tool Use (agent-aug) + Planning & Reasoning",
+      "profession": [
+        "A2",
+        "A5"
+      ],
+      "profession_label": "A2 Civil/Structural Eng + A5 Inspector",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3 Site & Infrastructure (Div 32 Exterior/roads, Div 34 Transportation)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -8646,8 +9019,25 @@
       "_note": "pending"
     },
     "capability": {
-      "domain": "domain knowledge",
-      "_note": "provisional; full capability coding pending"
+      "scheme": "v2",
+      "domain": "building science / water infrastructure (water CI)",
+      "task_spans": "Output Quality (generative QA)",
+      "modality_spans": "4.1 Text",
+      "evaluation_spans": "Code-based (ROUGE-L) + Human-in-the-loop",
+      "capability_spans": "Domain Knowledge + Planning & Reasoning",
+      "profession": [
+        "A2",
+        "A3"
+      ],
+      "profession_label": "A2 Civil Eng (water/env) + A3 (building water services)",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2",
+        "B3"
+      ],
+      "building_system_label": "B2 Facility Services (Div 22 Plumbing) + B3 Site & Infra (Div 33 Utilities)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"

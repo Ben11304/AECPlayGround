@@ -1,11 +1,11 @@
 ---
 import { benchmarks } from '../lib/benchmarks';
 
+const splitSpans = (s: string) => (s ?? '').split(';').map((x) => x.trim()).filter(Boolean);
+
 // Collect unique filter values from the data
 const domains = [...new Set(
-  benchmarks.flatMap((b) =>
-    b.capability.domain.split(';').map((s) => s.trim()).filter(Boolean)
-  )
+  benchmarks.flatMap((b) => splitSpans(b.capability.domain))
 )].sort();
 
 const tiers = [1, 2, 3];
@@ -21,6 +21,49 @@ const modalities = [
   { key: 'simulation_plot',      label: 'Sim. Plot' },
   { key: 'physics_simulation_env', label: 'Physics Sim' },
 ];
+
+// Dim1 Task / Dim2 Capability / Dim4 Evaluation-method — pooled across both taxonomy
+// schemes (v1: 26 records, taxonomy.md master table; v2: 5 newest, §10.2.N31). Label
+// vocabularies differ between schemes (see schema.json capability.scheme); values are
+// shown as-is, not harmonized, to avoid inventing a cross-scheme label mapping.
+const taskSpans = [...new Set(
+  benchmarks.flatMap((b) => splitSpans(b.capability.task_spans))
+)].sort();
+const capabilitySpans = [...new Set(
+  benchmarks.flatMap((b) => splitSpans(b.capability.capability_spans))
+)].sort();
+const evalSpans = [...new Set(
+  benchmarks.flatMap((b) => splitSpans(b.capability.evaluation_spans))
+)].sort();
+
+// Dim5 Profession (O*NET A1-A7) / Dim6 Building-system (MasterFormat-2020 B0-B5).
+// 5/31 records = verified (taxonomy.md §10.2.N31); 26/31 = proposal_unverified
+// (RESEARCHER layer2_gap_mapping.md, an explicitly UNFROZEN advisory proposal).
+const PROFESSION_LABELS: Record<string, string> = {
+  A1: 'A1 Architect/Designer',
+  A2: 'A2 Civil/Structural/Geotech Eng',
+  A3: 'A3 Building-sys/MEP Eng',
+  A4: 'A4 Drafter/Surveyor/Tech',
+  A5: 'A5 CM/Inspector',
+  A6: 'A6 Cost Estimator',
+  A7: 'A7 Sustainability Specialist',
+};
+const BUILDING_SYSTEM_LABELS: Record<string, string> = {
+  B0: 'B0 Cross-cutting',
+  B1: 'B1 Facility Construction',
+  B2: 'B2 Facility Services (MEP)',
+  B3: 'B3 Site & Infrastructure',
+  B4: 'B4 Process Equipment',
+  B5: 'B5 General/Procurement',
+};
+const professionCodes = [...new Set(
+  benchmarks.flatMap((b) => b.capability.profession ?? [])
+)].sort();
+const buildingSystemCodes = [...new Set(
+  benchmarks.flatMap((b) => b.capability.building_system ?? [])
+)].sort();
+const nProvisional = benchmarks.filter((b) => b.capability.profession_provenance === 'proposal_unverified').length;
+const nVerifiedTax = benchmarks.filter((b) => b.capability.profession_provenance === 'verified').length;
 ---
 
 <div class="sticky top-[57px] z-40 border-b border-slate-200 bg-white/95 backdrop-blur-sm py-3 px-4 sm:px-6 lg:px-8">
@@ -52,9 +95,18 @@ const modalities = [
       >
         ✕ Reset filters
       </button>
+
+      <!-- Expand taxonomy filters -->
+      <button
+        id="toggle-taxonomy-filters"
+        class="text-xs text-primary-700 hover:text-primary-800 transition-colors shrink-0 ml-auto"
+        aria-expanded="false"
+      >
+        Filter by taxonomy (Dim1–6) ▾
+      </button>
     </div>
 
-    <!-- Filter chips row -->
+    <!-- Core filter chips row (always visible: Tier, Modality) -->
     <div class="mt-2.5 flex flex-wrap gap-1.5 items-center">
       <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1">Tier</span>
       {tiers.map((t) => (
@@ -79,18 +131,138 @@ const modalities = [
         </button>
       ))}
     </div>
+
+    <!-- Taxonomy filter panel (Dim1-6), collapsed by default -->
+    <div id="taxonomy-filters" class="hidden mt-3 space-y-2.5 border-t border-slate-200 pt-3">
+
+      <!-- Dim5 Profession -->
+      <div class="flex flex-wrap gap-1.5 items-center">
+        <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1 shrink-0">Dim5 Profession</span>
+        {professionCodes.map((code) => (
+          <button
+            class="filter-btn chip text-[11px] bg-slate-100 text-slate-600 border border-slate-300 hover:border-slate-500 hover:text-slate-800 data-[active]:border-primary-500 data-[active]:bg-primary-50 data-[active]:text-primary-700 transition-all"
+            data-filter="profession"
+            data-value={code}
+          >
+            {PROFESSION_LABELS[code] ?? code}
+          </button>
+        ))}
+      </div>
+
+      <!-- Dim6 Building-system -->
+      <div class="flex flex-wrap gap-1.5 items-center">
+        <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1 shrink-0">Dim6 Building-system</span>
+        {buildingSystemCodes.map((code) => (
+          <button
+            class="filter-btn chip text-[11px] bg-slate-100 text-slate-600 border border-slate-300 hover:border-slate-500 hover:text-slate-800 data-[active]:border-primary-500 data-[active]:bg-primary-50 data-[active]:text-primary-700 transition-all"
+            data-filter="buildingSystem"
+            data-value={code}
+          >
+            {BUILDING_SYSTEM_LABELS[code] ?? code}
+          </button>
+        ))}
+      </div>
+
+      <p class="text-[10px] text-slate-500 italic">
+        Profession/Building-system placements: {nVerifiedTax} of {benchmarks.length} benchmarks are <strong>verified</strong> taxonomy-v2 coding;
+        the other {nProvisional} use a <strong>provisional</strong>, not-yet-ratified proposal
+        (RESEARCHER <code>layer2_gap_mapping.md</code>) — see each benchmark's detail page for its exact source.
+      </p>
+
+      <!-- Dim1 Task -->
+      <div class="flex flex-wrap gap-1.5 items-center">
+        <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1 shrink-0">Dim1 Task</span>
+        {taskSpans.map((span) => (
+          <button
+            class="filter-btn chip text-[11px] bg-slate-100 text-slate-600 border border-slate-300 hover:border-slate-500 hover:text-slate-800 data-[active]:border-primary-500 data-[active]:bg-primary-50 data-[active]:text-primary-700 transition-all"
+            data-filter="task"
+            data-value={span}
+          >
+            {span}
+          </button>
+        ))}
+      </div>
+
+      <!-- Dim2 Capability -->
+      <div class="flex flex-wrap gap-1.5 items-center">
+        <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1 shrink-0">Dim2 Capability</span>
+        {capabilitySpans.map((span) => (
+          <button
+            class="filter-btn chip text-[11px] bg-slate-100 text-slate-600 border border-slate-300 hover:border-slate-500 hover:text-slate-800 data-[active]:border-primary-500 data-[active]:bg-primary-50 data-[active]:text-primary-700 transition-all"
+            data-filter="capabilityDim"
+            data-value={span}
+          >
+            {span}
+          </button>
+        ))}
+      </div>
+
+      <!-- Dim4 Evaluation method -->
+      <div class="flex flex-wrap gap-1.5 items-center">
+        <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1 shrink-0">Dim4 Eval-method</span>
+        {evalSpans.map((span) => (
+          <button
+            class="filter-btn chip text-[11px] bg-slate-100 text-slate-600 border border-slate-300 hover:border-slate-500 hover:text-slate-800 data-[active]:border-primary-500 data-[active]:bg-primary-50 data-[active]:text-primary-700 transition-all"
+            data-filter="evalMethod"
+            data-value={span}
+          >
+            {span}
+          </button>
+        ))}
+      </div>
+
+      <!-- Domain (legacy Dim, kept for continuity) -->
+      <div class="flex flex-wrap gap-1.5 items-center">
+        <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mr-1 shrink-0">Domain</span>
+        {domains.map((d) => (
+          <button
+            class="filter-btn chip text-[11px] bg-slate-100 text-slate-600 border border-slate-300 hover:border-slate-500 hover:text-slate-800 data-[active]:border-primary-500 data-[active]:bg-primary-50 data-[active]:text-primary-700 transition-all"
+            data-filter="domain"
+            data-value={d}
+          >
+            {d}
+          </button>
+        ))}
+      </div>
+    </div>
   </div>
 </div>
 
 <script>
-// Client-side filtering
+// Client-side filtering. Filter groups match the data-* attributes set on BenchmarkCard:
+// data-tier, data-modality (comma), data-profession (comma), data-building-system (comma),
+// data-task / data-capability-dim / data-eval (pipe-separated, span text may contain commas),
+// data-domain (semicolon-separated, split at read time).
 const cards = () => Array.from(document.querySelectorAll<HTMLElement>('[data-id]'));
 const searchInput = document.getElementById('search-input') as HTMLInputElement;
 const countNum = document.getElementById('count-num') as HTMLElement;
 const resetBtn = document.getElementById('reset-filters') as HTMLElement;
 const filterBtns = Array.from(document.querySelectorAll<HTMLElement>('.filter-btn'));
+const toggleBtn = document.getElementById('toggle-taxonomy-filters') as HTMLElement;
+const taxonomyPanel = document.getElementById('taxonomy-filters') as HTMLElement;
 
-const activeFilters: Record<string, Set<string>> = { tier: new Set(), modality: new Set() };
+// filter type -> [dataset key, split delimiter or null for single value]
+const FILTER_SOURCE: Record<string, { key: string; sep: string | null }> = {
+  tier:           { key: 'tier',           sep: null },
+  modality:       { key: 'modality',       sep: ',' },
+  profession:     { key: 'profession',     sep: ',' },
+  buildingSystem: { key: 'buildingSystem', sep: ',' },
+  task:           { key: 'task',           sep: '|' },
+  capabilityDim:  { key: 'capabilityDim',  sep: '|' },
+  evalMethod:     { key: 'eval',           sep: '|' },
+  domain:         { key: 'domain',         sep: ';' },
+};
+
+const activeFilters: Record<string, Set<string>> = Object.fromEntries(
+  Object.keys(FILTER_SOURCE).map((k) => [k, new Set<string>()])
+);
+
+function cardValues(card: HTMLElement, filterType: string): string[] {
+  const { key, sep } = FILTER_SOURCE[filterType];
+  const raw = card.dataset[key] ?? '';
+  if (sep === null) return [raw];
+  return raw.split(sep).map((s) => s.trim()).filter(Boolean);
+}
 
 function apply() {
   const query = searchInput?.value.toLowerCase().trim() ?? '';
@@ -98,23 +270,25 @@ function apply() {
 
   cards().forEach((card) => {
     const name = card.dataset.name ?? '';
-    const tier = card.dataset.tier ?? '';
-    const mods = (card.dataset.modality ?? '').split(',');
     const id = card.dataset.id ?? '';
-
     const matchSearch = !query || name.includes(query) || id.toLowerCase().includes(query);
-    const matchTier = activeFilters.tier.size === 0 || activeFilters.tier.has(tier);
-    const matchMod = activeFilters.modality.size === 0 ||
-      [...activeFilters.modality].some((m) => mods.includes(m));
 
-    const show = matchSearch && matchTier && matchMod;
+    const matchAll = Object.keys(FILTER_SOURCE).every((filterType) => {
+      const active = activeFilters[filterType];
+      if (active.size === 0) return true;
+      const values = cardValues(card, filterType);
+      return [...active].some((v) => values.includes(v));
+    });
+
+    const show = matchSearch && matchAll;
     card.style.display = show ? '' : 'none';
     if (show) visible++;
   });
 
   if (countNum) countNum.textContent = String(visible);
 
-  const hasFilter = query || activeFilters.tier.size > 0 || activeFilters.modality.size > 0;
+  const anyActive = Object.values(activeFilters).some((s) => s.size > 0);
+  const hasFilter = Boolean(query) || anyActive;
   if (resetBtn) resetBtn.classList.toggle('hidden', !hasFilter);
 }
 
@@ -124,6 +298,7 @@ filterBtns.forEach((btn) => {
     const type = btn.dataset.filter ?? '';
     const value = btn.dataset.value ?? '';
     const set = activeFilters[type];
+    if (!set) return;
     if (set.has(value)) {
       set.delete(value);
       delete btn.dataset.active;
@@ -140,8 +315,14 @@ searchInput?.addEventListener('input', apply);
 resetBtn?.addEventListener('click', () => {
   searchInput.value = '';
   filterBtns.forEach((btn) => delete btn.dataset.active);
-  activeFilters.tier.clear();
-  activeFilters.modality.clear();
+  Object.values(activeFilters).forEach((s) => s.clear());
   apply();
+});
+
+toggleBtn?.addEventListener('click', () => {
+  const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+  toggleBtn.setAttribute('aria-expanded', String(!expanded));
+  taxonomyPanel?.classList.toggle('hidden', expanded);
+  toggleBtn.textContent = expanded ? 'Filter by taxonomy (Dim1–6) ▾' : 'Filter by taxonomy (Dim1–6) ▴';
 });
 </script>

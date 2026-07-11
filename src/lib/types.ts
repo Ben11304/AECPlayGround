@@ -70,6 +70,14 @@ export interface CapabilityInfo {
   modality_spans: string;
   evaluation_spans: string;
   capability_spans: string;
+  scheme?: 'v1' | 'v2';
+  profession?: string[];
+  profession_label?: string | null;
+  profession_provenance?: 'verified' | 'proposal_unverified' | 'missing';
+  building_system?: string[];
+  building_system_label?: string | null;
+  building_system_provenance?: 'verified' | 'proposal_unverified' | 'missing';
+  profession_note?: string;
 }
 
 export interface Rubric {

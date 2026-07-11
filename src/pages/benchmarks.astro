@@ -4,6 +4,8 @@ import FilterBar from '../components/FilterBar.astro';
 import BenchmarkCard from '../components/BenchmarkCard.astro';
 import { benchmarks } from '../lib/benchmarks';
 
+// Default sort: tier then rubric score (tiebreak only — tier is a FILTER, not a
+// grouping; the grid below is flat, not sectioned by tier per user request).
 const sorted = [...benchmarks].sort((a, b) => {
   if (a.tier !== b.tier) return a.tier - b.tier;
   return (b.rubric?.total ?? 0) - (a.rubric?.total ?? 0);
@@ -17,7 +19,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <Layout
   title="Benchmarks"
-  description="All 24 AEC AI benchmarks from the PRISMA systematic review — filterable by tier, domain, and modality."
+  description={`All ${benchmarks.length} AEC AI benchmarks from the PRISMA systematic review — filterable by taxonomy (Dim1-6: Task, Capability, Modality, Evaluation, Profession, Building-system), tier, and domain.`}
 >
 
   <!-- Page header -->
@@ -39,7 +41,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <p class="text-slate-600 text-sm max-w-2xl">
             {benchmarks.length} benchmarks curated by a PRISMA systematic review
             (177 identified → 163 screened → 42 full-text → {benchmarks.length} included).
-            Sorted by tier, then rubric score descending.
+            Filter below by taxonomy dimension (Dim1 Task · Dim2 Capability · Dim3 Modality ·
+            Dim4 Evaluation · Dim5 Profession · Dim6 Building-system), tier, or domain — tier is
+            one filterable attribute among several, not the primary grouping.
           </p>
         </div>
         <div class="flex gap-6 shrink-0">
@@ -62,46 +66,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- Filter bar (sticky) -->
   <FilterBar />
 
-  <!-- Card grid -->
+  <!-- Card grid: flat, not grouped by tier — use the Tier filter chips above to narrow -->
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-
-    <!-- T1 -->
-    <section class="mb-12">
-      <div class="mb-5 flex items-center gap-3">
-        <h2 class="text-sm font-display font-semibold text-slate-800">Tier 1 — Core Benchmarks</h2>
-        <span class="chip tier-1 text-[10px]">{t1.length}</span>
-        <span class="hidden sm:inline text-xs text-slate-600">Purpose-built for AEC · high rubric quality</span>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {t1.map(b => <BenchmarkCard benchmark={b} />)}
-      </div>
-    </section>
-
-    <!-- T2 -->
-    <section class="mb-12">
-      <div class="mb-5 flex items-center gap-3">
-        <h2 class="text-sm font-display font-semibold text-slate-800">Tier 2 — Peripheral Benchmarks</h2>
-        <span class="chip tier-2 text-[10px]">{t2.length}</span>
-        <span class="hidden sm:inline text-xs text-slate-600">Adjacent coverage · partial AEC focus</span>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {t2.map(b => <BenchmarkCard benchmark={b} />)}
-      </div>
-    </section>
-
-    <!-- T3 -->
-    {t3.length > 0 && (
-      <section class="mb-12">
-        <div class="mb-5 flex items-center gap-3">
-          <h2 class="text-sm font-display font-semibold text-slate-800">Tier 3 — Contextual</h2>
-          <span class="chip tier-3 text-[10px]">{t3.length}</span>
-          <span class="hidden sm:inline text-xs text-slate-600">Cross-domain context · non-AEC primary</span>
-        </div>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {t3.map(b => <BenchmarkCard benchmark={b} />)}
-        </div>
-      </section>
-    )}
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {sorted.map(b => <BenchmarkCard benchmark={b} />)}
+    </div>
 
     <!-- No-results message -->
     <div id="no-results-msg" class="hidden py-20 text-center text-slate-500">

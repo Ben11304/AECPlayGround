@@ -1,4 +1,6 @@
 ---
+import { benchmarks } from '../lib/benchmarks';
+import { tools } from '../lib/tools';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <footer class="border-t border-slate-200 bg-white mt-20">
@@ -20,7 +22,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <span class="font-display font-bold text-sm text-slate-900">AECplayground</span>
         </div>
         <p class="text-xs text-slate-500 leading-relaxed max-w-[200px]">
-          A dual registry: 26 AI benchmarks and 47 curated tools for Architecture, Engineering &amp; Construction.
+          A dual registry: {benchmarks.length} AI benchmarks and {tools.length} curated tools for Architecture, Engineering &amp; Construction.
         </p>
       </div>
 
@@ -52,10 +54,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               tier4_datasets.json
             </a>
           </li>
-          <li><span class="text-slate-600">26 benchmarks · 47 tools · CRAFTER v0.7.15</span></li>
-          <li><span class="text-slate-600">CURATOR 0.5.3</span></li>
-          <li><span class="text-slate-600">SYNTHESIZER 0.5.5</span></li>
-          <li><span class="text-slate-600">VERIFIER 0.5.38</span></li>
+          <li><span class="text-slate-600">{benchmarks.length} benchmarks · {tools.length} tools · CRAFTER v0.12.0</span></li>
+          <li><span class="text-slate-600">RESEARCHER 0.24.0</span></li>
+          <li><span class="text-slate-600">VERIFIER 0.5.63</span></li>
         </ul>
       </div>
 
