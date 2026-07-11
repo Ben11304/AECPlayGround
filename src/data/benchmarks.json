@@ -974,7 +974,14 @@
         "source_location": "Table 4, arXiv:2510.16559",
         "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R001_BuildArena_2510.16559.pdf",
+      "source_url": "https://arxiv.org/pdf/2510.16559",
+      "status": "obtained"
+    }
   },
   {
     "name": "AECV-Bench",
@@ -1772,6 +1779,13 @@
       "reported_failure_modes": "Door/window hallucination; difficulty in dense regions; OCR > spatial > symbol enumeration gap (claimed)",
       "human_baseline": null,
       "practical_interpretation": "Current VLMs have significant gap in AEC drawing understanding, especially symbol-level object recognition vs. text-based categories (claimed)"
+    },
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R002_AECV-Bench_2601.04819.pdf",
+      "source_url": "https://arxiv.org/pdf/2601.04819",
+      "status": "obtained"
     }
   },
   {
@@ -2080,6 +2094,13 @@
       "reported_failure_modes": "Poor image citations (irrelevant citations → incorrect answers); hallucinated citations for non-existent images (claimed)",
       "human_baseline": "Expert inspectors 98% consistency ±1 condition rating (upper bound reference) (claimed)",
       "practical_interpretation": "EMVR outperforms direct VLM approaches; retrieval bottleneck is key challenge; 50% answer correctness gap vs expert inspectors (claimed)"
+    },
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R003_BridgeEQA_2511.12676.pdf",
+      "source_url": "https://arxiv.org/pdf/2511.12676",
+      "status": "obtained"
     }
   },
   {
@@ -2167,7 +2188,15 @@
       "d10_practical_relevance": 2,
       "total": 11
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": false,
+      "obtained": false,
+      "pdf_path": null,
+      "source_url": "https://doi.org/10.1061/JCCEE5.CPENG-7571",
+      "status": "paywalled",
+      "note": "paywalled ASCE JCCEE (HTTP 403, no preprint); abstract-only"
+    }
   },
   {
     "name": "DrafterBench",
@@ -2358,7 +2387,14 @@
         "source_location": "Table 2, arXiv:2507.11527",
         "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R005_DrafterBench_2507.11527.pdf",
+      "source_url": "https://arxiv.org/pdf/2507.11527",
+      "status": "obtained"
+    }
   },
   {
     "name": "AEC-Bench",
@@ -2951,7 +2987,14 @@
         "source_location": "Table 2, arXiv:2603.29199",
         "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R006_AEC-Bench_2603.29199.pdf",
+      "source_url": "https://arxiv.org/pdf/2603.29199",
+      "status": "obtained"
+    }
   },
   {
     "name": "AECBench",
@@ -3218,6 +3261,13 @@
       "reported_failure_modes": "Tabular data (Tasks 2-3, 3-3 all models drastic underperformance); compliance checking (Task 5-1-3); brand compliance (5-1-4); knowledge-application gap; professional document generation <60% threshold (claimed)",
       "human_baseline": null,
       "practical_interpretation": "Reasoning models (DeepSeek-R1, QwQ-32B) outperform standard LLMs on calculation/application; standard LLMs outperform reasoning models on proofreading; all models fail at complex creation tasks (claimed)"
+    },
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R007_AECBench_2509.18776.pdf",
+      "source_url": "https://arxiv.org/pdf/2509.18776",
+      "status": "obtained"
     }
   },
   {
@@ -3306,7 +3356,14 @@
       "d10_practical_relevance": 2,
       "total": 12
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R008_Arch-Eval_PMC12008193.pdf",
+      "source_url": "https://doi.org/10.1038/s41598-025-98236-0",
+      "status": "obtained"
+    }
   },
   {
     "name": "CMExamSet",
@@ -3521,7 +3578,14 @@
         "source_location": "Table 8, arXiv:2504.08779",
         "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R009_CMExamSet_2504.08779.pdf",
+      "source_url": "https://arxiv.org/pdf/2504.08779",
+      "status": "obtained"
+    }
   },
   {
     "name": "ArchSIBench",
@@ -3897,7 +3961,14 @@
         "source_location": "Table 1, arXiv:2605.20837",
         "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R010_ArchSIBench_2605.20837.pdf",
+      "source_url": "https://arxiv.org/pdf/2605.20837",
+      "status": "obtained"
+    }
   },
   {
     "name": "FloorplanQA",
@@ -4300,6 +4371,13 @@
       "reported_failure_modes": "Constraint violations, centroid errors, clearance errors, token truncation for reasoning models (claimed)",
       "human_baseline": null,
       "practical_interpretation": "Spatial reasoning over symbolic floor plans remains challenging; best models near-perfect on distance but fail on space optimization (claimed)"
+    },
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R011_FloorplanQA_2507.07644.pdf",
+      "source_url": "https://arxiv.org/pdf/2507.07644",
+      "status": "obtained"
     }
   },
   {
@@ -5159,7 +5237,14 @@
         "source_location": "Table 4, arXiv:2603.20148",
         "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R016_DefectBench_2603.20148.pdf",
+      "source_url": "https://arxiv.org/pdf/2603.20148",
+      "status": "obtained"
+    }
   },
   {
     "name": "HSE-Bench",
@@ -5247,7 +5332,14 @@
       "d10_practical_relevance": 2,
       "total": 14
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R017_HSE-Bench_2505.22959.pdf",
+      "source_url": "https://arxiv.org/pdf/2505.22959",
+      "status": "obtained"
+    }
   },
   {
     "name": "ConstructionSite 10k",
@@ -6490,7 +6582,14 @@
         "source_location": "Table 8, arXiv:2508.11011",
         "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R019_ConstructionSite10k_2508.11011.pdf",
+      "source_url": "https://arxiv.org/pdf/2508.11011",
+      "status": "obtained"
+    }
   },
   {
     "name": "VL-Con",
@@ -6639,6 +6738,13 @@
       "reported_failure_modes": "Performance degradation of VLMs on construction-specific visual concepts due to domain gap with LAION general-domain pretraining (claimed)",
       "human_baseline": null,
       "practical_interpretation": "VL-Con enables VLM domain adaptation for construction monitoring; ASTM Uniformat II taxonomy provides structured coverage of AEC activities (claimed)"
+    },
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R023_VL-Con_ISARC2024_0146.pdf",
+      "source_url": "https://doi.org/10.22260/ISARC2024/0146",
+      "status": "obtained"
     }
   },
   {
@@ -6940,7 +7046,15 @@
         "source_location": "Fig. 9, §4 prose, ASME JESBC 7(2) 021002, doi:10.1115/1.4071865",
         "provenance_flag": "source_confirmed"
       }
-    ]
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": false,
+      "pdf_path": null,
+      "source_url": "https://doi.org/10.1115/1.4071865",
+      "status": "paywalled",
+      "note": "F-090 pdftotext extraction from primary-source PDF (transient fetch, not retained on-disk); paywalled landing"
+    }
   },
   {
     "name": "PE Civil Bench",
@@ -7028,7 +7142,15 @@
       "d10_practical_relevance": 2,
       "total": 14
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": false,
+      "obtained": false,
+      "pdf_path": null,
+      "source_url": "https://doi.org/10.1016/j.cacaie.2026.100126",
+      "status": "paywalled",
+      "note": "paywalled Elsevier CACAIE (no preprint); abstract-only"
+    }
   },
   {
     "name": "CEQuest",
@@ -7195,6 +7317,13 @@
       "reported_failure_modes": "Not reported",
       "human_baseline": "Not reported",
       "practical_interpretation": "14pp gap between best/worst; sub-80% ceiling on construction estimation knowledge suggests current LLMs have domain knowledge gaps [claimed]"
+    },
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R030_CEQuest_2508.16081.pdf",
+      "source_url": "https://arxiv.org/pdf/2508.16081",
+      "status": "obtained"
     }
   },
   {
@@ -7593,6 +7722,13 @@
       "reported_failure_modes": "High within-model variance (SD ~32–37pp); topological and semantic understanding weaker than geometric manipulation; complex scenes significantly harder than simple [claimed]",
       "human_baseline": "Not reported",
       "practical_interpretation": "IFC BIM editing remains largely unsolved for current LLMs; geometric manipulation more tractable than semantic/topological constraints [claimed]"
+    },
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R031_BIM-Edit_2606.20146.pdf",
+      "source_url": "https://arxiv.org/pdf/2606.20146",
+      "status": "obtained"
     }
   },
   {
@@ -7679,7 +7815,15 @@
       "d10_practical_relevance": 2,
       "total": 8
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": false,
+      "obtained": false,
+      "pdf_path": null,
+      "source_url": "https://doi.org/10.1061/9780784486139.076",
+      "status": "paywalled",
+      "note": "paywalled ASCE i3CE proceedings; abstract-only"
+    }
   },
   {
     "name": "Qwen-BIM Benchmark",
@@ -7766,7 +7910,15 @@
       "d10_practical_relevance": 2,
       "total": 10
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R035_QwenBIM_2602.20812.pdf",
+      "source_url": "https://arxiv.org/pdf/2602.20812",
+      "status": "obtained",
+      "note": "re-gated 0.16.0: full-text read from on-disk PDF; INCLUDE holds (benchmark = contribution #1, not model-only)"
+    }
   },
   {
     "name": "Ishigaki-IDS-Bench",
@@ -7853,7 +8005,15 @@
       "d10_practical_relevance": 2,
       "total": 15
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R036_Ishigaki-IDS_2605.22079.pdf",
+      "source_url": "https://arxiv.org/pdf/2605.22079",
+      "status": "obtained",
+      "note": "re-gated 0.16.0: full-text read; INCLUDE holds strongly (first publicly-released IDS benchmark; 166 ex; HF+Zenodo CC-BY)"
+    }
   },
   {
     "name": "Blueprint-Bench",
@@ -7940,7 +8100,15 @@
       "d10_practical_relevance": 2,
       "total": 13
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R037_Blueprint-Bench_2509.25229.pdf",
+      "source_url": "https://arxiv.org/pdf/2509.25229",
+      "status": "obtained",
+      "note": "re-gated 0.16.0: full-text read; INCLUDE holds BORDERLINE (d1=1: primary framing AI spatial-intelligence; AEC anchor = apartment->2D floor plan)"
+    }
   },
   {
     "name": "BEMEval-Doc2Schema",
@@ -8027,7 +8195,15 @@
       "d10_practical_relevance": 2,
       "total": 13
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R039_BEMEval_2602.16926.pdf",
+      "source_url": "https://arxiv.org/pdf/2602.16926",
+      "status": "obtained",
+      "note": "re-gated 0.16.0: full-text read; INCLUDE holds (first community-driven BEM benchmark; KVOR; 3 datasets)"
+    }
   },
   {
     "name": "DreamHouse",
@@ -8114,7 +8290,15 @@
       "d10_practical_relevance": 2,
       "total": 15
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R040_DreamHouse_2603.24866.pdf",
+      "source_url": "https://arxiv.org/pdf/2603.24866",
+      "status": "obtained",
+      "note": "re-gated 0.16.0: full-text read; INCLUDE holds strongly (26k timber-frame structures; 10 physics tests; agentic)"
+    }
   },
   {
     "name": "ConstructionWorker-VLM [VERIFY]",
@@ -8201,6 +8385,281 @@
       "d10_practical_relevance": 1,
       "total": 7
     },
-    "reported_results": []
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R041_ConstructionWorker-VLM_2601.10835.pdf",
+      "source_url": "https://arxiv.org/pdf/2601.10835",
+      "status": "obtained",
+      "note": "re-gated 0.16.0: full-text read; INCLUDE holds BORDERLINE (T2: self-described exploratory study; 1000 img; no coined benchmark name)"
+    }
+  },
+  {
+    "name": "ASHRAE-HVAC-Designer",
+    "identifier": "PII:S2666123324000448 [VERIFY DOI]",
+    "verification_status": "screened (Stage-2 INCLUDE, re-gated 0.17.0); full 7-group extraction + rubric PENDING CURATOR Stage-B; abstract-only (ScienceDirect 403) — full-text [VERIFY]",
+    "tier": 2,
+    "source_record_id": "R043",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Evaluation of large language models (LLMs) on the mastery of knowledge and skills in the heating, ventilation and air conditioning (HVAC) industry",
+      "authors": "Jie Lu, Zeyu Zheng, Chaobo Zhang, Yang Zhao, Jian Zhang, Wenkai Zhang, et al.",
+      "year": 2024,
+      "venue": "Energy and Built Environment (2024)",
+      "arxiv_id": null,
+      "doi": "[VERIFY — corpus DOI 10.1016/j.enbenv.2024.1000448 did not resolve; real source PII S2666123324000448]",
+      "repo_url": null,
+      "dataset_url": null
+    },
+    "domain_use_case": {
+      "aec_subdomain": "HVAC / building mechanical services (MEP) — ASHRAE Certified HVAC Designer certification knowledge",
+      "lifecycle_stage": "Design / operation (HVAC)",
+      "intended_user": "HVAC engineers; MEP practitioners"
+    },
+    "task": {
+      "task_type": "professional-exam question answering",
+      "_note": "provisional; full 7-group extraction pending"
+    },
+    "modality": {
+      "text": true,
+      "_note": "text-based professional-exam QA; full modality coding pending"
+    },
+    "dataset_properties": {
+      "_note": "pending CURATOR Stage-B full extraction"
+    },
+    "evaluation": {
+      "_note": "pending"
+    },
+    "capability": {
+      "domain": "domain knowledge",
+      "_note": "professional-knowledge QA; full capability coding pending"
+    },
+    "rubric": {
+      "_note": "PROVISIONAL; per-dimension scoring pending"
+    },
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": false,
+      "pdf_path": null,
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S2666123324000448",
+      "status": "paywalled",
+      "note": "re-gated 0.17.0 abstract-only (SD 403); §4: C1 PASS (HVAC/MEP), C2 PASS (ASHRAE Certified HVAC Designer exam = standalone professional assessment instrument, R013 precedent), C3 PASS (ChatGPT/GPT-4). INCLUDE Tier 2, d7=0"
+    }
+  },
+  {
+    "name": "Korean-MEP (EEM+EACRM)",
+    "identifier": "doi:10.1038/s41598-025-16118-x",
+    "verification_status": "screened (Stage-2 INCLUDE, re-gated 0.17.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B",
+    "tier": 2,
+    "source_record_id": "R044",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Performance evaluation of GPT-4o on South Korean national exams for building mechanical equipment maintenance",
+      "authors": "Haneul Choi, Jehyun Lee, Jonghun Kim",
+      "year": 2025,
+      "venue": "Scientific Reports (2025)",
+      "arxiv_id": null,
+      "doi": "10.1038/s41598-025-16118-x",
+      "repo_url": null,
+      "dataset_url": null
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Building mechanical equipment maintenance / HVAC (MEP) — Korean EEM + EACRM national certification exams",
+      "lifecycle_stage": "Operation / maintenance (building mechanical)",
+      "intended_user": "Building operators; mechanical equipment maintenance managers"
+    },
+    "task": {
+      "task_type": "professional-exam question answering",
+      "_note": "provisional; full 7-group extraction pending"
+    },
+    "modality": {
+      "text": true,
+      "_note": "text-based professional-exam QA; full modality coding pending"
+    },
+    "dataset_properties": {
+      "_note": "pending CURATOR Stage-B full extraction"
+    },
+    "evaluation": {
+      "_note": "pending"
+    },
+    "capability": {
+      "domain": "domain knowledge",
+      "_note": "professional-knowledge QA; full capability coding pending"
+    },
+    "rubric": {
+      "_note": "PROVISIONAL; per-dimension scoring pending"
+    },
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R044_Korean-MEP_s41598-025-16118-x.pdf",
+      "source_url": "https://www.nature.com/articles/s41598-025-16118-x",
+      "status": "obtained",
+      "note": "re-gated 0.17.0 full-text read; §4: C1 PASS (building mechanical/HVAC), C2 PASS (EEM+EACRM national cert exams, 100 Q public), C3 PASS (GPT-4o). INCLUDE Tier 2, d7=0"
+    }
+  },
+  {
+    "name": "Geotech-391",
+    "identifier": "doi:10.3390/geotechnics4020026",
+    "verification_status": "screened (Stage-2 INCLUDE, re-gated 0.17.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B; LINEAGE: shares Das-391 bank with excluded R046",
+    "tier": 2,
+    "source_record_id": "R045",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "An Investigation into the Utility of Large Language Models in Geotechnical Education and Problem Solving",
+      "authors": "Liuxin Chen, Amir Tophel, Umidu Hettiyadura, Jayantha Kodikara",
+      "year": 2024,
+      "venue": "Geotechnics 4(2):470-498 (2024)",
+      "arxiv_id": null,
+      "doi": "10.3390/geotechnics4020026",
+      "repo_url": null,
+      "dataset_url": null
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Geotechnical / civil engineering (A2) — 391-question geotechnical problem bank (Das & Sobhan textbook)",
+      "lifecycle_stage": "Education / problem-solving (geotechnical)",
+      "intended_user": "Geotechnical/civil engineers; engineering educators"
+    },
+    "task": {
+      "task_type": "professional-exam question answering",
+      "_note": "provisional; full 7-group extraction pending"
+    },
+    "modality": {
+      "text": true,
+      "_note": "text-based professional-exam QA; full modality coding pending"
+    },
+    "dataset_properties": {
+      "_note": "pending CURATOR Stage-B full extraction"
+    },
+    "evaluation": {
+      "_note": "pending"
+    },
+    "capability": {
+      "domain": "domain knowledge",
+      "_note": "professional-knowledge QA; full capability coding pending"
+    },
+    "rubric": {
+      "_note": "PROVISIONAL; per-dimension scoring pending"
+    },
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R045_Geotech-Chen_geotechnics4020026.pdf",
+      "source_url": "https://www.mdpi.com/2673-7094/4/2/26",
+      "status": "obtained",
+      "note": "re-gated 0.17.0 full-text read; §4: C1 PASS (geotech/civil A2), C2 PASS (391-Q structured bank + documented cognitive-levels + 3 prompting-strategy protocol; copyrighted d7=0 per R009), C3 PASS (GPT-4). INCLUDE Tier 2. LINEAGE: Das-391 bank shared w/ R046"
+    }
+  },
+  {
+    "name": "PaveBench",
+    "identifier": "arXiv:2604.02804",
+    "verification_status": "screened (Stage-2 INCLUDE, CI-1 arm 0.20.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B",
+    "tier": 1,
+    "source_record_id": "R047",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "PaveBench: A Versatile Benchmark for Pavement Distress Perception and Interactive Vision-Language Analysis",
+      "authors": "Dexiang Li, Zhenning Che, Haijun Zhang, Dongliang Zhou, Zhao Zhang, Yahong Han",
+      "year": 2026,
+      "venue": "arXiv 2026 (cs.CV)",
+      "arxiv_id": "2604.02804",
+      "doi": null,
+      "repo_url": "https://huggingface.co/datasets/MML-Group/PaveBench",
+      "dataset_url": "https://huggingface.co/datasets/MML-Group/PaveBench"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Transportation infrastructure — highway/road pavement distress assessment (CISA Transportation Systems)",
+      "lifecycle_stage": "Operation / maintenance (pavement inspection)",
+      "intended_user": "Highway/transportation engineers; pavement asset managers"
+    },
+    "task": {
+      "task_type": "critical-infrastructure perception/QA",
+      "_note": "provisional; full 7-group extraction pending"
+    },
+    "modality": {
+      "text": true,
+      "images": true,
+      "_note": "provisional; full modality coding pending"
+    },
+    "dataset_properties": {
+      "_note": "pending CURATOR Stage-B full extraction"
+    },
+    "evaluation": {
+      "_note": "pending"
+    },
+    "capability": {
+      "domain": "domain knowledge",
+      "_note": "provisional; full capability coding pending"
+    },
+    "rubric": {
+      "_note": "PROVISIONAL; per-dimension scoring pending"
+    },
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CI_PaveBench_2604.02804.pdf",
+      "source_url": "https://arxiv.org/abs/2604.02804",
+      "status": "obtained",
+      "note": "CI-1 Stage-2 full-text read; §4: C1 PASS (highway pavement = Transportation CI), C2 PASS (HF-released, 4 tasks incl PaveVQA multi-turn), C3 PASS (VLMs + agent-augmented). INCLUDE. First CI-Transportation-road benchmark in corpus. Fills CISA Transportation zero-coverage."
+    }
+  },
+  {
+    "name": "WaterER",
+    "identifier": "arXiv:2407.21045",
+    "verification_status": "screened (Stage-2 INCLUDE, CI-1 arm 0.20.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B; release status [VERIFY]",
+    "tier": 2,
+    "source_record_id": "R048",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Unlocking the Potential: Benchmarking Large Language Models in Water Engineering and Research",
+      "authors": "Boyan Xu, Liang Wen, Zihao Li, Yuxing Yang, Guanlan Wu, ..., How Yong Ng",
+      "year": 2024,
+      "venue": "arXiv 2024 (cs.CL)",
+      "arxiv_id": "2407.21045",
+      "doi": null,
+      "repo_url": null,
+      "dataset_url": "[VERIFY — release status not explicit in paper]"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Water & Wastewater infrastructure — treatment, distribution, sanitation (CISA Water & Wastewater)",
+      "lifecycle_stage": "Operation / engineering (water infrastructure)",
+      "intended_user": "Water/environmental/civil engineers"
+    },
+    "task": {
+      "task_type": "critical-infrastructure perception/QA",
+      "_note": "provisional; full 7-group extraction pending"
+    },
+    "modality": {
+      "text": true,
+      "images": false,
+      "_note": "provisional; full modality coding pending"
+    },
+    "dataset_properties": {
+      "_note": "pending CURATOR Stage-B full extraction"
+    },
+    "evaluation": {
+      "_note": "pending"
+    },
+    "capability": {
+      "domain": "domain knowledge",
+      "_note": "provisional; full capability coding pending"
+    },
+    "rubric": {
+      "_note": "PROVISIONAL; per-dimension scoring pending"
+    },
+    "reported_results": [],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CI_WaterER_2407.21045.pdf",
+      "source_url": "https://arxiv.org/abs/2407.21045",
+      "status": "obtained",
+      "note": "CI-1 Stage-2 full-text read; §4: C1 PASS (water/wastewater treatment+distribution = Water CI), C2 PASS (983 tasks/6 categories), C3 PASS (7 LLMs). INCLUDE. First CI-Water benchmark in corpus. Fills CISA Water zero-coverage."
+    }
   }
 ]
