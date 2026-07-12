@@ -62,8 +62,12 @@ const professionCodes = [...new Set(
 const buildingSystemCodes = [...new Set(
   benchmarks.flatMap((b) => b.capability.building_system ?? [])
 )].sort();
-const nProvisional = benchmarks.filter((b) => b.capability.profession_provenance === 'proposal_unverified').length;
-const nVerifiedTax = benchmarks.filter((b) => b.capability.profession_provenance === 'verified').length;
+// Dim5/Dim6 provenance are independent per record (e.g. R012: Dim5 verified, Dim6
+// provisional) — count each dimension separately rather than one blanket figure.
+const nProfessionVerified = benchmarks.filter((b) => b.capability.profession_provenance === 'verified').length;
+const nBuildingSystemVerified = benchmarks.filter((b) => b.capability.building_system_provenance === 'verified').length;
+const nProfessionProvisional = benchmarks.length - nProfessionVerified;
+const nBuildingSystemProvisional = benchmarks.length - nBuildingSystemVerified;
 ---
 
 <div class="sticky top-[57px] z-40 border-b border-slate-200 bg-white/95 backdrop-blur-sm py-3 px-4 sm:px-6 lg:px-8">
@@ -164,9 +168,9 @@ const nVerifiedTax = benchmarks.filter((b) => b.capability.profession_provenance
       </div>
 
       <p class="text-[10px] text-slate-500 italic">
-        Profession/Building-system placements: {nVerifiedTax} of {benchmarks.length} benchmarks are <strong>verified</strong> taxonomy-v2 coding;
-        the other {nProvisional} use a <strong>provisional</strong>, not-yet-ratified proposal
-        (RESEARCHER <code>layer2_gap_mapping.md</code>) — see each benchmark's detail page for its exact source.
+        Dim5 Profession: <strong>{nProfessionVerified} of {benchmarks.length}</strong> verified{nProfessionProvisional > 0 && <>, {nProfessionProvisional} provisional</>}.
+        Dim6 Building-system: <strong>{nBuildingSystemVerified} of {benchmarks.length}</strong> verified{nBuildingSystemProvisional > 0 && <>, {nBuildingSystemProvisional} provisional (paywalled placement, see detail page)</>}.
+        See each benchmark's detail page for its exact source.
       </p>
 
       <!-- Dim1 Task -->

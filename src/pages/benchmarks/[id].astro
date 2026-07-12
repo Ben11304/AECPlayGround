@@ -393,16 +393,27 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 <p class="text-slate-700 leading-relaxed">{value}</p>
               </div>
             ))}
+            {/* Dim5 and Dim6 provenance are independent — a record can be verified on one
+                dimension and still provisional on the other (e.g. R012: Dim5 verified,
+                Dim6 kept an unresolved proposal). Show a per-dimension warning, not one
+                blanket check on profession_provenance alone. */}
             {b.capability.profession_provenance === 'proposal_unverified' && (
-              <p class="text-[10px] text-amber-700 italic border-t border-slate-200 pt-2">
-                Profession/Building-system are a <strong>provisional</strong> placement — {b.capability.profession_note}
+              <p class="text-[10px] text-amber-700 italic">
+                Dim5 Profession is a <strong>provisional</strong> placement.
               </p>
             )}
-            {b.capability.profession_provenance === 'verified' && (
-              <p class="text-[10px] text-emerald-700 italic border-t border-slate-200 pt-2">
-                {b.capability.profession_note}
+            {b.capability.building_system_provenance === 'proposal_unverified' && (
+              <p class="text-[10px] text-amber-700 italic">
+                Dim6 Building-system is a <strong>provisional</strong> placement.
               </p>
             )}
+            <p class={`text-[10px] italic border-t border-slate-200 pt-2 ${
+              (b.capability.profession_provenance === 'proposal_unverified' ||
+               b.capability.building_system_provenance === 'proposal_unverified')
+                ? 'text-amber-700' : 'text-emerald-700'
+            }`}>
+              {b.capability.profession_note}
+            </p>
           </div>
         </section>
 

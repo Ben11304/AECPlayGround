@@ -74,14 +74,14 @@
       "profession": [
         "A2"
       ],
-      "profession_label": "A2",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A2 Civil/Structural/Geotech Eng",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -1070,14 +1070,14 @@
       "profession": [
         "A1"
       ],
-      "profession_label": "A1",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A1 Architect/Designer",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -1885,16 +1885,17 @@
       "evaluation_spans": "accuracy; citation relevance; LLM-as-judge rubric",
       "capability_spans": "perception; spatial reasoning; retrieval grounding; multimodal grounding",
       "profession": [
+        "A2",
         "A5"
       ],
-      "profession_label": "A5",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A5 CM/Inspector + A2 Civil/Structural/Geotech Eng",
+      "profession_provenance": "verified",
       "building_system": [
         "B3"
       ],
-      "building_system_label": "B3",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B3 Site & Infrastructure (Div 30-39)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -2214,14 +2215,14 @@
       "profession": [
         "A1"
       ],
-      "profession_label": "A1",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A1 Architect/Designer",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -2321,14 +2322,14 @@
       "profession": [
         "A4"
       ],
-      "profession_label": "A4",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A4 Drafter/Surveyor/Tech",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -2530,16 +2531,18 @@
       "evaluation_spans": "task success; tool-call correctness",
       "capability_spans": "planning; tool use; cross-document/cross-sheet; retrieval grounding; multimodal grounding",
       "profession": [
-        "A1"
+        "A1",
+        "A2"
       ],
-      "profession_label": "A1",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A1 Architect/Designer + A2 Civil/Structural/Geotech Eng; A5 CM/Inspector",
+      "profession_provenance": "verified",
       "building_system": [
+        "B1",
         "B5"
       ],
-      "building_system_label": "B5",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B5 Procurement & General Requirements (Div 00-01) + B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3142,16 +3145,18 @@
       "evaluation_spans": "accuracy; F1; LLM-as-judge rubric",
       "capability_spans": "domain knowledge; quantitative reasoning; spatial reasoning",
       "profession": [
-        "A1"
+        "A1",
+        "A2"
       ],
-      "profession_label": "A1",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A1 Architect/Designer + A2 Civil/Structural/Geotech Eng; A5 CM/Inspector",
+      "profession_provenance": "verified",
       "building_system": [
-        "B0"
+        "B0",
+        "B1"
       ],
-      "building_system_label": "B0",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B0 Cross-cutting / non-MasterFormat + B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3430,14 +3435,15 @@
       "profession": [
         "A1"
       ],
-      "profession_label": "A1",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A1 Architect/Designer",
+      "profession_provenance": "verified",
       "building_system": [
-        "B0"
+        "B0",
+        "B2"
       ],
-      "building_system_label": "B0",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B0 Cross-cutting / non-MasterFormat + B2 Facility Services (Div 20-29)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3537,14 +3543,14 @@
       "profession": [
         "A5"
       ],
-      "profession_label": "A5",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
       "building_system": [
         "B0"
       ],
-      "building_system_label": "B0",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B0 Cross-cutting / non-MasterFormat",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3771,14 +3777,14 @@
       "profession": [
         "A1"
       ],
-      "profession_label": "A1",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A1 Architect/Designer",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -4166,14 +4172,14 @@
       "profession": [
         "A1"
       ],
-      "profession_label": "A1",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A1 Architect/Designer",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -4588,14 +4594,14 @@
       "profession": [
         "A5"
       ],
-      "profession_label": "A5",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -5466,14 +5472,15 @@
       "profession": [
         "A5"
       ],
-      "profession_label": "A5",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
       "building_system": [
-        "B0"
+        "B0",
+        "B5"
       ],
-      "building_system_label": "B0",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B0 Cross-cutting / non-MasterFormat + B5 Procurement & General Requirements (Div 00-01)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -5573,14 +5580,14 @@
       "profession": [
         "A5"
       ],
-      "profession_label": "A5",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
       "building_system": [
         "B3"
       ],
-      "building_system_label": "B3",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B3 Site & Infrastructure (Div 30-39)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -6835,14 +6842,14 @@
       "profession": [
         "A5"
       ],
-      "profession_label": "A5",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
       "building_system": [
         "B3"
       ],
-      "building_system_label": "B3",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B3 Site & Infrastructure (Div 30-39)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7001,16 +7008,18 @@
       "evaluation_spans": "accuracy",
       "capability_spans": "perception; multimodal grounding; quantitative reasoning",
       "profession": [
-        "A1"
+        "A1",
+        "A3"
       ],
-      "profession_label": "A1",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A1 Architect/Designer + A3 Building-sys/MEP Eng",
+      "profession_provenance": "verified",
       "building_system": [
-        "B1"
+        "B1",
+        "B2"
       ],
-      "building_system_label": "B1",
+      "building_system_label": "B1 Facility Construction (Div 02-19) + B2 Facility Services (Div 20-29)",
       "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7324,14 +7333,15 @@
       "profession": [
         "A2"
       ],
-      "profession_label": "A2",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A2 Civil/Structural/Geotech Eng",
+      "profession_provenance": "verified",
       "building_system": [
-        "B0"
+        "B0",
+        "B1"
       ],
-      "building_system_label": "B0",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B0 Cross-cutting / non-MasterFormat + B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7428,16 +7438,16 @@
       "evaluation_spans": "accuracy",
       "capability_spans": "domain knowledge; quantitative reasoning",
       "profession": [
-        "A5"
+        "A6"
       ],
-      "profession_label": "A5",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A6 Cost Estimator",
+      "profession_provenance": "verified",
       "building_system": [
         "B5"
       ],
-      "building_system_label": "B5",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B5 Procurement & General Requirements (Div 00-01)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7616,14 +7626,14 @@
       "profession": [
         "A4"
       ],
-      "profession_label": "A4",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A4 Drafter/Surveyor/Tech",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8033,14 +8043,14 @@
       "profession": [
         "A5"
       ],
-      "profession_label": "A5",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
       "building_system": [
         "B0"
       ],
-      "building_system_label": "B0",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B0 Cross-cutting / non-MasterFormat",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8138,16 +8148,17 @@
       "evaluation_spans": "G-Eval (LLM-as-judge) [VERIFY: exact rubric and scoring protocol]",
       "capability_spans": "domain knowledge; spatial reasoning [VERIFY: specific BIM spatial capabilities]",
       "profession": [
+        "A2",
         "A4"
       ],
-      "profession_label": "A4",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A4 Drafter/Surveyor/Tech + A2 Civil/Structural/Geotech Eng",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8245,16 +8256,17 @@
       "evaluation_spans": "IDS-XML validity / structural accuracy [VERIFY — metric not fully specified in CURATOR; may be exact-match or schema overlap]",
       "capability_spans": "domain knowledge; structured output generation [VERIFY]",
       "profession": [
+        "A1",
         "A4"
       ],
-      "profession_label": "A4",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A4 Drafter/Surveyor/Tech + A1 Architect/Designer; A2 Civil/Structural/Geotech Eng; A3 Building-sys/MEP Eng",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8352,16 +8364,17 @@
       "evaluation_spans": "floor plan reconstruction accuracy [VERIFY — room IoU? topology? custom metric?]",
       "capability_spans": "perception; multimodal grounding; spatial reasoning; planning; tool use",
       "profession": [
-        "A1"
+        "A1",
+        "A4"
       ],
-      "profession_label": "A1",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A1 Architect/Designer + A4 Drafter/Surveyor/Tech",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -8459,16 +8472,17 @@
       "evaluation_spans": "KVOR (Key-Value Object Recognition) [custom metric; from VERIFIER briefing; VERIFY full definition and scoring range]",
       "capability_spans": "domain knowledge; retrieval grounding [VERIFY — BEM domain expertise required]",
       "profession": [
-        "A3"
+        "A3",
+        "A7"
       ],
-      "profession_label": "A3",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A3 Building-sys/MEP Eng + A7 Sustainability Specialist",
+      "profession_provenance": "verified",
       "building_system": [
         "B2"
       ],
-      "building_system_label": "B2",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B2 Facility Services (Div 20-29)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8566,16 +8580,17 @@
       "evaluation_spans": "task success / agentic (structural validation oracle: 10 deterministic validation tests; 13 architectural style categories) [VERIFY exact metrics]",
       "capability_spans": "spatial reasoning; planning; tool use; structural domain knowledge",
       "profession": [
+        "A1",
         "A2"
       ],
-      "profession_label": "A2",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A2 Civil/Structural/Geotech Eng + A1 Architect/Designer",
+      "profession_provenance": "verified",
       "building_system": [
         "B1"
       ],
-      "building_system_label": "B1",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B1 Facility Construction (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8675,14 +8690,14 @@
       "profession": [
         "A5"
       ],
-      "profession_label": "A5",
-      "profession_provenance": "proposal_unverified",
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
       "building_system": [
         "B3"
       ],
-      "building_system_label": "B3",
-      "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: RESEARCHER layer2_gap_mapping.md (2026-07-07) — an explicitly UNFROZEN advisory proposal, not the ratified taxonomy. Primary placement only; secondary/flagged alternates omitted here (see layer2_gap_mapping.md §2 for full detail)."
+      "building_system_label": "B3 Site & Infrastructure (Div 30-39)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -8760,7 +8775,7 @@
       ],
       "building_system_label": "B2 Facility Services (HVAC, Div 23)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -8826,9 +8841,9 @@
       "building_system": [
         "B2"
       ],
-      "building_system_label": "B2 Facility Services (Div 23)",
+      "building_system_label": "B2 Facility Services (building mechanical/HVAC, Div 23)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -8894,9 +8909,9 @@
       "building_system": [
         "B3"
       ],
-      "building_system_label": "B3 Site & Infrastructure (geotech/foundations)",
+      "building_system_label": "B3 Site & Infrastructure (geotechnical/foundations)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -8956,17 +8971,16 @@
       "evaluation_spans": "Code-based (accuracy/mAP/mIoU) + LLM-as-a-Judge/Human [VERIFY]",
       "capability_spans": "Perception/OCR (AEC-VLM) + Tool Use (agent-aug) + Planning & Reasoning",
       "profession": [
-        "A2",
-        "A5"
+        "A2"
       ],
-      "profession_label": "A2 Civil/Structural Eng + A5 Inspector",
+      "profession_label": "A2 Civil/Structural Eng (+ A5 inspector — pavement asset inspection)",
       "profession_provenance": "verified",
       "building_system": [
         "B3"
       ],
       "building_system_label": "B3 Site & Infrastructure (Div 32 Exterior/roads, Div 34 Transportation)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -9026,18 +9040,16 @@
       "evaluation_spans": "Code-based (ROUGE-L) + Human-in-the-loop",
       "capability_spans": "Domain Knowledge + Planning & Reasoning",
       "profession": [
-        "A2",
-        "A3"
+        "A2"
       ],
-      "profession_label": "A2 Civil Eng (water/env) + A3 (building water services)",
+      "profession_label": "A2 Civil Eng (water/environmental) + A3 (building-services water)",
       "profession_provenance": "verified",
       "building_system": [
-        "B2",
-        "B3"
+        "B2"
       ],
-      "building_system_label": "B2 Facility Services (Div 22 Plumbing) + B3 Site & Infra (Div 33 Utilities)",
+      "building_system_label": "B2 Facility Services (Div 22 Plumbing/water) + B3 Site & Infrastructure (Div 33 Utilities/water infra)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (RESEARCHER 0.22.0) — verified taxonomy-v2 coding."
+      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
