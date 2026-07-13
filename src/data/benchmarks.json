@@ -81,7 +81,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -1077,7 +1077,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -1895,7 +1895,7 @@
       ],
       "building_system_label": "B3 Site & Infrastructure (Div 30-39)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -2222,7 +2222,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -2329,7 +2329,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -2542,7 +2542,7 @@
       ],
       "building_system_label": "B5 Procurement & General Requirements (Div 00-01) + B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3156,7 +3156,7 @@
       ],
       "building_system_label": "B0 Cross-cutting / non-MasterFormat + B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3443,7 +3443,7 @@
       ],
       "building_system_label": "B0 Cross-cutting / non-MasterFormat + B2 Facility Services (Div 20-29)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3550,7 +3550,7 @@
       ],
       "building_system_label": "B0 Cross-cutting / non-MasterFormat",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -3784,7 +3784,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -4179,7 +4179,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -4601,7 +4601,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -5480,7 +5480,7 @@
       ],
       "building_system_label": "B0 Cross-cutting / non-MasterFormat + B5 Procurement & General Requirements (Div 00-01)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -5587,7 +5587,7 @@
       ],
       "building_system_label": "B3 Site & Infrastructure (Div 30-39)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -6849,7 +6849,7 @@
       ],
       "building_system_label": "B3 Site & Infrastructure (Div 30-39)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7019,7 +7019,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19) + B2 Facility Services (Div 20-29)",
       "building_system_provenance": "proposal_unverified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7260,68 +7260,60 @@
   {
     "name": "PE Civil Bench",
     "identifier": "doi:10.1016/j.cacaie.2026.100126",
-    "verification_status": "verified",
-    "tier": 2,
+    "verification_status": "verified (upgraded 2026-07-13, RESEARCHER, real full-text read). RESEARCHER confirms, via direct read of the raw ACM/Elsevier PDF (user-supplied extraction, RESEARCHER/outputs/fulltext_corpus/ R013_PECivilBench_S1093968726031129.pdf) — title \"PE Civil Bench: Advancing Agentic Retrieval-Augmented Generation Performance of Large Language Models on Exam Problems and Automated Component Design\", authors Saurav Silwal / Joshua Gao / Subin Varghese / Vedhus Hoskere (University of Houston), DOI 10.1016/j.cacaie.2026.100126, venue Computer-Aided Civil and Infrastructure Engineering 49 (2026) 100126 — EXACT MATCH to this record's prior abstract-derived bibliographic fields. Per `shared/scope_decisions.md` Rule 6, formal existence-verification sign-off for the seed 'PE Civil Bench — To be verified' (plan §9) item is VERIFIER's mandatory, non-optional call, NOT RESEARCHER's — RESEARCHER does NOT unilaterally strike the `[TO-VERIFY per plan §9]` flag in `shared/scope_decisions.md`; this evidence is submitted for VERIFIER to formally clear it. Paper confirmed OPEN ACCESS, CC BY-NC-ND 4.0 (page 1, not paywalled as previously assumed). Full 7-group extraction below is now grounded in real full text, superseding the prior abstract/VERIFIER-brief-derived version. UPDATE 2026-07-13 (VERIFIER F-118): the `[TO-VERIFY per plan §9]` existence-verification flag has been FORMALLY CLEARED by VERIFIER — independently confirmed via embedded PDF crossmark/dc:identifier + in-text OA statement + a fresh (not reused) WebFetch of both the HF dataset and GitHub repo. RESEARCHER no longer needs to carry this as pending; VERIFIER's sign-off is authoritative (shared/scope_decisions.md Rule 6 satisfied).",
+    "tier": 1,
     "source_record_id": "R013",
     "provenance": "claimed",
     "bibliographic": {
-      "benchmark_name": "PE Civil Bench",
-      "paper_title": "[VERIFY — CACAIE paywall]",
-      "authors": "Silwal; Gao; Varghese; Hoskere",
+      "paper_title": "PE Civil Bench: Advancing Agentic Retrieval-Augmented Generation Performance of Large Language Models on Exam Problems and Automated Component Design",
+      "authors": "Saurav Silwal, Joshua Gao, Subin Varghese, Vedhus Hoskere (Dept. of Civil & Environmental Engineering / Dept. of Electrical & Computer Engineering, University of Houston)",
       "year": 2026,
-      "venue": "Computers and AI in Civil and Infrastructure Engineering (CACAIE), 2026 (claimed)",
+      "venue": "Computer-Aided Civil and Infrastructure Engineering 49 (2026) 100126, Elsevier. Received 6 Feb 2026; accepted 14 Jun 2026; available online 15 Jun 2026. Open access, CC BY-NC-ND 4.0.",
       "doi": "10.1016/j.cacaie.2026.100126",
       "arxiv_id": null,
-      "repo_url": "[VERIFY]",
-      "dataset_url": "[VERIFY]",
-      "version_accessed": "2026-06-19"
+      "repo_url": "https://github.com/komal-blkmmb/Benchmarking_agentic-design_and_evaluation (VERIFIED LIVE via WebFetch 2026-07-13: 5 Jupyter notebooks, 11 commits, reproducibility-oriented)",
+      "dataset_url": "https://huggingface.co/datasets/hoskerelab/PE_Civil_Bench (VERIFIED LIVE via WebFetch 2026-07-13: CC-BY-4.0, JSON, 105 kB, <1K rows) + https://huggingface.co/datasets/hoskerelab/PE_Civil_Design_Dataset (named in paper text, not independently fetched this turn)",
+      "version_accessed": "Raw full-text PDF obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R013_PECivilBench_S1093968726031129.pdf; HF dataset + GitHub repo independently confirmed live via WebFetch same date."
     },
     "domain_use_case": {
-      "aec_subdomain": "Education/certification; structural/civil engineering",
-      "lifecycle_stage": "Pre-construction / professional certification",
-      "intended_user": "AI researchers; professional engineers; certification bodies"
+      "aec_subdomain": "Civil engineering professional licensing (FE/PE Civil exams); structural design automation (reinforced concrete beams/columns)",
+      "lifecycle_stage": "Professional practice (licensure) and design (RC element design automation)",
+      "intended_user": "Civil engineering firms piloting LLM-assisted workflows; AEC AI researchers evaluating engineering-code-grounded reasoning"
     },
     "task": {
-      "task_type": "Exam reasoning; RAG/evidence-grounded; agentic tool use",
-      "task_complexity": "PE Civil exam MCQ + RAG retrieval + agentic tool calls (claimed)",
-      "output_type": "Exact correctness; LLM-as-judge rubric (claimed)"
+      "task_type": "(1) Knowledge-intensive exam QA on FE/PE Civil problems under 3 configurations (baseline prompting, vector RAG, agentic RAG); (2) automated multi-agent RAG structural design of simply-supported RC beams (33 configurations) and columns, validated against ETABS finite-element outputs; (3) an autonomous RAG-based evaluator agreeing with a rule-based scorer (r=0.976)",
+      "task_complexity": "150 Civil exam questions (110 MCQ + 40 open-ended numerical) across 3 difficulty tiers and multiple FE/PE Civil subdisciplines; agentic RAG design task requires code retrieval (ACI 318), calculation, ETABS-validated design, and iterative self-correction with transparent traces",
+      "output_type": "MCQ selection (exact match) + open-ended numerical answer (±5% tolerance, unit-normalized); code-compliant RC beam/column design outputs"
     },
     "modality": {
+      "image": false,
       "text": true,
-      "tables": false,
-      "images": false,
-      "engineering_drawings": false,
-      "cad_floor_plans": false,
-      "bim_ifc_3d": false,
-      "point_cloud": false,
-      "video_multi_image": false,
-      "simulation_plot": false,
-      "symbolic_layout": false,
-      "tool_api_env": false,
-      "physics_simulation_env": false,
-      "notes": "Text-only; no images or tables in exam format (claimed)"
+      "video": false,
+      "bim_ifc": false,
+      "pointcloud_3d": false,
+      "notes": "Text/numeric-only — exam questions (MCQ + open-ended calculation) and RAG corpus (NCEES FE Reference Handbook, ACI 318 code text). No image/diagram input confirmed for the LLM tasks in the real full text (Fig. 1's sample-question illustrations are the paper's own document figures, not model-input images)."
     },
     "dataset_properties": {
-      "n_samples": "[VERIFY — CACAIE paywall]",
-      "n_tasks_categories": "[VERIFY — CACAIE paywall]",
-      "data_source": "NCEES PE Civil exam materials (proprietary/copyright-protected; claimed)",
-      "annotation_method": "NCEES professional exam standard (claimed)",
-      "expert_validation": "NCEES-aligned expert design (full; claimed)",
-      "license": "Proprietary/copyright-protected — NCEES PE exam content (claimed)",
-      "accessibility": "Proprietary/copyright-protected (claimed)",
-      "train_test_split": "[VERIFY]",
-      "leakage_risk": "Partial acknowledgment — NCEES exam exposure risk (d8=1; claimed)"
+      "n_samples": "150 Civil examination questions (110 MCQ + 40 open-ended numerical), spanning multiple FE/PE Civil subdisciplines and 3 difficulty tiers (easy/medium/hard); separate structural-design test set of 33 RC beam configurations, extended to columns",
+      "n_tasks_categories": "3 evaluation configurations (baseline / vector RAG / agentic RAG) × 13 LLMs for exam QA; 1 automated multi-agent RAG design task (beams + columns) validated against ETABS",
+      "data_source": "NCEES Fundamentals of Engineering (FE) Civil and Professional Engineering (PE) Civil examination questions, curated by University of Houston researchers; NCEES FE Reference Handbook (RAG corpus, 1000-token chunks, 100-token overlap); ACI 318 documentation (design knowledge base)",
+      "annotation_method": "Questions curated by University of Houston researchers from FE/PE Civil examination material; ground-truth answers verified against reference solutions",
+      "expert_validation": "NCEES official exam content basis; University of Houston civil engineering researchers curated and validated the question set",
+      "license": "CC-BY-4.0 (confirmed live on the HuggingFace dataset page, WebFetch 2026-07-13) — paper itself is CC BY-NC-ND 4.0",
+      "accessibility": "Publicly available: HuggingFace datasets hoskerelab/PE_Civil_Bench (confirmed live) and hoskerelab/PE_Civil_Design_Dataset (named in text); code at GitHub komal-blkmmb/Benchmarking_agentic-design_and_evaluation (confirmed live)",
+      "train_test_split": "Not a train/test ML split — fixed evaluation benchmark (150 Q) used across all 13 models × 3 configurations",
+      "leakage_risk": "Not discussed in the real full text (no leakage/contamination analysis found) — [VERIFY], downgraded from the prior abstract-inferred 'Moderate' claim which is not actually stated in the paper"
     },
     "evaluation": {
-      "metrics": "Exact correctness; LLM-as-judge rubric (claimed)",
-      "baseline_models": "13 frontier LLMs [VERIFY — CACAIE paywall] (claimed)",
-      "prompting_method": "[VERIFY — CACAIE paywall] (claimed)",
-      "zero_few_shot": "[VERIFY] (claimed)",
-      "rag_tool_use": "RAG pipeline + agentic tool calls (claimed)",
-      "human_eval_method": "NCEES PE exam passing standard (partial [VERIFY])",
-      "llm_as_judge_method": "LLM-as-judge rubric present (claimed)",
-      "robustness_tests": "[VERIFY]",
-      "cost_latency_reporting": "None (claimed)"
+      "metrics": "MCQ exact-match accuracy; open-ended numerical accuracy (±5% tolerance); RC design code-compliance rate; Pearson r vs. ETABS finite-element outputs (r≥0.90); autonomous-evaluator agreement r=0.976 vs rule-based scorer",
+      "baseline_models": "13 models: reasoning-optimized — GPT-5.5, GPT-5.4 (2026-03-05), o4-mini, o3-mini, Gemini-2.5-Pro, DeepSeek-R1 7B; general-purpose flagship — GPT-4o, GPT-4o-mini; open-source — Llama-3.1-8B, Llama-3.1-405B, Llama-3.3-70B, Mistral-7B, Gemma2-9B",
+      "prompting_method": "3 configurations: (1) baseline — standardized step-by-step professional-reasoning prompt, no retrieval; (2) vector RAG — NCEES FE Reference Handbook chunked/embedded (OpenAI text-embedding-3-small) in ChromaDB, top-5 chunks by cosine similarity appended; (3) agentic RAG — iterative retrieval loop with relevance assessment, query reformulation, up to 3 iterations",
+      "zero_few_shot": "Zero-shot (no worked examples provided in baseline; RAG conditions retrieve reference material, not few-shot exemplars)",
+      "rag_tool_use": "Yes — vector RAG (ChromaDB) and agentic RAG (iterative retrieve-assess-reformulate loop); separate multi-agent RAG framework for RC beam/column design with code retrieval, calculation, validation, self-correction",
+      "human_eval_method": "None reported — no human exam-taker pass-rate comparison found in the real full text (downgraded from the prior abstract-inferred implicit-baseline claim)",
+      "llm_as_judge_method": "An autonomous RAG-based evaluator extracts assessment criteria from reference solutions and scores designs; agrees with a traditional rule-based scorer at r=0.976",
+      "robustness_tests": "3-configuration design isolates the effect of retrieval augmentation (baseline vs vector RAG vs agentic RAG) on exam accuracy across model families/scales",
+      "cost_latency_reporting": "Not confirmed from real full text read this turn — [VERIFY]"
     },
     "capability": {
       "scheme": "v1",
@@ -7341,7 +7333,7 @@
       ],
       "building_system_label": "B0 Cross-cutting / non-MasterFormat + B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7350,20 +7342,22 @@
       "d4_annotation_quality": 2,
       "d5_evaluation_clarity": 2,
       "d6_baseline_coverage": 2,
-      "d7_reproducibility": 0,
-      "d8_leakage_control": 1,
-      "d9_human_baseline": 1,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
       "d10_practical_relevance": 2,
-      "total": 14
+      "total": 14,
+      "_notes": "UPGRADED 2026-07-13 from real full-text read (was: d7=0, d8=1, d9=1, total=14 — same total, different composition). d7 1->... 0->2: HF dataset (hoskerelab/PE_Civil_Bench, CC-BY-4.0) + GitHub code repo both independently confirmed LIVE via WebFetch 2026-07-13 — genuinely reproducible, not just a promise. d8 1->0 and d9 1->0: the prior scores were abstract-level INFERENCES ('may appear in pretraining', 'exam pass rate ~70% may serve as implicit baseline') — the real full text discusses neither leakage/contamination nor a human-examinee pass-rate comparison, so both are corrected down to what's actually stated (R6: report as-is, don't inflate). SUM CHECK: 2+2+0+2+2+2+2+0+0+2=14.",
+      "_caveat": "Rubric now grounded in the real ACM/Elsevier full-text PDF (obtained from user, stored fulltext_corpus/), not the abstract-only/VERIFIER-brief basis used previously."
     },
     "reported_results": [],
     "fulltext": {
-      "assessed": false,
-      "obtained": false,
-      "pdf_path": null,
-      "source_url": "https://doi.org/10.1016/j.cacaie.2026.100126",
-      "status": "paywalled",
-      "note": "paywalled Elsevier CACAIE (no preprint); abstract-only"
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R013_PECivilBench_S1093968726031129.pdf",
+      "source_url": "https://doi.org/10.1016/j.cacaie.2026.100126 (open access, CC BY-NC-ND 4.0 — NOT paywalled, correcting the prior 'paywalled' status)",
+      "status": "obtained",
+      "note": "Raw full-text PDF supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/1-s2.0-S1093968726031129-main/), read directly, confirmed exact bibliographic match. Paper is genuinely open access -- the prior 'paywalled' status was a mis-assumption based on the Elsevier venue alone, not an actual access check. Existence-verification evidence submitted to VERIFIER for formal sign-off per shared/scope_decisions.md Rule 6 (RESEARCHER does not unilaterally clear the [TO-VERIFY per plan §9] flag)."
     }
   },
   {
@@ -7447,7 +7441,7 @@
       ],
       "building_system_label": "B5 Procurement & General Requirements (Div 00-01)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -7633,7 +7627,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8050,7 +8044,7 @@
       ],
       "building_system_label": "B0 Cross-cutting / non-MasterFormat",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8158,7 +8152,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8266,7 +8260,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8374,7 +8368,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -8482,7 +8476,7 @@
       ],
       "building_system_label": "B2 Facility Services (Div 20-29)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8590,7 +8584,7 @@
       ],
       "building_system_label": "B1 Facility Construction (Div 02-19)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 2,
@@ -8697,7 +8691,7 @@
       ],
       "building_system_label": "B3 Site & Infrastructure (Div 30-39)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (RESEARCHER 0.25.0, frozen 2026-07-11) — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
     },
     "rubric": {
       "d1_domain_authenticity": 1,
@@ -8723,48 +8717,70 @@
     }
   },
   {
-    "name": "ASHRAE-HVAC-Designer",
-    "identifier": "PII:S2666123324000448 [VERIFY DOI]",
-    "verification_status": "screened (Stage-2 INCLUDE, re-gated 0.17.0); full 7-group extraction + rubric PENDING CURATOR Stage-B; abstract-only (ScienceDirect 403) — full-text [VERIFY]",
+    "name": "ASHRAE-HVAC-Designer LLM Eval",
+    "identifier": "doi:10.1016/j.enbenv.2024.03.010",
+    "verification_status": "INCLUDE, Tier 2 (upgraded 2026-07-13, RESEARCHER, real full-text read). Raw ScienceDirect PDF (user-supplied extraction, PII S2666123324000448) confirmed exact match: title \"Evaluation of large language models (LLMs) on the mastery of knowledge and skills in the heating, ventilation and air conditioning (HVAC) industry\", authors Jie Lu / Xiangning Tian / Chaobo Zhang / Yang Zhao / Jian Zhang / Wenkai Zhang / Chenxin Feng / Jianing He / Jiaxi Wang / Fengtai He, venue Energy and Built Environment 6 (2025) 875-892 (KeAi/Elsevier). Paper is OPEN ACCESS, CC BY-NC-ND 4.0 (not paywalled, correcting the prior 403/paywalled status). Full 7-group extraction below now grounded in real full text, superseding the prior abstract-only version -- resolves essentially all prior [VERIFY] fields.",
     "tier": 2,
     "source_record_id": "R043",
     "provenance": "claimed",
     "bibliographic": {
       "paper_title": "Evaluation of large language models (LLMs) on the mastery of knowledge and skills in the heating, ventilation and air conditioning (HVAC) industry",
-      "authors": "Jie Lu, Zeyu Zheng, Chaobo Zhang, Yang Zhao, Jian Zhang, Wenkai Zhang, et al.",
-      "year": 2024,
-      "venue": "Energy and Built Environment (2024)",
+      "authors": "Jie Lu, Xiangning Tian, Chaobo Zhang, Yang Zhao, Jian Zhang, Wenkai Zhang, Chenxin Feng, Jianing He, Jiaxi Wang, Fengtai He (Zhejiang University / Univ. of Cambridge / Eindhoven Univ. of Technology / Architectural Design & Research Institute of Zhejiang University)",
+      "year": 2025,
+      "venue": "Energy and Built Environment 6 (2025) 875-892, KeAi/Elsevier. Open access, CC BY-NC-ND 4.0.",
+      "doi": "10.1016/j.enbenv.2024.03.010",
       "arxiv_id": null,
-      "doi": "[VERIFY — corpus DOI 10.1016/j.enbenv.2024.1000448 did not resolve; real source PII S2666123324000448]",
       "repo_url": null,
-      "dataset_url": null
+      "dataset_url": null,
+      "version_accessed": "Raw full-text PDF obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R043_ASHRAE-HVAC-Designer_S2666123324000448.pdf DOI CORRECTED 2026-07-13 per VERIFIER F-118 (verification_log.csv R043 row, independently resolved from embedded PDF crossmark/dc:identifier/pdfx:doi): 10.1016/j.enbenv.2024.03.010 (was self-flagged [VERIFY exact suffix] as 10.1016/j.enbenv.2024.02.001, which was WRONG)."
     },
     "domain_use_case": {
-      "aec_subdomain": "HVAC / building mechanical services (MEP) — ASHRAE Certified HVAC Designer certification knowledge",
-      "lifecycle_stage": "Design / operation (HVAC)",
-      "intended_user": "HVAC engineers; MEP practitioners"
+      "aec_subdomain": "HVAC / building mechanical services (MEP) -- ASHRAE Certified HVAC Designer (CHD) certification knowledge",
+      "lifecycle_stage": "Design / operation (HVAC design and O&M)",
+      "intended_user": "HVAC engineers; MEP practitioners; AEC AI researchers evaluating professional-certification knowledge in LLMs"
     },
     "task": {
-      "task_type": "professional-exam question answering",
-      "_note": "provisional; full 7-group extraction pending"
+      "task_type": "Closed-book professional certification exam QA -- ASHRAE Certified HVAC Designer (CHD) examination, single-choice questions testing 3 knowledge capabilities: recall, analysis, application (ratio 5:3:2 per ASHRAE's own exam-design guidance)",
+      "task_complexity": "100 exam-style single-choice questions curated from the ASHRAE CHD examination guide book (specific page ranges cited); each question asked 5 times per model in a fresh dialog to control for response randomness",
+      "output_type": "Single-choice answer selection + explanation (closed-book, no external resources/retrieval)"
     },
     "modality": {
       "text": true,
-      "_note": "text-based professional-exam QA; full modality coding pending"
+      "image": false,
+      "structured_data": false,
+      "audio": false,
+      "video": false,
+      "notes": "Text-only closed-book exam QA. No image/diagram input confirmed in the real full text."
     },
     "dataset_properties": {
-      "_note": "pending CURATOR Stage-B full extraction"
+      "n_samples": "100 exam-style single-choice questions from the ASHRAE CHD examination guide book (recall:analysis:application = 5:3:2, per ASHRAE's own exam blueprint)",
+      "n_tasks_categories": "3 knowledge-capability categories (recall, analysis, application), each independently scored",
+      "data_source": "ASHRAE Certified HVAC Designer (CHD) examination guide book (specific page ranges: 30-38, 43-48, 53-55, 64-68)",
+      "annotation_method": "Sourced directly from the official ASHRAE CHD guide book; ground truth = official exam answer key",
+      "expert_validation": "ASHRAE CHD is an authoritative industry certification exam -- expert-authored by definition",
+      "license": "Paper is CC BY-NC-ND 4.0 (open access, confirmed page 1); underlying ASHRAE exam questions remain ASHRAE's own copyrighted material -- no separate dataset release found, no GitHub/repo link found in the real full text",
+      "accessibility": "No public dataset/code release found in the real full text (no Data Availability statement, no GitHub/HF link) -- the 100-question set itself is not confirmed redistributable (sourced from a copyrighted ASHRAE guide book)",
+      "train_test_split": "N/A -- fixed 100-question evaluation set, no train split",
+      "leakage_risk": "Not explicitly discussed as a named risk in the real full text, though the closed-book design (no pre-fed prompts, fresh dialog per test) is itself a methodological control against certain contamination effects -- [VERIFY] no formal leakage analysis found"
     },
     "evaluation": {
-      "_note": "pending"
+      "metrics": "Per-question accuracy (recall/analysis/application); overall exam pass/fail against ASHRAE's official passing score; response consistency across 5 repeated trials per question",
+      "baseline_models": "12 LLMs: closed-source -- GPT-3.5, GPT-4.0, ERNIE Bot (Baidu); open-source -- LLaMA (7B), Alpaca (13B, fine-tuned from LLaMA), Koala (13B), Vicuna-13B, Dolly 2.0 (12B, Pythia-based), OpenAssistant/Oasst-pythia (12B), FastChat-T5 (3B, FLAN-T5-based), ChatGLM (6B, GLM-based), StableLM-tuned-alpha (7B, LLaMA-based)",
+      "prompting_method": "Closed-book, no external resources. Standardized 2-part prompt (instruction + question): \"Answer the following single-choice questions about CERTIFIED HVAC DESIGNER exam and explain the reason\"",
+      "zero_few_shot": "Zero-shot -- no pre-fed prompts before each test; each test run in a fresh dialog box to avoid prior-context influence",
+      "rag_tool_use": false,
+      "human_eval_method": "None -- automated scoring against the official ASHRAE answer key",
+      "llm_as_judge_method": null,
+      "robustness_tests": "Each question asked 5 times per LLM in a fresh dialog box to measure response consistency/randomness (Fig. 8, consistency analysis for recall-capability questions)",
+      "cost_latency_reporting": ""
     },
     "capability": {
       "scheme": "v2",
-      "domain": "education/certification (MEP)",
+      "domain": "HVAC / building mechanical services",
       "task_spans": "Output Quality (exam QA)",
       "modality_spans": "4.1 Text",
       "evaluation_spans": "Code-based (exam accuracy) [VERIFY]",
-      "capability_spans": "Domain Knowledge + Planning & Reasoning",
+      "capability_spans": "Domain Knowledge (AEC instance) + Planning & Reasoning",
       "profession": [
         "A3"
       ],
@@ -8775,19 +8791,30 @@
       ],
       "building_system_label": "B2 Facility Services (HVAC, Div 23)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (Dim1-6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this record does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
-      "_note": "PROVISIONAL; per-dimension scoring pending"
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 0,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 2,
+      "d10_practical_relevance": 2,
+      "total": 14,
+      "rubric_note": "UPGRADED 2026-07-13 from real full-text read (was: d4=1,d5=1,d6=1,d9=0, total=9, abstract-only). d4 1->2: official ASHRAE CHD guide-book sourcing + official answer key, confirmed real. d5 1->2: clear closed-book protocol, 5-repeat consistency check, well-documented. d6 1->2: 12 named LLMs with exact parameter sizes/sources (Table 1), not just 'ChatGPT/GPT-4 [VERIFY]'. d9 0->2: a REAL human-examinee pass-rate comparison is explicitly reported (GPT-4 outperforms ~half of first-time examinees) -- this is genuine, not inferred. d7 stays 0: no dataset/code release found in real text (ASHRAE-copyrighted exam content, no GitHub/HF link). d8 stays 0: no formal leakage analysis found. SUM CHECK: 2+2+0+2+2+2+0+0+2+2=14."
     },
     "reported_results": [],
     "fulltext": {
       "assessed": true,
-      "obtained": false,
-      "pdf_path": null,
-      "source_url": "https://www.sciencedirect.com/science/article/pii/S2666123324000448",
-      "status": "paywalled",
-      "note": "re-gated 0.17.0 abstract-only (SD 403); §4: C1 PASS (HVAC/MEP), C2 PASS (ASHRAE Certified HVAC Designer exam = standalone professional assessment instrument, R013 precedent), C3 PASS (ChatGPT/GPT-4). INCLUDE Tier 2, d7=0"
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R043_ASHRAE-HVAC-Designer_S2666123324000448.pdf",
+      "source_url": "https://doi.org/10.1016/j.enbenv.2024.03.010 (open access, CC BY-NC-ND 4.0)",
+      "status": "obtained",
+      "note": "Raw full-text PDF supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/1-s2.0-S2666123324000448-main/), read directly, confirmed exact bibliographic match. Paper is genuinely open access -- the prior 'paywalled'/403 status was based on a blocked ScienceDirect landing-page fetch, not a full-text-unavailable determination."
     }
   },
   {
@@ -8828,11 +8855,11 @@
     },
     "capability": {
       "scheme": "v2",
-      "domain": "education/certification (MEP)",
+      "domain": "Building mechanical equipment maintenance / HVAC",
       "task_spans": "Output Quality (exam QA)",
-      "modality_spans": "4.1 Text (+partial 4.3 for figure Qs)",
+      "modality_spans": "4.1 Text (+ partial 4.3 2D Visual for figure questions)",
       "evaluation_spans": "Code-based (exam score) + Reliability (Consistency)",
-      "capability_spans": "Domain Knowledge + Planning & Reasoning",
+      "capability_spans": "Domain Knowledge (AEC instance) + Planning & Reasoning",
       "profession": [
         "A3"
       ],
@@ -8843,7 +8870,7 @@
       ],
       "building_system_label": "B2 Facility Services (building mechanical/HVAC, Div 23)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (Dim1-6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this record does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -8896,11 +8923,11 @@
     },
     "capability": {
       "scheme": "v2",
-      "domain": "education/certification (geotech)",
+      "domain": "Geotechnical / civil engineering",
       "task_spans": "Output Quality (problem-solving QA)",
-      "modality_spans": "4.1 Text (+partial 4.3)",
-      "evaluation_spans": "Code-based (accuracy) + Human-in-the-loop",
-      "capability_spans": "Planning & Reasoning + Domain Knowledge",
+      "modality_spans": "4.1 Text (+ partial 4.3 2D Visual)",
+      "evaluation_spans": "Code-based (accuracy) + Human-in-the-loop (oversight)",
+      "capability_spans": "Planning & Reasoning + Domain Knowledge (AEC instance)",
       "profession": [
         "A2"
       ],
@@ -8911,7 +8938,7 @@
       ],
       "building_system_label": "B3 Site & Infrastructure (geotechnical/foundations)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (Dim1-6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this record does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -8965,11 +8992,11 @@
     },
     "capability": {
       "scheme": "v2",
-      "domain": "infrastructure inspection (transport CI)",
+      "domain": "Transportation infrastructure",
       "task_spans": "Task Completion (perception) + Output Quality (VQA)",
       "modality_spans": "4.3 2D Visual (highway pavement images)",
-      "evaluation_spans": "Code-based (accuracy/mAP/mIoU) + LLM-as-a-Judge/Human [VERIFY]",
-      "capability_spans": "Perception/OCR (AEC-VLM) + Tool Use (agent-aug) + Planning & Reasoning",
+      "evaluation_spans": "Code-based (accuracy/mAP/mIoU) + LLM-as-a-Judge / Human (expert-corrected VQA) [VERIFY]",
+      "capability_spans": "Perception/OCR (AEC-VLM instance) + Tool Use (agent-augmented) + Planning & Reasoning",
       "profession": [
         "A2"
       ],
@@ -8980,7 +9007,7 @@
       ],
       "building_system_label": "B3 Site & Infrastructure (Div 32 Exterior/roads, Div 34 Transportation)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (Dim1-6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this record does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -9034,11 +9061,11 @@
     },
     "capability": {
       "scheme": "v2",
-      "domain": "building science / water infrastructure (water CI)",
+      "domain": "Water & Wastewater infrastructure",
       "task_spans": "Output Quality (generative QA)",
       "modality_spans": "4.1 Text",
       "evaluation_spans": "Code-based (ROUGE-L) + Human-in-the-loop",
-      "capability_spans": "Domain Knowledge + Planning & Reasoning",
+      "capability_spans": "Domain Knowledge (AEC instance) + Planning & Reasoning",
       "profession": [
         "A2"
       ],
@@ -9049,7 +9076,7 @@
       ],
       "building_system_label": "B2 Facility Services (Div 22 Plumbing/water) + B3 Site & Infrastructure (Div 33 Utilities/water infra)",
       "building_system_provenance": "verified",
-      "profession_note": "Source: SYNTHESIZER taxonomy.md §10.2.N31 (Dim1-4) + CURATOR benchmark_records.jsonl taxonomy_v2 (Dim5/6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this cohort does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 (Dim1-6, Stage-B full-text extraction F-107/F-111). Provenance label backfilled to 'verified' for UI consistency — the taxonomy_v2 schema for this record does not carry an explicit dim5_provenance/dim6_provenance field, but the underlying coding was independently verified via full-text extraction."
     },
     "rubric": {
       "_note": "PROVISIONAL; per-dimension scoring pending"
@@ -9062,6 +9089,1631 @@
       "source_url": "https://arxiv.org/abs/2407.21045",
       "status": "obtained",
       "note": "CI-1 Stage-2 full-text read; §4: C1 PASS (water/wastewater treatment+distribution = Water CI), C2 PASS (983 tasks/6 categories), C3 PASS (7 LLMs). INCLUDE. First CI-Water benchmark in corpus. Fills CISA Water zero-coverage."
+    }
+  },
+  {
+    "name": "PIDQA",
+    "identifier": "doi:10.3390/make7020039",
+    "verification_status": "Stage-2 full-text read 2026-07-12 (RESEARCHER, real §4 3-condition screen, PDF on-disk) — INCLUDE, BORDERLINE C1",
+    "tier": 2,
+    "source_record_id": "R052",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "PIDQA—Question Answering on Piping and Instrumentation Diagrams",
+      "authors": "Mohit Gupta, Chialing Wei, Thomas Czerniawski, Ricardo Eiris",
+      "year": 2025,
+      "venue": "Machine Learning and Knowledge Extraction (MDPI), Vol. 7, Issue 2, Article 39",
+      "doi": "10.3390/make7020039",
+      "arxiv_id": null,
+      "repo_url": "https://github.com/mgupta70/PIDQA",
+      "dataset_url": "https://github.com/mgupta70/PIDQA (QA pairs + Cypher queries, CC0-1.0); underlying P&ID images from the pre-existing public 'Dataset-P&ID' (Paliwal et al. 2021, Digitize-PID), referenced not re-hosted",
+      "version_accessed": "MDPI OA PDF, RESEARCHER 2026-07-12, published 21 April 2025"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Process/industrial-plant engineering documentation — Piping & Instrumentation Diagram (P&ID) question answering, adjacent to AEC/built-environment (BORDERLINE, see _screening_rationale). Authors affiliated with Built Environment school (ASU).",
+      "lifecycle_stage": "Design review / operations (material takeoffs, safety-compliance verification, CAD-drafting-error detection on existing P&ID documentation)",
+      "intended_user": "Process/piping engineers, EPC (Engineering-Procurement-Construction) design reviewers, plant safety auditors, AEC/process-engineering AI researchers"
+    },
+    "task": {
+      "task_type": "Natural-language question answering over P&ID diagrams via LLM-generated Cypher graph queries on a Labeled Property Graph (LPG) representation. 4 question categories: (I) simple counting, (II) spatial counting, (III) spatial connections (multi-hop, safety-check style), (IV) value-based queries (tag/attribute lookup, CAD-error detection)",
+      "task_complexity": "Structured graph-query generation (text-to-Cypher) grounded on a P&ID knowledge graph; complexity varies by question type (multi-hop spatial-connection queries hardest, per Table 4 accuracy spread)",
+      "output_type": "Cypher query -> executed graph-query result -> LLM-reformatted natural-language answer (count / boolean / entity list)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": true,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": true,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Upstream pipeline (Section 3.2.1, not itself LLM-evaluated) digitizes raw P&ID IMAGES into a graph via YOLOv11/KerasOCR/PHT; the LLM-evaluated QA stage (Section 3.2.3, PIDQA benchmark proper) operates entirely on TEXT (natural-language question) + a structured/symbolic Labeled Property Graph representation (Cypher schema), not on raw images. engineering_drawings=true reflects the P&ID source artifact; symbolic_layout=true reflects the graph/Cypher structured representation the LLM actually consumes."
+    },
+    "dataset_properties": {
+      "n_samples": "64,000 QA pairs (128 questions x 500 P&ID sheets: 300 train / 100 val / 100 test)",
+      "n_tasks_categories": "4 question categories (simple counting, spatial counting, spatial connections, value-based), each with 20 linguistically-diverse templates (16,000 questions/category)",
+      "data_source": "Programmatically generated QA pairs (via gpt-3.5-turbo-authored templates) over the pre-existing public synthetic 'Dataset-P&ID' (Paliwal et al. 2021, Digitize-PID) — 500 synthetic P&ID sheets, 32 symbol classes (numeric IDs only, no human-readable names)",
+      "annotation_method": "Programmatic/template-based generation from ground-truth graph structure (deterministic, rule-derived from the synthetic dataset's known symbol/line/text labels), not manual expert annotation of individual QA pairs",
+      "expert_validation": "Base entity graph construction included a semi-automatic human-in-the-loop error-correction step (Section 3.2.1); the 64k QA pairs themselves are template-generated, not individually expert-reviewed",
+      "license": "CC0-1.0 (GitHub repo, confirmed) for PIDQA QA data + code; article itself CC BY 4.0 (MDPI OA)",
+      "accessibility": "Public, no paywall: GitHub github.com/mgupta70/PIDQA (confirmed live, 14 stars/3 forks) + MDPI OA article + explicit Data Availability Statement",
+      "train_test_split": "300 train / 100 validation / 100 test P&ID sheets (entity-recognition stage); QA evaluation reported on the test-set sheets",
+      "leakage_risk": "[VERIFY] Not discussed in paper. QA pairs are newly generated (2025) reducing direct leakage risk, but the underlying Dataset-P&ID base images are from a 2021 public prior-work dataset that could plausibly appear in later LLM pretraining corpora — undiscussed."
+    },
+    "evaluation": {
+      "metrics": "Accuracy (exact Cypher-execution-result match) per question category and context level",
+      "baseline_models": "gpt-3.5-turbo ONLY — single model, evaluated across 4 prompting/context conditions (this is a context-ablation study of one model, not a multi-model comparison)",
+      "prompting_method": "4-level context-grounding ablation: Level 0 (no schema context) / Level 1 (basic graph schema) / Level 2 (schema + attribute-value statistics) / Level 3 (Level 2 + dynamic 3-shot examples)",
+      "zero_few_shot": "Zero-shot (Levels 0-2); dynamic 3-shot (Level 3)",
+      "rag_tool_use": "Schema-grounding + dynamic few-shot retrieval (not RAG over documents; retrieval is over graph-schema exemplars) + tool use (Cypher execution on Neo4j graph database)",
+      "human_eval_method": "None reported",
+      "llm_as_judge_method": "None (code-based exact-match evaluation via Cypher query execution against ground truth)",
+      "robustness_tests": "Linguistic-diversity robustness across paraphrased question templates (implicit in the 20-template design); qualitative failure-mode analysis (schema hallucination, referential ambiguity)",
+      "cost_latency_reporting": "Not reported"
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Process/industrial-plant engineering documentation",
+      "task_spans": "Output Quality (structured graph-grounded QA accuracy on P&ID Cypher queries)",
+      "modality_spans": "4.1 Text (natural-language questions/answers) + 4.6 Structured/Symbolic (Labeled Property Graph / Cypher schema representation the LLM actually consumes; underlying P&ID source is 2D Visual/engineering-drawing but is digitized by a separate non-LLM upstream pipeline, not directly LLM-consumed — disclosed, consistent with this record's own modality.notes)",
+      "evaluation_spans": "Code-based (exact Cypher-execution-result match, per-category accuracy, Table 4)",
+      "capability_spans": "Domain Knowledge (AEC/process-plant P&ID instance) + Tool Use (Cypher query generation + execution on Neo4j graph database) + Planning & Reasoning (multi-hop spatial-connection queries)",
+      "profession": [
+        "A3"
+      ],
+      "profession_label": "A3 Building-sys/MEP Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2",
+        "B4"
+      ],
+      "building_system_label": "B4 Process Equipment (Div 40-49) + B2 Facility Services (Div 20-29)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 1,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 1,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 0,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 11,
+      "_notes": "FULL-TEXT SCORED 2026-07-12 (RESEARCHER, PDF read at Stage-2 INCLUDE time, not a briefing-provisional score). d1=1: P&ID is a real engineering-drawing artifact, but this is process/industrial-plant engineering (oil-refinery/petroleum-industry worked examples: OISD-129, ASME B31.3), adjacent to core AEC not core AEC itself (see _screening_rationale C1 borderline); additionally the underlying dataset is SYNTHETIC (Dataset-P&ID), not real facility drawings. d2=2: task types (material takeoffs, safety-compliance spatial-connection checks citing real engineering logic e.g. 'strainers upstream of pumps', CAD-drafting-error detection) are realistic professional P&ID-engineer tasks with concrete worked examples. d3=1: LLM-evaluated stage is text+structured-graph only (no raw image modality reaches the LLM; image digitization is a separate non-LLM upstream pipeline) — single primary modality. d4=1: QA pairs are programmatically template-generated from ground-truth graph structure (internally consistent/deterministic) but not individually expert-authored/audited; symbol classes are numeric-only with no human-readable names (self-disclosed Limitation #2). d5=2: evaluation protocol is fully specified and reproducible — 4 clearly-defined context levels, deterministic temperature=0, per-category accuracy table (Table 4), qualitative failure analysis. d6=0: only ONE model evaluated (gpt-3.5-turbo) across 4 prompting conditions — this is a single-model context-ablation, not a baseline comparison; fails the 'diverse frontier + open-source baselines' bar entirely (no GPT-4/Claude/Gemini/open-source comparison) — this is the floor-failing dimension. d7=2: PIDQA (QA pairs + Cypher + eval code) is on GitHub under CC0-1.0, confirmed live and public, with an explicit MDPI Data Availability Statement — full public canonical release, no access barriers. d8=0: no explicit contamination/leakage discussion; underlying base images (Dataset-P&ID, 2021) predate many LLM training cutoffs, undiscussed risk. d9=0: no human baseline reported anywhere. d10=2: directly tied to real P&ID-engineering practice (MTOs, safety compliance, drafting-error detection) with concrete cited engineering-standard examples. SUM CHECK: 1+2+1+1+2+0+2+0+0+2=11, matches total=11."
+    },
+    "reported_results": [
+      {
+        "model_string": "gpt-3.5-turbo",
+        "metric_name": "Simple counting (Level 0 (no context)) — accuracy",
+        "value": "12.7%",
+        "source_location": "10.3390/make7020039",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "gpt-3.5-turbo",
+        "metric_name": "Spatial counting (Level 0 (no context)) — accuracy",
+        "value": "57.1%",
+        "source_location": "10.3390/make7020039",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "gpt-3.5-turbo",
+        "metric_name": "Spatial connections (Level 0 (no context)) — accuracy",
+        "value": "13.5%",
+        "source_location": "10.3390/make7020039",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "gpt-3.5-turbo",
+        "metric_name": "Value-based (Level 0 (no context)) — accuracy",
+        "value": "17.2%",
+        "source_location": "10.3390/make7020039",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "gpt-3.5-turbo",
+        "metric_name": "Simple counting (Level 3 (schema+stats+few-shot)) — accuracy",
+        "value": "99.5%",
+        "source_location": "10.3390/make7020039",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "gpt-3.5-turbo",
+        "metric_name": "Spatial counting (Level 3 (schema+stats+few-shot)) — accuracy",
+        "value": "98.6%",
+        "source_location": "10.3390/make7020039",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "gpt-3.5-turbo",
+        "metric_name": "Spatial connections (Level 3 (schema+stats+few-shot)) — accuracy",
+        "value": "97.5%",
+        "source_location": "10.3390/make7020039",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "gpt-3.5-turbo",
+        "metric_name": "Value-based (Level 3 (schema+stats+few-shot)) — accuracy",
+        "value": "97.0%",
+        "source_location": "10.3390/make7020039",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R052_PIDQA_make-07-00039.pdf",
+      "source_url": "https://mdpi-res.com/d_attachment/make/make-07-00039/article_deploy/make-07-00039.pdf",
+      "status": "obtained",
+      "note": "MDPI OA, downloaded 2026-07-12, %PDF-verified (19.3MB), pdftotext-read in full. GitHub repo github.com/mgupta70/PIDQA independently confirmed live (CC0-1.0, 14 stars/3 forks/23 commits)."
+    }
+  },
+  {
+    "name": "Power-LLaVA / PowerQA",
+    "identifier": "arXiv:2407.19178",
+    "verification_status": "Stage-2 full-text read 2026-07-12 (RESEARCHER, real §4 3-condition screen, PDF on-disk, pdftotext-read in full) — INCLUDE, Tier 2. Screened under the OVERTURNED 2026-07-12 scope rule (shared/scope_decisions.md dated entry, later turn) that extends the process-plant design/construction/commissioning/O&M logic to power transmission/distribution physical-asset inspection/O&M; grid-dispatch/market-economics remains excluded (unaffected).",
+    "tier": 2,
+    "source_record_id": "R053",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Power-LLaVA: Large Language and Vision Assistant for Power Transmission Line Inspection",
+      "authors": "Jiahao Wang, Mingxuan Li, Haichen Luo, Jinguo Zhu, Aijun Yang, Mingzhe Rong, Xiaohua Wang",
+      "year": 2024,
+      "venue": "arXiv preprint (IEEE copyright notice present in the PDF footer — '© 2024 IEEE. Personal use of this material is permitted...' — suggesting acceptance at an IEEE venue, but the specific conference/journal name is not stated anywhere in the accessible PDF text; [VERIFY] exact IEEE venue)",
+      "doi": null,
+      "arxiv_id": "2407.19178",
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "arXiv v1, 27 Jul 2024. PDF on-disk, pdftotext-read in full 2026-07-12."
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Power transmission-line physical-asset inspection (power/utility infrastructure vertical, in scope per the 2026-07-12 overturn)",
+      "lifecycle_stage": "Operations & maintenance — visual inspection for foreign objects/hazards on power transmission lines and towers",
+      "intended_user": "Power-utility inspection engineers/technicians conducting transmission-line hazard/foreign-object inspection"
+    },
+    "task": {
+      "task_type": "Visual dialogue/VQA for power transmission-line inspection: detailed image description, multi-round conversation, and complex-reasoning hazard assessment (e.g. kite/debris entanglement risk); evaluated via the PowerQA multiple-choice benchmark (2-4 options/question)",
+      "task_complexity": "3 conversation types (detailed description, long conversation, complex reasoning) in training data; eval benchmark is single-turn MC-format zero-shot testing",
+      "output_type": "Free-text dialogue response (model); letter/option selection scored against a reference answer (PowerQA eval)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Single image + text-dialogue modality throughout — real-world power transmission-line photographs paired with natural-language instructions/questions and generated text responses. No video, 3D, tabular, or engineering-drawing modality involved despite the physical-infrastructure subject matter."
+    },
+    "dataset_properties": {
+      "n_samples": "Pre-training: 608K image-text pairs (558K from public LLaVA release + 50K newly generated). Instruction-tuning: 100K samples (22K detailed description + 45K conversation + 33K complex reasoning). PowerQA eval benchmark: 1,000 MC-format samples.",
+      "n_tasks_categories": "3 instruction-data types (detailed description / long conversation / complex reasoning) for training; PowerQA eval is a single unified MC-QA task format",
+      "data_source": "20,000 real-world power-transmission-line images collected by the authors; captions from VL-model captioners (VisualGLM, InternLM-XComposer-VL, Qwen-VL-Chat, ShareGPT4V) + object-detection labels (Co-DETR); instruction-tuning conversations generated by ChatGPT from those captions/labels; PowerQA questions/answers generated by GPT-4V from real inspection images across multiple hazard perspectives",
+      "annotation_method": "Semi-automated pipeline: VL-model captioning + detector labels + ChatGPT-generated conversation synthesis (training data, not individually human-authored); PowerQA benchmark specifically underwent a manual refinement pass to remove ambiguous/dirty samples ('all samples are refined manually')",
+      "expert_validation": "PowerQA underwent manual human refinement, but the paper does not state the reviewers were domain (electrical-engineering) experts specifically — reviewer qualifications are unstated, disclosed as a gap rather than assumed",
+      "license": "Not stated anywhere in the accessible text",
+      "accessibility": "NOT confirmed public as of this paper — the text states only 'Code shall be released' (future tense in the abstract); no GitHub/HuggingFace/download URL is given anywhere in the PDF. Disclosed as unreleased-at-time-of-publication, not assumed public.",
+      "train_test_split": "608K pre-training + 100K instruction-tuning (no held-out split described for these); PowerQA (1,000 samples) functions purely as a zero-shot eval set, no train/test split within it",
+      "leakage_risk": "[VERIFY] Not discussed in the paper. PowerQA is GPT-4V-generated from the authors' own 2024 image collection, reducing direct pretraining-corpus overlap risk for contemporaneous models, but this is not explicitly analyzed by the authors."
+    },
+    "evaluation": {
+      "metrics": "Accuracy (%) on PowerQA MC questions",
+      "baseline_models": "VisualGLM, InstructBLIP, MiniGPT4, InternLM-XComposer-VL, Qwen-VL-Chat, GPT-4V — 6 comparison models spanning open-source and proprietary (GPT-4V) systems",
+      "prompting_method": "Zero-shot testing on PowerQA MC questions; models directly select an answer from provided options",
+      "zero_few_shot": "Zero-shot",
+      "rag_tool_use": "None",
+      "human_eval_method": "None as an evaluation baseline (humans were involved only in PowerQA's construction/refinement, not as benchmark-takers)",
+      "llm_as_judge_method": "None — exact-match accuracy against reference MC answers",
+      "robustness_tests": "Ablation on training-data scale (Fig. 5) and on conversation-type composition (Table 2: removing any of the 3 data types degrades performance)",
+      "cost_latency_reporting": "Training-data-scale/cost efficiency argument reported (Power-LLaVA needs only 708K samples vs. LLaVA-family models' 5M+) but no inference latency/cost figures"
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Power transmission-line physical-asset inspection",
+      "task_spans": "Output Quality (multiple-choice QA accuracy on PowerQA power-line-inspection benchmark)",
+      "modality_spans": "4.3 2D Visual (real-world power-transmission-line/tower photographs) + 4.1 Text (dialogue/QA instructions and responses)",
+      "evaluation_spans": "Code-based (exact-match accuracy on PowerQA MC questions against reference answers)",
+      "capability_spans": "Perception/OCR (AEC-VLM instance — power-line hazard/foreign-object visual recognition) + Domain Knowledge (power-transmission-infrastructure instance) + Planning & Reasoning (complex hazard-risk reasoning, per the paper's own 'complex reasoning' instruction-data type)",
+      "profession": [
+        "A3"
+      ],
+      "profession_label": "A3 Building-sys/MEP Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3 Site & Infrastructure Subgroup (Div 30-39)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 1,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 12,
+      "_notes": "FULL-TEXT SCORED 2026-07-12 (RESEARCHER, pdftotext-read PDF, not briefing-provisional). d1=2: real-world power-transmission-line imagery (20K authors'-own-collected images), clean physical-asset-inspection domain fit under the 2026-07-12 overturned scope, not adjacent/borderline. d2=2: hazard-inspection dialogue task (foreign-object/entanglement risk assessment) is a realistic, professionally-motivated power-line-inspection task with concrete worked examples. d3=1: single image+text modality pair throughout, no richer modality diversity (no video/3D/tabular/drawing). d4=1: PowerQA underwent manual refinement but reviewer domain-expertise is unstated (contrast SubstationAI's explicit named electrical-expert review); training data itself is VL-model/ChatGPT-generated, not human-annotated. d5=2: fully specified zero-shot MC protocol, complete results table (Table 1), real ablation (Table 2, Fig. 5). d6=2: 6 diverse baselines incl. proprietary GPT-4V and multiple open-source LMM families — comfortably clears the T1 floor. d7=0: paper states only 'Code shall be released' (future tense) — NO confirmed public dataset/code/model release anywhere in the accessible text; per the project's existing d7=0 anchor convention (an unconfirmed future-tense release promise, no URL), this is the floor-failing dimension, identical in kind to the previously-logged R035 'data available on request, no URL' case. d8=0: no leakage/contamination discussion anywhere. d9=0: no human baseline performance reported (only AI models compared). d10=2: directly tied to real transmission-line-inspection practice with concrete motivating hazard examples. SUM CHECK: 2+2+1+1+2+2+0+0+0+2=12, matches total=12."
+    },
+    "reported_results": [
+      {
+        "model_string": "Power-LLaVA",
+        "metric_name": "PowerQA (overall) (zero-shot) — accuracy",
+        "value": "86.8%",
+        "source_location": "arXiv:2407.19178",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4V",
+        "metric_name": "PowerQA (overall) (zero-shot) — accuracy",
+        "value": "85.1%",
+        "source_location": "arXiv:2407.19178",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen-VL-Chat",
+        "metric_name": "PowerQA (overall) (zero-shot) — accuracy",
+        "value": "84.5%",
+        "source_location": "arXiv:2407.19178",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "InternLM-XComposer-VL",
+        "metric_name": "PowerQA (overall) (zero-shot) — accuracy",
+        "value": "81.1%",
+        "source_location": "arXiv:2407.19178",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "MiniGPT4",
+        "metric_name": "PowerQA (overall) (zero-shot) — accuracy",
+        "value": "63.4%",
+        "source_location": "arXiv:2407.19178",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "VisualGLM",
+        "metric_name": "PowerQA (overall) (zero-shot) — accuracy",
+        "value": "62.3%",
+        "source_location": "arXiv:2407.19178",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "InstructBLIP",
+        "metric_name": "PowerQA (overall) (zero-shot) — accuracy",
+        "value": "32.5%",
+        "source_location": "arXiv:2407.19178",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-1_PowerLLaVA-PowerQA_2407.19178.pdf",
+      "source_url": "https://arxiv.org/abs/2407.19178",
+      "status": "obtained",
+      "note": "arXiv PDF, %PDF-verified, downloaded prior turn (F-116/fulltext-corpus pass), pdftotext-read in full this turn for real 7-group extraction + rubric scoring (not abstract-only)."
+    }
+  },
+  {
+    "name": "SubstationAI",
+    "identifier": "arXiv:2412.17077",
+    "verification_status": "Stage-2 full-text read 2026-07-12 (RESEARCHER, real §4 3-condition screen, PDF on-disk, pdftotext-read in full) — INCLUDE, Tier 2. Screened under the OVERTURNED 2026-07-12 scope rule (shared/scope_decisions.md dated entry, later turn).",
+    "tier": 2,
+    "source_record_id": "R054",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "SubstationAI: Multimodal Large Model-Based Approaches for Analyzing Substation Equipment Faults",
+      "authors": "Jinzhi Wang, Qinfeng Song, Lidong Qian, Haozhou Li, Qinke Peng, Jiangbo Zhang",
+      "year": 2024,
+      "venue": "arXiv preprint (cs.AI); no conference/journal venue stated in the accessible text beyond the arXiv listing",
+      "doi": null,
+      "arxiv_id": "2412.17077",
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "arXiv v1, 22 Dec 2024. PDF on-disk, pdftotext-read in full 2026-07-12."
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Substation equipment fault diagnosis (power/utility infrastructure vertical, in scope per the 2026-07-12 overturn)",
+      "lifecycle_stage": "Operations & maintenance — fault detection, cause analysis, and repair-recommendation generation for substation equipment",
+      "intended_user": "Substation maintenance engineers/on-site technicians (paper explicitly frames the output as guiding 'on-site engineers in equipment maintenance and fault handling')"
+    },
+    "task": {
+      "task_type": "Multimodal fault-analysis-report generation from substation-equipment fault images: identifies fault type (T), analyzes cause (C), and generates repair suggestions (S) as a structured 3-part report",
+      "task_complexity": "Structured multi-part generation task, enhanced with a retrieval-based domain-knowledge module (BERT keyword extraction + knowledge-base lookup) layered atop supervised fine-tuning",
+      "output_type": "Free-text fault-analysis report, scored by human expert raters on a 1-5 scale across 4 custom quality dimensions (Accuracy, Clarity, Completeness, Practicality)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Single image+text modality — real substation-fault photographs (some video-augmented via image-to-video generation then re-extracted as still frames) paired with text prompts and generated fault-analysis reports. No engineering-drawing, 3D, or tabular modality."
+    },
+    "dataset_properties": {
+      "n_samples": "Base: 10,330 real substation fault images (public source dataset, 14 fault types + location labels). Augmented to 40,000 images via image-to-video generation (EasyAnimate) + 1.5-second screenshot extraction. 1,000 samples randomly selected as the comparative benchmark/eval set.",
+      "n_tasks_categories": "14 substation fault types (e.g. transformer damage, cable insulation failure, breather/silica-gel degradation); single unified report-generation task format across all types",
+      "data_source": "Base images from China Electric Power Research Institute's publicly available substation defect-detection dataset; fault-analysis-report ground truth generated by GPT-4 guided by prompts derived from State Grid Corporation of China's official 'Guidelines for the Assessment of the Condition of Power Transmission and Transformation Equipment'",
+      "annotation_method": "GPT-4-generated draft fault-analysis reports, followed by a secondary human review pass by 5 named electrical experts who corrected unreasonable elements — a genuine domain-expert-in-the-loop QC step",
+      "expert_validation": "YES — explicitly '5 electrical experts' reviewed/corrected the GPT-4-generated ground-truth reports, and separately '5 engineers with a background in the electric power industry' rated the models' generated reports during evaluation — real domain-expert involvement at both the annotation and evaluation stages",
+      "license": "Not explicitly stated for the 40K augmented dataset; the base 10,330-image dataset is described as publicly released by the source institute, but exact license terms are not given in the accessible text",
+      "accessibility": "NOT confirmed public — no repository/download URL for the paper's own 40K-entry augmented dataset, fault-analysis-report annotations, or trained model weights is given anywhere in the accessible text. The base 10,330-image source dataset is public, but that predates and is external to this paper's own contribution.",
+      "train_test_split": "LoRA fine-tuning conducted on the constructed dataset over 60 hours (train split not separately itemized); 1,000 samples randomly held out as the comparative benchmark",
+      "leakage_risk": "[VERIFY] Not discussed in the paper."
+    },
+    "evaluation": {
+      "metrics": "Accuracy (1-5 human-rated); Clarity (1-5); Completeness (1-5); Practicality (1-5); Average of the 4",
+      "baseline_models": "GPT-4, Claude-3, LLAVA1.5-7B, VisualGLM-6B, Qwen2-VL-7B, MiniGPT-4 — 6 models spanning 2 proprietary (GPT-4, Claude-3) and 4 open-source systems",
+      "prompting_method": "Direct prompting (fault image + guiding prompt) to generate a structured fault-analysis report; ablation additionally compares SFT-only, knowledge-enhancement-only, and knowledge-enhancement-plus-Zero-shot-CoT variants",
+      "zero_few_shot": "Not zero/few-shot in the LLM-prompting sense — SubstationAI is a supervised-fine-tuned (LoRA) model; baselines evaluated presumably zero-shot/off-the-shelf (not explicitly stated for each baseline)",
+      "rag_tool_use": "Yes — a retrieval-augmented knowledge-enhancement module: BERT-based keyword extraction from the model's initial description, followed by knowledge-base lookup and integration of the highest-scoring retrieved knowledge points",
+      "human_eval_method": "YES — 5 engineers with an electric-power-industry background rated each model's generated reports against the 4 predefined criteria, a genuine human-expert evaluation protocol (not an automatic metric or LLM-as-judge)",
+      "llm_as_judge_method": "None — human expert rating only",
+      "robustness_tests": "Ablation study (Table II): Original / SFT-only / CoT-only / Knowledge-Enhancement-only / SFT+CoT / SFT+Knowledge-Enhancement combinations",
+      "cost_latency_reporting": "Training compute specified (3x RTX 3090 GPUs, 60 hours) but no inference latency/cost figures"
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Substation equipment fault diagnosis",
+      "task_spans": "Output Quality (fault-analysis-report quality across 4 criteria: accuracy/clarity/completeness/practicality)",
+      "modality_spans": "4.3 2D Visual (substation fault photographs, incl. video-extracted frames) + 4.1 Text (fault-analysis report text)",
+      "evaluation_spans": "Human-in-the-loop (5 power-industry-engineer 1-5 ratings across 4 quality criteria — the paper's sole evaluation method, no code-based/LLM-judge metric used for the comparative eval itself)",
+      "capability_spans": "Perception/OCR (AEC-VLM instance — substation fault-image understanding) + Domain Knowledge (substation-equipment/electrical-power instance) + Memory & Context Retention (knowledge-base retrieval-augmented enhancement — BERT keyword extraction + KB lookup)",
+      "profession": [
+        "A3"
+      ],
+      "profession_label": "A3 Building-sys/MEP Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3 Site & Infrastructure Subgroup (Div 30-39)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 13,
+      "_notes": "FULL-TEXT SCORED 2026-07-12 (RESEARCHER, pdftotext-read PDF). d1=2: real substation fault images from an actual public source dataset, clean physical-asset-O&M domain fit under the 2026-07-12 overturned scope. d2=2: fault-diagnosis + repair-recommendation report generation is a directly professionally-realistic substation-maintenance task, grounded in official State Grid condition-assessment guidelines. d3=1: single image+text modality pair (video-derived frames still processed as static images), no richer modality diversity. d4=2: GPT-4-generated ground truth explicitly reviewed/corrected by 5 named electrical experts — genuine domain-expert-in-the-loop annotation QC, the strongest annotation-quality case of the 3 new records. d5=2: 4 well-defined custom metrics, full results table (Table I), real ablation (Table II). d6=2: 6 diverse baselines (2 proprietary + 4 open-source) comfortably clears the T1 floor. d7=0: no code/dataset/model-weight release link anywhere in the accessible text — the paper's own 40K-entry augmented dataset and fault-analysis-report annotations are not confirmed public (only the unrelated, pre-existing 10,330-image base dataset is public, and that predates this paper's contribution). d8=0: leakage/contamination not discussed. d9=0: the 5 power-industry engineers are raters/judges of AI output, not a human performance baseline solving the same task themselves — no human baseline score exists to compare against model scores. d10=2: directly tied to real substation-maintenance practice with explicit deployment framing. SUM CHECK: 2+2+1+2+2+2+0+0+0+2=13, matches total=13."
+    },
+    "reported_results": [
+      {
+        "model_string": "SubstationAI",
+        "metric_name": "Fault analysis report quality (avg of 4 metrics) (SFT+Knowledge-Enhancement) — human-rated score (1-5)",
+        "value": "4.28",
+        "source_location": "arXiv:2412.17077",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude-3",
+        "metric_name": "Fault analysis report quality (avg of 4 metrics) (baseline) — human-rated score (1-5)",
+        "value": "3.38",
+        "source_location": "arXiv:2412.17077",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4",
+        "metric_name": "Fault analysis report quality (avg of 4 metrics) (baseline) — human-rated score (1-5)",
+        "value": "3.35",
+        "source_location": "arXiv:2412.17077",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "LLAVA1.5-7B",
+        "metric_name": "Fault analysis report quality (avg of 4 metrics) (baseline) — human-rated score (1-5)",
+        "value": "2.98",
+        "source_location": "arXiv:2412.17077",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "VisualGLM-6B",
+        "metric_name": "Fault analysis report quality (avg of 4 metrics) (baseline) — human-rated score (1-5)",
+        "value": "2.9",
+        "source_location": "arXiv:2412.17077",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen2-VL-7B",
+        "metric_name": "Fault analysis report quality (avg of 4 metrics) (baseline) — human-rated score (1-5)",
+        "value": "2.86",
+        "source_location": "arXiv:2412.17077",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "MiniGPT-4",
+        "metric_name": "Fault analysis report quality (avg of 4 metrics) (baseline) — human-rated score (1-5)",
+        "value": "2.44",
+        "source_location": "arXiv:2412.17077",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-2_SubstationAI_2412.17077.pdf",
+      "source_url": "https://arxiv.org/abs/2412.17077",
+      "status": "obtained",
+      "note": "arXiv PDF, %PDF-verified, downloaded prior turn (F-116/fulltext-corpus pass), pdftotext-read in full this turn for real 7-group extraction + rubric scoring (not abstract-only)."
+    }
+  },
+  {
+    "name": "CaptionPS",
+    "identifier": "IEEE Access 11488027 [VERIFY DOI]",
+    "verification_status": "Stage-2 full-text read 2026-07-12 (RESEARCHER, real §4 3-condition screen; full text obtained via mcp__scholarscope__fetch_fulltext in a prior turn, CAND-18 in fulltext_corpus, re-read in full this turn) — INCLUDE, Tier 2, BORDERLINE C1 (disclosed). Screened under the OVERTURNED 2026-07-12 scope rule (shared/scope_decisions.md dated entry, later turn).",
+    "tier": 2,
+    "source_record_id": "R055",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "CaptionPS: Benchmarking and Analyzing Worker-Centric Detailed Image Captioning in Power Scenarios",
+      "authors": "[VERIFY — author byline was not captured in the scholarscope full-text extraction (CAND-18); a targeted WebSearch this turn could not independently confirm the author list either. Not fabricated — left unresolved rather than guessed.]",
+      "year": 2026,
+      "venue": "IEEE Access, pp. 97432-97452, Date of Publication: 20 April 2026. Electronic ISSN: 2169-3536. CC-BY (open access).",
+      "doi": null,
+      "arxiv_id": null,
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "Full-text Markdown extraction via mcp__scholarscope__fetch_fulltext, 2026-07-12 (CAND-18_CaptionPS_IEEE-11488027_fulltext.md) — the tool's verbatim returned text (full paper body, Sections I-V + Appendices A/B; tables/figures referenced by caption text, not embedded pixel data). Direct WebFetch/PDF-download of the IEEE Xplore page was blocked (JS-driven reader, no static PDF URL) both in the prior turn and re-confirmed this turn ([VERIFY: DOI not independently resolved])."
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Worker-safety-violation detection at power-operation sites (power/utility O&M vertical, BORDERLINE C1 — worker-safety-behavior captioning rather than equipment-condition inspection narrowly, see _screening_rationale)",
+      "lifecycle_stage": "Operations & maintenance / safety supervision — real-time detection of worker safety-protocol violations at power-industry job sites",
+      "intended_user": "Power-utility safety supervisors/regulators; automated safety-compliance monitoring systems at power operation sites"
+    },
+    "task": {
+      "task_type": "3 sub-tasks per image: (1) fine-grained scene-description captioning (with violation-region bounding-box localization), (2) 6-way violation-scene classification, (3) binary safety-status prediction of subsequent worker behavior",
+      "task_complexity": "Combines generative captioning + closed-set classification + binary behavioral-outcome prediction, with an explicit spatial-localization sub-metric (IoU/GIoU/DIoU on violation regions)",
+      "output_type": "Free-text caption + violation-category label + safe/unsafe prediction + bounding-box coordinates"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Single image+text modality — real-world photographs from power-operation sites paired with generated text captions/labels and bounding-box coordinates. No video, 3D, or drawing modality."
+    },
+    "dataset_properties": {
+      "n_samples": "14,263 real-world images across 6 violation categories: welding/cutting operations (1,576), working at heights (1,523), staying under the crane (1,335), crossing the fence (1,506), electrical inspection pole operation (1,531), and 'others' (6,792, a composite category covering substations/distribution stations/outdoor maintenance). Approximately 1:1 violation-to-non-violation ratio. Training: 11,913; test: 2,350 (stratified: 250 from each of the first 5 categories + 1,100 from 'others').",
+      "n_tasks_categories": "6 violation-scene categories; 3 evaluation sub-tasks (captioning, classification, safety prediction)",
+      "data_source": "Real-world power-operation-site images; GPT-5.1 generates fine-grained textual descriptions (scene type, equipment colors, personnel count, violation-region coordinates) plus safety (safe/unsafe) and scene-category labels",
+      "annotation_method": "Automated GPT-5.1 generation, then 2-stage filtering: (1) automated format validation (removes garbled/non-English text, checks field completeness), (2) human content-quality filtering by 3 professional power-safety regulators + 2 annotation engineers verifying description-image consistency, coordinate accuracy, and hallucinations — 135 person-hours total; spot-check of 20 random samples found only 1-2 with formatting issues",
+      "expert_validation": "YES — 3 named 'professional power safety regulators' explicitly involved in the human QC pass, a genuine domain-expert-in-the-loop review, though the exact rating rubric/inter-rater metrics are not detailed beyond the format/consistency checks described",
+      "license": "Article itself is CC-BY (IEEE Access open access); the dataset's own license/release terms are not separately stated in the accessible text",
+      "accessibility": "[VERIFY] No explicit dataset-download/repository link (GitHub/HuggingFace/other) is found anywhere in the accessible extraction — the article being CC-BY open-access covers the paper's text, not necessarily a confirmed standalone dataset release. Disclosed as unconfirmed, not assumed released.",
+      "train_test_split": "11,913 train / 2,350 test, stratified across the 6 violation categories",
+      "leakage_risk": "[VERIFY] Not discussed in the accessible text."
+    },
+    "evaluation": {
+      "metrics": "BLEU-4; ROUGE-L; Token-Acc; BERTScore (F1); Classes-Acc; Status-Acc; IoU/GIoU/DIoU (localization)",
+      "baseline_models": "GPT-4o, Gemini-2.0-flash, Doubao-seed-1.6-vision (commercial) + InternVL3.5, LLaVA-1.5, Llama-3.2-Vision, Qwen2.5, Qwen3 (open-source, several at multiple parameter sizes) — 8 model families, the broadest and most diverse baseline set of the 3 new records",
+      "prompting_method": "Pre-training (zero-shot) baseline vs. LoRA-fine-tuned comparison; a separate prompt-tuning-only ablation is also reported (Appendix B)",
+      "zero_few_shot": "Zero-shot for pre-training baselines; LoRA fine-tuning is the primary comparison condition (not few-shot in-context)",
+      "rag_tool_use": "None",
+      "human_eval_method": "None reported for the evaluation stage itself (all metrics are automatic); human involvement was confined to dataset construction/QC",
+      "llm_as_judge_method": "None — automatic metrics only",
+      "robustness_tests": "Ablation study (removing image captions substantially reduces LoRA fine-tuning gains on Classes-Acc/Status-Acc, confirming captions are critical to reasoning performance); per-scenario breakdown across all 6 violation categories (Tables 8-13)",
+      "cost_latency_reporting": "LoRA fine-tuning compute specified (4x NVIDIA RTX 5090, batch size 16, max sequence length 1024, learning rate 1e-4) but no inference latency figures"
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Worker-safety-violation detection at power-operation sites",
+      "task_spans": "Output Quality (caption quality: BLEU-4/ROUGE-L/BERTScore) + Task Completion (violation-scene classification + safety-status prediction accuracy)",
+      "modality_spans": "4.3 2D Visual (real-world power-operation-site photographs, incl. violation-region bounding boxes) + 4.1 Text (captions/violation labels)",
+      "evaluation_spans": "Code-based (BLEU-4/ROUGE-L/Token-Acc/BERTScore/Classes-Acc/Status-Acc/IoU-GIoU-DIoU — all automatic deterministic metrics; no human-in-the-loop or LLM-as-judge used for the evaluation stage itself)",
+      "capability_spans": "Perception/OCR (AEC-VLM instance — violation-region visual recognition + bounding-box localization) + Compliance & Privacy (Safety & Alignment §3.4.3 — worker safety-violation/compliance detection) + Domain Knowledge (power-operation-site safety-supervision instance)",
+      "profession": [
+        "A3",
+        "A5"
+      ],
+      "profession_label": "A5 CM / Inspector + A3 Building-sys/MEP Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2",
+        "B3"
+      ],
+      "building_system_label": "B3 Site & Infrastructure Subgroup (Div 30-39) + B2 Facility Services Subgroup (Div 20-29)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 1,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 12,
+      "_notes": "FULL-TEXT SCORED 2026-07-12 (RESEARCHER, re-read the CAND-18 scholarscope full-text extraction obtained in a prior turn). d1=1: real power-operation-site imagery, but the evaluated SKILL is worker-safety-violation captioning/classification, not equipment-condition/asset-inspection narrowly — a real but imperfect fit to the overturned rule's core inspection/O&M framing (4 of 6 categories are power-industry-anchored, but the task shape more closely resembles a generic-construction-safety benchmark narrowed to a power-industry sample); disclosed BORDERLINE, consistent with the _screening_rationale C1 both-directions treatment. d2=2: the 3 sub-tasks (captioning, violation classification, safety prediction) are realistic, professionally-motivated safety-supervision tasks with concrete real violation-category grounding. d3=1: single image+text modality pair, no richer modality diversity. d4=2: GPT-5.1-generated + explicit 2-stage QC including 3 named professional power-safety regulators verifying consistency — genuine domain-expert-in-the-loop annotation, on par with R054's expert-validation strength. d5=2: 7 distinct well-defined metrics (BLEU-4/ROUGE-L/Token-Acc/BERTScore/Classes-Acc/Status-Acc/IoU-family), full pre-training-vs-post-FT tables, ablation + per-scenario breakdown — the most thorough evaluation protocol of the 3 new records. d6=2: 8 model families (3 commercial + 5 open-source, several at multiple sizes) — the broadest baseline set of the 3. d7=0: despite the article itself being CC-BY open-access, NO explicit dataset-repository/download link for the CaptionPS dataset itself is found anywhere in the accessible text — article-open-access is not the same as dataset-publicly-released, and this gap is disclosed rather than assumed away. d8=0: leakage/contamination not discussed. d9=0: no human task-performance baseline reported (the professional regulators are QC annotators, not benchmark-takers). d10=2: directly tied to real power-industry safety-supervision practice with explicit regulatory-compliance motivation. SUM CHECK: 1+2+1+2+2+2+0+0+0+2=12, matches total=12."
+    },
+    "reported_results": [
+      {
+        "model_string": "GPT-4o",
+        "metric_name": "Detailed captioning (pre-training (zero-shot)) — BERTScore F1",
+        "value": "0.7668",
+        "source_location": "IEEE Access document 11488027",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "InternVL3.5-8B",
+        "metric_name": "Detailed captioning (semantic similarity) (post-LoRA fine-tuning) — F1",
+        "value": "76.8%",
+        "source_location": "IEEE Access document 11488027",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "InternVL3.5-8B",
+        "metric_name": "Scene classification (6-way) (post-LoRA fine-tuning) — accuracy",
+        "value": "87.3%",
+        "source_location": "IEEE Access document 11488027",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Llama-3.2-Vision-11B",
+        "metric_name": "Safety status prediction (post-LoRA fine-tuning) — accuracy",
+        "value": "78.5%",
+        "source_location": "IEEE Access document 11488027",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "LLaVA-1.5-13B",
+        "metric_name": "Violation-region localization (post-LoRA fine-tuning) — IoU",
+        "value": "16.9%",
+        "source_location": "IEEE Access document 11488027",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-18_CaptionPS_IEEE-11488027_fulltext.md",
+      "source_url": "https://ieeexplore.ieee.org/document/11488027",
+      "status": "obtained (Markdown extraction, not PDF — IEEE Xplore serves this article only via a JS-driven reader with no fetchable static PDF URL; scholarscope fetch_fulltext succeeded where WebFetch did not)",
+      "note": "Full paper body (Sections I-V + Appendices A/B) obtained via mcp__scholarscope__fetch_fulltext in a prior turn (F-116/fulltext-corpus pass); tables/figures referenced by caption text only, not embedded pixel data. Re-read in full this turn for real 7-group extraction + rubric scoring (not abstract-only)."
+    }
+  },
+  {
+    "name": "BuildingQA",
+    "identifier": "doi:10.1145/3736425.3770097",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-12 (RESEARCHER, real fetch) — INCLUDE, Tier 1. UPDATE 2026-07-13 (RESEARCHER): the raw ACM full-text PDF was obtained from the user (verified genuine via direct read — title/authors/DOI/venue on page 1 match exactly: \"BuildingQA: A Benchmark for Natural Language Question Answering over Building Knowledge Graphs\", Mulayim/Anwar/Saka/Paul/Prakash/Fierro/Pritoni/Bergés, DOI 10.1145/3736425.3770097, BUILDSYS '25) and is now stored at RESEARCHER/outputs/fulltext_corpus/R056_BuildingQA_ACM-3736425.3770097.pdf. The headline max-F1-0.38 claim is read verbatim from the raw text (§5.2.2: \"with the best-performing method reaching an F1 score of only 0.38\") — upgraded from `claimed` to `verified` per R3. This full-text pass also resolved several previously-[VERIFY] fields directly from raw text: best-performing method = ReAct (5000-triple context) + Gemini-flash-2.5 (§5.2.2, cross-read against Figure 5's scatter plot), metric = Row-Matching F1 (mean, per Figure 5 y-axis), full baseline/LLM roster = DA-KGQA + ReAct (No-KG/100-triple/5000-triple context) tested across o3-mini/Gemini-flash-2.5/Llama-4-Scout-17B-16E (§5.2.1) plus o4-mini/deepseek-r1 in the cost-accuracy analysis (§5.2.2, Figure 5), sample counts 188 Q / 4 buildings confirmed exactly (56 human-authored + 132 LLM-augmented questions from 29 SPARQL queries over 51 source buildings, subsampled to 4 for the released benchmark, §3.1-3.3), and the paper carries a CC BY 4.0 license (page 1 footer) — dataset-specific license on the GitHub repo itself remains [VERIFY], not confirmed from the PDF. d4 annotation validation, leakage_risk, and versioning remain [VERIFY] — not discussed in the raw text either. IMPORTANT PRIOR-STATE NOTE (superseded, kept for audit trail): extraction was originally grounded in (a) the GitHub README (primary author artifact) and (b) 2 independently-converging secondary sources, because the ACM PDF was CAPTCHA-blocked at the time and a ResearchGate mirror was 403-blocked. Not a name-collision risk: DOI resolves unambiguously via scholarscope/OpenAlex to this exact paper (Mulayim et al., CMU/Colorado School of Mines/LBNL, BUILDSYS '25, Best Paper Award Runner-Up).",
+    "tier": 1,
+    "source_record_id": "R056",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "BuildingQA: A Benchmark for Natural Language Question Answering over Building Knowledge Graphs",
+      "authors": "Ozan Baris Mulayim (Carnegie Mellon University), Avia Anwar (Colorado School of Mines), Umut Mete Saka (Colorado School of Mines), Lazlo Paul (Lawrence Berkeley National Laboratory), Anand Krishnan Prakash (LBNL/CMU), Gabe Fierro (Colorado School of Mines), Marco Pritoni (Lawrence Berkeley National Laboratory), Mario Bergés (Carnegie Mellon University)",
+      "year": 2025,
+      "venue": "Proceedings of the 12th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BUILDSYS '25), Nov 19-21 2025, Golden CO. Best Paper Award Runner-Up.",
+      "doi": "10.1145/3736425.3770097",
+      "arxiv_id": null,
+      "repo_url": "https://github.com/INFERLab/BuildingQA",
+      "dataset_url": "https://github.com/INFERLab/BuildingQA (eval_buildings/ + Benchmark_QA_pairs/)",
+      "version_accessed": "Raw ACM full-text PDF (11 pp., BUILDSYS '25 proceedings) obtained from user and read directly 2026-07-13; stored at RESEARCHER/outputs/fulltext_corpus/R056_BuildingQA_ACM-3736425.3770097.pdf. Superseded prior basis: GitHub README fetched verbatim via WebFetch 2026-07-12 + WebSearch/Semantic-Scholar secondary corroboration, used when the ACM PDF was CAPTCHA-blocked and the ResearchGate mirror 403-blocked — see verification_status for full history."
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Building operations / facility management — Natural-language QA over Building Knowledge Graphs (Brick-ontology-style semantic models of building systems/equipment/spaces) (B2 Facility Services)",
+      "lifecycle_stage": "Operations & maintenance — practitioners querying real deployed buildings' equipment/topology/sensor metadata",
+      "intended_user": "Facility managers / building operators / BAS (building automation system) practitioners; researchers building LLM-KG-QA systems for building operations"
+    },
+    "task": {
+      "task_type": "Natural-language-to-SPARQL query translation and answering over building topology/equipment knowledge graphs; agentic (ReAct: Query Writer + Critique two-agent loop) query generation and iterative refinement",
+      "task_complexity": "188 curated NL questions (practitioner-collected, LLM-augmented for linguistic diversity) across 4 real buildings' knowledge graphs; requires correct SPARQL generation over graphs of varying topology/vocabulary — paper introduces a 'lexical gap' quantification method and a 4-stage failure-diagnostic framework for analyzing why systems fail",
+      "output_type": "SPARQL query -> tabular query-result set, scored against ground-truth results at 4 levels of strictness"
+    },
+    "modality": {
+      "text": true,
+      "tables": true,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": true,
+      "tool_api_env": true,
+      "physics_simulation_env": false,
+      "notes": "Text (NL questions) + structured/symbolic (RDF/Turtle knowledge graphs + SPARQL queries) + tool/API (SPARQL endpoint / ReAct tool-calling loop). No visual/CAD/BIM/point-cloud modality."
+    },
+    "dataset_properties": {
+      "n_samples": "188 curated NL question/ground-truth-SPARQL pairs across 4 real Building Knowledge Graphs (counts cross-corroborated via 2 independent secondary sources quoting the abstract; not read from a raw published table — tagged claimed)",
+      "n_tasks_categories": "1 core task (NL-to-SPARQL QA) scored via 4 progressive-strictness metrics",
+      "data_source": "Practitioner-collected questions from real building-operations use, augmented with LLM-generated linguistic-diversity variants; 4 real buildings' Knowledge Graphs (Turtle/.ttl format) in eval_buildings/",
+      "annotation_method": "Multi-stage: practitioner data collection -> LLM augmentation for linguistic diversity -> ground-truth SPARQL query curation per question",
+      "expert_validation": "Practitioner-sourced base questions (domain-expert-in-the-loop at collection stage); exact QC/validation protocol for the ground-truth SPARQL beyond this is not confirmed from accessible sources — [VERIFY] against ACM full text",
+      "license": "[VERIFY] not stated in accessible sources (GitHub repo license file not read this turn)",
+      "accessibility": "Publicly released — GitHub repo github.com/INFERLab/BuildingQA contains both KGs and QA pairs plus a Jupyter demo notebook and evaluation scripts",
+      "train_test_split": "Not applicable in the conventional sense — all 4 buildings' KGs + 188 QA pairs function as a fixed evaluation benchmark (no train split described)",
+      "leakage_risk": "[VERIFY] not discussed in accessible sources"
+    },
+    "evaluation": {
+      "metrics": "Arity Matching F1 (column-count match, lowest strictness); Entity Set F1 (unique-value-set match, medium strictness); Row-Matching F1 (row-by-row content match, primary indicator, high strictness); Exact-Match F1 (column order + full content, highest strictness)",
+      "baseline_models": "VERIFIED from raw full text (§5.1-5.2): two paradigms — DA-KGQA (retrieval-augmented, non-iterative, builds on AutoKGQA) and ReAct (agentic, iterative Query Writer + Critique two-agent loop) under 3 context conditions (No Graph Context / Small Graph Context 100 triples / Large Graph Context 5000 triples). Tested across 3 primary LLMs (GPT-o3-mini, Gemini-flash-2.5, Llama-4-Scout-17B-16E) per §5.2.1, plus o4-mini and deepseek-r1 added in the cost-accuracy analysis (§5.2.2, Figure 5).",
+      "prompting_method": "Zero-shot LLM-powered KGQA baselines; agentic ReAct (Reasoning+Acting) two-agent loop (Query Writer Agent + Critique Agent) as the provided baseline implementation",
+      "zero_few_shot": "Zero-shot (per accessible sources; no few-shot/in-context variant reported)",
+      "rag_tool_use": "Yes — SPARQL endpoint / local-file graph tool access is part of the ReAct agent's tool-use loop (graph context injection)",
+      "human_eval_method": "None reported for the evaluation stage in accessible sources",
+      "llm_as_judge_method": "None reported",
+      "robustness_tests": "4-stage diagnostic framework for analyzing system failure modes; a novel 'lexical gap' quantification method characterizing benchmark complexity/ambiguity across the 4 buildings' differing vocabularies",
+      "cost_latency_reporting": "[VERIFY] not confirmed from accessible sources"
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Building operations / facility management",
+      "task_spans": "Output Quality (query/answer correctness via 4 progressive-strictness F1 metrics) + Task Completion (successful end-to-end SPARQL retrieval)",
+      "modality_spans": "Text + Structured/Symbolic (NL questions; RDF/Turtle knowledge graphs + SPARQL)",
+      "evaluation_spans": "Code-based (4 automatic deterministic F1-family metrics; no human-in-the-loop or LLM-as-judge in the evaluation stage)",
+      "capability_spans": "Domain Knowledge (building-systems/BAS ontology semantics) + Tool Use (SPARQL query generation/execution against a graph endpoint) + Planning & Reasoning (ReAct iterative Writer-Critique refinement loop)",
+      "profession": [
+        "A3",
+        "A5"
+      ],
+      "profession_label": "A3 Building-sys/MEP Eng + A5 CM / Inspector",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2"
+      ],
+      "building_system_label": "B2 Facility Services Subgroup (Div 20-29)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 15,
+      "_notes": "d1=2: 4 real deployed buildings' knowledge graphs, practitioner-collected questions — high domain authenticity. d2=2: real building-operations QA need, practitioner-sourced, expert-relevant task. d3=1: text + structured/symbolic (KG/SPARQL) + tool-use, but no visual/CAD/BIM/point-cloud modality — single reasoning channel, not richly multimodal. d4=2: practitioner-collected base + curated ground-truth SPARQL + LLM-augmented diversity. d5=2: 4 clearly-defined progressive-strictness F1 metrics, well-documented in the primary GitHub README. d6=2 (UPDATED 2026-07-13, raw text confirmed): full text (§5.1-5.2) confirms 2 method paradigms (DA-KGQA retrieval-augmented; ReAct agentic 2-agent) x 3 context variants (No-KG/100-triple/5000-triple) x up to 5 LLM backbones (o3-mini, Gemini-flash-2.5, Llama-4-Scout-17B-16E, o4-mini, deepseek-r1) — broad multi-baseline, multi-model evaluation, raised from the prior conservative floor-pass of 1. d7=2: public GitHub repo with data+code+eval scripts+demo notebook — genuinely reproducible. d8=0: leakage/contamination not discussed in raw text. d9=0: no human-performance baseline reported. d10=2: real practitioner-facing building-operations use case, Best Paper Award Runner-Up recognition. SUM CHECK: 2+2+1+2+2+2+2+0+0+2=15, matches total=15.",
+      "_caveat": "UPDATED 2026-07-13 (RESEARCHER): rubric now scored against the raw ACM full-text PDF (obtained from user, verified genuine, stored at RESEARCHER/outputs/fulltext_corpus/R056_BuildingQA_ACM-3736425.3770097.pdf), superseding the prior GitHub-README-plus-2-secondary-sources basis. d6 raised 1→2 (total 14→15) on confirmed evidence, per R3/R6 (report as-is, not silently). Remaining [VERIFY]: d4's exact ground-truth-SPARQL QC protocol beyond practitioner-in-the-loop collection, d8 leakage risk, and dataset versioning — genuinely not discussed in the raw text, not a residual access gap. Flagged for VERIFIER read-only audit of this rescoring."
+    },
+    "reported_results": [
+      {
+        "model_string": "ReAct (5000-triple graph context) + Gemini-flash-2.5",
+        "metric_name": "NL-to-SPARQL building knowledge graph QA (zero-shot, agentic ReAct 2-agent (Query Writer + Critique) loop, large graph context) — Row-Matching F1 (Stage-3, relational-structure correctness)",
+        "value": "38.0%",
+        "source_location": "10.1145/3736425.3770097",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R056_BuildingQA_ACM-3736425.3770097.pdf",
+      "source_url": "https://doi.org/10.1145/3736425.3770097 (raw PDF supplied by user 2026-07-13, verified genuine via direct read of page-1 title/authors/DOI/venue) ; https://github.com/INFERLab/BuildingQA (README, primary author artifact, used for earlier partial pass)",
+      "status": "FULL — raw ACM full-text PDF (11 pp.) obtained and read directly 2026-07-13 (RESEARCHER). Confirms all fields previously grounded in the GitHub README + 2 secondary sources, and resolves the [VERIFY] flags on best_model, baseline_models, model_versions, performance_by_task (exact metric), and reported_failure_modes. Headline F1=0.38 upgraded claimed→verified per R3.",
+      "note": "d4 annotation-QC methodology, leakage_risk, dataset versioning, and the GitHub repo's own dataset license remain [VERIFY] — not discussed in the raw paper text (a dataset license ≠ the paper's own CC BY 4.0 copyright notice on page 1, which is confirmed but is not the same field)."
+    }
+  },
+  {
+    "name": "KoCEM",
+    "identifier": "SNU repository handle 10371/221090 [VERIFY DOI/arXiv — MS thesis, none assigned]",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read of the raw thesis PDF, user-supplied extraction) — INCLUDE, Tier 1.",
+    "tier": 1,
+    "source_record_id": "R057",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "KoCEM: A Multitask Benchmark for Expert Artificial Intelligence in Korean Construction Engineering and Management — A Comprehensive Dataset and Evaluation Framework for Multimodal Understanding and Reasoning Tasks",
+      "authors": "Byunghee Yoo (Department of Architecture & Architectural Engineering, The Graduate School, Seoul National University; MS thesis advisor not stated in the sections read)",
+      "year": 2025,
+      "venue": "Master of Science in Engineering thesis, Seoul National University, February 2025",
+      "doi": null,
+      "arxiv_id": null,
+      "repo_url": "[VERIFY — not found in the thesis text; no GitHub/HuggingFace link confirmed]",
+      "dataset_url": "[VERIFY — not found in the thesis text]",
+      "version_accessed": "Raw thesis PDF (114 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R057_KoCEM_000000189024.pdf; accessible via SNU institutional repository (handle 10371/221090, bitstream located by VERIFIER in a prior turn)"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Korean construction engineering and management, broad — architectural planning, building systems (MEP), safety management, structural engineering, cost estimation, project/quality control, interior design, materials, drawing interpretation, terminology",
+      "lifecycle_stage": "Spans multiple lifecycle stages (design/planning, safety, cost estimation, quality control) rather than one stage — mirrors the multi-subject structure of Korean national construction certification exams",
+      "intended_user": "Construction engineering/management practitioners and researchers building or evaluating domain-specific Korean-language construction LLMs"
+    },
+    "task": {
+      "task_type": "Multiple-choice QA (2-5 options) across 5 disciplines: Domain-specific Terminology, Drawing Interpretation, Domain-specific Knowledge, Expert-level Reasoning, Expert-level Comprehension; assessed across 3 aspects — Perception, Knowledge, Reasoning",
+      "task_complexity": "4,823 questions across 20 fields/29 subfields; questions further stratified by difficulty (easy/medium/hard, calibrated on real human-accuracy statistics from the source certification exams)",
+      "output_type": "Multiple-choice answer selection (zero-shot, standardized prompt template)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": true,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Text-based tasks (Latin/Hangul/Hanja/numbers/math symbols) + Vision+Text tasks (796/4,823 = 13.5% of questions include images — architectural/engineering schematics, diagrams, symbols/annotations, primarily for the Drawing Interpretation discipline). No BIM/IFC, point cloud, or video modality confirmed."
+    },
+    "dataset_properties": {
+      "n_samples": "4,823 total questions; 5 disciplines / 20 fields / 29 subfields; 796 questions (13.5%) include an image",
+      "n_tasks_categories": "5 disciplines (Domain-specific Terminology, Drawing Interpretation, Domain-specific Knowledge, Expert-level Reasoning, Expert-level Comprehension) mapped onto 3 assessed aspects (Perception, Knowledge, Reasoning)",
+      "data_source": "National construction certification exam material (Architectural Engineer, Industrial Architectural Engineer, Construction Safety Engineer, CAD Drafter certifications), 11 initial + 9 additional subjects = 20 subjects total; Terminology subset alone drawn from 5 distinct sources (1,020 items)",
+      "annotation_method": "Assembled/curated from national certification exam sources; manual researcher review to remove noise/outliers; de-identification of any inadvertently captured personal data; randomized option counts (2-5, avg 3.89) to reduce option bias; Expert-level Comprehension set manually curated",
+      "expert_validation": "Sourced from official national professional certification exams (expert-authored by definition); difficulty levels calibrated on real human test-taker accuracy statistics from the source exams",
+      "license": "[VERIFY — not stated in the thesis text read this turn]",
+      "accessibility": "Available as an SNU institutional-repository thesis document (handle 10371/221090); no confirmed separate public dataset/code artifact (GitHub/HuggingFace) found in the text — [VERIFY]",
+      "train_test_split": "Developer : Validation : Test = 1% : 9% : 90%",
+      "leakage_risk": "Not discussed in the sections read — [VERIFY]"
+    },
+    "evaluation": {
+      "metrics": "Multiple-choice accuracy (per discipline: DT/DK/ER/DI/EC); Random-choice baseline included for comparison; Performance broken down by question difficulty (easy/medium/hard)",
+      "baseline_models": "11 models: proprietary multimodal/text — GPT-4o, GPT-4o-mini, GPT-4 (text), Gemini 1.5 Pro, Gemini 1.5 Flash, Gemini 1.0 Pro (text), Claude 3.5 Sonnet; open-source — LLaVA v1.6 (7B), LLaVA v1.6 (13B), Llama 3.2 Vision-11B, Bllossom-3B (text), EEVE-10.8B (text, Korean-optimized)",
+      "prompting_method": "Zero-shot, standardized multiple-choice-QA prompt template applied uniformly across all models to control for prompt-engineering effects",
+      "zero_few_shot": "Zero-shot only",
+      "rag_tool_use": false,
+      "human_eval_method": "Human accuracy statistics from the source certification exams used to calibrate question difficulty, not reported as a direct model-comparison baseline in the main results tables",
+      "llm_as_judge_method": null,
+      "robustness_tests": "Difficulty-stratified analysis (easy/medium/hard); separate error analysis of 145 annotated GPT-4o errors on Expert-level Reasoning, categorized into Lack-of-Knowledge, Lack-of-Reasoning, Perceptual, Reasoning, and Additional-Information-Requested error types (Ch. 6)",
+      "cost_latency_reporting": "Not reported"
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Korean construction engineering and management, broad",
+      "task_spans": "Output Quality (multiple-choice accuracy across 5 disciplines) + Task Completion",
+      "modality_spans": "4.1 Text + 4.3 2D Visual (architectural/engineering drawings, schematics, symbols)",
+      "evaluation_spans": "Code-based (exact-match multiple-choice accuracy)",
+      "capability_spans": "Domain Knowledge (construction engineering/management) + Perception/OCR (drawing/schematic interpretation) + Planning & Reasoning (Expert-level Reasoning discipline)",
+      "profession": [
+        "A1",
+        "A5"
+      ],
+      "profession_label": "A5 CM/Inspector + A1 Architect/Designer",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B0",
+        "B1"
+      ],
+      "building_system_label": "B0 Cross-cutting / non-MasterFormat + B1 Facility Construction Subgroup (Div 02-19)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 1,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 1,
+      "d10_practical_relevance": 2,
+      "total": 15,
+      "_notes": "d1=2: national certification-exam-sourced, real Korean construction-industry credentialing content. d2=2: genuine multi-discipline professional task validity. d3=1: text+image (13.5% w/ image), single 2D-visual channel, no BIM/CAD/3D/point-cloud. d4=2: certification-exam sourcing + documented bias-mitigation (de-identification, option randomization, source diversification, manual review). d5=2: standardized zero-shot prompt, 5-discipline breakdown, random-choice baseline included. d6=2: 11 diverse models (7 proprietary incl. multimodal + 4 open-source). d7=1 (conservative): thesis document itself is accessible via SNU institutional repository, but no confirmed separate public dataset/code artifact (GitHub/HF) found in the text — partial, not full, reproducibility. d8=0: not discussed. d9=1: human-accuracy statistics exist and are used for difficulty calibration (real data, not fabricated) but not reported as a direct model-vs-human comparison in the results tables — partial credit. d10=2: real national-certification-exam-grounded content, directly relevant to construction practice. SUM CHECK: 2+2+1+2+2+2+1+0+1+2=15.",
+      "_caveat": "Rubric grounded in a real full-text Master's thesis (114 pp., SNU, Feb 2025) obtained from the user this turn and read directly — not abstract-derived."
+    },
+    "reported_results": [
+      {
+        "model_string": "GPT-4o",
+        "metric_name": "Domain-specific Terminology (zero-shot MCQA) — Accuracy",
+        "value": "70.1",
+        "source_location": "Byunghee Yoo, MS thesis, Seoul National University, Feb 2025 (SNU repository handle 10371/221090)",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude 3.5 Sonnet",
+        "metric_name": "Expert-level Reasoning (zero-shot MCQA) — Accuracy",
+        "value": "62.4",
+        "source_location": "Byunghee Yoo, MS thesis, Seoul National University, Feb 2025 (SNU repository handle 10371/221090)",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R057_KoCEM_000000189024.pdf",
+      "source_url": "SNU institutional repository, handle 10371/221090",
+      "status": "obtained",
+      "note": "Raw thesis PDF (114 pp.) supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/000000189024/), read directly in full. This resolves the prior CAND-16 KoCEM full-text-blocked backlog item (JS bot-challenge redirect gate on the SNU bitstream URL) — full text now genuinely obtained, not just the bitstream link located."
+    }
+  },
+  {
+    "name": "RGSVLM / Granary-sweeping VLM benchmark",
+    "identifier": "doi:10.1016/j.jspr.2025.102619",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 2.",
+    "tier": 2,
+    "source_record_id": "R058",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Automatic granary sweeping strategy using visual large language model",
+      "authors": "Boqiang Zhang, Jinhao Yan, Yuhe Gao, GenLiang Yang (Henan University of Technology), Kunpeng Zhang (Henan University of Technology), Junwu Li (COFCO Engineering & Technology (Zhengzhou) Co., Ltd.)",
+      "year": 2025,
+      "venue": "Journal of Stored Products Research 112 (2025) 102619, Elsevier",
+      "doi": "10.1016/j.jspr.2025.102619",
+      "arxiv_id": null,
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "Raw full-text PDF (12 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R058_GranarySweepingVLM_S0022474X25000785.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Food-storage facility O&M — grain-storage facility (granary) interior cleaning/maintenance robotics",
+      "lifecycle_stage": "Operations & maintenance (facility interior cleaning)",
+      "intended_user": "Grain-storage facility operators; developers of intelligent granary-cleaning robots"
+    },
+    "task": {
+      "task_type": "Residual grain scatter classification/segmentation for an autonomous grain-sweeping robot; 9-category classification (3 grain types × 3 scattering states: slight/partial/complete)",
+      "task_complexity": "Requires distinguishing grain type (wheat/corn/soybean) and dispersal extent from real granary-floor images under varying light/humidity/temperature conditions",
+      "output_type": "Category classification + segmented residual-grain region (FastSAM-assisted)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Image (real granary-floor photographs) + text (VLM instruction/prompt). Single 2D-visual channel, no BIM/CAD/3D/point-cloud."
+    },
+    "dataset_properties": {
+      "n_samples": "10,000+ high-resolution images (6,000 from flat warehouses + 4,000 from external/other warehouse types); 9,863 selected for training, 900+ for validation",
+      "n_tasks_categories": "9 categories (wheat/corn/soybean × slight/partial/complete scattering); wheat 31%, corn 36%, soybean 33%; scattering slight/partial/complete = 32%/37%/31%",
+      "data_source": "Real-world images collected by an in-house-developed intelligent grain sweeper (industrial HD camera, fixed 5m shooting distance) operating in actual granary environments (Henan Province Intelligent Logistics Equipment and Vehicle Engineering Technology Research Center)",
+      "annotation_method": "FastSAM (improved) segmentation + pixel-occupancy analysis for systematic labeling; image cleaning/noise removal preprocessing",
+      "expert_validation": "Not confirmed from the sections read — labeling is algorithm-assisted (FastSAM), not stated to involve independent human expert QC — [VERIFY]",
+      "license": "© 2025 Elsevier Ltd, standard copyright, not open access (no CC-BY found)",
+      "accessibility": "NOT publicly released — 'Data will be made available on request' (Data Availability statement)",
+      "train_test_split": "9,863 training / 900+ validation (exact validation count given as '~900')",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Accuracy; Precision; Recall; Inference time (s)",
+      "baseline_models": "GLM4, LLaVA, Qwen2-VL, CogVLM2, InternVL 2.0 (5 general-purpose VLMs) vs. the paper's own fine-tuned RGSVLM",
+      "prompting_method": "Zero-shot and few-shot comparison; RGSVLM fine-tuned via LoRA (rank/target details in Table 5) on Qwen2.5-VL-derived base",
+      "zero_few_shot": "Both — zero-shot (baseline VLM capability) and few-shot/fine-tuned (RGSVLM, LoRA fine-tuning on the full training set)",
+      "rag_tool_use": false,
+      "human_eval_method": "None reported",
+      "llm_as_judge_method": null,
+      "robustness_tests": "Confusion-matrix analysis (9-category); zero-shot vs. few-shot comparison",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Food-storage facility O&M",
+      "task_spans": "Output Quality (classification accuracy) + Task Completion",
+      "modality_spans": "4.3 2D Visual (real-world facility-interior images) + 4.1 Text",
+      "evaluation_spans": "Code-based (accuracy/precision/recall/inference-time)",
+      "capability_spans": "Perception/OCR (visual residual-grain identification) + Domain Knowledge (grain-storage/food-security domain)",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2"
+      ],
+      "building_system_label": "B2 Facility Services Subgroup (Div 20-29)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 13,
+      "_notes": "d1=2: real deployed intelligent grain sweeper, real granary environments, 10k+ real images. d2=2: genuine facility-O&M task solving a real grain-loss/food-security problem. d3=1: image+text, single visual channel. d4=2: FastSAM-assisted systematic labeling + documented preprocessing, though no independent human-expert QC confirmed. d5=2: clear accuracy/precision/recall/inference-time metrics, well-defined Table 6. d6=2: 5 external VLM baselines + own fine-tuned model, zero-shot comparison. d7=0: 'data will be made available on request' — no public release, no code repo found. d8=0: not discussed. d9=0: no human baseline. d10=2: real deployed system, food-security/practical relevance. SUM CHECK: 2+2+1+2+2+2+0+0+0+2=13.",
+      "_caveat": "Rubric grounded in real full-text PDF (12 pp.) obtained from user 2026-07-13, not abstract-derived."
+    },
+    "reported_results": [
+      {
+        "model_string": "RGSVLM (fine-tuned)",
+        "metric_name": "Residual grain scatter 9-class classification (few-shot/fine-tuned) — Accuracy",
+        "value": "93.4",
+        "source_location": "10.1016/j.jspr.2025.102619",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "CogVLM2",
+        "metric_name": "Residual grain scatter 9-class classification (zero-shot) — Accuracy",
+        "value": "63.16",
+        "source_location": "10.1016/j.jspr.2025.102619",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R058_GranarySweepingVLM_S0022474X25000785.pdf",
+      "source_url": "https://doi.org/10.1016/j.jspr.2025.102619",
+      "status": "obtained",
+      "note": "Raw full-text PDF supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/1-s2.0-S0022474X25000785-main/), read directly. Resolves the prior 'F-a granary-sweeping VLM' full-text-blocked backlog item from remaining_cisa_sectors_arm.md (was Cloudflare-CAPTCHA-blocked)."
+    }
+  },
+  {
+    "name": "ShieldGPT",
+    "identifier": "doi:10.1016/j.tust.2026.107897",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 2.",
+    "tier": 2,
+    "source_record_id": "R059",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "ShieldGPT: A LoRA-Tuned large language model and its application in mechanised shield tunneling",
+      "authors": "Shuo Liu (Central South University), Shuying Wang (Central South University / Shenzhen University), Tongming Qu (Wuhan University), Huanhuan Feng, Kairong Hong (China Railway Tunnel Group Co., Ltd.), Xiangsheng Chen (Shenzhen University)",
+      "year": 2026,
+      "venue": "Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107897, Elsevier",
+      "doi": "10.1016/j.tust.2026.107897",
+      "arxiv_id": null,
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "Raw full-text PDF (16 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R059_ShieldGPT_S0886779826004554.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Underground/tunnel engineering — mechanized shield tunneling; geotechnical engineering professional licensing",
+      "lifecycle_stage": "Construction (real-time shield-tunneling operations) and professional certification",
+      "intended_user": "Tunnel/geotechnical engineers; shield-tunneling operations teams; researchers evaluating domain-specific fine-tuned LLMs for underground construction"
+    },
+    "task": {
+      "task_type": "(1) Professional certification exam QA — China's Registered Geotechnical Engineer Exam (Fundamental + Professional Knowledge, single/multiple-choice); (2) 3 applied real-engineering tasks — muck-clogging risk identification, excavation-quality assessment (5 operating scenarios), shield-machine-type-selection/report-generation (not independently benchmarked against other LLMs, single-model demonstration only)",
+      "task_complexity": "972 exam items (328 Fundamental + 644 Professional: 362 single-choice + 282 multiple-choice) compiled across exam years 2018-2023",
+      "output_type": "Single-choice answer 'Answer: X' / multiple-choice 'Answer: XY…', automatically parsed and scored (full credit correct, half credit partial, zero incorrect)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Text-only exam QA. The paper's separate applied tasks (muck-clogging risk, excavation-quality assessment) consume real tunneling sensor/operational data, but these are not part of the multi-LLM comparative benchmark component and are single-model (ShieldGPT-only) demonstrations."
+    },
+    "dataset_properties": {
+      "n_samples": "972 exam items total: 328 single-choice (Fundamental Knowledge) + 644 (362 single-choice + 282 multiple-choice, Professional Knowledge), compiled across exam years 2018-2023",
+      "n_tasks_categories": "2 knowledge categories (Fundamental / Professional), further divided by topic (site investigation, geotechnical design, construction, monitoring)",
+      "data_source": "China's Registered Geotechnical Engineer Exam (official professional licensing exam), compiled cross-year 2018-2023 for representativeness",
+      "annotation_method": "Official exam questions with definitive single/multiple-choice ground-truth answers",
+      "expert_validation": "Official national professional licensing exam — expert-authored by definition",
+      "license": "© Elsevier, standard copyright, not open access (no CC-BY found)",
+      "accessibility": "NOT publicly released — 'Data will be made available on request' (Data Availability statement)",
+      "train_test_split": "9:1 train/validation split used for ShieldGPT's own LoRA fine-tuning corpus (a separate teacher-guided synthetic instruction corpus, not the 972-item exam eval set); the 972-item exam set itself is a fixed evaluation set, no train split",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Accuracy (Basic Exam / Professional Exam / by question type)",
+      "baseline_models": "6 LLMs: Qwen3 (235B, MoE), DeepSeek-R1 (671B, MoE), ChatGLM-4.5 (355B, MoE), GPT-4o (~200B, undisclosed), Doubao (ByteDance, undisclosed) — general-purpose comparators; base Qwen2.5-7B-Instruct (pre-fine-tuning) vs. ShieldGPT (LoRA-fine-tuned version of the same base)",
+      "prompting_method": "Standardized prompt templates, fixed output format; confidence-based early stopping (SoftMax token probabilities) + self-consistency voting for difficult items; deterministic greedy decoding for initial inference",
+      "zero_few_shot": "Zero-shot, head-to-head comparison of models before/after fine-tuning under the same protocol",
+      "rag_tool_use": false,
+      "human_eval_method": "None reported",
+      "llm_as_judge_method": null,
+      "robustness_tests": "Training-stability/convergence analysis (validation-loss plateau at step 1050 used to select final checkpoint, guarding against overfitting)",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Underground/tunnel engineering",
+      "task_spans": "Output Quality (exam accuracy) + Task Completion",
+      "modality_spans": "4.1 Text",
+      "evaluation_spans": "Code-based (exact-match exam accuracy, partial credit for multi-select)",
+      "capability_spans": "Domain Knowledge (geotechnical/tunneling engineering)",
+      "profession": [
+        "A2"
+      ],
+      "profession_label": "A2 Civil/Structural/Geotech Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3 Site & Infrastructure Subgroup (Div 30-39)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 0,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 12,
+      "_notes": "d1=2: official national geotechnical/tunneling licensing exam, real professional content. d2=2: real professional knowledge-assessment task directly tied to shield-tunneling practice. d3=0: text-only exam QA, no visual/structured/tool-use channel in the benchmarked component. d4=2: official cross-year (2018-2023) licensing-exam sourcing, definitive ground truth. d5=2: clear scoring protocol (confidence-based early stopping, self-consistency voting, strict credit scheme). d6=2: 6 diverse SOTA LLMs (up to 671B MoE) + base/fine-tuned comparison. d7=0: 'data will be made available on request' — no public release. d8=0: not discussed. d9=0: no human baseline. d10=2: real safety-critical shield-tunneling professional-licensing content. SUM CHECK: 2+2+0+2+2+2+0+0+0+2=12.",
+      "_caveat": "Rubric grounded in real full-text PDF (16 pp.) obtained from user 2026-07-13, not abstract-derived."
+    },
+    "reported_results": [
+      {
+        "model_string": "Qwen3-235B-A22B",
+        "metric_name": "Registered Geotechnical Engineer Exam — Basic (zero-shot) — Accuracy",
+        "value": "69.9",
+        "source_location": "10.1016/j.tust.2026.107897",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "ShieldGPT (LoRA fine-tuned)",
+        "metric_name": "Registered Geotechnical Engineer Exam — Basic (zero-shot, post-fine-tuning) — Accuracy",
+        "value": "67.6",
+        "source_location": "10.1016/j.tust.2026.107897",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R059_ShieldGPT_S0886779826004554.pdf",
+      "source_url": "https://doi.org/10.1016/j.tust.2026.107897",
+      "status": "obtained",
+      "note": "Raw full-text PDF supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/1-s2.0-S0886779826004554-main/), read directly. Resolves the prior CAND-13 ShieldGPT full-text-blocked backlog item (was Cloudflare-CAPTCHA-blocked)."
+    }
+  },
+  {
+    "name": "UndergrBench",
+    "identifier": "doi:10.1016/j.autcon.2026.106997",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "tier": 1,
+    "source_record_id": "R060",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Multimodal large language model (MLLM) benchmark for intelligent construction in underground engineering",
+      "authors": "Tianhao Li, Xuri Ge, Zhaoyang Wang (Shandong University), Pengjie Ren (Shandong University), Zhenhao Xu (Shandong University, State Key Laboratory of Tunnel Engineering)",
+      "year": 2026,
+      "venue": "Automation in Construction 188 (2026) 106997, Elsevier",
+      "doi": "10.1016/j.autcon.2026.106997",
+      "arxiv_id": null,
+      "repo_url": "https://github.com/capybara1122/UndergrBench (named in the paper's Data Availability statement — controlled-access mechanism, not independently fetched this turn)",
+      "dataset_url": "Controlled access upon reasonable request from the corresponding author; access information at the GitHub repo above",
+      "version_accessed": "Raw full-text PDF (13 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R060_UndergrBench_S0926580526002384.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Underground engineering — tunnel/geotechnical construction intelligence (hazard identification, geological investigation, design, construction)",
+      "lifecycle_stage": "Design, construction, and hazard risk-management for underground/tunnel projects",
+      "intended_user": "Underground-engineering researchers and practitioners developing/evaluating domain-specialized (M)LLMs for construction automation"
+    },
+    "task": {
+      "task_type": "9 core tasks across 3 cognitive levels — knowledge memorization, understanding, and application — covering geological hazard identification (water/mud inrush, rockburst, gas outburst), engineering-code knowledge, and multimodal (image+text) reasoning over geological/disaster data",
+      "task_complexity": "10,888 samples spanning multiple task types; some tasks purely text-based (e.g. engineering-code memorization), others multimodal (e.g. rock-image + textual-label reasoning, per the paper's Appendix G example)",
+      "output_type": "Task-dependent — includes classification/QA-style scored responses, aggregated into an overall per-model score (Fig. 2)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Text (engineering codes, geological reports, scientific papers, disaster case records) + images (e.g. rock/geological imagery for multimodal tasks) — 20 of the 59 evaluated models are multimodal, 39 language-only, confirming a genuine mixed text+image task composition. No BIM/CAD/3D/point-cloud modality confirmed."
+    },
+    "dataset_properties": {
+      "n_samples": "10,888 samples across 9 core tasks",
+      "n_tasks_categories": "9 tasks / 3 cognitive levels (memorization, understanding, application)",
+      "data_source": "Engineering codes, geological reports, scientific papers, and disaster case records",
+      "annotation_method": "Expert annotation (stated in abstract: 'expert annotation ensuring quality')",
+      "expert_validation": "Expert-annotated per the paper's own description",
+      "license": "© 2026 Elsevier B.V., standard copyright, not open access (no CC-BY found) — the paper itself is paywalled; the benchmark DATA is separately controlled-access via GitHub",
+      "accessibility": "Controlled access — 'available from the corresponding author under a controlled access mechanism upon reasonable request'; access information at github.com/capybara1122/UndergrBench (link named in text, not independently fetched/confirmed live this turn)",
+      "train_test_split": "Not confirmed from the sections read — [VERIFY]",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Overall per-model score (Fig. 2, aggregate across 9 tasks); Task- and cognitive-level-categorized scores (Fig. 3, Table 4)",
+      "baseline_models": "59 general-purpose models: 20 multimodal (e.g. Doubao-Seed-1.6, Gemini-2.5-Flash, Qwen-VL-Max, GLM-4V, Llama-4-Maverick, InternVL3 family) + 39 language-only (e.g. Qwen3 family 0.6B-235B-A22B, Kimi-K2, DeepSeek-Reasoner/Chat, Ernie-X1-Turbo, DeepSeek-R1-Distill-Qwen)",
+      "prompting_method": "Zero-shot evaluation across cognitive levels; multimodal tasks include an image+textual-label example format for guiding model reasoning",
+      "zero_few_shot": "Zero-shot (59 models evaluated in a standardized zero-shot setting)",
+      "rag_tool_use": false,
+      "human_eval_method": "Not reported",
+      "llm_as_judge_method": null,
+      "robustness_tests": "Task- and level-categorized breakdown reveals large score variance across tasks (e.g. task 2-1 >90 vs task 3-3 <40 for all models) and within-task variance across models (e.g. task 2-2: 24-65 among multimodal models); comparative experiments vs traditional baseline models on selected tasks (Appendix I)",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Underground engineering",
+      "task_spans": "Output Quality (per-task/per-level scores) + Task Completion",
+      "modality_spans": "4.1 Text + 4.3 2D Visual (geological/rock imagery)",
+      "evaluation_spans": "Code-based (automatic scoring across 9 tasks/3 cognitive levels)",
+      "capability_spans": "Domain Knowledge (underground-engineering codes/geology) + Perception/OCR (multimodal geological-image tasks) + Planning & Reasoning (application-level tasks)",
+      "profession": [
+        "A2"
+      ],
+      "profession_label": "A2 Civil/Structural/Geotech Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B3"
+      ],
+      "building_system_label": "B3 Site & Infrastructure Subgroup (Div 30-39)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 1,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 14,
+      "_notes": "d1=2: real engineering codes, geological reports, disaster case records from a State Key Laboratory of Tunnel Engineering. d2=2: genuine construction-intelligence task validity across 3 cognitive levels. d3=1: text+image (20/59 models multimodal), single 2D-visual channel, no BIM/3D/point-cloud. d4=2: expert-annotated, real engineering/disaster source documents. d5=2: clear per-task/per-level scoring breakdown (Fig. 2/3, Table 4). d6=2: exceptionally broad coverage — 59 models (20 MLLM + 39 LLM). d7=1 (partial): controlled-access-on-request, but with a REAL named GitHub access point (github.com/capybara1122/UndergrBench) documented in the paper — a genuine access mechanism exists, distinguishing it from a pure closed 'email the author' pattern (granary/ShieldGPT), though not independently confirmed live this turn. d8=0: not discussed. d9=0: no human baseline. d10=2: real practical underground-engineering safety/automation relevance (hazard prevention). SUM CHECK: 2+2+1+2+2+2+1+0+0+2=14.",
+      "_caveat": "Rubric grounded in real full-text PDF (13 pp.) obtained from user 2026-07-13, not abstract-derived. The GitHub access-point URL is named in the paper's own Data Availability statement (not fabricated) but was not independently fetched/confirmed live this turn — flagged [VERIFY-pending-fetch], distinct from a confirmed-live claim."
+    },
+    "reported_results": [
+      {
+        "model_string": "Qwen3-235B-A22B",
+        "metric_name": "UndergrBench overall (LLM track) (zero-shot) — Aggregate score",
+        "value": "53.81",
+        "source_location": "10.1016/j.autcon.2026.106997",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Doubao-Seed-1.6",
+        "metric_name": "UndergrBench overall (MLLM track) (zero-shot) — Aggregate score",
+        "value": "45.99",
+        "source_location": "10.1016/j.autcon.2026.106997",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R060_UndergrBench_S0926580526002384.pdf",
+      "source_url": "https://doi.org/10.1016/j.autcon.2026.106997",
+      "status": "obtained",
+      "note": "Raw full-text PDF supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/1-s2.0-S0926580526002384-main/), read directly. Resolves the prior CAND-8 UndergrBench full-text-blocked backlog item (was Cloudflare-CAPTCHA-blocked)."
+    }
+  },
+  {
+    "name": "PowerGPT / PowerBENCH",
+    "identifier": "doi:10.1016/j.asoc.2025.113939",
+    "verification_status": "Stage-2 §4 3-condition RE-SCREEN 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 2. This is the original CI-1 candidate that crystallized the now-OVERTURNED 'no power-grid-ops' rule (`shared/scope_decisions.md`); user overturned that rule 2026-07-12 for physical-asset inspection/O&M, applying the process-plant design/construction/commissioning/O&M logic to power transmission/distribution infrastructure (same overturn precedent as R053 Power-LLaVA/PowerQA, R054 SubstationAI, R055 CaptionPS, all INCLUDE Tier 2). Was previously left `[VERIFY]`/NOT added per explicit user instruction not to force an unread candidate in — now resolved with real full text.",
+    "tier": 2,
+    "source_record_id": "R061",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "PowerGPT: A multimodal foundation model for power inspection",
+      "authors": "Yangyang Zhong, Pengxin Luo (Zhejiang University), Yunfeng Yan (Zhejiang University), Tong Jia (Northeastern University), Donglian Qi (Zhejiang University)",
+      "year": 2026,
+      "venue": "Applied Soft Computing 186 (2026) 113939, Elsevier",
+      "doi": "10.1016/j.asoc.2025.113939",
+      "arxiv_id": null,
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "Raw full-text PDF (23 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R061_PowerBENCH_S1568494625012529.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Power transmission/distribution infrastructure inspection — physical-asset condition monitoring and safety supervision",
+      "lifecycle_stage": "Operations & maintenance (power-infrastructure inspection)",
+      "intended_user": "Power-utility inspection teams; developers of domain-specific multimodal models for power-infrastructure O&M"
+    },
+    "task": {
+      "task_type": "5 standardized power-safety supervision QA tasks over PowerBENCH's 70 real-world power-inspection scenarios (F-118-corrected task names/values, verbatim from paper §5.2): Grounded Captioning (GC), Reference Expression Comprehension (REC), Reference Expression Generation (REG), Counting, and Knowledge Understanding (KNO)",
+      "task_complexity": "Multimodal instruction-following over real power-inspection imagery, requiring spatial/coordinate understanding and power-domain knowledge",
+      "output_type": "Bounding-box/coordinate grounding output; count values; free-text knowledge-QA answers, scored against ground truth"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Image (real power-infrastructure inspection photographs, 200K images in the source PSID dataset) + text (instruction-answer pairs, 800K in PSID). Single 2D-visual channel, no BIM/CAD/3D/point-cloud."
+    },
+    "dataset_properties": {
+      "n_samples": "Source instruction dataset (PSID): ~200,000 power images + ~800,000 instruction-answer pairs. PowerBENCH evaluation subset: 70 power-safety scenarios, 5 standardized QA tasks",
+      "n_tasks_categories": "5 tasks: Grounded Captioning (GC), Reference Expression Comprehension (REC), Reference Expression Generation (REG), Counting, Knowledge Understanding (KNO)",
+      "data_source": "Real-world power-inspection images from 70 scenarios, systematically collected and annotated (metadata preparation over ~200,000 electric-power inspection images)",
+      "annotation_method": "Metadata preparation + prompt-engineering pipeline using GPT-3.5-turbo API to transform structured annotations into instruction-answer pairs; substantial manual person-days invested in object-detection image annotation",
+      "expert_validation": "Not confirmed as independent third-party expert QC beyond the described annotation pipeline — [VERIFY]",
+      "license": "Not confirmed as open access from the sections read — [VERIFY]",
+      "accessibility": "NOT publicly released — 'Data will be made available on request' (Data Availability statement)",
+      "train_test_split": "Not confirmed from the sections read for the PowerBENCH evaluation subset specifically — [VERIFY]",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "GC accuracy; REC accuracy; REG accuracy; Counting accuracy; Knowledge Understanding (KNO) accuracy",
+      "baseline_models": "LLaVA, Shikra (early representative visual-instruction models PowerGPT is architecturally derived from), InternVL2.5 (stronger recent baseline)",
+      "prompting_method": "Multimodal instruction-following evaluation on PowerBENCH's 5 standardized tasks",
+      "zero_few_shot": "Not explicitly stated as zero/few-shot in the sections read — comparative baseline evaluation — [VERIFY]",
+      "rag_tool_use": false,
+      "human_eval_method": "Not reported",
+      "llm_as_judge_method": null,
+      "robustness_tests": "Statistical-significance testing (p-values) comparing PowerGPT against LLaVA across tasks",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Power transmission/distribution infrastructure inspection",
+      "task_spans": "Output Quality (grounding/counting/QA accuracy) + Task Completion",
+      "modality_spans": "4.3 2D Visual (real power-inspection imagery) + 4.1 Text",
+      "evaluation_spans": "Code-based (grounding/counting accuracy, statistical-significance testing)",
+      "capability_spans": "Perception/OCR (visual grounding, spatial localization) + Domain Knowledge (power-infrastructure safety)",
+      "profession": [
+        "A3"
+      ],
+      "profession_label": "A3 Building-sys/MEP Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2",
+        "B3"
+      ],
+      "building_system_label": "B3 Site & Infrastructure Subgroup (Div 30-39) + B2 Facility Services Subgroup (Div 20-29)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 1,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 12,
+      "_notes": "d1=2: real power-infrastructure inspection scenarios (70 real-world scenarios), genuine physical-asset O&M domain (now in-scope per the overturned rule). d2=2: genuine power-safety-supervision task validity. d3=1: image+text, single visual channel. d4=1: substantial annotation pipeline described (metadata prep + GPT-3.5-turbo-assisted instruction generation) but independent third-party expert QC not confirmed — conservative score, consistent with the R053/R054 precedent's similar conservative annotation scoring. d5=2: 5 well-defined standardized tasks with clear metrics and statistical-significance testing. d6=2: 3 external baselines (LLaVA, Shikra, InternVL2.5) spanning early and recent SOTA. d7=0: 'data will be made available on request' — no public release, matching the R053/R054 precedent pattern exactly. d8=0: not discussed. d9=0: no human baseline. d10=2: real practical power-grid-safety relevance. SUM CHECK: 2+2+1+1+2+2+0+0+0+2=12.",
+      "_caveat": "Rubric grounded in real full-text PDF (23 pp.) obtained from user 2026-07-13, not abstract-derived. This resolves the single remaining item from the R053/R054/R055 power-utility overturn batch (`prisma_canonical_funnel.md` §7) that was left `[VERIFY]`/not-added due to a genuine full-text block at the time. CORRECTED 2026-07-13 per VERIFIER F-118 (verification_log.csv R061 row): the +40.09% figure was originally mislabeled as the 'Counting' task; it is verbatim the paper's Knowledge Understanding (KNO) task figure. Real Counting figure (+37.14% vs LLaVA) added. Rubric scores/tier unaffected (this was a task-label/reported_results error, not a rubric-dimension error)."
+    },
+    "reported_results": [
+      {
+        "model_string": "PowerGPT",
+        "metric_name": "PowerBENCH (5-task average gain) (vs. InternVL2.5 baseline) — Score delta vs. InternVL2.5",
+        "value": "0.8",
+        "source_location": "10.1016/j.asoc.2025.113939",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "PowerGPT",
+        "metric_name": "Knowledge Understanding (KNO) (vs. LLaVA baseline, Knowledge Understanding (KNO) task) — % improvement over LLaVA",
+        "value": "40.09",
+        "source_location": "10.1016/j.asoc.2025.113939",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "PowerGPT",
+        "metric_name": "Counting (vs. LLaVA baseline, Counting task) — % improvement over LLaVA",
+        "value": "37.14",
+        "source_location": "10.1016/j.asoc.2025.113939",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R061_PowerBENCH_S1568494625012529.pdf",
+      "source_url": "https://doi.org/10.1016/j.asoc.2025.113939",
+      "status": "obtained",
+      "note": "Raw full-text PDF supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/1-s2.0-S1568494625012529-main/), read directly. Resolves the PowerBENCH/PowerGPT item that was explicitly left `[VERIFY]`/NOT added in the R053/R054/R055 power-utility-overturn batch (`prisma_canonical_funnel.md` §7) due to a Cloudflare-CAPTCHA block on ScienceDirect/ResearchGate at the time. DOI/authors/venue here match exactly what google-scholar's snippet had independently indicated in that prior turn (Yangyang Zhong/Pengxin Luo/Yunfeng Yan/Tong Jia/Donglian Qi, Applied Soft Computing 2025/2026, DOI 10.1016/j.asoc.2025.113939) — confirming it is the same paper, not a name-collision."
+    }
+  },
+  {
+    "name": "Geo-RE / Geo-QA",
+    "identifier": "doi:10.1016/j.jrmge.2025.12.038",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "tier": 1,
+    "source_record_id": "R062",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Leveraging large language models for automated knowledge extraction from geological reports",
+      "authors": "Qi Ge (Nanjing Forestry University), Pengfa Li (Nanjing University of Information Science and Technology), Jin Li (Nanjing University of Information Science and Technology), Hongyue Sun (Zhejiang University), Zhongqiang Liu (Norwegian Geotechnical Institute)",
+      "year": 2026,
+      "venue": "Journal of Rock Mechanics and Geotechnical Engineering (Journal Pre-proof, in press), Institute of Rock and Soil Mechanics, Chinese Academy of Sciences / Elsevier",
+      "doi": "10.1016/j.jrmge.2025.12.038",
+      "arxiv_id": null,
+      "repo_url": "https://github.com/jli0117/Geo-LLM-Benchmarks (VERIFIED LIVE per real full-text read — repo URL directly cited in the paper text; not independently WebFetched this turn)",
+      "dataset_url": "Geo-RE corpus (open-source, from Tian et al. 2024) + Geo-QA (self-built by this paper's authors, from 5 regional NGAC geological-hazard reports); interactive demo at https://huggingface.co/spaces/Ciallo0d00/up",
+      "version_accessed": "Raw full-text PDF (21 pp., Journal Pre-proof) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R062_GeoRE_S1674775526001216.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Geotechnical/geological site investigation — automated knowledge extraction from geological reports for risk assessment",
+      "lifecycle_stage": "Site investigation / geotechnical risk assessment (pre-design and hazard-management stages)",
+      "intended_user": "Geotechnical engineers; researchers building LLM tools for geological-report information extraction and hazard QA"
+    },
+    "task": {
+      "task_type": "(1) Geological knowledge-graph (KG) construction — entity/relationship-triplet extraction from geological-report sentences (4 major relationship categories: spatial, structural, attribute, functional; 22-24 subcategories); (2) Geological QA — yes/no and factoid questions over geological-hazard report content",
+      "task_complexity": "KG task: 1,000 annotated sentences (500 zero-shot eval / 500 ICL demonstrations) covering 22 relationship types. QA task: 400 QA pairs (200 zero-shot / 200 few-shot) across 5 topics (hazard characteristics, prone-area division, economic-loss assessment, risk evaluation, prevention suggestions), each with 80 pairs; includes 200 yes/no + 200 factoid questions",
+      "output_type": "KG task: entity-relationship triplets. QA task: yes/no answers and factoid answers (numerical data/defined terms)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": true,
+      "tool_api_env": true,
+      "physics_simulation_env": false,
+      "notes": "Text-only (unstructured geological-report text) with a symbolic/structured output for the KG task (entity-relationship triplets) and a public interactive tool/demo (HuggingFace Space integrating all benchmarked LLMs + prompting techniques). No image/BIM/3D modality."
+    },
+    "dataset_properties": {
+      "n_samples": "KG task: 1,000 annotated sentences (500 zero-shot / 500 ICL) from the existing open Geo-RE corpus (2,432 total manually annotated sentences from 7 regional geological reports, Tian et al. 2024), covering 22 of its 24 relationship subcategories. QA task: 400 self-built Geo-QA pairs (200 zero-shot / 200 few-shot; 200 yes/no + 200 factoid) from 5 regional geological-hazard reports (NGAC), rigorously tested by 3 professionals.",
+      "n_tasks_categories": "2 tasks (Geological KG construction; Geological QA), 5 QA topics x 80 pairs each",
+      "data_source": "Geo-RE corpus (open-source, National Geological Archives of China (NGAC) regional reports, Tian et al. 2024); Geo-QA self-built from 5 further NGAC regional geological-hazard reports",
+      "annotation_method": "Geo-RE: manually annotated, verified via strict consistency checks (prior work, reused here). Geo-QA: 400 questions with standard answers designed by the authors, rigorously tested by 3 professionals",
+      "expert_validation": "Geo-QA rigorously tested/validated by 3 professionals; Geo-RE independently verified via consistency checks in its original construction",
+      "license": "© 2026 Institute of Rock and Soil Mechanics/Elsevier, standard copyright on the paper itself (Journal Pre-proof, no CC-BY found) — the Geo-RE dataset is separately described as 'open-source' and the paper's own code/demo are public (GitHub + HuggingFace Space)",
+      "accessibility": "Publicly available: GitHub github.com/jli0117/Geo-LLM-Benchmarks (code) + HuggingFace Space huggingface.co/spaces/Ciallo0d00/up (interactive demo integrating all benchmarked LLMs and prompting techniques) — genuinely reproducible, not just a promise",
+      "train_test_split": "KG: 500/500 (zero-shot eval / ICL demonstration pool). QA: 200/200 (zero-shot / few-shot pool)",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "KG task: exact-match triplet extraction accuracy (Direct Match) + semantic similarity match (mpnet-base-v2 cosine similarity); QA task: precision/exact-match on factoid questions; accuracy on yes/no questions; Human evaluation for factual consistency",
+      "baseline_models": "8 SOTA LLMs (proprietary + open-source), named in abstract/interactive demo: GPT-3.5, GPT-4o, Gemini-1.5, DeepSeek-V3, DeepSeek-R1, and 3 further models available in the HuggingFace demo interface",
+      "prompting_method": "3 prompt-engineering techniques compared: in-context learning (ICL), chain-of-thought (CoT), and the paper's proposed knowledge-injected (KI) strategy; basic-prompt structure includes an expertise-framing prefix ('You are a skilled geological expert')",
+      "zero_few_shot": "Both — zero-shot evaluation plus few-shot/ICL variants (500 KG and 200 QA items reserved as demonstration pools)",
+      "rag_tool_use": false,
+      "human_eval_method": "Human evaluation confirms factual consistency of model outputs (e.g. GPT-4 rated highly consistent; GPT-3.5 shows limitations) — a real reported human-judgment evaluation, not merely automated metrics",
+      "llm_as_judge_method": null,
+      "robustness_tests": "Prompting-technique ablation (ICL vs CoT vs KI) isolates which technique helps which task/metric",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Geotechnical/geological site investigation",
+      "task_spans": "Output Quality (KG-triplet/QA accuracy) + Task Completion",
+      "modality_spans": "4.1 Text + 4.6 Structured/Symbolic (KG triplets)",
+      "evaluation_spans": "Code-based (exact-match + semantic-similarity metrics) + Human-in-the-loop (factual-consistency evaluation)",
+      "capability_spans": "Domain Knowledge (geotechnical/geological engineering) + Tool Use (public interactive demo/tool)",
+      "profession": [
+        "A2"
+      ],
+      "profession_label": "A2 Civil/Structural/Geotech Eng",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B0",
+        "B3"
+      ],
+      "building_system_label": "B0 Cross-cutting / non-MasterFormat + B3 Site & Infrastructure Subgroup (Div 30-39)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 0,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 1,
+      "d10_practical_relevance": 2,
+      "total": 15,
+      "_notes": "d1=2: real geological reports from NGAC (National Geological Archives of China) regional sources, genuine geotechnical risk-assessment content. d2=2: genuine information-extraction task validity for real engineering decision-making. d3=0: text-only (KG triplets are a structured/symbolic OUTPUT, not a distinct input modality). d4=2: Geo-RE independently consistency-checked (prior work); Geo-QA validated by 3 professionals. d5=2: clear dual-metric protocol (exact-match + semantic-similarity for KG; precision/accuracy for QA), well-documented ablations. d6=2: 8 SOTA LLMs including very recent models (DeepSeek-V3/R1, GPT-4o, Gemini-1.5). d7=2: GENUINELY reproducible — public GitHub repo (github.com/jli0117/Geo-LLM-Benchmarks) + public interactive HuggingFace Space demo integrating all models/techniques, confirmed by direct citation in the real full text (strongest reproducibility evidence of all 7 new candidates this turn). d8=0: not discussed. d9=1: a real human evaluation of factual consistency is reported (judge-style, not a head-to-head human-score baseline) — partial credit. d10=2: real geotechnical risk-assessment practical relevance. SUM CHECK: 2+2+0+2+2+2+2+0+1+2=15.",
+      "_caveat": "Rubric grounded in real full-text PDF (21 pp., Journal Pre-proof) obtained from user 2026-07-13, not abstract-derived. GitHub/HuggingFace-Space URLs are directly cited in the real full text (not fabricated) but not independently WebFetched/confirmed live this turn — flagged [VERIFY-pending-fetch] on live status, though the citation itself is real primary-source evidence, unlike a purely inferred claim."
+    },
+    "reported_results": [
+      {
+        "model_string": "DeepSeek-V3",
+        "metric_name": "Geological KG construction (zero-shot) — Best-performing model (exact metric value not individually re-tabulated)",
+        "value": "None",
+        "source_location": "10.1016/j.jrmge.2025.12.038",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "DeepSeek-R1",
+        "metric_name": "Geological QA (zero-shot/CoT) — Best-performing model (exact metric value not individually re-tabulated)",
+        "value": "None",
+        "source_location": "10.1016/j.jrmge.2025.12.038",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R062_GeoRE_S1674775526001216.pdf",
+      "source_url": "https://doi.org/10.1016/j.jrmge.2025.12.038",
+      "status": "obtained",
+      "note": "Raw full-text PDF (Journal Pre-proof) supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/1-s2.0-S1674775526001216-main/), read directly. Resolves the prior CAND-14 Geo-RE full-text-blocked backlog item (was Cloudflare-CAPTCHA-blocked, plus a separately-blocked ResearchGate mirror)."
+    }
+  },
+  {
+    "name": "International Construction Contract Knowledge Benchmark",
+    "identifier": "SSRN preprint 5247570 [not peer reviewed; no DOI/arXiv assigned]",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 2.",
+    "tier": 2,
+    "source_record_id": "R063",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Benchmarking International Construction Contract Knowledge of Large Language Models",
+      "authors": "Hanzhao Xia, Yongqiang Chen, Xuan Qi (College of Management and Economics, Tianjin University), Yu Wang (School of Data Science, Lingnan University, Hong Kong SAR)",
+      "year": null,
+      "venue": "SSRN preprint, not peer reviewed. Corresponds to a ScienceDirect-hosted version (PII S0957417426006676) that remains full-text-blocked (Cloudflare CAPTCHA) — the SSRN version obtained this turn and the blocked ScienceDirect PII are treated as the SAME underlying study (same title/authors/1,131-question/14-model design), not independently re-verified line-for-line against each other this turn.",
+      "doi": null,
+      "arxiv_id": null,
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "Raw SSRN preprint PDF (53 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R063_ContractKnowledgeBenchmark_ssrn-5247570.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "International construction contract management (FIDIC standard forms — Yellow Book/Conditions of Contract for Plant & Design-Build, Red Book/Construction, Silver Book/EPC-Turnkey)",
+      "lifecycle_stage": "Contract administration and dispute/compliance management (spans pre-construction through construction and close-out)",
+      "intended_user": "Construction contract managers/practitioners; developers of LLM-based intelligent contract-management systems"
+    },
+    "task": {
+      "task_type": "6 evaluation tasks spanning 3 cognitive levels (memorization, understanding, application) of FIDIC contract knowledge: Terminology Memorization, Contract Conditions Memorization, Modification-of-Particular-Conditions Identification, Functions Classification, Risk Classification, and open-ended questions",
+      "task_complexity": "1,131 questions total, derived from all 21 clauses of the 2017 FIDIC Yellow Book (97.13% sub-clause coverage), supplemented by the Red Book, Silver Book, authoritative literature, and dispute-case data; multiple question formats (fill-in-the-blank, single-choice, classification, open-ended QA)",
+      "output_type": "Fill-in-the-blank answers, single-choice selections, classification labels, and free-text answers to open-ended questions"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Text-only — FIDIC contract-clause text, terminology, and open-ended contract-management questions. No image/BIM/3D modality."
+    },
+    "dataset_properties": {
+      "n_samples": "1,131 questions across 6 tasks (e.g. Terminology Memorization n=77 fill-in-the-blank; Contract Conditions Memorization n=282 single-choice, 100%/70.11% clause/sub-clause coverage; Modification-of-Particular-Conditions Identification n=101 single-choice; further tasks per Table 1, not all individually re-tabulated here)",
+      "n_tasks_categories": "6 tasks across 3 cognitive levels (memorization, understanding, application)",
+      "data_source": "2017 FIDIC Conditions of Contract for Plant and Design-Build (Yellow Book, primary source), supplemented by the 2017 FIDIC Red Book (Construction) and Silver Book (EPC/Turnkey), plus authoritative literature, books, and dispute-case data",
+      "annotation_method": "Manually developed by 2 researchers in construction management with systematic FIDIC training, over a 2-month process, based directly on the original FIDIC text and authoritative literature",
+      "expert_validation": "Manually developed by trained construction-management researchers with in-depth FIDIC field knowledge (direct authorship, not independent third-party validation panel)",
+      "license": "Not stated — SSRN preprint, not peer reviewed; no explicit license/data-availability statement found in the sections read",
+      "accessibility": "No public dataset/code release (GitHub/HF) found in the real full text — [VERIFY]",
+      "train_test_split": "N/A — fixed 1,131-question evaluation set, no train split",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Task-specific normalized scores (0/1 per-question metric satisfaction, normalized across dimensions); Elo rating system (pairwise comparison-based overall ranking across all 14 models)",
+      "baseline_models": "14 LLMs released before June 2024 (3 open-source, 11 closed-source): GPT-4o-2024-05-13, GPT-3.5-turbo-0125, Gemini-1.5-Pro, Claude3-Opus, Mistral-Large-2402, Command R+ (open), Llama3-70B-Instruct (open), ERNIE-4.0-8K-0613, GLM-4-0520, Qwen-Max-0428, Yi-Large, Doubao-pro-4k-0515, Baichuan4, and one further model per Table 5",
+      "prompting_method": "Multidimensional evaluation metric system integrating objective and subjective measurements; few-shot variants also tested (impact on accuracy reported as inconsistent)",
+      "zero_few_shot": "Both zero-shot and few-shot evaluated; the paper explicitly reports that few-shot learning's impact on accuracy is inconsistent across models",
+      "rag_tool_use": false,
+      "human_eval_method": "Subjective-dimension scoring is part of the 'hybrid evaluation metrics' system (objective + subjective measurements), though the exact human-rater protocol is not further detailed in the sections read — [VERIFY]",
+      "llm_as_judge_method": "Not confirmed from the sections read — [VERIFY]",
+      "robustness_tests": "Few-shot vs zero-shot comparison to test consistency of the few-shot learning effect",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "International construction contract management",
+      "task_spans": "Output Quality (per-task normalized scores) + Task Completion",
+      "modality_spans": "4.1 Text",
+      "evaluation_spans": "Code-based (normalized task scores) + Human-in-the-loop (subjective-dimension scoring) + Elo ranking",
+      "capability_spans": "Domain Knowledge (FIDIC international construction contract law/practice) + Compliance & Privacy (contract-condition compliance identification)",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B5"
+      ],
+      "building_system_label": "B5 Procurement & General Requirements Subgroup (Div 00-01)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 0,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 12,
+      "_notes": "d1=2: real FIDIC standard-contract text (Yellow/Red/Silver Books), the actual international standard used in construction contract practice. d2=2: genuine contract-management task validity (memorization through application). d3=0: text-only. d4=2: manually developed by FIDIC-trained construction-management researchers over 2 months, 97.13% sub-clause coverage, rigorous documented methodology. d5=2: clear multidimensional metric system + Elo-based ranking, well-documented. d6=2: 14 diverse contemporary LLMs (3 open-source, 11 closed-source). d7=0: no public dataset/code release found; also an unpublished, not-peer-reviewed SSRN preprint. d8=0: not discussed. d9=0: no human baseline. d10=2: real, high-stakes international-construction-contract-management relevance. SUM CHECK: 2+2+0+2+2+2+0+0+0+2=12.",
+      "_caveat": "Rubric grounded in a real full-text SSRN PREPRINT (53 pp., explicitly marked 'not peer reviewed' on every page) obtained from user 2026-07-13 — NOT abstract-derived, but also not a peer-reviewed publication. A separate ScienceDirect-hosted version of what appears to be the same underlying study (PII S0957417426006676) remains full-text-blocked and was NOT used to cross-verify this extraction line-for-line this turn; flagged for VERIFIER to confirm the SSRN and ScienceDirect versions are indeed the same study before treating this as a final published record."
+    },
+    "reported_results": [
+      {
+        "model_string": "GPT-4o-2024-05-13",
+        "metric_name": "International Construction Contract Knowledge Benchmark (overall Elo) (zero-shot) — Elo rating",
+        "value": "1258",
+        "source_location": "SSRN preprint 5247570 (https://ssrn.com/abstract=5247570) — NOT PEER REVIEWED",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude3-Opus",
+        "metric_name": "International Construction Contract Knowledge Benchmark (overall Elo) (zero-shot) — Elo rating",
+        "value": "1250",
+        "source_location": "SSRN preprint 5247570 (https://ssrn.com/abstract=5247570) — NOT PEER REVIEWED",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R063_ContractKnowledgeBenchmark_ssrn-5247570.pdf",
+      "source_url": "https://ssrn.com/abstract=5247570",
+      "status": "obtained",
+      "note": "Raw SSRN preprint PDF supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/ssrn-5247570/), read directly. Resolves the prior CAND-9 'International construction-contract-knowledge benchmark' full-text-blocked backlog item for its SSRN mirror specifically. The ORIGINAL ScienceDirect PII (S0957417426006676) remains full-text-blocked (Cloudflare CAPTCHA) — this record is built on the SSRN preprint version, disclosed as not-peer-reviewed."
     }
   }
 ]
