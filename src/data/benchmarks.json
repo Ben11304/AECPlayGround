@@ -3375,18 +3375,17 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "[VERIFY: R008 version_accessed]",
-      "benchmark_name": "Arch-Eval"
+      "version_accessed": "Published version; PubMed ID: 40251269"
     },
     "domain_use_case": {
-      "aec_subdomain": "Chinese architectural knowledge evaluation: architecture design, engineering, planning, codes",
-      "lifecycle_stage": "Design / education / certification",
-      "intended_user": "Architects, engineers, AI researchers in Chinese AEC domain (claimed)"
+      "aec_subdomain": "Chinese architectural domain knowledge: architectural design/theory, structural engineering/building physics, building codes/economics/management, urban planning/site design (claimed)",
+      "lifecycle_stage": "Spans design, planning, construction, management (claimed)",
+      "intended_user": "Chinese architecture/engineering practitioners, LLM researchers, professional certification bodies"
     },
     "task": {
-      "task_type": "Exam reasoning; domain-knowledge QA over architecture knowledge (claimed)",
-      "task_complexity": "MCQ-based; official exam format (claimed)",
-      "output_type": "MCQ selections; categorical accuracy (claimed)"
+      "task_type": "Single-choice MCQ QA over Chinese architectural professional domain knowledge (claimed)",
+      "task_complexity": "Single-step MCQ; includes quantitative and qualitative sub-types (boundary blurs in practice) (claimed)",
+      "output_type": "Single-letter answer selection (AO); reasoning chain + answer (CoT) (claimed)"
     },
     "modality": {
       "text": true,
@@ -3401,29 +3400,29 @@
       "symbolic_layout": false,
       "tool_api_env": false,
       "physics_simulation_env": false,
-      "notes": "Text only (claimed)"
+      "notes": "Text only (Chinese language questions); paper explicitly notes multimodal as future work (claimed)"
     },
     "dataset_properties": {
-      "n_samples": "[VERIFY: R008 num_samples]",
-      "n_tasks_categories": "Architecture design / engineering / planning knowledge categories (claimed)",
-      "data_source": "Official Chinese architectural examination questions (claimed)",
-      "annotation_method": "Official exam materials (claimed)",
-      "expert_validation": "Expert validation present (claimed)",
-      "license": "[VERIFY: R008 license]",
-      "accessibility": "On-request only (claimed)",
-      "train_test_split": "Evaluation only (claimed)",
-      "leakage_risk": "Uses official exam questions; no systematic contamination analysis (claimed)"
+      "n_samples": "10,440 total; 875 questions per iteration (7 iterations; stratified random sampling from full pool) (claimed)",
+      "n_tasks_categories": "4 core knowledge domains: Architectural Design/Theory; Structural Engineering/Building Physics; Building Codes/Economics/Management; Urban Planning/Site Design (claimed)",
+      "data_source": "Official architecture/planner certification exam questions; university paper exams; high-quality mock questions; teacher-compiled practice questions (claimed)",
+      "annotation_method": "Pre-validated by professional certification bodies; university-compiled by experienced instructors; single-correct-answer format (claimed)",
+      "expert_validation": "Sourced from authoritative professional certification exam bodies; university exam papers (claimed)",
+      "license": "CC BY-NC-ND 4.0 (claimed)",
+      "accessibility": "Data available from corresponding author Shimin Li upon reasonable request — NOT publicly accessible via repo (claimed)",
+      "train_test_split": "None (evaluation only; 7 stratified samples from 10,440-question pool) (claimed)",
+      "leakage_risk": "Non-publicly indexed sources (university paper exams); some contamination resistance; no systematic analysis (claimed)"
     },
     "evaluation": {
-      "metrics": "Accuracy; robustness/consistency; response time (claimed)",
-      "baseline_models": "Qwen1.5-14B-Chat, GPT-4-turbo, others (claimed)",
-      "prompting_method": "Few-shot variants tested (claimed)",
-      "zero_few_shot": "Both tested (claimed)",
+      "metrics": "Accuracy (% correct); Stability (sample variance across 7 iterations, lower=better); Response time (sec/question) (claimed)",
+      "baseline_models": "Qwen-14B-Chat, GPT-3.5-turbo, GPT-4-turbo, Chatglm2-6B, Qwen1.5-7B-Chat, Qwen-7B-Chat, Baichuan2-7B-Chat, Qwen1.5-14B-Chat, + 6 additional [VERIFY full list from paper Table 1] (claimed)",
+      "prompting_method": "Answer-Only (AO) and Chain-of-Thought (CoT); zero-shot implied (no few-shot mentioned) (claimed)",
+      "zero_few_shot": "Zero-shot (claimed)",
       "rag_tool_use": "None (claimed)",
-      "human_eval_method": "Expert exam questions as ground truth (claimed)",
+      "human_eval_method": "None (claimed)",
       "llm_as_judge_method": "None (claimed)",
-      "robustness_tests": "Stability analysis across runs (claimed)",
-      "cost_latency_reporting": "Response time reported (claimed)"
+      "robustness_tests": "7-iteration stability testing; AO vs CoT comparison on 5 of 14 models (claimed)",
+      "cost_latency_reporting": "Response time: AO avg 2.38 sec/question; CoT avg 62.23 sec/question (26×) (claimed)"
     },
     "capability": {
       "scheme": "v1",
@@ -3458,7 +3457,43 @@
       "d10_practical_relevance": 2,
       "total": 12
     },
-    "reported_results": [],
+    "reported_results": [
+      {
+        "model_string": "GPT-4-turbo (online mode)",
+        "metric_name": "Arch-Eval stability (stability assessment (repeated runs)) — sample variance of accuracy",
+        "value": "0.0%",
+        "source_location": "10.1038/s41598-025-98236-0",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Chatglm2-6B",
+        "metric_name": "Arch-Eval stability (stability assessment (repeated runs)) — sample variance of accuracy",
+        "value": "0.0%",
+        "source_location": "10.1038/s41598-025-98236-0",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen1.5-7B-Chat",
+        "metric_name": "Arch-Eval stability (stability assessment (repeated runs)) — sample variance of accuracy",
+        "value": "0.0%",
+        "source_location": "10.1038/s41598-025-98236-0",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen1.5-14B-Chat",
+        "metric_name": "Arch-Eval response time (Answer-Only (AO)) — mean response time (s/question)",
+        "value": "2.38",
+        "source_location": "10.1038/s41598-025-98236-0",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen1.5-14B-Chat",
+        "metric_name": "Arch-Eval response time (Chain-of-Thought (COT)) — mean response time (s/question)",
+        "value": "62.23",
+        "source_location": "10.1038/s41598-025-98236-0",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
     "fulltext": {
       "assessed": true,
       "obtained": true,
@@ -5412,18 +5447,17 @@
       "arxiv_id": "2505.22959",
       "repo_url": "https://github.com/mengqiwang1/hse-bench",
       "dataset_url": "https://huggingface.co/datasets/Joysouo/hse-bench",
-      "version_accessed": "[VERIFY: R017 version_accessed]",
-      "benchmark_name": "HSE-Bench"
+      "version_accessed": "v1 / 2025-05-29"
     },
     "domain_use_case": {
-      "aec_subdomain": "Health, Safety, and Environment compliance reasoning",
-      "lifecycle_stage": "Construction / regulatory",
-      "intended_user": "HSE professionals, compliance officers, AI researchers"
+      "aec_subdomain": "Health, Safety and Environment (HSE) compliance assessment in construction and workplace safety (claimed)",
+      "lifecycle_stage": "Construction phase / workplace safety monitoring (implied) (claimed)",
+      "intended_user": "HSE professionals, construction managers, safety officers, AI researchers"
     },
     "task": {
-      "task_type": "Compliance checking; domain-knowledge QA; RAG/evidence-grounded IRAC-structured reasoning (claimed)",
-      "task_complexity": "IRAC structure: Issue, Rule, Application, Conclusion; multi-phase pipeline (claimed)",
-      "output_type": "Accuracy on individual IRAC phases and integrated pipeline (claimed)"
+      "task_type": "IRAC-framework compliance QA: Issue Spotting, Rule Recall, Rule Application, Rule Conclusion; integrated multi-step IRAC pipeline (claimed)",
+      "task_complexity": "Single-step (individual IRAC phases); multi-step (integrated pipeline); multi-source data (regulations, court cases, exams, videos) (claimed)",
+      "output_type": "Multiple-choice (single correct answer); open-ended variant also tested (claimed)"
     },
     "modality": {
       "text": true,
@@ -5438,28 +5472,28 @@
       "symbolic_layout": false,
       "tool_api_env": false,
       "physics_simulation_env": false,
-      "notes": "Text primary; video frames converted to text descriptions; Text >> video (claimed)"
+      "notes": "Text primary (regulations, court cases, exam questions); video frames converted to textual descriptions for video subset (100 questions) (claimed)"
     },
     "dataset_properties": {
-      "n_samples": "[VERIFY: R017 num_samples]",
-      "n_tasks_categories": "IRAC phases + integrated pipeline; US/Canada/China/Australia regulations (claimed)",
-      "data_source": "Multi-jurisdiction HSE regulations and case scenarios (claimed)",
-      "annotation_method": "Expert-authored IRAC-structured QA (claimed)",
-      "expert_validation": "Expert validation present (claimed)",
-      "license": "[VERIFY: R017 license]",
-      "accessibility": "Public (claimed)",
-      "train_test_split": "Evaluation only (claimed)",
-      "leakage_risk": "Not discussed (claimed)"
+      "n_samples": "1,020 IRAC-formatted questions: Regulations 448, Safety exams 320, Court cases 152, Fieldwork videos 100 (claimed)",
+      "n_tasks_categories": "4 IRAC phases × 4 data sources (claimed)",
+      "data_source": "US/Canada/China/Australia regulations; Australian court cases (CourtAid); professional HSE exam materials; YouTube instructional construction videos (claimed)",
+      "annotation_method": "Two-phase: (1) GPT-4o automated IRAC question generation; (2) adversarial contextual augmentation (distractors); followed by manual expert review (claimed)",
+      "expert_validation": "Yes — two domain experts double-checked labels for fieldwork videos and other sources (claimed)",
+      "license": "CC BY 4.0 (claimed)",
+      "accessibility": "Public HuggingFace (Joysouo/hse-bench) + GitHub (mengqiwang1/hse-bench) (claimed)",
+      "train_test_split": "NOT FOUND (single evaluation set implied) (claimed)",
+      "leakage_risk": "Regulations and court cases likely in LLM training data; not explicitly addressed (claimed)"
     },
     "evaluation": {
-      "metrics": "Accuracy (individual IRAC phases + integrated); robustness/consistency (with/without options) (claimed)",
-      "baseline_models": "Claude 3.7-Sonnet, GPT-4o, others (claimed)",
-      "prompting_method": "RoE (Rule of Evidence) structured prompting (claimed)",
-      "zero_few_shot": "Not specified (claimed)",
-      "rag_tool_use": "RAG/evidence-grounded reasoning (claimed)",
-      "human_eval_method": "None explicit (claimed)",
+      "metrics": "Accuracy (with options); AUC-ROC (without options — tests genuine reasoning) (claimed)",
+      "baseline_models": "Deepseek-V3 (671B), Qwen2.5-72B-Instruct, GPT-4o-mini, Llama-3.1-8B-Instruct, Gemini-2.0-flash, Deepseek-R1 (671B), QwQ-32B, GPT-o3-mini, Claude 3.7-Sonnet, Gemini-2.5-pro-pre, Llava-onevision-7B, Gemma-3-27B (claimed)",
+      "prompting_method": "Zero-shot, 5-shot few-shot, CoT, Zero-CoT, CoT+Self-Consistency, RoE (Reasoning of Experts) proposed method (claimed)",
+      "zero_few_shot": "Zero-shot and 5-shot (claimed)",
+      "rag_tool_use": "None (claimed)",
+      "human_eval_method": "Two domain experts for question validation (not as performance baseline) (claimed)",
       "llm_as_judge_method": "None (claimed)",
-      "robustness_tests": "With/without answer options; per-phase analysis (claimed)",
+      "robustness_tests": "With vs without options comparison; IRAC phase-level analysis; multi-prompting strategy comparison (claimed)",
       "cost_latency_reporting": "None (claimed)"
     },
     "capability": {
@@ -5495,7 +5529,50 @@
       "d10_practical_relevance": 2,
       "total": 14
     },
-    "reported_results": [],
+    "reported_results": [
+      {
+        "model_string": "Claude-3.7-Sonnet",
+        "metric_name": "HSE-Bench IRAC pipeline (single-phase (Issue Spotting)) — accuracy %",
+        "value": "91.3",
+        "source_location": "arXiv:2505.22959",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude-3.7-Sonnet",
+        "metric_name": "HSE-Bench IRAC pipeline (integrated full IRAC pipeline (4-phase composite)) — accuracy %",
+        "value": "68.06",
+        "source_location": "arXiv:2505.22959",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "DeepSeek-R1",
+        "metric_name": "HSE-Bench IRAC pipeline (integrated full IRAC pipeline (4-phase composite)) — accuracy %",
+        "value": "68.42",
+        "source_location": "arXiv:2505.22959",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "QwQ-32B",
+        "metric_name": "HSE-Bench IRAC pipeline (integrated full IRAC pipeline (4-phase composite)) — accuracy %",
+        "value": "61.6",
+        "source_location": "arXiv:2505.22959",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "All evaluated LLMs (average)",
+        "metric_name": "HSE-Bench IRAC framework (single-phase, Issue Spotting) — average AUC-ROC %",
+        "value": "70.17",
+        "source_location": "arXiv:2505.22959",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "All evaluated LLMs (average)",
+        "metric_name": "HSE-Bench IRAC framework (single-phase, Rule Recall) — average AUC-ROC %",
+        "value": "60.75",
+        "source_location": "arXiv:2505.22959",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
     "fulltext": {
       "assessed": true,
       "obtained": true,
@@ -7350,7 +7427,64 @@
       "_notes": "UPGRADED 2026-07-13 from real full-text read (was: d7=0, d8=1, d9=1, total=14 — same total, different composition). d7 1->... 0->2: HF dataset (hoskerelab/PE_Civil_Bench, CC-BY-4.0) + GitHub code repo both independently confirmed LIVE via WebFetch 2026-07-13 — genuinely reproducible, not just a promise. d8 1->0 and d9 1->0: the prior scores were abstract-level INFERENCES ('may appear in pretraining', 'exam pass rate ~70% may serve as implicit baseline') — the real full text discusses neither leakage/contamination nor a human-examinee pass-rate comparison, so both are corrected down to what's actually stated (R6: report as-is, don't inflate). SUM CHECK: 2+2+0+2+2+2+2+0+0+2=14.",
       "_caveat": "Rubric now grounded in the real ACM/Elsevier full-text PDF (obtained from user, stored fulltext_corpus/), not the abstract-only/VERIFIER-brief basis used previously."
     },
-    "reported_results": [],
+    "reported_results": [
+      {
+        "model_string": "GPT-5.5",
+        "metric_name": "PE Civil Bench (N=150) (baseline (no augmentation)) — accuracy %",
+        "value": "82.7",
+        "source_location": "10.1016/j.cacaie.2026.100126",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.5",
+        "metric_name": "PE Civil Bench (N=150) (agentic RAG) — accuracy %",
+        "value": "87.3",
+        "source_location": "10.1016/j.cacaie.2026.100126",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 2.5 Pro",
+        "metric_name": "PE Civil Bench (N=150) (baseline (no augmentation)) — accuracy %",
+        "value": "49.3",
+        "source_location": "10.1016/j.cacaie.2026.100126",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 2.5 Pro",
+        "metric_name": "PE Civil Bench (N=150) (agentic RAG) — accuracy %",
+        "value": "78.0",
+        "source_location": "10.1016/j.cacaie.2026.100126",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4o",
+        "metric_name": "PE Civil Bench (N=150) (agentic RAG) — accuracy %",
+        "value": "70.7",
+        "source_location": "10.1016/j.cacaie.2026.100126",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Llama 3.1 405B",
+        "metric_name": "PE Civil Bench (N=150) (agentic RAG) — accuracy %",
+        "value": "60.7",
+        "source_location": "10.1016/j.cacaie.2026.100126",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Mistral 7B",
+        "metric_name": "PE Civil Bench (N=150) (vector RAG) — accuracy %",
+        "value": "23.3",
+        "source_location": "10.1016/j.cacaie.2026.100126",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Llama 3.1 8B",
+        "metric_name": "PE Civil Bench (N=150) (baseline (no augmentation)) — accuracy %",
+        "value": "28.0",
+        "source_location": "10.1016/j.cacaie.2026.100126",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
     "fulltext": {
       "assessed": true,
       "obtained": "full",
@@ -8072,12 +8206,12 @@
   {
     "name": "Qwen-BIM Benchmark",
     "identifier": "arXiv:2602.20812",
-    "verification_status": "screened (Stage 2 INCLUDE; VERIFIER 0.5.33 existence + §4-fit) — [VERIFY] full-text pending VERIFIER re-gate",
-    "tier": 1,
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier change PENDING ESCALATION (d7 1->0 fails T1 floor)",
+    "tier": 2,
     "source_record_id": "R035",
     "provenance": "claimed",
     "bibliographic": {
-      "paper_title": "[VERIFY — confirm from arXiv:2602.20812]",
+      "paper_title": "[VERIFY]",
       "authors": "[VERIFY]",
       "year": 2026,
       "venue": "arXiv preprint [VERIFY — peer-review status unknown]",
@@ -8103,14 +8237,14 @@
       "images": null,
       "engineering_drawings": null,
       "cad_floor_plans": null,
-      "bim_ifc_3d": null,
+      "bim_ifc_3d": "[VERIFY — BIM-design context may involve structured BIM/IFC data]",
       "point_cloud": false,
       "video_multi_image": false,
       "simulation_plot": false,
       "symbolic_layout": null,
       "tool_api_env": null,
       "physics_simulation_env": false,
-      "notes": "All modality details [VERIFY] pending full-text read. text=True inferred from 'BIM-design LLM benchmark' briefing. BIM/IFC involvement unclear — benchmark may use textual BIM descriptions rather than native IFC files."
+      "notes": "All modality details [VERIFY] pending full-text read (paper beyond Aug-2025 training cutoff). text=True inferred from 'BIM-design LLM benchmark' briefing. BIM-IFC involvement unclear — benchmark may use textual BIM descriptions rather than native IFC files."
     },
     "dataset_properties": {
       "n_samples": "[VERIFY]",
@@ -8156,18 +8290,48 @@
     },
     "rubric": {
       "d1_domain_authenticity": 2,
-      "d2_task_validity": 1,
+      "d2_task_validity": 2,
       "d3_modality_coverage": 1,
       "d4_annotation_quality": 1,
-      "d5_evaluation_clarity": 1,
-      "d6_baseline_coverage": 1,
-      "d7_reproducibility": 1,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
       "d8_leakage_control": 0,
       "d9_human_baseline": 0,
       "d10_practical_relevance": 2,
-      "total": 10
+      "total": 12,
+      "_notes": "FULL-TEXT CONFIRMED 2026-07-11 (RESEARCHER, PDF read, replaces briefing-only PROVISIONAL score total=10). d1=2: real Revit models (shopping malls, offices, dormitories, teaching buildings, museums) partitioned into 150 blocks; authentic AEC source data. d2=2 (UPGRADE from 1): capability requirements derived directly from real BIM design-review workflows (integrity/rationality/compliance/detailing, Table 1) — realistic professional tasks; original d2=1 note conflated task realism with G-Eval judge-validity (that concern belongs to d5, not d2). d3=1: text-only BIM textualization (Header/Component sections), no native BIM/IFC/CAD file, no images — single modality, workflow-level structure only. d4=1: BIM-QA answers are rule-based/hard-coded from ground-truth model data (not expert-panel annotated); only the 3,493-pair QRA fine-tuning subset was manually checked for correctness, not the full 3,300-pair BIM-QA set. d5=2 (UPGRADE from 1): Section 3.3 gives a fully specified, reproducible protocol — verbatim G-Eval prompt with 5 explicit scoring rules, 6 quantitative indicators (Format/BLEU-1/BLEU-2/ROUGE-L/Cos-Sim/G-Eval), fixed temperature=0, 20-partition sampling procedure. d6=2 (UPGRADE from 1): Table 4 confirms 11 general LLMs across 3 series (ChatGLM, Qwen, DeepSeek), spanning closed-source (GLM-4-plus/Qwen-max) + open-source (Qwen2.5 7B-72B) + reasoning (QwQ-32b, DeepSeek-R1) — diverse frontier+open-source coverage. d7=0 (DOWNGRADE from 1 — TIER-CRITICAL): explicit Data Availability statement (paper end): 'Data will be made available on request.' No GitHub/HuggingFace/Zenodo link anywhere in the full text. Per d7_rubric_codebook.md, 'available on request' WITHOUT a public URL is explicitly d7=0, NOT d7=1 (the codebook's own d7=0 anchor table lists exactly this sub-case). The prior d7=1 'preprint-public provisional' scoring undercounted this — full text reveals a stated on-request-only policy, which is the d7=0 anchor, not the d7=1 anchor. d8=0: no explicit contamination/leakage safeguard discussed anywhere in the paper. d9=0: no human baseline or human-expert comparison reported anywhere in the paper (only automated text/semantic-similarity metrics + G-Eval LLM-judge). d10=2: BIM design review/compliance-checking automation = high practical AEC value, explicitly framed as addressing a real industry gap. SUM CHECK: 2+2+1+1+2+2+0+0+0+2=12, matches total=12 (was 10; net +2, composed of +1×3 upgrades d2/d5/d6 and -1 downgrade d7). TIER FLAG: original tier=1 rested on d7=1 (assumed). Full text shows d7=0 → Tier-1 floor (d7≥1) FAILS. This is a genuine tier-change trigger — ESCALATED, tier left unchanged pending BOSS/user decision (see RESEARCHER escalation 2026-07-11)."
     },
-    "reported_results": [],
+    "reported_results": [
+      {
+        "model_string": "Qwen-BIM (14B, fine-tuned)",
+        "metric_name": "BIM-QA EQS Benchmark (overall (all question types)) — G-Eval score",
+        "value": "0.834",
+        "source_location": "arXiv:2602.20812",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Base LLM (Qwen2.5-14B-instruct)",
+        "metric_name": "BIM-QA EQS Benchmark (overall (all question types)) — G-Eval score",
+        "value": "0.689",
+        "source_location": "arXiv:2602.20812",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen-BIM (14B, fine-tuned)",
+        "metric_name": "BIM-QA EQS Benchmark (domain-specific tasks only) — G-Eval score",
+        "value": "0.801",
+        "source_location": "arXiv:2602.20812",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Base LLM (Qwen2.5-14B-instruct)",
+        "metric_name": "BIM-QA EQS Benchmark (domain-specific tasks only) — G-Eval score",
+        "value": "0.588",
+        "source_location": "arXiv:2602.20812",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
     "fulltext": {
       "assessed": true,
       "obtained": true,
@@ -8180,12 +8344,12 @@
   {
     "name": "Ishigaki-IDS-Bench",
     "identifier": "arXiv:2605.22079",
-    "verification_status": "screened (Stage 2 INCLUDE; VERIFIER 0.5.33 existence + §4-fit) — [VERIFY] full-text pending VERIFIER re-gate",
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier unchanged (Tier 1, strengthened)",
     "tier": 1,
     "source_record_id": "R036",
     "provenance": "claimed",
     "bibliographic": {
-      "paper_title": "[VERIFY — confirm exact name from arXiv:2605.22079]",
+      "paper_title": "[VERIFY]",
       "authors": "Ishigaki et al. [VERIFY full author list]",
       "year": 2026,
       "venue": "arXiv preprint [VERIFY — peer-review status unknown]",
@@ -8201,8 +8365,8 @@
       "intended_user": "BIM managers, information managers, buildingSMART practitioners, LLM researchers for BIM/IFC [VERIFY]"
     },
     "task": {
-      "task_type": "BIM requirement → IDS-XML generation (structured code generation from NL BIM requirements) [from briefing, VERIFY]",
-      "task_complexity": "Medium — IDS-XML is a structured XML specification aligned to buildingSMART/ISO 21597; requires BIM domain knowledge [from briefing, VERIFY]",
+      "task_type": "BIM requirement → IDS-XML generation (structured code generation from natural-language BIM requirements) [from briefing, VERIFY]",
+      "task_complexity": "Medium — IDS-XML is a structured XML specification format aligned to buildingSMART/ISO 21597; requires BIM domain knowledge [from briefing, VERIFY complexity analysis]",
       "output_type": "IDS-XML structured output [from briefing, VERIFY]"
     },
     "modality": {
@@ -8218,21 +8382,21 @@
       "symbolic_layout": null,
       "tool_api_env": null,
       "physics_simulation_env": false,
-      "notes": "Primary: text → structured XML. Input: NL BIM requirements in Japanese + English (bilingual) [from briefing]. Output: IDS-XML. IDS is a buildingSMART open standard for defining information requirements in IFC-based BIM workflows. bim_ifc_3d set True per SYNTHESIZER 0.6.2 figureA authoritative mapping (native BIM/IFC = {R031, R036} = 2/26, user-confirmed framing); CURATOR field remains [VERIFY] pending full-text re-gate."
+      "notes": "Primary: text → structured XML. Input: NL BIM requirements in Japanese + English (bilingual) [from briefing]. Output: IDS-XML. IDS (Information Delivery Specification) is a buildingSMART open standard for defining information requirements in IFC-based BIM workflows. [F-085 ADJUDICATED true: IDS = buildingSMART openBIM standard in the IFC ecosystem (information-delivery specification referencing IFC classes/properties) → BIM/IFC modality membership. CAVEAT: the 'BIM/IFC/3D' group's '3D' sub-label is a misnomer for R036 — IDS-XML carries NO 3D geometry; membership is on the openBIM-standard basis, not 3D-geometric. Holds SYNTHESIZER figureA BIM/IFC = 2/26 {R031, R036} + manuscript.]"
     },
     "dataset_properties": {
       "n_samples": "166 expert examples (bilingual JA + EN) [from VERIFIER briefing]",
       "n_tasks_categories": "[VERIFY — task categories within IDS-XML generation]",
       "data_source": "Expert-created BIM requirement → IDS-XML pairs, bilingual JA+EN [from briefing; VERIFY institution and expert profiles]",
       "annotation_method": "Expert annotation (buildingSMART/BIM domain experts) [from briefing; VERIFY validation protocol]",
-      "expert_validation": "Yes — 166 expert examples (bilingual) [from briefing; VERIFY inter-annotator agreement]",
+      "expert_validation": "Yes — 166 expert examples (bilingual) [from briefing; VERIFY inter-annotator agreement or review process]",
       "license": "CC-BY-4.0 [from VERIFIER briefing — confirmed]",
       "accessibility": "Public — GitHub + HuggingFace [from VERIFIER briefing; VERIFY exact repo/dataset paths]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — test set may overlap LLM training if from public BIM documentation]"
     },
     "evaluation": {
-      "metrics": "[VERIFY — IDS-XML validity check? exact-match? structural overlap? custom metric?]",
+      "metrics": "[VERIFY — IDS-XML validity check? exact-match? structural overlap? custom metric? VERIFIER to confirm from full text]",
       "baseline_models": "10 LLMs [from VERIFIER briefing; VERIFY names and versions]",
       "prompting_method": "[VERIFY]",
       "zero_few_shot": "[VERIFY]",
@@ -8267,15 +8431,52 @@
       "d2_task_validity": 2,
       "d3_modality_coverage": 1,
       "d4_annotation_quality": 2,
-      "d5_evaluation_clarity": 1,
+      "d5_evaluation_clarity": 2,
       "d6_baseline_coverage": 2,
       "d7_reproducibility": 2,
       "d8_leakage_control": 1,
       "d9_human_baseline": 0,
       "d10_practical_relevance": 2,
-      "total": 15
+      "total": 16,
+      "_notes": "FULL-TEXT CONFIRMED 2026-07-11 (RESEARCHER, PDF read, replaces briefing-only PROVISIONAL score total=15). d1=2: IDS = official buildingSMART open BIM standard grounded in IFC vocabulary; 166 examples from 83 practical scenarios authored by 6 BIM/IDS experts. d2=2: IDS-XML generation from BIM information requirements is a real specification-authoring workflow task in professional BIM/IDS practice. d3=1: text/CSV input -> structured XML output; narrow but well-defined structured-generation modality, not multimodal. d4=2: 166 expert-created AND verified examples; construction pipeline (Fig.2) shows 6 BIM/IDS experts consolidating ~100 candidates into 83 scenarios with semantic review, IDSAuditTool validation, facet-scorer reruns, JA/EN checks, plus 2 additional ML-expert reviews of task definition/metadata/protocol. d5=2 (UPGRADE from 1): two-stage protocol precisely defined -- Stage 1 IDSAuditTool (Processability/Structure/Content), Stage 2 facet-level macro-F1 against gold IDS with exact comparison-block definition; fixed decoding settings documented per model family; no reranking/repair/regeneration. Metric fully specified and reproducible. d6=2: 10 LLMs spanning closed proprietary (GPT-5.5, Claude Opus 4.5, Gemini 3.1 Pro) and open-weight (gpt-oss-120b, Kimi K2.6, DeepSeek V4 Pro, Qwen3.5-397B-A17B, Qwen3-32B/14B/8B). d7=2: dataset on Hugging Face (DOI 10.57967/hf/8873) under CC BY 4.0; evaluation code on Zenodo (DOI 10.5281/zenodo.20550510) under Apache-2.0; versioned maintenance stated (HF/Zenodo/GitHub) -- full public canonical release. d8=1: paper explicitly states the dataset 'does not include personal information, real IFC files, confidential project data, or copyrighted real-project documents' -- a stated safeguard, though it addresses confidentiality/copyright rather than LLM-pretraining contamination specifically, so kept at partial (1) not strong (2). d9=0: no human baseline reported; no pairwise IAA reported either (explicitly explained: expert-authoring + standards-compliance validation used instead of blind multi-annotator labeling). d10=2: IDS is a live requirement in buildingSMART/openBIM production workflows. SUM CHECK: 2+2+1+2+2+2+2+1+0+2=16, matches total=16 (was 15; net +1 from d5 upgrade). No tier change -- floors already comfortably satisfied and strengthen (d5 1->2)."
     },
-    "reported_results": [],
+    "reported_results": [
+      {
+        "model_string": "GPT-5.5 (xhigh)",
+        "metric_name": "Ishigaki-IDS-Bench (166 examples) (zero-shot) — Facet F1 %",
+        "value": "65.6",
+        "source_location": "arXiv:2605.22079",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5.5 (xhigh)",
+        "metric_name": "Ishigaki-IDS-Bench (166 examples) (zero-shot) — Content pass rate %",
+        "value": "27.7",
+        "source_location": "arXiv:2605.22079",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Opus 4.5",
+        "metric_name": "Ishigaki-IDS-Bench (166 examples) (zero-shot) — Facet F1 %",
+        "value": "42.2",
+        "source_location": "arXiv:2605.22079",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 3.1 Pro",
+        "metric_name": "Ishigaki-IDS-Bench (166 examples) (zero-shot) — Facet F1 %",
+        "value": "52.2",
+        "source_location": "arXiv:2605.22079",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "gpt-oss-120b (xhigh)",
+        "metric_name": "Ishigaki-IDS-Bench (166 examples) (zero-shot) — Facet F1 %",
+        "value": "21.6",
+        "source_location": "arXiv:2605.22079",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
     "fulltext": {
       "assessed": true,
       "obtained": true,
@@ -8396,12 +8597,12 @@
   {
     "name": "BEMEval-Doc2Schema",
     "identifier": "arXiv:2602.16926",
-    "verification_status": "screened (Stage 2 INCLUDE; VERIFIER 0.5.33 existence + §4-fit) — [VERIFY] full-text pending VERIFIER re-gate",
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier unchanged (Tier 1)",
     "tier": 1,
     "source_record_id": "R039",
     "provenance": "claimed",
     "bibliographic": {
-      "paper_title": "[VERIFY — confirm from arXiv:2602.16926; may be 'BEMEval', 'Doc2Schema', or compound title]",
+      "paper_title": "[VERIFY]",
       "authors": "[VERIFY]",
       "year": 2026,
       "venue": "arXiv preprint [VERIFY — peer-review status unknown]",
@@ -8434,13 +8635,13 @@
       "symbolic_layout": null,
       "tool_api_env": null,
       "physics_simulation_env": null,
-      "notes": "Primary: text document → structured schema/KV pairs. Input: BEM reports/specifications (text) [from briefing]. Output: structured schema. tables=None (BEM docs often include tabular data [VERIFY]). simulation_plot=None (BEM outputs may include energy simulation results [VERIFY])."
+      "notes": "Primary: text document → structured schema/KV pairs. Input: BEM reports/specifications (text) [from briefing]. Output: structured schema. tables=None (BEM docs often include tabular data [VERIFY]). simulation_plot=None (BEM outputs may include energy simulation results [VERIFY]). bim_ifc_3d=None (BEM may reference BIM geometry [VERIFY])."
     },
     "dataset_properties": {
       "n_samples": "[VERIFY]",
       "n_tasks_categories": "[VERIFY]",
       "data_source": "Building energy modeling documents (reports, specifications, simulation inputs) [from briefing; VERIFY document sources and provenance]",
-      "annotation_method": "[VERIFY — how was ground-truth schema validated?]",
+      "annotation_method": "[VERIFY — how was ground-truth schema validated? expert review?]",
       "expert_validation": "[VERIFY]",
       "license": "[VERIFY]",
       "accessibility": "[VERIFY — arXiv public; dataset/code release unclear]",
@@ -8485,13 +8686,50 @@
       "d4_annotation_quality": 1,
       "d5_evaluation_clarity": 2,
       "d6_baseline_coverage": 1,
-      "d7_reproducibility": 1,
-      "d8_leakage_control": 1,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
       "d9_human_baseline": 0,
       "d10_practical_relevance": 2,
-      "total": 13
+      "total": 13,
+      "_notes": "FULL-TEXT CONFIRMED 2026-07-11 (RESEARCHER, PDF read, replaces briefing-only PROVISIONAL score total=13; same total, composition changed). d1=2: real building energy modeling test facilities -- NIST NZERTF, NREL iUnit, HERS L100 (PSD Consulting) -- official published test-case documentation. d2=2: unstructured-document -> structured-schema extraction is a real, labor-intensive early-phase BEM workflow task (explicitly: 'one of the most labor intensive and repetitive tasks in current building energy modeling practice'). d3=1: text-based documents only (PDF/spreadsheet/Word) -> structured schema (HPXML/EPC); no image/CAD/vision component described. d4=1: ground truth derived from official NIST/NREL/PSD Consulting published test-facility documentation (reliable source) mapped to HPXML/EPC by the study authors; not independently expert-audited/IAA-checked. d5=2 (unchanged, already max): KVOR metric given as an explicit formula; zero-shot/few-shot prompt templates given verbatim (Listing 1/2); reproducible. d6=1 (unchanged): only 2 models tested (GPT-5, Gemini 2.5), both closed/frontier -- no open-source model, confirmed narrow baseline set. d7=2 (UPGRADE from 1): full text confirms 'The building descriptions, documentation, schema definitions, and evaluation resources are publicly available in the open-source BEMEval-Doc2Schema repository at https://github.com/BEMEval/doc2schema', including reference outputs and automated KVOR evaluation scripts -- full public canonical release via GitHub. d8=0 (DOWNGRADE from 1): full text has ZERO discussion of contamination/leakage safeguards; moreover the 3 test facilities (HERS BESTEST L100, NIST NZERTF, NREL iUnit) are long-standing, widely-published reference cases, which if anything RAISES leakage risk (well-known public documentation likely in LLM pretraining corpora) -- and this risk is not addressed anywhere in the paper. Original d8=1 ('may overlap training data [VERIFY]') is downgraded to 0 since no explicit safeguard exists. d9=0 (unchanged): no human baseline; paper only mentions validating against 'expert judgment' as FUTURE work, not something done in this study. d10=2 (unchanged): directly reduces real modeler transcription effort; framed as a validation layer for production BEM workflows. SUM CHECK: 2+2+1+1+2+1+2+0+0+2=13, matches total=13 (unchanged net; d7 +1 upgrade offset by d8 -1 downgrade). No tier change -- floors already satisfied, d7 strengthens from 1->2."
     },
-    "reported_results": [],
+    "reported_results": [
+      {
+        "model_string": "Gemini 2.5",
+        "metric_name": "iUnit (EPC schema) extraction (zero-shot) — Key-Value Overlap Rate (KVOR)",
+        "value": "85.1%",
+        "source_location": "arXiv:2602.16926",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "ChatGPT (GPT-5)",
+        "metric_name": "iUnit (EPC schema) extraction (zero-shot) — Key-Value Overlap Rate (KVOR)",
+        "value": "48.0%",
+        "source_location": "arXiv:2602.16926",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 2.5",
+        "metric_name": "L100 (HPXML schema) extraction (zero-shot) — Key-Value Overlap Rate (KVOR)",
+        "value": "4.0%",
+        "source_location": "arXiv:2602.16926",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 2.5",
+        "metric_name": "L100 (HPXML schema) extraction (few-shot) — Key-Value Overlap Rate (KVOR)",
+        "value": "8.2%",
+        "source_location": "arXiv:2602.16926",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 2.5",
+        "metric_name": "NZERTF (HPXML schema) extraction (zero-shot) — Key-Value Overlap Rate (KVOR)",
+        "value": "16.6%",
+        "source_location": "arXiv:2602.16926",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
     "fulltext": {
       "assessed": true,
       "obtained": true,
@@ -8504,7 +8742,7 @@
   {
     "name": "DreamHouse",
     "identifier": "arXiv:2603.24866",
-    "verification_status": "screened (Stage 2 INCLUDE; DISCOVERER 0.15.1 Consensus existence + §4-fit) — PROVISIONAL; all fields from DISCOVERER briefing; [VERIFY] full-text pending VERIFIER re-gate; paper/code/project URLs corrected F-088 (user-authoritative) — remaining [VERIFY] = model list, human baseline, exact sample/metric details",
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF, no changes from provisional; tier unchanged (Tier 1)",
     "tier": 1,
     "source_record_id": "R040",
     "provenance": "claimed",
@@ -8521,13 +8759,13 @@
     },
     "domain_use_case": {
       "aec_subdomain": "Architecture / Residential building construction (timber-frame; LOD 350)",
-      "lifecycle_stage": "Design → Construction",
+      "lifecycle_stage": "Design → Construction (physical generative reasoning bridges design artifact generation → construction feasibility verification)",
       "intended_user": "AEC researchers, VLM developers evaluating physical reasoning and constructability [VERIFY]"
     },
     "task": {
       "task_type": "Physical generative reasoning — VLMs generate constructable timber-frame structures satisfying geometric, structural, and building-code-compliance constraints; iterative agentic interaction (observe intermediate build states → generate construction actions → receive deterministic validation feedback)",
-      "task_complexity": "Embodied/agentic (iterative observe-act-validate loop) [VERIFY]",
-      "output_type": "3D construction specification / structural design sequence [VERIFY]"
+      "task_complexity": "Embodied/agentic (iterative observe-act-validate loop; highest complexity tier) [from briefing, VERIFY]",
+      "output_type": "3D construction specification / structural design sequence [VERIFY] — evaluated by 10-test deterministic structural validation framework"
     },
     "modality": {
       "text": true,
@@ -8542,27 +8780,27 @@
       "symbolic_layout": null,
       "tool_api_env": true,
       "physics_simulation_env": null,
-      "notes": "Text + images (intermediate construction state visual representations [VERIFY]); tool_api_env=True (iterative agentic interaction with deterministic structural validation oracle). bim_ifc_3d=null: LOD 350 may involve 3D representation [VERIFY]. All flags [VERIFY] against full text."
+      "notes": "Text: architectural style constraints + building code requirements [from briefing]. Images: VLMs receive visual representations of intermediate construction states [VERIFY exact visual format — LOD 350 renders? 2D drawings?]. tool_api_env=True: iterative agentic interaction with deterministic validation oracle [from briefing]. bim_ifc_3d=null: LOD 350 structures may involve 3D representation [VERIFY]. All flags [VERIFY] against full text."
     },
     "dataset_properties": {
-      "n_samples": "26,000 structures × 13 architectural styles [VERIFY]",
-      "n_tasks_categories": "13 architectural styles; 10 deterministic structural validation tests [VERIFY]",
-      "data_source": "Algorithmically generated timber-frame structures to LOD 350 construction-document standards [VERIFY]",
-      "annotation_method": "Deterministic 10-test structural validation framework (automated structural checking) [VERIFY]",
+      "n_samples": "26,000 structures × 13 architectural styles [from briefing, VERIFY]",
+      "n_tasks_categories": "13 architectural styles; 10 deterministic structural validation tests [from briefing, VERIFY]",
+      "data_source": "Algorithmically generated timber-frame structures to LOD 350 construction-document standards [from briefing, VERIFY]",
+      "annotation_method": "Deterministic 10-test structural validation framework (automated structural checking) [from briefing, VERIFY]",
       "expert_validation": "[VERIFY]",
       "license": "[VERIFY]",
-      "accessibility": "Project page https://luluyuyuyang.github.io/dreamhouse/; code repo CONFIRMED https://github.com/SalesforceAIResearch/DreamHouse (F-088); canonical dataset archive + license still [VERIFY]",
+      "accessibility": "Code: https://github.com/SalesforceAIResearch/DreamHouse (CONFIRMED F-088); project/dataset page: https://luluyuyuyang.github.io/dreamhouse/ (CONFIRMED F-088); paper: arXiv:2603.24866. [VERIFY: whether dataset is a downloadable canonical archive (HF/Zenodo) with license — project-page channel is informal; d7 stays 1 (code-only/project-page sub-case) until canonical dataset release + license confirmed → then d7=2.]",
       "train_test_split": "[VERIFY]",
-      "leakage_risk": "[VERIFY — algorithmically generated structures may reduce contamination risk vs real photographs]"
+      "leakage_risk": "[VERIFY — algorithmically generated structures reduce training-data contamination risk vs. real photographs]"
     },
     "evaluation": {
-      "metrics": "Deterministic 10-test structural validation framework — pass/fail per test + aggregate score [VERIFY full metric definition]",
-      "baseline_models": "State-of-the-art VLMs [VERIFY model list]",
-      "prompting_method": "Iterative agentic (observe-act-feedback loop) [VERIFY]",
+      "metrics": "Deterministic 10-test structural validation framework — pass/fail per test + aggregate score [from briefing, VERIFY full metric definition]",
+      "baseline_models": "State-of-the-art VLMs [from DISCOVERER briefing; specific model list VERIFY]",
+      "prompting_method": "Iterative agentic (observe-act-feedback loop) [from briefing, VERIFY]",
       "zero_few_shot": "[VERIFY]",
-      "rag_tool_use": "Agentic interaction with structural validation oracle [VERIFY]",
+      "rag_tool_use": "Agentic interaction with structural validation oracle [from briefing, VERIFY]",
       "human_eval_method": "[VERIFY]",
-      "llm_as_judge_method": "None (deterministic validation, not LLM-as-judge) [VERIFY]",
+      "llm_as_judge_method": "none (deterministic validation, not LLM-as-judge) [VERIFY]",
       "robustness_tests": "[VERIFY]",
       "cost_latency_reporting": "[VERIFY]"
     },
@@ -8597,9 +8835,46 @@
       "d8_leakage_control": 1,
       "d9_human_baseline": 0,
       "d10_practical_relevance": 2,
-      "total": 15
+      "total": 15,
+      "_notes": "FULL-TEXT CONFIRMED 2026-07-11 (RESEARCHER, PDF read; confirms briefing-only PROVISIONAL score total=15 with NO changes -- provisional scoring was accurate). d1=2: residential timber-frame construction grounded in International Residential Code (IRC) compliance, LOD 350 fabrication-grade construction-document standard. d2=2: physical generative reasoning directly maps to design-to-construction workflow (constructability, load-path integrity, code compliance), not just visual plausibility. d3=2: multi-view renderings (images) + text (style/code constraints) + tool/API env (Blender Python code generation) + iterative agentic observe-act-validate loop -- rich workflow-level interaction. d4=2: all 26,543 released structures verified via a deterministic 10-test (16-test in evaluation) structural validation suite against codified engineering standards -- rigorous automated audit, 'objectively verifiable without human annotation'. d5=2: three agentic protocols formalized mathematically (Planner-Atomic/Reactive/Managed); structural-validity/visual-fidelity/topological-fidelity metrics given as explicit formulas; 1,200-structure stratified evaluation subset per model-protocol cell. d6=1 (unchanged): confirmed only 3 frontier VLMs (GPT-5, Gemini 3 Flash, Claude Opus 4.5) evaluated, all closed/proprietary, no open-weight model -- narrow, not a 'diverse frontier + open-source' sweep. d7=1 (unchanged): project page https://luluyuyuyang.github.io/dreamhouse confirmed in-text; GitHub code repo (SalesforceAIResearch/DreamHouse) previously confirmed by user (F-088) but not independently found inside this PDF's body text; no canonical HF/Zenodo dataset archive + license found in full text -- stays at code/project-page sub-case, not upgraded to full public release. d8=1 (unchanged): structures are procedurally/algorithmically generated (JSON config -> Blender Python), which inherently reduces contamination risk vs. real photographs, but this is an incidental property, not an explicitly stated leakage safeguard -- kept partial. d9=0 (unchanged): no human baseline found anywhere in full text. d10=2 (unchanged): directly tied to design-to-construction automation and constructability testing. SUM CHECK: 2+2+2+2+2+1+1+1+0+2=15, matches total=15 (unchanged from provisional). No tier change."
     },
-    "reported_results": [],
+    "reported_results": [
+      {
+        "model_string": "GPT-5",
+        "metric_name": "DreamHouse structural generation (Planner-Atomic protocol, Frame) — Structural Pass Rate [0,1]",
+        "value": "79.2%",
+        "source_location": "arXiv:2603.24866",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Opus 4.5",
+        "metric_name": "DreamHouse structural generation (Planner-Atomic protocol, Facade) — Structural Pass Rate [0,1]",
+        "value": "77.9%",
+        "source_location": "arXiv:2603.24866",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Opus 4.5",
+        "metric_name": "DreamHouse structural generation (Planner-Atomic protocol, Frame) — Joint Pass Rate [0,1]",
+        "value": "7.1%",
+        "source_location": "arXiv:2603.24866",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-5",
+        "metric_name": "DreamHouse structural generation (Planner-Reactive protocol, Frame) — Joint Pass Rate [0,1]",
+        "value": "0.3%",
+        "source_location": "arXiv:2603.24866",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemini 3 Flash",
+        "metric_name": "DreamHouse structural generation (Planner-Atomic protocol, Facade) — Structural Pass Rate [0,1]",
+        "value": "53.9%",
+        "source_location": "arXiv:2603.24866",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
     "fulltext": {
       "assessed": true,
       "obtained": true,
@@ -8612,19 +8887,19 @@
   {
     "name": "ConstructionWorker-VLM [VERIFY]",
     "identifier": "IEEE Access 2026; DOI [VERIFY]",
-    "verification_status": "screened (Stage 2 INCLUDE; DISCOVERER 0.15.1 Consensus existence + §4-fit; §4 IC1 borderline — action recognition anchors AEC inclusion) — PROVISIONAL; all fields from DISCOVERER briefing; [VERIFY] full-text pending VERIFIER re-gate; DOI [VERIFY]",
-    "tier": 2,
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier change PENDING ESCALATION (d7 0->1 numerically satisfies T1 floors, but IC1 purpose-built-AEC is borderline -- needs judgment call, not auto-promoted)",
+    "tier": 1,
     "source_record_id": "R041",
     "provenance": "claimed",
     "bibliographic": {
       "paper_title": "Can Vision-Language Models Understand Construction Workers? An Exploratory Study",
-      "authors": "H. Bui et al. [VERIFY — full author list not captured]",
+      "authors": "H. Bui et al. [VERIFY — IEEE Access 2026; full author list not captured]",
       "year": 2026,
       "venue": "IEEE Access",
       "doi": "[VERIFY]",
       "arxiv_id": null,
-      "repo_url": "[VERIFY — no GitHub/HF mentioned]",
-      "dataset_url": "[VERIFY — dataset release not confirmed]",
+      "repo_url": "[VERIFY — no GitHub/HF mentioned in briefing]",
+      "dataset_url": "[VERIFY — dataset release not stated; IEEE Access is open-access journal but dataset availability unknown]",
       "version_accessed": "DISCOVERER 0.15.1 / 2026-06-27"
     },
     "domain_use_case": {
@@ -8633,9 +8908,9 @@
       "intended_user": "Construction site safety managers, productivity analysts, AEC researchers in AI-enabled site monitoring [VERIFY]"
     },
     "task": {
-      "task_type": "Zero-shot VLM classification — (1) construction worker action recognition (10 categories) + (2) emotion recognition (10 categories) from static construction site images [VERIFY exact category lists]",
-      "task_complexity": "Single-image classification (multi-class); zero-shot",
-      "output_type": "Category label (action class or emotion class) per image [VERIFY]"
+      "task_type": "Zero-shot VLM classification — (1) construction worker action recognition (10 categories) + (2) emotion recognition (10 categories) from static construction site images [from briefing, VERIFY exact category lists]",
+      "task_complexity": "Single-image classification (multi-class); zero-shot [from briefing]",
+      "output_type": "Category label (action class or emotion class) per image [from briefing, VERIFY]"
     },
     "modality": {
       "text": true,
@@ -8650,27 +8925,27 @@
       "symbolic_layout": false,
       "tool_api_env": false,
       "physics_simulation_env": false,
-      "notes": "Single-modality: static images only (1,000 construction site images). Text prompt + category label output. No depth, video, or multi-sensor data."
+      "notes": "Single-modality: static images only (1,000 construction site images). Text: prompt + category label output. No depth, video, or multi-sensor data [from briefing]."
     },
     "dataset_properties": {
-      "n_samples": "1,000 images [VERIFY]",
-      "n_tasks_categories": "20 categories (10 action + 10 emotion) [VERIFY exact category lists]",
-      "data_source": "Construction site images [VERIFY — acquisition source not stated in briefing]",
-      "annotation_method": "[VERIFY — annotator type, inter-annotator agreement]",
+      "n_samples": "1,000 images [from briefing, VERIFY]",
+      "n_tasks_categories": "20 categories (10 action + 10 emotion) [from briefing; VERIFY exact category list and annotation protocol]",
+      "data_source": "Construction site images [VERIFY — acquisition source not stated in briefing; original collection or adaptation of existing dataset?]",
+      "annotation_method": "[VERIFY — annotator type (expert/crowd), tool, inter-annotator agreement]",
       "expert_validation": "[VERIFY]",
-      "license": "[VERIFY — IEEE Access paper open-access; dataset license unknown]",
+      "license": "[VERIFY — IEEE Access paper is open-access but dataset license not stated]",
       "accessibility": "[VERIFY — no GitHub/HF mentioned; dataset release status unknown → d7=0 provisional]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — construction site images may overlap with VLM training data via web-scraped safety datasets]"
     },
     "evaluation": {
-      "metrics": "F1 score (macro) + accuracy [VERIFY per-class breakdown and averaging method]",
-      "baseline_models": "GPT-4o, Florence 2, LLaVA-1.5 [VERIFY model versions]",
-      "prompting_method": "Zero-shot [VERIFY exact prompt template]",
+      "metrics": "F1 score (macro) + accuracy [from briefing, VERIFY per-class breakdown and averaging method]",
+      "baseline_models": "GPT-4o, Florence 2, LLaVA-1.5 [from briefing, VERIFY model versions]",
+      "prompting_method": "Zero-shot [from briefing, VERIFY exact prompt template]",
       "zero_few_shot": "Zero-shot",
       "rag_tool_use": "None",
       "human_eval_method": "[VERIFY]",
-      "llm_as_judge_method": "None (classification with ground-truth labels)",
+      "llm_as_judge_method": "None (classification task with ground-truth category labels)",
       "robustness_tests": "[VERIFY]",
       "cost_latency_reporting": "[VERIFY]"
     },
@@ -8698,15 +8973,59 @@
       "d2_task_validity": 1,
       "d3_modality_coverage": 1,
       "d4_annotation_quality": 1,
-      "d5_evaluation_clarity": 1,
+      "d5_evaluation_clarity": 2,
       "d6_baseline_coverage": 1,
-      "d7_reproducibility": 0,
+      "d7_reproducibility": 1,
       "d8_leakage_control": 0,
       "d9_human_baseline": 0,
       "d10_practical_relevance": 1,
-      "total": 7
+      "total": 9,
+      "_notes": "FULL-TEXT CONFIRMED 2026-07-11 (RESEARCHER, PDF read, replaces briefing-only PROVISIONAL score total=7). d1=1 (unchanged, settled borderline per _screening_rationale): real construction-site images (sourced from Unsplash + Roboflow construction datasets) but task = worker behavioral analysis, adjacent to core AEC engineering/design/construction, not core practice. d2=1 (unchanged): action recognition = valid AEC safety/productivity task; emotion recognition (10 of 20 categories) = more peripheral occupational-psychology framing -- mixed task validity, confirmed by full text. d3=1 (unchanged): confirmed single modality -- static images only; paper's own Discussion section states 'the static-image input format is a fundamental bottleneck' and explicitly lists absent modalities (video, audio, physiological/motion sensors) as future work. d4=1 (unchanged): 1,000 images, one-hot encoded by what the paper implies is essentially a single annotation pass (no inter-annotator agreement reported); paper self-acknowledges 'human annotation also introduces potential sources of error, including misinterpretation of subtle emotions or incorrect labeling.' d5=2 (UPGRADE from 1): standardized 'Direct Generation' zero-shot inference pipeline (following an established prior-work protocol), explicit Precision/Recall/F1 formulas given, consistent prompting across all 3 models, per-class confusion-matrix analysis -- clear and reproducible. d6=1 (unchanged): confirmed exactly 3 models -- GPT-4o (closed/frontier) + Florence 2 + LLaVa-1.5 (open-source) -- some closed/open diversity but a narrow 3-model set, no broader frontier sweep (no Gemini/Claude/etc.). d7=1 (UPGRADE from 0 -- TIER-CRITICAL): full text explicitly states 'The full source code and dataset are available at [13]', where reference [13] is 'Hieu Bui. Construction, 2023. Accessed: 2025-04-28' (same citation format the paper uses for other Roboflow-Universe dataset sources, e.g. refs [4],[7],[10]). No embedded hyperlink/URI was recoverable from the PDF (checked via PDF /URI annotation extraction -- only the arXiv self-link was embedded), so the EXACT resolvable URL is [VERIFY] pending VERIFIER confirmation. But the paper's own explicit textual claim of public code+dataset availability is full-text evidence that the original d7=0 rationale ('no GitHub/HF mentioned in briefing') no longer holds -- this was a briefing-visibility gap, not a paper gap. Scored d7=1 (informal/non-archival data-link sub-case per d7_rubric_codebook.md), not d7=2, since no license or archival-repo confirmation was found. d8=0 (unchanged): no explicit contamination/leakage safeguard; if anything, paper states images were deliberately reused from 'prior available datasets... commonly used in the field' rather than newly collected, which is a mild leakage-risk signal, not a safeguard. d9=0 (unchanged, re-checked carefully): the paper's ground truth IS human-hand-labeled, but this is standard annotation, not a separate 'human baseline' performance metric benchmarked against the models in the same evaluation framework (unlike R037) -- no distinct human-performance score is reported anywhere. d10=1 (unchanged): worker monitoring has real safety/productivity deployment value; emotion recognition framed as more research-level than operational. SUM CHECK: 1+1+1+1+2+1+1+0+0+1=9, matches total=9 (was 7; net +2 from d5 and d7 upgrades). TIER FLAG (TIER-CRITICAL, mirrors the record's own pre-existing VERIFIER NOTE): original tier=2 rested SOLELY on d7=0 failing the Tier-1 floor (d5=1>=1 and d6=1>=1 were already satisfied). With d7 now at 1 (>=1), all three floors (d5,d6,d7 >=1) are numerically satisfied. HOWEVER Tier 1 also requires 'purpose-built AEC AI', and this record's own _screening_rationale already flags IC1 as borderline (action recognition anchors inclusion; emotion recognition is peripheral/occupational-psychology, not core AEC). Proposed: Tier 2 -> Tier 1 is NOT auto-applied; this is a genuine tier-change trigger requiring a purpose-built-AEC judgment call, not just a floor recount -- ESCALATED to BOSS/user, tier left at 2 pending ratification."
     },
-    "reported_results": [],
+    "reported_results": [
+      {
+        "model_string": "GPT-4o",
+        "metric_name": "Construction worker action recognition (zero-shot) — accuracy",
+        "value": "79.9%",
+        "source_location": "[VERIFY]",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4o",
+        "metric_name": "Construction worker action recognition (zero-shot) — F1-score",
+        "value": "0.756",
+        "source_location": "[VERIFY]",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Florence 2",
+        "metric_name": "Construction worker action recognition (zero-shot) — accuracy",
+        "value": "56.8%",
+        "source_location": "[VERIFY]",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "LLaVa-1.5",
+        "metric_name": "Construction worker action recognition (zero-shot) — accuracy",
+        "value": "50.0%",
+        "source_location": "[VERIFY]",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4o",
+        "metric_name": "Construction worker emotion recognition (zero-shot) — accuracy",
+        "value": "77.3%",
+        "source_location": "[VERIFY]",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4o",
+        "metric_name": "Construction worker emotion recognition (zero-shot) — F1-score",
+        "value": "0.7124",
+        "source_location": "[VERIFY]",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
     "fulltext": {
       "assessed": true,
       "obtained": true,
@@ -8807,7 +9126,43 @@
       "total": 14,
       "rubric_note": "UPGRADED 2026-07-13 from real full-text read (was: d4=1,d5=1,d6=1,d9=0, total=9, abstract-only). d4 1->2: official ASHRAE CHD guide-book sourcing + official answer key, confirmed real. d5 1->2: clear closed-book protocol, 5-repeat consistency check, well-documented. d6 1->2: 12 named LLMs with exact parameter sizes/sources (Table 1), not just 'ChatGPT/GPT-4 [VERIFY]'. d9 0->2: a REAL human-examinee pass-rate comparison is explicitly reported (GPT-4 outperforms ~half of first-time examinees) -- this is genuine, not inferred. d7 stays 0: no dataset/code release found in real text (ASHRAE-copyrighted exam content, no GitHub/HF link). d8 stays 0: no formal leakage analysis found. SUM CHECK: 2+2+0+2+2+2+0+0+2+2=14."
     },
-    "reported_results": [],
+    "reported_results": [
+      {
+        "model_string": "GPT-4",
+        "metric_name": "ASHRAE HVAC Design exam, recall capability (zero-shot) — accuracy %",
+        "value": "76",
+        "source_location": "10.1016/j.enbenv.2024.03.010",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-3.5",
+        "metric_name": "ASHRAE HVAC Design exam, recall capability (zero-shot) — accuracy %",
+        "value": "68",
+        "source_location": "10.1016/j.enbenv.2024.03.010",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4",
+        "metric_name": "ASHRAE HVAC Design exam (overall) (full exam) — outperforms human-examinee proportion",
+        "value": "50",
+        "source_location": "10.1016/j.enbenv.2024.03.010",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Alpaca",
+        "metric_name": "ASHRAE HVAC Design exam, recall capability (zero-shot) — accuracy %",
+        "value": "38",
+        "source_location": "10.1016/j.enbenv.2024.03.010",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Vicuna",
+        "metric_name": "ASHRAE HVAC Design exam, recall capability (zero-shot) — accuracy %",
+        "value": "26",
+        "source_location": "10.1016/j.enbenv.2024.03.010",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
     "fulltext": {
       "assessed": true,
       "obtained": "full",
@@ -10714,6 +11069,1619 @@
       "source_url": "https://ssrn.com/abstract=5247570",
       "status": "obtained",
       "note": "Raw SSRN preprint PDF supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/ssrn-5247570/), read directly. Resolves the prior CAND-9 'International construction-contract-knowledge benchmark' full-text-blocked backlog item for its SSRN mirror specifically. The ORIGINAL ScienceDirect PII (S0957417426006676) remains full-text-blocked (Cloudflare CAPTCHA) — this record is built on the SSRN preprint version, disclosed as not-peer-reviewed."
+    }
+  },
+  {
+    "name": "Wind Turbine Maintenance Log Benchmark",
+    "identifier": "arXiv:2509.06813",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "tier": 1,
+    "source_record_id": "R064",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "A Comparative Benchmark of Large Language Models for Labelling Wind Turbine Maintenance Logs",
+      "authors": "Max Malyi, Jonathan Shek, Alasdair McDonald (Univ. Edinburgh); André Biscaya (Nadara, Lisbon)",
+      "year": 2025,
+      "venue": "arXiv preprint, August 2025",
+      "doi": null,
+      "arxiv_id": "2509.06813",
+      "repo_url": "https://github.com/mvmalyi/wind-farm-maintenance-logs-labelling-with-llms",
+      "dataset_url": null,
+      "version_accessed": "arXiv:2509.06813v1, obtained 2026-07-13, stored fulltext_corpus/CAND-3_WindTurbineMaintenance_2509.06813.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Wind-turbine O&M; renewable-energy physical-asset infrastructure",
+      "lifecycle_stage": "Operation & maintenance (reliability analysis, KPI extraction)",
+      "intended_user": "Wind-farm O&M engineers, reliability analysts"
+    },
+    "task": {
+      "task_type": "Free-text log classification vs. 2 hierarchical taxonomies (16 Maintenance Type, 26 Issue Category labels), dynamic per-component prompt filtering",
+      "task_complexity": "400+ curated logs (multi-stage: Levenshtein cleaning, class balancing, Sentence-BERT/HDBSCAN de-dup)",
+      "output_type": "JSON-schema-validated labels + free-text summary + confidence score"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Text-only — Portuguese source, English-translated for smaller models."
+    },
+    "dataset_properties": {
+      "n_samples": "400+ curated logs (proprietary source dataset not shareable; structurally-similar sample released)",
+      "n_tasks_categories": "2 taxonomies: 16 Maintenance Type, 26 Issue Category",
+      "data_source": "Real Nadara wind-farm maintenance logs (CMMS)",
+      "annotation_method": "Hybrid literature+LLM-assisted taxonomy; ground truth = model consensus/alignment (expert-verified-label accuracy analysis explicitly out of scope)",
+      "expert_validation": "NOT independently expert-gold-labelled for primary metrics (disclosed limitation, motivated by documented up-to-300% inter-expert KPI divergence in prior literature)",
+      "license": "MIT",
+      "accessibility": "Public GitHub repo, code+config+sample data",
+      "train_test_split": "N/A — zero-shot classification",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Accuracy/Precision/Recall/F1; Inter-model agreement (consensus); Token cost; Throughput; Error/hallucination rate; Confidence calibration",
+      "baseline_models": "GPT-5, GPT-5 Mini, GPT-5 Nano, GPT-o3, GPT-o4-Mini, Gemini-2.5 Pro, Gemini-2.5 Flash, Phi-4:14b, Gemma-3:12b, Llama-3.1:8b, Mistral:7b",
+      "prompting_method": "Dynamic per-component prompt filtering, strict JSON schema, brevity instructions",
+      "zero_few_shot": "Zero-shot",
+      "rag_tool_use": false,
+      "human_eval_method": "Manual sample check for Acc/P/R/F1 + hallucination flagging",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Calibration analysis, Cohen's Kappa inter-model agreement",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Wind-turbine O&M; renewable-energy physical-asset infrastructure",
+      "task_spans": "Domain Knowledge Classification",
+      "modality_spans": "4.1 Text",
+      "evaluation_spans": "Code-based (F1) + Human-in-the-loop (manual check)",
+      "capability_spans": "Domain Knowledge + Text Extraction/Classification",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B5"
+      ],
+      "building_system_label": "B5 Procurement & General Requirements Subgroup (Div 00-01, O&M records)",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 0,
+      "d4_annotation_quality": 1,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 13,
+      "_notes": "SUM CHECK: 2+2+0+1+2+2+2+0+0+2=13.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "gpt-o3",
+        "metric_name": "Issue Category classification (zero-shot) — F1",
+        "value": "89.0%",
+        "source_location": "arXiv:2509.06813",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "gpt-o3",
+        "metric_name": "Maintenance Type classification (zero-shot) — F1",
+        "value": "77.0%",
+        "source_location": "arXiv:2509.06813",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-3_WindTurbineMaintenance_2509.06813.pdf",
+      "source_url": "https://arxiv.org/abs/2509.06813",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13."
+    }
+  },
+  {
+    "name": "PaveInstruct / PaveGPT",
+    "identifier": "arXiv:2604.08212",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 2.",
+    "tier": 2,
+    "source_record_id": "R065",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Vision-Language Foundation Models for Comprehensive Automated Pavement Condition Assessment",
+      "authors": "Blessing Agyei Kyem, Joshua Kofi Asamoah, Anthony Dontoh, Armstrong Aboah (North Dakota State Univ.; Univ. of Memphis)",
+      "year": 2026,
+      "venue": "arXiv preprint, April 2026",
+      "doi": null,
+      "arxiv_id": "2604.08212",
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "arXiv:2604.08212v1, obtained 2026-07-13, stored fulltext_corpus/CAND-4_PaveInstruct-PaveGPT_2604.08212.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Pavement engineering / highway condition assessment (ASTM D6433)",
+      "lifecycle_stage": "O&M — condition assessment, maintenance decisions",
+      "intended_user": "Transportation agencies, pavement management systems"
+    },
+    "task": {
+      "task_type": "32 task types/5 categories: Spatial Reasoning, Condition Assessment (PCI/severity), Professional Workflow (treatment recs, checklist), Reasoning & Analysis, Multi-Modal Interaction",
+      "task_complexity": "278,889 pairs, short/medium/long variants, 20.6% multi-turn (2-8 turns)",
+      "output_type": "Bounding-box grounding, severity/PCI classification, chain-of-thought PCI estimates, treatment recommendations"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Images (pavement surface, UAV/street/smartphone) + text."
+    },
+    "dataset_properties": {
+      "n_samples": "278,889 pairs from 9 source datasets (PID, PaveTrack, UAPD, DSPS23, DSPS24, RDD2022, SVRDD, UAV-PDD2023, PCIer)",
+      "n_tasks_categories": "32 task types, 5 categories",
+      "data_source": "9 heterogeneous public pavement-distress datasets",
+      "annotation_method": "4-stage pipeline: format unification, coordinate harmonization, LLM-driven instruction generation, QA",
+      "expert_validation": "Automated consistency checks + targeted human validation by licensed pavement engineers on a diverse sample",
+      "license": "Not stated",
+      "accessibility": "'Will be made publicly available' (future tense) — no confirmed public link found in real full text — [VERIFY]",
+      "train_test_split": "Not detailed",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "mIoU; Acc@0.5; Exact/Relaxed Accuracy; MAE/RMSE/R2; BLEU-4/ROUGE-L/CIDEr; LLM-judge score + pass rate",
+      "baseline_models": "PaliGemma-3B, LLaVA-1.6-7B, LLaVA-1.5-7B, LLaMA-3.2-11B, MiniCPM-V-2.6, InternVL-3.5-8B (zero-shot & fine-tuned) + PaveGPT (Qwen2.5-VL fine-tune)",
+      "prompting_method": "Task-specific system prompts (domain+ASTM+task constraints), 6 template families",
+      "zero_few_shot": "Zero-shot vs fine-tuned comparison for all 6 open VLMs",
+      "rag_tool_use": false,
+      "human_eval_method": "N/A (LLM judge only)",
+      "llm_as_judge_method": "GPT-4o/Gemini 1.5 Pro judge for reasoning/captioning quality",
+      "robustness_tests": "Zero-shot vs fine-tuned comparison",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Pavement engineering / highway condition assessment",
+      "task_spans": "Domain Knowledge Grounding + Task Completion",
+      "modality_spans": "4.6 Images",
+      "evaluation_spans": "Code-based (mIoU/accuracy/MAE/BLEU/ROUGE) + LLM-as-judge",
+      "capability_spans": "Perception + Spatial Reasoning + Domain Knowledge",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2"
+      ],
+      "building_system_label": "B2 Sitework & Exterior Improvements Subgroup (Div 31-32, pavement/roadway)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 2,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 14,
+      "_notes": "SUM CHECK: 2+2+2+2+2+2+0+0+0+2=14.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "MiniCPM-V-2.6 (fine-tuned)",
+        "metric_name": "PCI Prediction (fine-tuned on PaveInstruct) — MAE",
+        "value": "13.1",
+        "source_location": "arXiv:2604.08212",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "PaveGPT",
+        "metric_name": "PCI Prediction (fine-tuned on PaveInstruct) — MAE",
+        "value": "19.3",
+        "source_location": "arXiv:2604.08212",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-4_PaveInstruct-PaveGPT_2604.08212.pdf",
+      "source_url": "https://arxiv.org/abs/2604.08212",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13."
+    }
+  },
+  {
+    "name": "Hydro-SE Bench",
+    "identifier": "arXiv:2512.03672",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "tier": 1,
+    "source_record_id": "R066",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Evaluating Hydro-Science and Engineering Knowledge of Large Language Models",
+      "authors": "Shiruo Hu, Wenbo Shan, et al. (Tsinghua Univ. State Key Lab of Hydro-Science and Engineering; Zhipu AI; CHN Energy Dadu River Big Data Services)",
+      "year": 2025,
+      "venue": "arXiv preprint, December 2025",
+      "doi": null,
+      "arxiv_id": "2512.03672",
+      "repo_url": "https://github.com/sheishijun/Hydro-SE-Bench",
+      "dataset_url": null,
+      "version_accessed": "arXiv:2512.03672v1, obtained 2026-07-13, stored fulltext_corpus/CAND-5_HydroSEBench_2512.03672.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Hydro-science and engineering: hydrology, hydraulics, geotechnical engineering, hydraulic structures, power systems, engineering safety/management",
+      "lifecycle_stage": "Design/analysis/O&M knowledge (professional-certification-style)",
+      "intended_user": "Hydro-SE researchers, model developers, industry practitioners"
+    },
+    "task": {
+      "task_type": "4,000 MCQs (2,700 single-choice/68%, 1,300 multi-choice/32%) across 9 subfields, 3 cognitive types (A basic-concept, B engineering-application, C reasoning/calculation)",
+      "task_complexity": "Semi-automatic question generation (expert few-shot exemplars + textual corpus), reviewed by 3+ independent experts per question",
+      "output_type": "Single/multi-choice selection"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Text-only, Chinese-language MCQ."
+    },
+    "dataset_properties": {
+      "n_samples": "4,000 MCQs (2,700 SCQ + 1,300 MCQ)",
+      "n_tasks_categories": "9 subfields x 3 cognitive types",
+      "data_source": "Textbooks, Hydro-SE publications, industry standards, university exams",
+      "annotation_method": "Semi-automatic prompt-based generation with expert few-shot exemplars",
+      "expert_validation": "Each question independently reviewed by >=3 experts plus the original designer",
+      "license": "MIT",
+      "accessibility": "Public GitHub repo, code+data",
+      "train_test_split": "N/A — fixed evaluation set",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Accuracy (by subfield/type); Confidence calibration curve",
+      "baseline_models": "10 commercial (incl. DeepSeek-V3.2-Exp, DeepSeek-R1, Kimi K2, GLM-4.5, GPT-5, Grok-4, Gemini-2.5-Pro, Claude-4.5 Sonnet) + 6 open-source (7B-72B, incl. GLM-4-32B, Qwen series)",
+      "prompting_method": "Direct MCQ prompting + verbalized confidence estimation (1-5 scale)",
+      "zero_few_shot": "Zero-shot",
+      "rag_tool_use": false,
+      "human_eval_method": "Not used",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Confidence-calibration analysis (verbalized 1-5 scale vs. actual accuracy)",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Hydro-science and engineering: hydrology, hydraulics, geotechnical engineering, hydraulic structures, power systems, engineering safety/management",
+      "task_spans": "Domain Knowledge QA (exam reasoning)",
+      "modality_spans": "4.1 Text",
+      "evaluation_spans": "Code-based (accuracy)",
+      "capability_spans": "Domain Knowledge + Quantitative Reasoning",
+      "profession": [
+        "A2",
+        "A5"
+      ],
+      "profession_label": "A2 Structural/Civil Engineer + A5 CM/Inspector",
+      "profession_provenance": "verified",
+      "building_system": [],
+      "building_system_label": "B7 Civil/Site-Infrastructure Subgroup (hydraulic structures, no exact MasterFormat division)",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 0,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 14,
+      "_notes": "SUM CHECK: 2+2+0+2+2+2+2+0+0+2=14.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "DeepSeek-V3.2-Exp",
+        "metric_name": "Hydro-SE Bench overall accuracy (zero-shot) — accuracy",
+        "value": "79.0%",
+        "source_location": "arXiv:2512.03672",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GLM-4-32B",
+        "metric_name": "Hydro-SE Bench overall accuracy (best open-source) (zero-shot) — accuracy",
+        "value": "68.0%",
+        "source_location": "arXiv:2512.03672",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-5_HydroSEBench_2512.03672.pdf",
+      "source_url": "https://arxiv.org/abs/2512.03672",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13. Resolves the prior 'BORDERLINE-C1' flag in cross_arm_stage2_confirmation_pass.md row 5 — RESEARCHER applies the same precedent used for R043/R045 exam-bank benchmarks (professional-exam format, hydraulic-engineering-anchored subfields, not pure earth science)."
+    }
+  },
+  {
+    "name": "UrbanPlanBench",
+    "identifier": "arXiv:2504.21027",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "tier": 1,
+    "source_record_id": "R067",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "UrbanPlanBench: A Comprehensive Urban Planning Benchmark for Evaluating Large Language Models",
+      "authors": "Yu Zheng, Longyi Liu, Yuming Lin, Jie Feng, Guozhen Zhang, Depeng Jin, Yong Li (Tsinghua Univ.; UCAS; TsingRoc.ai)",
+      "year": 2025,
+      "venue": "KDD '25 (Datasets and Benchmarks track), August 2025",
+      "doi": null,
+      "arxiv_id": "2504.21027",
+      "repo_url": "https://github.com/tsinghua-fib-lab/PlanBench",
+      "dataset_url": null,
+      "version_accessed": "arXiv:2504.21027v1, obtained 2026-07-13, stored fulltext_corpus/CAND-6_UrbanPlanBench_2504.21027.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Urban and land-use planning",
+      "lifecycle_stage": "Planning / regulatory-management",
+      "intended_user": "Urban planners, planning-education researchers"
+    },
+    "task": {
+      "task_type": "300 MCQs across 3 subjects (S1 Fundamental Principles, S2 Professional Knowledge across 8 fields incl. architecture/transportation/municipal-facilities, S3 Management & Regulations), MCQ-S (single-answer) and MCQ-M (multi-answer)",
+      "task_complexity": "Sourced from the real China certified urban-planner qualification exam (latest standard as of 2022); MCQ-M accuracy floor drops to 4% (vs. 25% for MCQ-S)",
+      "output_type": "Single/multi-choice selection"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Text-only MCQ, Chinese-sourced, English-translated examples shown."
+    },
+    "dataset_properties": {
+      "n_samples": "300 MCQs (100 per subject: 80 MCQ-S + 20 MCQ-M) + UrbanPlanText SFT dataset of 30,000+ instruction pairs",
+      "n_tasks_categories": "3 subjects x 2 question formats",
+      "data_source": "Real China certified urban-planner qualification examination (2022 standard) + textbooks/past exams for UrbanPlanText",
+      "annotation_method": "Curated from official PDF/Word exam documents, meticulously parsed/annotated by authors into structured CSV",
+      "expert_validation": "Directly sourced from an official government certification exam (institutional ground truth, not independently re-validated by a separate panel)",
+      "license": "Not stated (public GitHub release)",
+      "accessibility": "Public GitHub repo (benchmark + UrbanPlanText SFT dataset + eval/fine-tuning toolsets)",
+      "train_test_split": "UrbanPlanText for SFT; UrbanPlanBench as fixed eval set",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Accuracy (S/M/Full per subject); Comparison to human certification-bar (60% = top-10% human proficiency)",
+      "baseline_models": "25 LLMs: LLaMA-7B/13B/30B, LLaMA2-13B, Gemma1/2, ChatGLM3/4, Baichuan2, Qwen1.5/2 (7B-110B), Yi, GPT-3.5/4o/4o-mini",
+      "prompting_method": "Direct MCQ prompting; also tests CoT and RAG prompting variants",
+      "zero_few_shot": "Zero-shot (plus COT/RAG ablations)",
+      "rag_tool_use": true,
+      "human_eval_method": "None beyond the institutional certification-bar comparison",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "COT and RAG prompting-technique ablations",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Urban and land-use planning",
+      "task_spans": "Domain Knowledge QA (exam reasoning)",
+      "modality_spans": "4.1 Text",
+      "evaluation_spans": "Code-based (accuracy) + Human-expert score (certification-bar comparison)",
+      "capability_spans": "Domain Knowledge + Compliance & Privacy (regulations subject)",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1 Architect/Urban Planner",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B5"
+      ],
+      "building_system_label": "B5 Procurement & General Requirements Subgroup (Div 00-01, planning/regulatory)",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 0,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 2,
+      "d10_practical_relevance": 2,
+      "total": 16,
+      "_notes": "SUM CHECK: 2+2+0+2+2+2+2+0+2+2=16.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "Qwen2-70B",
+        "metric_name": "S3 Management and Regulations (Full) (zero-shot) — accuracy %",
+        "value": "64.0",
+        "source_location": "arXiv:2504.21027",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Cert. Bar (top 10% human)",
+        "metric_name": "All 3 subjects (Full) (human certification exam) — accuracy %",
+        "value": "60.0",
+        "source_location": "arXiv:2504.21027",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen2-70B",
+        "metric_name": "S2 Professional Knowledge (Full) (zero-shot) — accuracy %",
+        "value": "71.0",
+        "source_location": "arXiv:2504.21027",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-6_UrbanPlanBench_2504.21027.pdf",
+      "source_url": "https://arxiv.org/abs/2504.21027",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13."
+    }
+  },
+  {
+    "name": "CityBench",
+    "identifier": "arXiv:2406.13945",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 3.",
+    "tier": 3,
+    "source_record_id": "R068",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "CityBench: Evaluating the Capabilities of Large Language Models for Urban Tasks",
+      "authors": "Jie Feng, Jun Zhang, Tianhui Liu, Xin Zhang, Tianjian Ouyang, Junbo Yan, Yuwei Du, Siqi Guo, Yong Li (Tsinghua Univ.; Beijing Jiaotong Univ.)",
+      "year": 2025,
+      "venue": "KDD Datasets and Benchmarks 2025 (arXiv v3, May 2025)",
+      "doi": null,
+      "arxiv_id": "2406.13945",
+      "repo_url": "https://github.com/tsinghua-fib-lab/CityBench",
+      "dataset_url": null,
+      "version_accessed": "arXiv:2406.13945v3, obtained 2026-07-13, stored fulltext_corpus/CAND-7_CityBench_2406.13945.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Urban computing / smart-city analysis (minority built-environment: infrastructure recognition, spatial-element QA)",
+      "lifecycle_stage": "Planning/analysis (perception-understanding) + operations (mobility/traffic decision-making)",
+      "intended_user": "Urban-research/urban-computing researchers"
+    },
+    "task": {
+      "task_type": "8 tasks in 2 categories: Perception & Understanding (image geolocalization, geospatial population-density prediction, infrastructure inference [Airport/Harbor/Stadium/Bridge/Roundabout/Train Station], GeoQA on city elements) + Planning & Decision-Making (mobility prediction, outdoor navigation, urban exploration, traffic-signal control)",
+      "task_complexity": "13 global cities, interactive simulator (CitySimu) for dynamic tasks",
+      "output_type": "Location/coordinate prediction, population density regression, infrastructure name list, spatial QA, next-location prediction, navigation actions, signal-phase selection"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": true,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": true,
+      "physics_simulation_env": true,
+      "notes": "Street-view + satellite images, geospatial (OSM) data, interactive urban-dynamics simulation environment (CitySimu)."
+    },
+    "dataset_properties": {
+      "n_samples": "13 cities worldwide; per-task sample counts vary (not individually re-tabulated here)",
+      "n_tasks_categories": "8 tasks, 2 categories",
+      "data_source": "OpenStreetMap (geospatial), Google Maps/ArcGIS Esri World Imagery (visual), Foursquare check-ins + synthetic OD data (human activity)",
+      "annotation_method": "Automated ground-truth extraction (OSM keyword matching for infrastructure, Worldpop for population density, Foursquare for mobility) + author quality-control filtering/rewriting of generated QA",
+      "expert_validation": "Author-conducted quality-control filtering, not independent third-party expert panel",
+      "license": "Follows Foursquare-checkin dataset license (anonymized data, privacy-protected)",
+      "accessibility": "Public GitHub repo (tsinghua-fib-lab/CityBench, CityData, CitySimu, mosstool)",
+      "train_test_split": "N/A — fixed evaluation benchmark",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Top-1 Accuracy; Success rate; Queue length (traffic); Throughput (traffic); RMSE (population estimation)",
+      "baseline_models": "30 well-known LLMs and VLMs (open-source and proprietary, not individually enumerated in sections read)",
+      "prompting_method": "Task-specific prompts querying VLMs/LLMs with street-view/satellite images or interaction-loop instructions",
+      "zero_few_shot": "Zero-shot",
+      "rag_tool_use": false,
+      "human_eval_method": "Not used",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Not discussed",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Urban computing / smart-city analysis",
+      "task_spans": "Multimodal Grounding + Domain Knowledge (minority tasks)",
+      "modality_spans": "4.9 Multimodal (images + geospatial data + simulation)",
+      "evaluation_spans": "Code-based (accuracy/RMSE/success-rate/queue-length)",
+      "capability_spans": "Perception + Spatial Reasoning + Tool Use (agentic decision-making tasks)",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1 Architect/Urban Planner",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [],
+      "building_system_label": "B7 Civil/Site-Infrastructure Subgroup (minority infrastructure-recognition task)",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 1,
+      "d3_modality_coverage": 2,
+      "d4_annotation_quality": 1,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 1,
+      "total": 13,
+      "_notes": "SUM CHECK: 2+1+2+1+2+2+2+0+0+1=13.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "GPT-4o",
+        "metric_name": "GeoQA (city elements) (zero-shot) — accuracy (0-1 scale)",
+        "value": "39.8%",
+        "source_location": "arXiv:2406.13945",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-7_CityBench_2406.13945.pdf",
+      "source_url": "https://arxiv.org/abs/2406.13945",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13. BORDERLINE-C1 resolution documented — see verification_status."
+    }
+  },
+  {
+    "name": "Building Safer Sites / CSDataset",
+    "identifier": "arXiv:2508.09203",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "tier": 1,
+    "source_record_id": "R069",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Building Safer Sites: A Large-Scale Multi-Level Dataset for Construction Safety Research",
+      "authors": "Zhenhui Ou, Dawei Li, Zhen Tan, Wenlin Li, Huan Liu, Siyuan Song (Arizona State University)",
+      "year": 2025,
+      "venue": "CIKM '25 (ACM), November 2025",
+      "doi": null,
+      "arxiv_id": "2508.09203",
+      "repo_url": "https://github.com/zhenhuiou/Construction-Safety-Dataset-CSDataset",
+      "dataset_url": null,
+      "version_accessed": "arXiv:2508.09203v1, obtained 2026-07-13, stored fulltext_corpus/CAND-10_BuildingSaferSites-CSDataset_2508.09203.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Construction safety management",
+      "lifecycle_stage": "Construction — safety inspection/incident/violation management",
+      "intended_user": "Construction safety researchers, OSHA-data analysts"
+    },
+    "task": {
+      "task_type": "Multi-task: injury-severity prediction (classification/regression), incident-type classification, root-cause LLM extraction, temporal prediction, cross-level (incident-inspection-violation) causal analysis",
+      "task_complexity": "150k+ OSHA records spanning 2013-2022, multi-level relational structure (incident/inspection/violation linked via activity numbers)",
+      "output_type": "Severity class label (0-4 scale), causal-relationship findings"
+    },
+    "modality": {
+      "text": true,
+      "tables": true,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Structured tabular attributes (weather, job title, location) + unstructured narrative text."
+    },
+    "dataset_properties": {
+      "n_samples": "50,000+ incident records, 100,000+ inspection and violation records (150k+ total), 2013-2022",
+      "n_tasks_categories": "Multi-task: classification, regression, LLM extraction, temporal prediction",
+      "data_source": "Real OSHA (Occupational Safety and Health Administration) public records, linked via activity numbers",
+      "annotation_method": "Real-world administrative records (not synthetically labelled); data cleaning/normalization/linking pipeline",
+      "expert_validation": "Real government-recorded incident data (authoritative administrative source, not a separate expert-annotation panel)",
+      "license": "Not stated (public GitHub release)",
+      "accessibility": "Public GitHub repo, code + dataset",
+      "train_test_split": "7:3 train/test split, balanced across severity classes",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Accuracy; Precision; Recall; F1 (macro-averaged)",
+      "baseline_models": "6 ML models (LR-L1, LR-L2, SVM, Random Forest, XGBoost, MLP) + 2 LLMs (GPT-4.1-mini, Qwen2.5-7B)",
+      "prompting_method": "Structured prompts combining incident descriptions + structured attributes for severity prediction (LLMs); standard feature-based training for ML models",
+      "zero_few_shot": "Not zero-shot — LLMs prompted with narrative+structured context (few-shot/direct not further specified)",
+      "rag_tool_use": false,
+      "human_eval_method": "Not used",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Not discussed",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Construction safety management",
+      "task_spans": "Domain Knowledge Classification + Safety-Critical Judgment",
+      "modality_spans": "4.2 Tables + 4.1 Text",
+      "evaluation_spans": "Code-based (accuracy/precision/recall/F1)",
+      "capability_spans": "Domain Knowledge + Quantitative Reasoning + Safety-Critical Judgment",
+      "profession": [
+        "A6"
+      ],
+      "profession_label": "A6 Safety/HSE Officer",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B5"
+      ],
+      "building_system_label": "B5 Procurement & General Requirements Subgroup (Div 00-01, safety/administrative records)",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 1,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 1,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 14,
+      "_notes": "SUM CHECK: 2+2+1+2+2+1+2+0+0+2=14.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "GPT-4.1-mini",
+        "metric_name": "Injury Severity Prediction (narrative+structured prompt) — macro F1",
+        "value": "82.0%",
+        "source_location": "arXiv:2508.09203",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen2.5-7B",
+        "metric_name": "Injury Severity Prediction (narrative+structured prompt) — accuracy",
+        "value": "83.0%",
+        "source_location": "arXiv:2508.09203",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Random Forest",
+        "metric_name": "Injury Severity Prediction (tabular features) — accuracy",
+        "value": "82.4%",
+        "source_location": "arXiv:2508.09203",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-10_BuildingSaferSites-CSDataset_2508.09203.pdf",
+      "source_url": "https://arxiv.org/abs/2508.09203",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13. Flagged (per cross_arm_stage2_confirmation_pass.md row 10) as a distinct safety-data-type record from already-included R019 ConstructionSite-10k (OSHA administrative text vs. synthetic weather-augmented images) — not a duplicate."
+    }
+  },
+  {
+    "name": "RoadBench",
+    "identifier": "arXiv:2507.17353",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 2.",
+    "tier": 2,
+    "source_record_id": "R070",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "RoadBench: A Vision-Language Foundation Model and Benchmark for Road Damage Understanding",
+      "authors": "Xi Xiao, Yunbei Zhang, Janet Wang, et al. (Univ. of Alabama at Birmingham; Tulane; Northeastern; Georgia Tech; CMU; Brown; Emory; Harvard; Oak Ridge National Lab; Tezpur Univ.)",
+      "year": 2026,
+      "venue": "arXiv preprint, March 2026",
+      "doi": null,
+      "arxiv_id": "2507.17353",
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "arXiv:2507.17353v3, obtained 2026-07-13, stored fulltext_corpus/CAND-11_RoadBench_2507.17353.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Road/pavement infrastructure monitoring",
+      "lifecycle_stage": "O&M — road damage detection/monitoring",
+      "intended_user": "Infrastructure-monitoring researchers"
+    },
+    "task": {
+      "task_type": "Zero-shot classification (road-damage category), image-text retrieval (Recall@1/5/10), Semantic Localization Accuracy (SLA, text-guided attention grounding)",
+      "task_complexity": "100,000 high-resolution (3840x2160) synthetic road-damage image-text pairs",
+      "output_type": "Damage classification label, retrieval ranking, IoU-based localization mask"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Images (SYNTHETIC, GPT-4o-generated) + text (GPT-4o-generated descriptions)."
+    },
+    "dataset_properties": {
+      "n_samples": "100,000 image-text pairs (largest in the field per the paper, but entirely synthetic)",
+      "n_tasks_categories": "3 tasks: zero-shot classification, retrieval, semantic localization",
+      "data_source": "Fully synthetic — GPT-4o generates images from expert-informed vocabulary-guided prompts, plus matching text descriptions",
+      "annotation_method": "Automated GPT-4o generation + human expert verification pass for quality",
+      "expert_validation": "Domain experts consulted for the standardized vocabulary guiding generation, and for verification of generated outputs; NOT expert-annotated real photographs",
+      "license": "Not stated",
+      "accessibility": "No public GitHub/HF link found in the real full text — [VERIFY]",
+      "train_test_split": "Not detailed in sections read",
+      "leakage_risk": "Authors note the synthetic approach avoids privacy concerns (faces/license plates) but the images are not real captured road-damage photographs — a domain-authenticity limitation, not leakage per se"
+    },
+    "evaluation": {
+      "metrics": "Zero-Shot Classification Accuracy; Recall@1/5/10 (image-text retrieval); Semantic Localization Accuracy (SLA, IoU-based)",
+      "baseline_models": "Vision-only: YOLOv10-n/s, YOLOS-ti/s, PP-PicoDet, RT-DETR, Lite-DETR, FR-CNN, SSD-VGG16, TD-YOLOV10. Vision-language: CLIP, BLIP-2, LLaVA, MiniGPT-4, InstructBLIP, mPLUG-Owl, Otter, GPT-4V, DeepSeek-VL. Plus RoadCLIP (proposed).",
+      "prompting_method": "CLIP-style contrastive fine-tuning (InfoNCE) for RoadCLIP; direct prompting for VLM baselines",
+      "zero_few_shot": "Zero-shot classification/retrieval",
+      "rag_tool_use": false,
+      "human_eval_method": "Not used for evaluation (only used for dataset QA)",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Ablation study on positional-encoding/prior-injection modules",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Road/pavement infrastructure monitoring",
+      "task_spans": "Perception (grounding/classification) + Retrieval",
+      "modality_spans": "4.6 Images",
+      "evaluation_spans": "Code-based (accuracy/Recall@k/IoU)",
+      "capability_spans": "Perception + Multimodal Grounding",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2"
+      ],
+      "building_system_label": "B2 Sitework & Exterior Improvements Subgroup (Div 32, pavement/roadway)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 1,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 2,
+      "d4_annotation_quality": 1,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 1,
+      "total": 11,
+      "_notes": "SUM CHECK: 1+2+2+1+2+2+0+0+0+1=11.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "RoadCLIP",
+        "metric_name": "Zero-Shot Classification (fine-tuned) — accuracy %",
+        "value": "78.6",
+        "source_location": "arXiv:2507.17353",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4V",
+        "metric_name": "Zero-Shot Classification (zero-shot) — accuracy %",
+        "value": "74.5",
+        "source_location": "arXiv:2507.17353",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-11_RoadBench_2507.17353.pdf",
+      "source_url": "https://arxiv.org/abs/2507.17353",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13. Confirmed FULLY SYNTHETIC dataset (Section 3.3 'Is Synthetic Data Reliable?') — a domain-authenticity nuance not fully captured in prior abstract-level screening."
+    }
+  },
+  {
+    "name": "WildRoadBench",
+    "identifier": "arXiv:2605.20306",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "tier": 1,
+    "source_record_id": "R071",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "WILDROADBENCH: A Wild Aerial Road-Damage Grounding Benchmark for Vision-Language Models and Autonomous Agents",
+      "authors": "Bingnan Liu, Chenhang Cui, Rui Huang, et al. (Univ. of Electronic Science and Technology of China; National Univ. of Singapore; De AI Lab; CUHK-Shenzhen; USTC)",
+      "year": 2026,
+      "venue": "arXiv preprint, June 2026 (preprint)",
+      "doi": null,
+      "arxiv_id": "2605.20306",
+      "repo_url": "https://github.com/liangyunuancha/wildroadbench",
+      "dataset_url": null,
+      "version_accessed": "arXiv:2605.20306v2, obtained 2026-07-13, stored fulltext_corpus/CAND-12_WildRoadBench_2605.20306.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Road/pavement infrastructure, aerial/UAV inspection",
+      "lifecycle_stage": "O&M — road-maintenance inspection via aerial imagery",
+      "intended_user": "Road-maintenance agencies, autonomous-agent/inspection-platform developers"
+    },
+    "task": {
+      "task_type": "Dual-track visual grounding: VLM Track (single-image, single-prompt zero-shot bounding-box grounding) and Agent Track (autonomous LLM-agent end-to-end detector development: web search, model adaptation, training/inference code, submission via scalar-feedback oracle)",
+      "task_complexity": "1,061-image professionally-annotated UAV corpus, 1,699 GT boxes across 5 scene categories (road water/crack/pothole, pavement debris, infrastructure anomaly)",
+      "output_type": "Axis-aligned bounding boxes with confidence scores (both tracks)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": true,
+      "physics_simulation_env": false,
+      "notes": "UAV aerial images + text prompts (VLM track); sandboxed tool/API/code-execution environment (Agent track)."
+    },
+    "dataset_properties": {
+      "n_samples": "1,061 images, 1,699 ground-truth boxes, 5 scene categories",
+      "n_tasks_categories": "2 tracks (VLM, Agent) x 5 scene categories, unified COCO-style AP50 metric",
+      "data_source": "Internally-collected UAV imagery of real road damage on Chinese roads (quad-rotor drones, 50-200m altitude)",
+      "annotation_method": "Professional annotation by road-maintenance experts (bounding boxes + damage categories)",
+      "expert_validation": "Professional road-maintenance experts conducted annotation directly",
+      "license": "Not stated (public GitHub release, code+data)",
+      "accessibility": "Public GitHub repo (liangyunuancha/wildroadbench), code + data released for reproducibility",
+      "train_test_split": "VLM track offline (images+annotations released); Agent track uses the SAME image pool as a hidden holdout (explicit leakage control)",
+      "leakage_risk": "EXPLICIT — Agent track holdout images/labels never exposed during the agent's run, a deliberate anti-leakage design"
+    },
+    "evaluation": {
+      "metrics": "Macro AP50; Macro mAP[.5:.95]; Macro F1; Micro F1; TP/FP/FN counts",
+      "baseline_models": "25 VLMs (16 open-source incl. Qwen2.5-VL-32B-Instruct-AWQ + 9 closed-source incl. Gemini 3 Pro) + 15 LLM-driven agents (incl. Claude Opus 4.7)",
+      "prompting_method": "VLM track: single image + short target-scene prompt, unified prompting/decoding/parsing pipeline. Agent track: written task brief + small exposed example set + fixed interaction budget",
+      "zero_few_shot": "VLM track zero-shot (no in-context examples, no tool access)",
+      "rag_tool_use": true,
+      "human_eval_method": "Not used",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Small-target-size stratified analysis; reasoning-vs-non-reasoning model-variant comparison",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Road/pavement infrastructure, aerial/UAV inspection",
+      "task_spans": "Perception (grounding) + Tool Use (Agent Track: agentic detector development)",
+      "modality_spans": "4.6 Images + 4.11 Tool/API Environment",
+      "evaluation_spans": "Code-based (AP50/mAP/F1)",
+      "capability_spans": "Perception + Tool Use + Spatial Reasoning",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B2"
+      ],
+      "building_system_label": "B2 Sitework & Exterior Improvements Subgroup (Div 32, pavement/roadway)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 2,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 2,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 18,
+      "_notes": "SUM CHECK: 2+2+2+2+2+2+2+2+0+2=18.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "Gemini 3 Pro",
+        "metric_name": "WildRoadBench grounding (overall) (zero-shot, VLM Track) — macro AP50 %",
+        "value": "42.1",
+        "source_location": "arXiv:2605.20306",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen2.5-VL-32B-Instruct-AWQ",
+        "metric_name": "WildRoadBench grounding (overall, best open-source) (zero-shot, VLM Track) — macro AP50 %",
+        "value": "25.5",
+        "source_location": "arXiv:2605.20306",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Claude Opus 4.7",
+        "metric_name": "WildRoadBench end-to-end detector development (Agent Track, 5 attempts/5h budget) — macro AP50",
+        "value": "16.8%",
+        "source_location": "arXiv:2605.20306",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-12_WildRoadBench_2605.20306.pdf",
+      "source_url": "https://arxiv.org/abs/2605.20306",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13."
+    }
+  },
+  {
+    "name": "NER-Wastewater-Stormwater",
+    "identifier": "arXiv:2506.01938",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 2.",
+    "tier": 2,
+    "source_record_id": "R073",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Novel Benchmark for NER in the Wastewater and Stormwater Domain",
+      "authors": "Franco Alberto Cardillo, Franca Debole, Francesca Frontini (CNR, Italy); Mitra Aelami, Nanée Chahinian, Serge Conrad (HSM Univ. Montpellier, IRD, CNRS)",
+      "year": 2025,
+      "venue": "arXiv preprint, June 2025",
+      "doi": null,
+      "arxiv_id": "2506.01938",
+      "repo_url": null,
+      "dataset_url": null,
+      "version_accessed": "arXiv:2506.01938v1, obtained 2026-07-13, stored fulltext_corpus/CAND-17_NER-WastewaterStormwater_2506.01938.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Wastewater and stormwater network management/infrastructure documentation",
+      "lifecycle_stage": "O&M — monitoring, planning, maintenance (information extraction from reports/regulations)",
+      "intended_user": "Environmental information-systems researchers, wastewater-network operators"
+    },
+    "task": {
+      "task_type": "Named Entity Recognition (NER) over 14 domain-specific entity tags (Equipment, Spatial, Event, Shape, Function, Fault, Material, Measurement, Circulation Mode, Organization, Structure, Temporal, Network Type, Pipeline); secondary task: cross-lingual annotation projection",
+      "task_complexity": "220 documents (110 French + 110 Italian, parallel), 3,103 sentences each, ~5,300 entities per language",
+      "output_type": "BIO-tagged entity spans"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Text-only, multilingual (French-Italian parallel corpus)."
+    },
+    "dataset_properties": {
+      "n_samples": "220 documents (110 French, 110 Italian), 3,103 sentences/language, ~5,300 entities/language, 12,415-13,470 annotated tokens",
+      "n_tasks_categories": "14 entity tags + cross-lingual projection sub-task",
+      "data_source": "French corpus built on MeDo project Gold Standard + newspaper articles/official documents on Montpellier/Nîmes/Alès network works; Italian corpus = expert-checked machine translation",
+      "annotation_method": "French: manually checked/aligned to new schema. Italian: machine-translated + independently checked by 2 translation students + expert-hydrologist disambiguation, then manually transposed via INCEpTION tool",
+      "expert_validation": "Expert hydrologists resolved translation ambiguities; annotation scheme inspired by RAEPA geostandard (official French water-utility standard)",
+      "license": "Not stated",
+      "accessibility": "'Will be made available and cited in the final version' — future tense, not yet released as of this extraction — [VERIFY]",
+      "train_test_split": "Not detailed",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Precision; Recall; F1 (micro-averaged, CoNLL script)",
+      "baseline_models": "Primary NER: CamemBERT, Italian BERT (dbmdz), GilBERTo. Annotation projection: mBERT/XLM-R (SimAlign) + open-weight decoder LLMs Llama2, Llama3, Mistral, Phi4, Gemma3",
+      "prompting_method": "Fine-tuning (BERT-family, primary NER task); zero-shot prompting (LLMs, annotation-projection sub-task)",
+      "zero_few_shot": "Zero-shot for LLM annotation-projection sub-task",
+      "rag_tool_use": false,
+      "human_eval_method": "Not used beyond corpus annotation",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Cross-lingual annotation-projection accuracy comparison",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Wastewater and stormwater network management/infrastructure documentation",
+      "task_spans": "Domain Knowledge Extraction (NER)",
+      "modality_spans": "4.1 Text",
+      "evaluation_spans": "Code-based (precision/recall/F1)",
+      "capability_spans": "Text Extraction/NER + Cross-lingual Transfer",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [
+        "B4"
+      ],
+      "building_system_label": "B4 MEP Utilities Subgroup (water/wastewater, no exact MasterFormat division)",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 0,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 0,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 12,
+      "_notes": "SUM CHECK: 2+2+0+2+2+2+0+0+0+2=12.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "CamemBERT",
+        "metric_name": "Primary NER (French) (fine-tuned, 100% training data) — F1",
+        "value": "63.0%",
+        "source_location": "arXiv:2506.01938",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Gemma3",
+        "metric_name": "Cross-lingual annotation projection (zero-shot annotation projection) — F1",
+        "value": "58.0%",
+        "source_location": "arXiv:2506.01938",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-17_NER-WastewaterStormwater_2506.01938.pdf",
+      "source_url": "https://arxiv.org/abs/2506.01938",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13. Identifier corrected per cross_arm_stage2_confirmation_pass.md row 17 (real ID is arXiv:2506.01938, not the previously-logged IEEE document number 11224095)."
+    }
+  },
+  {
+    "name": "YEARGUESSR",
+    "identifier": "arXiv:2512.21337",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 3.",
+    "tier": 3,
+    "source_record_id": "R074",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Beyond Memorization: A Multi-Modal Ordinal Regression Benchmark to Expose Popularity Bias in Vision-Language Models",
+      "authors": "Li-Zhong Szu-Tu, Ting-Lin Wu, Chia-Jui Chang, He Syu, Yu-Lun Liu (National Yang Ming Chiao Tung University)",
+      "year": 2025,
+      "venue": "arXiv preprint, December 2025",
+      "doi": null,
+      "arxiv_id": "2512.21337",
+      "repo_url": null,
+      "dataset_url": "https://huggingface.co/datasets/Morris0401/Year-Guessr-Dataset",
+      "version_accessed": "arXiv:2512.21337v1, obtained 2026-07-13, stored fulltext_corpus/CAND-19_YEARGUESSR_2512.21337.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Building-age estimation / heritage preservation (motivating use case); core evaluated skill is general VLM robustness/memorization testing",
+      "lifecycle_stage": "Assessment (heritage preservation, retrofit prioritization, post-disaster assessment — as motivation, not as evaluated professional workflow)",
+      "intended_user": "VLM researchers studying popularity/memorization bias; secondarily, heritage/retrofit practitioners"
+    },
+    "task": {
+      "task_type": "Ordinal regression: construction-year prediction from building facade image (+ optional GPS); popularity-aware interval-accuracy metrics to quantify memorization bias",
+      "task_complexity": "55,546 images, 157 countries, years 1001-2024 CE, continuous ordinal labels + page-view-count popularity proxy",
+      "output_type": "Predicted construction year (continuous) + architectural rationale text (YearCLIP)"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Building facade images + GPS coordinates + captions/descriptions + page-view metadata."
+    },
+    "dataset_properties": {
+      "n_samples": "55,546 building images, 157 countries, 1001-2024 CE span",
+      "n_tasks_categories": "1 primary task (ordinal year regression) + popularity-bias diagnostic analysis",
+      "data_source": "Wikipedia-sourced building images with GPS/year/page-view metadata",
+      "annotation_method": "Sourced from Wikipedia/Wikidata structured metadata (year, coordinates, page views), not independently expert-annotated",
+      "expert_validation": "Not independently expert-validated (relies on Wikipedia/Wikidata crowd-sourced metadata accuracy)",
+      "license": "CC BY-SA 4.0 (or public-domain content)",
+      "accessibility": "Public, first open CC BY-SA 4.0 image set for this task; HuggingFace dataset release (Morris0401/Year-Guessr-Dataset)",
+      "train_test_split": "Not detailed in sections read",
+      "leakage_risk": "EXPLICITLY the paper's central topic — popularity/page-view proxy used specifically to diagnose training-data memorization bias"
+    },
+    "evaluation": {
+      "metrics": "MAE; Interval Accuracy; Popularity-aware MAE/interval-accuracy bias metric",
+      "baseline_models": "30+ VLMs including Gemini-2.0, plus proposed YearCLIP (CLIP-based, NumCLIP-derived ordinal training + GPS-fused location encoder)",
+      "prompting_method": "Image (+ optional GPS) prompt for year estimation; YearCLIP uses pre-defined reasoning prompts (roof/wall material cues) for explainability",
+      "zero_few_shot": "Zero-shot",
+      "rag_tool_use": false,
+      "human_eval_method": "Not used",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Population-density and renovation-type stratified MAE analysis (Table 4)",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Building-age estimation / heritage preservation",
+      "task_spans": "Quantitative Reasoning (ordinal regression) + Robustness/Bias Diagnosis",
+      "modality_spans": "4.6 Images",
+      "evaluation_spans": "Code-based (MAE/Interval Accuracy)",
+      "capability_spans": "Perception + Domain Knowledge (architectural style cues)",
+      "profession": [],
+      "profession_label": "A9 Heritage/Preservation Specialist",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [],
+      "building_system_label": "N/A (whole-building age estimation, no single MasterFormat division)",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 1,
+      "d2_task_validity": 1,
+      "d3_modality_coverage": 2,
+      "d4_annotation_quality": 1,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 2,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 1,
+      "total": 14,
+      "_notes": "SUM CHECK: 1+1+2+1+2+2+2+2+0+1=14.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "Gemini-2.0",
+        "metric_name": "Construction year prediction (popularity-bias gap) (zero-shot, high-popularity subset) — accuracy gain %",
+        "value": "34.18",
+        "source_location": "arXiv:2512.21337",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-19_YEARGUESSR_2512.21337.pdf",
+      "source_url": "https://arxiv.org/abs/2512.21337",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13. BORDERLINE-C1 resolution documented — see verification_status."
+    }
+  },
+  {
+    "name": "VLM-Heritage",
+    "identifier": "doi:10.3390/heritage8030095",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 3.",
+    "tier": 3,
+    "source_record_id": "R075",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "A Comparative Study of Vision Language Models for Italian Cultural Heritage",
+      "authors": "C. Vitaloni, D. Shullani, D. Baracchi (per GitHub repo cross-reference, VERIFIER F-116)",
+      "year": 2025,
+      "venue": "Heritage (MDPI), open access, published 2025-03-02",
+      "doi": "10.3390/heritage8030095",
+      "arxiv_id": null,
+      "repo_url": "https://github.com/IAPP-Group/VLM-Heritage",
+      "dataset_url": null,
+      "version_accessed": "Full text obtained via mcp__scholarscope__fetch_fulltext 2026-07-12/13, stored fulltext_corpus/CAND-20_VLMHeritage_heritage8030095/full_text.md (WebFetch and MDPI direct PDF both returned HTTP 403 bot-detection walls)"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Cultural heritage recognition / virtual tourist guide (architecture-majority landmark set)",
+      "lifecycle_stage": "N/A (recognition/description task, not a design/construction/O&M workflow)",
+      "intended_user": "Virtual-tourist-guide application developers, cultural-heritage researchers"
+    },
+    "task": {
+      "task_type": "2-question VQA sequence per image: (1) subject identification with no context, (2) subject identification given city name; bilingual (Italian/English)",
+      "task_complexity": "40 images across 20 subjects (10 national landmarks + 10 Florence landmarks), 3 image sources (Wikimedia, FloreView, personal photos for zero training-overlap)",
+      "output_type": "Free-text subject/city identification, human-graded OK/NO/PAR/ERR"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Landmark/monument images + bilingual VQA text."
+    },
+    "dataset_properties": {
+      "n_samples": "40 images (20 subjects x 2 images each)",
+      "n_tasks_categories": "2 sequential questions x 2 languages = 4 conditions per image",
+      "data_source": "Wikimedia (20 images), FloreView (Florence-specific, post-Oct-2023, not search-indexed, 10 images), personal unpublished photographs (10 images, zero training-overlap by design)",
+      "annotation_method": "Human evaluators labeled model responses on 3 criteria (City/Subject/Description, OK/NO/PAR/ERR scale)",
+      "expert_validation": "Human evaluator labeling (not domain-heritage-expert panel specifically, but manual quality review)",
+      "license": "Not stated (public GitHub release)",
+      "accessibility": "Public GitHub repo (IAPP-Group/VLM-Heritage)",
+      "train_test_split": "N/A — fixed evaluation set",
+      "leakage_risk": "EXPLICITLY discussed — training-data-overlap concern for Wikimedia images flagged; FloreView (post-Oct-2023) and 'Others' personal photos confirmed bias-free by design"
+    },
+    "evaluation": {
+      "metrics": "City/Subject/Description accuracy (OK/NO/PAR/ERR); McNemar's test with Holm-Bonferroni correction",
+      "baseline_models": "Qwen2-VL, CogVLM2, Deepseek-VL, Phi-3.5, InternVL2, Pixtral, LLaVA 1.6, Molmo, SmolVLM, Bing+ChatGPT-4 (10 VLLMs, all 2023-2024 releases)",
+      "prompting_method": "2 sequential questions per image per conversation (no-context then city-provided), Italian and English versions",
+      "zero_few_shot": "Zero-shot",
+      "rag_tool_use": false,
+      "human_eval_method": "Human evaluators (with labeling-support acknowledgment) scored all model responses on 3 criteria",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Language-sensitivity comparison (Italian vs English), context-provision ablation (city name given vs not)",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Cultural heritage recognition / virtual tourist guide",
+      "task_spans": "Multimodal Grounding (landmark/subject identification)",
+      "modality_spans": "4.6 Images",
+      "evaluation_spans": "Human-in-the-loop (OK/NO/PAR/ERR grading) + statistical test (McNemar's)",
+      "capability_spans": "Perception + Domain Knowledge (architectural/cultural recognition)",
+      "profession": [],
+      "profession_label": "A9 Heritage/Preservation Specialist",
+      "profession_provenance": "proposal_unverified",
+      "building_system": [],
+      "building_system_label": "N/A (whole-monument recognition, no single MasterFormat division)",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 1,
+      "d3_modality_coverage": 2,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 2,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 1,
+      "total": 16,
+      "_notes": "SUM CHECK: 2+1+2+2+2+2+2+2+0+1=16.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "Bing+ChatGPT-4",
+        "metric_name": "Subject identification (zero-shot, 'Other' dataset) — accuracy",
+        "value": "80.0%",
+        "source_location": "10.3390/heritage8030095",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen2-VL",
+        "metric_name": "Subject identification (zero-shot, Flore/Wiki datasets) — accuracy",
+        "value": "70.0%",
+        "source_location": "10.3390/heritage8030095",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/extracted_paper/CAND-20_VLMHeritage_heritage8030095/full_text.md",
+      "source_url": "https://doi.org/10.3390/heritage8030095",
+      "status": "obtained",
+      "note": "Full text obtained via mcp__scholarscope__fetch_fulltext (2026-07-12/13) — WebFetch and MDPI direct-PDF both blocked (HTTP 403 bot-detection); scholarscope succeeded. BORDERLINE-C1 resolution documented — see verification_status."
+    }
+  },
+  {
+    "name": "PlanBench-V",
+    "identifier": "arXiv:2606.05744",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "tier": 1,
+    "source_record_id": "R076",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "PlanBench-V: A Spatial Planning Map Benchmark for Vision-Language Models",
+      "authors": "Minxin Chen, He Zhu, Junyou Su, Wen Wang, Yijie Deng, Wenjia Zhang (Behavioral and Spatial AI Lab, Tongji Univ./Peking Univ.; College of Architecture and Urban Planning, Tongji Univ.)",
+      "year": 2026,
+      "venue": "arXiv preprint, June 2026",
+      "doi": null,
+      "arxiv_id": "2606.05744",
+      "repo_url": "https://plangpt.github.io/",
+      "dataset_url": null,
+      "version_accessed": "arXiv:2606.05744v1, obtained 2026-07-13, stored fulltext_corpus/CAND-21_PlanBenchV_2606.05744.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Statutory spatial/urban planning map interpretation",
+      "lifecycle_stage": "Planning — territorial governance, regulatory/policy communication",
+      "intended_user": "Urban planners, planning students, planning-support-system developers"
+    },
+    "task": {
+      "task_type": "4-dimensional cognitive framework: Perception (visual-component identification), Reasoning (structured domain-specific inference), Association (policy/regulation/indicator linking), Implementation (comparing/critiquing/optimizing planning proposals)",
+      "task_complexity": "223 planning maps, 1,629 QA pairs, sourced from (1) official Chinese master plans, (2) Chinese Certified Urban-Rural Planner Qualification Examination, (3) international planning maps",
+      "output_type": "Free-text/structured answers scored via LLM-as-judge with structured rubrics"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": true,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": true,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Planning maps (cartographic/symbolic layouts with legends, zoning symbols) + expert QA text."
+    },
+    "dataset_properties": {
+      "n_samples": "223 planning maps, 1,629 QA pairs",
+      "n_tasks_categories": "4 cognitive dimensions (Perception, Reasoning, Association, Implementation), 8 sub-task types",
+      "data_source": "Official Chinese master plans, Chinese Certified Urban-Rural Planner Qualification Examination (CURPQE), international spatial planning maps",
+      "annotation_method": "Manually annotated by professional urban planners",
+      "expert_validation": "Professional urban planners directly authored the QA pairs (not merely reviewed)",
+      "license": "Not stated (code+data available)",
+      "accessibility": "Public code+data at plangpt.github.io",
+      "train_test_split": "300-item stratified subset used for 2-round model evaluation",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Overall score (LLM-judge, 0-2 scale); Per-sub-task scores (Element Recognition, Captioning, Classification, Spatial Reasoning, Domain Reasoning, Scheme, etc.)",
+      "baseline_models": "17 VLMs across 2 rounds: Round 1 (2025) — GPT-4o, GPT-4o-mini, Qwen2-VL/Qwen2.5-VL family (2B-72B, incl. AWQ-quantized), InternVL3 family (8B-14B); Round 2 (2026) — 6 agentic-reasoning models incl. Qwen3.6-Plus, Qwen3.6-Flash, Gemini-2.5-Pro",
+      "prompting_method": "LLM-as-judge with structured scoring rubrics + automated prompt optimization; structured reference answers with annotated critical points",
+      "zero_few_shot": "Zero-shot, no dataset-specific fine-tuning for any evaluated VLM",
+      "rag_tool_use": false,
+      "human_eval_method": "Human Performance Baseline: 3 graduate urban-planning students answered 40 sampled questions (5/type across 8 types), scored by 4 LLM judges (GPT-4o-mini, GPT-4o, Claude Opus 4.7, GPT-5.4) with calibration validation (Spearman ρ>0.75 all pairs)",
+      "llm_as_judge_method": "4-judge ensemble with structured rubrics; GPT-4o-mini used as primary evaluator with critical-point-anchored reference answers achieving >0.89 correlation with stricter judges",
+      "robustness_tests": "Prompt-variant stability testing; judge-strictness calibration analysis",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Statutory spatial/urban planning map interpretation",
+      "task_spans": "Multimodal Grounding + Domain Knowledge + Task Completion (Implementation dimension)",
+      "modality_spans": "4.6 Images + 4.9 Symbolic Layouts",
+      "evaluation_spans": "LLM-as-judge (calibrated, 4-judge ensemble) + Human-expert score (graduate-student baseline)",
+      "capability_spans": "Perception + Domain Knowledge + Cross-document Reasoning + Planning",
+      "profession": [
+        "A1"
+      ],
+      "profession_label": "A1 Architect/Urban Planner",
+      "profession_provenance": "verified",
+      "building_system": [
+        "B5"
+      ],
+      "building_system_label": "B5 Procurement & General Requirements Subgroup (Div 00-01, planning/regulatory)",
+      "building_system_provenance": "proposal_unverified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records). Dim6 Building-system for this record is an EXCEPTION: kept as an unresolved proposal (paywalled; the paper's own framing does not disambiguate B1 vs B2 from the abstract alone) — Dim5 Profession IS verified."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 2,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 2,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 2,
+      "d10_practical_relevance": 2,
+      "total": 18,
+      "_notes": "SUM CHECK: 2+2+2+2+2+2+2+0+2+2=18.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "Qwen3.6-Plus",
+        "metric_name": "PlanBench-V overall (Round 2 (2026), agentic reasoning) — % improvement over best 2025 model (GPT-4o)",
+        "value": "27",
+        "source_location": "arXiv:2606.05744",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "GPT-4o",
+        "metric_name": "PlanBench-V overall (Round 1 (2025), zero-shot) — overall score (0-2 scale)",
+        "value": "1.342",
+        "source_location": "arXiv:2606.05744",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "Qwen2-VL-2B",
+        "metric_name": "PlanBench-V overall (weakest) (Round 1 (2025), zero-shot) — overall score (0-2 scale)",
+        "value": "0.731",
+        "source_location": "arXiv:2606.05744",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CAND-21_PlanBenchV_2606.05744.pdf",
+      "source_url": "https://arxiv.org/abs/2606.05744",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13. Resolves the standing lineage-recheck flagged in cross_arm_stage2_confirmation_pass.md row 21 — confirmed as a genuine new standalone INCLUDE record, distinct from the still-excluded R021 (PlanGPT-VL). Note: release URL plangpt.github.io suggests continuity with the PlanGPT project lineage despite formal standalone-paper status — disclosed, not treated as disqualifying."
+    }
+  },
+  {
+    "name": "Quantized VLM Bridge Damage Assessment",
+    "identifier": "arXiv:2603.26770",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 2.",
+    "tier": 2,
+    "source_record_id": "R077",
+    "provenance": "claimed",
+    "bibliographic": {
+      "paper_title": "Quantized Vision-Language Models for Damage Assessment: A Comparative Study of LLaVA-1.5-7B Quantization Levels",
+      "authors": "Takato Yasuno",
+      "year": 2026,
+      "venue": "arXiv preprint, March 2026",
+      "doi": null,
+      "arxiv_id": "2603.26770",
+      "repo_url": "https://github.com/tk-yasuno/damage_text_score",
+      "dataset_url": null,
+      "version_accessed": "arXiv:2603.26770v1, obtained 2026-07-13, stored fulltext_corpus/CI_BridgeVLM_2603.26770.pdf"
+    },
+    "domain_use_case": {
+      "aec_subdomain": "Bridge infrastructure inspection (rebar exposure/corrosion damage assessment)",
+      "lifecycle_stage": "O&M — periodic bridge inspection",
+      "intended_user": "Bridge-inspection engineers, civil-infrastructure monitoring system developers"
+    },
+    "task": {
+      "task_type": "End-to-end pipeline: VLM visual damage description -> structured JSON extraction -> rule-based priority scoring; damage type/severity/location/extent recognition",
+      "task_complexity": "254 real-world rebar-exposure bridge images, 5-point quality-evaluation framework (damage type 2.0pt, severity 1.0pt, location 1.0pt, extent 1.0pt)",
+      "output_type": "Structured JSON (damage type, severity, location, risk) + free-text description + priority score [0,1]"
+    },
+    "modality": {
+      "text": true,
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Real bridge rebar-exposure photographs + structured/free-text output."
+    },
+    "dataset_properties": {
+      "n_samples": "254 real-world bridge images with rebar exposure damage",
+      "n_tasks_categories": "1 primary task (damage assessment) evaluated across 3 quantization conditions (Q4_K_M, Q5_K_M, Q8_0)",
+      "data_source": "Real-world bridge infrastructure photographs (rebar exposure/corrosion)",
+      "annotation_method": "Manual scoring by 2 civil-engineering domain experts using the 5-point rubric",
+      "expert_validation": "Inter-rater agreement validated via Cohen's kappa > 0.8 between the 2 domain experts",
+      "license": "Not stated (public GitHub release)",
+      "accessibility": "Public GitHub repo (tk-yasuno/damage_text_score), full reproducible pipeline (OpenCV preprocessing, llama-cpp-python inference, Swallow-8B structuring, priority scoring)",
+      "train_test_split": "N/A — fixed evaluation set",
+      "leakage_risk": "Not discussed"
+    },
+    "evaluation": {
+      "metrics": "Quality score (5-point rubric); Inference time (s/image); Efficiency (quality/sec); Statistical correlation (text-length vs. quality)",
+      "baseline_models": "LLaVA-1.5-7B at 3 GGUF quantization levels: Q4_K_M (4.1GB), Q5_K_M (4.8GB), Q8_0 (7.2GB) — a single base architecture, no other VLM family compared",
+      "prompting_method": "Single expert-role prompt ('You are a bridge inspection expert...') requesting damage type/severity/location/risk in civil-engineering terminology",
+      "zero_few_shot": "Zero-shot",
+      "rag_tool_use": false,
+      "human_eval_method": "2 civil-engineering domain experts manually scored all outputs (Cohen's kappa>0.8 inter-rater agreement)",
+      "llm_as_judge_method": "Not used",
+      "robustness_tests": "Statistical distribution analysis (bimodality of Q4_K_M scores), text-quality correlation analysis",
+      "cost_latency_reporting": ""
+    },
+    "capability": {
+      "scheme": "v2",
+      "domain": "Bridge infrastructure inspection",
+      "task_spans": "Multimodal Grounding + Domain Knowledge (damage description)",
+      "modality_spans": "4.6 Images",
+      "evaluation_spans": "Human-in-the-loop (expert 5-point rubric scoring)",
+      "capability_spans": "Perception + Domain Knowledge + Safety-Critical Judgment",
+      "profession": [
+        "A5"
+      ],
+      "profession_label": "A5 CM/Inspector",
+      "profession_provenance": "verified",
+      "building_system": [],
+      "building_system_label": "B7 Civil/Site-Infrastructure Subgroup (bridges)",
+      "building_system_provenance": "verified",
+      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
+    },
+    "rubric": {
+      "d1_domain_authenticity": 2,
+      "d2_task_validity": 2,
+      "d3_modality_coverage": 2,
+      "d4_annotation_quality": 2,
+      "d5_evaluation_clarity": 2,
+      "d6_baseline_coverage": 0,
+      "d7_reproducibility": 2,
+      "d8_leakage_control": 0,
+      "d9_human_baseline": 0,
+      "d10_practical_relevance": 2,
+      "total": 14,
+      "_notes": "SUM CHECK: 2+2+2+2+2+0+2+0+0+2=14.",
+      "_caveat": "Rubric grounded in real full-text obtained from user-supplied extraction 2026-07-13."
+    },
+    "reported_results": [
+      {
+        "model_string": "LLaVA-1.5-7B (Q5_K_M)",
+        "metric_name": "Bridge rebar-exposure damage assessment (zero-shot, 5-bit quantization) — quality score (0-5)",
+        "value": "3.18",
+        "source_location": "arXiv:2603.26770",
+        "provenance_flag": "source_confirmed"
+      },
+      {
+        "model_string": "LLaVA-1.5-7B (Q8_0)",
+        "metric_name": "Bridge rebar-exposure damage assessment inference overhead vs Q5_K_M (zero-shot, 8-bit quantization) — % slower inference",
+        "value": "34.6",
+        "source_location": "arXiv:2603.26770",
+        "provenance_flag": "source_confirmed"
+      }
+    ],
+    "fulltext": {
+      "assessed": true,
+      "obtained": "full",
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/CI_BridgeVLM_2603.26770.pdf",
+      "source_url": "https://arxiv.org/abs/2603.26770",
+      "status": "obtained",
+      "note": "Full text obtained from user-supplied extraction, read directly 2026-07-13. Resolves the prior 'PROCEED-to-Stage-2, borderline vs R003 BridgeEQA' Stage-1 lead from ci_search_arm.md into a full Stage-2 record."
     }
   }
 ]
