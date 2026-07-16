@@ -342,10 +342,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <p class="section-label">Imagery</p>
       <h2 class="section-title mb-3">Benchmark Thumbnails &amp; Fair Use</h2>
       <p class="prose-aec mb-3 max-w-2xl">
-        Benchmark cards display <strong>15 thumbnails: 5 openly-licensed</strong> (CC&nbsp;BY&nbsp;4.0 / MIT / Apache&nbsp;2.0 —
-        freely redistributable) <strong>+ 10 paper figures shown under fair use</strong> for identification
-        (the original papers' Figure&nbsp;1). Each card carries an attribution caption linking to the source
-        (arXiv id, or DOI for VizArQA).
+        Benchmark cards display <strong>33 thumbnails: 6 openly-licensed</strong> (CC&nbsp;BY&nbsp;4.0 / MIT / Apache&nbsp;2.0 / CC0-1.0 —
+        freely redistributable) <strong>+ 27 paper figures shown under fair use</strong> for identification
+        (usually the original papers' Figure&nbsp;1, or the nearest genuine content figure when Figure&nbsp;1
+        itself turned out to be a license badge or copyright page). Each card carries an attribution caption
+        linking to the source (arXiv id, DOI, IEEE Xplore document, or institutional-repository handle).
+        23 of the 56 benchmarks still have no thumbnail — either no accessible full text, no usable figure
+        found in the extracted pages, or a deliberate exclusion (R011, non-redistributable CC&nbsp;BY-NC-SA
+        license); see CRAFTER's manifest for the full per-record breakdown.
       </p>
       <p class="text-[12px] text-slate-500 leading-relaxed max-w-2xl">
         Benchmark thumbnails are figures from the original papers, shown for identification under fair use;

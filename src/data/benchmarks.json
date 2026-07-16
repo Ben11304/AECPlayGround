@@ -2,7 +2,7 @@
   {
     "name": "BuildArena",
     "identifier": "arXiv:2510.16559",
-    "verification_status": "verified",
+    "verification_status": "verified license=CC BY-NC 4.0 (user-xlsx, web-verified)| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 1,
     "source_record_id": "R001",
     "provenance": "claimed",
@@ -15,7 +15,9 @@
       "arxiv_id": "2510.16559",
       "repo_url": "https://build-arena.github.io",
       "dataset_url": null,
-      "version_accessed": "v1 / 2025"
+      "version_accessed": "v1 / 2025",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Engineering construction — structural assembly and mechanical design in 3D physics simulation",
@@ -48,7 +50,8 @@
       "data_source": "Besiege physics simulator; LLM-generated construction attempts; no external human-labeled dataset (claimed)",
       "annotation_method": "Automated physics simulation outcomes; no human annotation (claimed)",
       "expert_validation": "None explicit; validated by Besiege player community acceptance (claimed)",
-      "license": "NOT FOUND",
+      "license": "CC BY-NC 4.0 (github.com/AI4Science-WestlakeU/BuildArena, verified 2026-07-15)| user-xlsx merge 2026-07-15 (web-verified)",
+      "license_class": "open-restricted",
       "accessibility": "Code available at build-arena.github.io; no public dataset package (claimed)",
       "train_test_split": "None — evaluation only (claimed)",
       "leakage_risk": "Low — interactive simulation limits static memorization (claimed)"
@@ -1011,7 +1014,9 @@
       "arxiv_id": "2601.04819",
       "repo_url": "https://github.com/AECFoundry/AECV-Bench",
       "dataset_url": "https://github.com/AECFoundry/AECV-Bench",
-      "version_accessed": "v1 / 2026-01-08"
+      "version_accessed": "v1 / 2026-01-08",
+      "country_region": "Australia",
+      "country_region_base": "Australia"
     },
     "domain_use_case": {
       "aec_subdomain": "Architectural and engineering drawing understanding — floor plans, structural/architectural drawings",
@@ -1044,7 +1049,8 @@
       "data_source": "CubiCasa5K, CVC-FP, Apple HQ and Rinker building plans, public internet drawings (claimed)",
       "annotation_method": "Manual counting rules for object counting; GPT-5-generated QA candidates; human reviewers audited, verified answerability, selected final 192 pairs; web-based adjudication tool (claimed)",
       "expert_validation": "Human reviewers audited all QA candidates; human adjudication for edge cases via dedicated web tool (claimed)",
-      "license": "NOT FOUND",
+      "license": "NOT FOUND [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "unstated",
       "accessibility": "Public GitHub: github.com/AECFoundry/AECV-Bench (claimed); living benchmark with planned leaderboard (claimed)",
       "train_test_split": "None — evaluation only (claimed)",
       "leakage_risk": "CubiCasa5K and CVC-FP are public — potential overlap with VLM pretraining; not addressed by authors (claimed)"
@@ -1828,7 +1834,9 @@
       "arxiv_id": "2511.12676",
       "repo_url": "https://drags99.github.io/bridge-eqa/",
       "dataset_url": "https://drags99.github.io/bridge-eqa/",
-      "version_accessed": "v2 / 2026-04-20"
+      "version_accessed": "v2 / 2026-04-20",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Infrastructure inspection — bridge inspection; civil engineering asset management",
@@ -1861,7 +1869,8 @@
       "data_source": "200 Vermont Agency of Transportation (VTrans) bridge inspection reports spanning 73 Vermont towns (claimed)",
       "annotation_method": "Gemini 2.5 Flash/Pro used as zero-shot parsers to generate QA from inspection reports; human review of 100 QA pairs (100% accuracy); RAGAS metrics validation (claimed)",
       "expert_validation": "Human review validated (100% accuracy on sample); RAGAS: Faithfulness 0.997, Answer Relevancy 0.997, Answerability 0.996, Inspector Relevancy 0.980 (claimed)",
-      "license": "NOT FOUND",
+      "license": "NOT FOUND [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "open-permissive",
       "accessibility": "Dataset and code at https://drags99.github.io/bridge-eqa/ (claimed)",
       "train_test_split": "50/50 — 1,100 train / 1,100 test (claimed)",
       "leakage_risk": "Not addressed; VTrans reports may be online (claimed)"
@@ -2143,7 +2152,7 @@
   {
     "name": "ArchPlanVQA",
     "identifier": "doi:10.1061/JCCEE5.CPENG-7571",
-    "verification_status": "verified",
+    "verification_status": "GITHUB-README-confirmed (secondary artifact: repo+dataset public, baselines/metrics from README; ASCE paper paywalled, full-text NOT read) | country=China (cleaned); license on-request/google-drive| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 1,
     "source_record_id": "R004",
     "provenance": "claimed",
@@ -2156,7 +2165,9 @@
       "arxiv_id": null,
       "repo_url": "https://github.com/pengyang-Li/ArchPlanVQA",
       "dataset_url": "https://drive.google.com/file/d/1P5b6NfNlnFvLM3nnaMo4xlfRi4bA75Zn/view",
-      "version_accessed": "GitHub repo / 2026"
+      "version_accessed": "GitHub repo / 2026",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Architectural floor plan CAD drawing understanding",
@@ -2189,7 +2200,8 @@
       "data_source": "FloorPlanCAD dataset (10,000+ real-world floor plans, 30 object categories), processed via SymPoint pipeline (claimed)",
       "annotation_method": "Custom QA pairs; LLM-assisted synonym mapping for evaluation; full method [VERIFY — ASCE paywall] (claimed)",
       "expert_validation": "[VERIFY — paper paywalled]; funded by NSFC Grant 72301250 (claimed)",
-      "license": "[VERIFY — no license file in GitHub repo]",
+      "license": "[dataset via Google Drive, on-request; no explicit license] (user-xlsx: 'google drive require'| user-xlsx merge 2026-07-15 (web-verified))",
+      "license_class": "unstated",
       "accessibility": "Public GitHub (0 stars, 4 commits); Google Drive dataset link (claimed)",
       "train_test_split": "Three-way split inherited from FloorPlanCAD (test/train/val); exact ratios [VERIFY] (claimed)",
       "leakage_risk": "[VERIFY — paper paywalled]"
@@ -2235,7 +2247,8 @@
       "d8_leakage_control": 0,
       "d9_human_baseline": 0,
       "d10_practical_relevance": 2,
-      "total": 11
+      "total": 11,
+      "_notes": "RULE-0 AUDIT 2026-07-15: evidence source = GitHub README (github.com/pengyang-Li/ArchPlanVQA, public, 0 stars/4 commits) + Google Drive dataset + DISCOVERER briefing — NOT peer-reviewed full-text (ASCE JCCEE paywalled, HTTP 403). Rubric floors ARE evidence-grounded from the README: d5=1 (metrics listed: Number/Boolean/String accuracy), d6=1 (4 named baselines: GPT-4o/Gemini-1.5-Pro/Claude-3.7-Sonnet/Qwen2.5-VL-72B), d7=1 (public GitHub+Drive). d1=2/d2=2 (FloorPlanCAD real architectural CAD VQA), d3=1 (images+text), d4=1 (dataset annotated, human_eval=[VERIFY]), d8=0/d9=0 (leakage/human-baseline not reported). Tier-1 DEFENSIBLE (purpose-built AEC + floors met from README evidence). Verification_status corrected: was \"verified\" (overstated) -> \"GITHUB-README-confirmed (secondary; paper not full-text-read)\". NOT a Rule-0 violation on scores (README is real artifact); only the \"verified\" label was misleading. [audit-2026-07-15]"
     },
     "reported_results": [],
     "fulltext": {
@@ -2263,7 +2276,9 @@
       "arxiv_id": "2507.11527",
       "repo_url": "https://github.com/Eason-Li-AIS/DrafterBench",
       "dataset_url": "https://huggingface.co/datasets/Eason666/DrafterBench",
-      "version_accessed": "v1 / 2025-07-15"
+      "version_accessed": "v1 / 2025-07-15",
+      "country_region": "Canada",
+      "country_region_base": "Canada"
     },
     "domain_use_case": {
       "aec_subdomain": "Civil engineering technical drawing revision and construction document management",
@@ -2297,6 +2312,7 @@
       "annotation_method": "Real-world files collected, categorized, filtered; human verification for solvability and value distribution uniformity (claimed)",
       "expert_validation": "Yes — human verification by domain practitioners; design firms and construction companies contributed source files (claimed)",
       "license": "MIT (HuggingFace dataset card) (claimed)",
+      "license_class": "open-permissive",
       "accessibility": "Public GitHub + HuggingFace (Eason666/DrafterBench; 4.21 MB JSON/Parquet) (claimed)",
       "train_test_split": "None — evaluation only (1,920 test tasks) (claimed)",
       "leakage_risk": "Not discussed (claimed)"
@@ -2473,7 +2489,9 @@
       "arxiv_id": "2603.29199",
       "repo_url": "https://github.com/nomic-ai/aec-bench",
       "dataset_url": "https://huggingface.co/datasets/nomic-ai/aec-bench",
-      "version_accessed": "v1 / 2026-04-02"
+      "version_accessed": "v1 / 2026-04-02",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Multi-domain AEC document coordination: architecture, structural, mechanical, specifications, submittals",
@@ -2507,6 +2525,7 @@
       "annotation_method": "Professional engineers and architects established ground truth; TOML configs + JSON ground truth + manifest files; automated verification via Harbor with Docker sandboxes (claimed)",
       "expert_validation": "Yes — practicing architects and engineers including Aurecon; number of annotators [VERIFY] (claimed)",
       "license": "Apache 2.0 (code/dataset); CC-BY-4.0 (paper) (claimed)",
+      "license_class": "open-permissive",
       "accessibility": "Public HuggingFace (nomic-ai/aec-bench) + GitHub (nomic-ai/aec-bench) (claimed)",
       "train_test_split": "None — evaluation only (all 196 instances are test/eval) (claimed)",
       "leakage_risk": "Real-world public-sector documents; not explicitly analyzed (claimed)"
@@ -3086,7 +3105,9 @@
       "arxiv_id": "2509.18776",
       "repo_url": "https://github.com/ArchiAI-LAB/AECBench",
       "dataset_url": "https://github.com/ArchiAI-LAB/AECBench",
-      "version_accessed": "v3 / 2026-02-14 (arXiv); AEI journal publication 2026"
+      "version_accessed": "v3 / 2026-02-14 (arXiv); AEI journal publication 2026",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Comprehensive AEC domain knowledge: architectural design, structural, MEP, construction management, fire safety, energy efficiency, environmental regulations, engineering economics, building codes, materials, regulatory compliance (11 domains) (claimed)",
@@ -3120,6 +3141,7 @@
       "annotation_method": "Expert-crafted questions; two-round review: Round 1 mid-level engineers (reasonableness, coverage); Round 2 senior specialists 10+ years (representativeness, subtle errors, ambiguity); multi-step cleaning (format standardization, n-gram + vector dedup, outlier detection) (claimed)",
       "expert_validation": "Yes — rigorous two-round expert review with specific examples of rejected/revised questions (e.g., seismic category C requirements) (claimed)",
       "license": "CC BY-NC-ND 4.0 (claimed)",
+      "license_class": "open-restricted",
       "accessibility": "GitHub: github.com/ArchiAI-LAB/AECBench; dataset open-source release planned (claimed)",
       "train_test_split": "NOT FOUND (evaluation only implied) (claimed)",
       "leakage_risk": "Licensure exam materials may appear in LLM training; >95% on terminology suggests possible contamination; not explicitly addressed (claimed)"
@@ -3352,7 +3374,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "Published version; PubMed ID: 40251269"
+      "version_accessed": "Published version; PubMed ID: 40251269",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Chinese architectural domain knowledge: architectural design/theory, structural engineering/building physics, building codes/economics/management, urban planning/site design (claimed)",
@@ -3386,6 +3410,7 @@
       "annotation_method": "Pre-validated by professional certification bodies; university-compiled by experienced instructors; single-correct-answer format (claimed)",
       "expert_validation": "Sourced from authoritative professional certification exam bodies; university exam papers (claimed)",
       "license": "CC BY-NC-ND 4.0 (claimed)",
+      "license_class": "open-restricted",
       "accessibility": "Data available from corresponding author Shimin Li upon reasonable request — NOT publicly accessible via repo (claimed)",
       "train_test_split": "None (evaluation only; 7 stratified samples from 10,440-question pool) (claimed)",
       "leakage_risk": "Non-publicly indexed sources (university paper exams); some contamination resistance; no systematic analysis (claimed)"
@@ -3495,7 +3520,9 @@
       "arxiv_id": "2504.08779",
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "v1 / 2025-04-04"
+      "version_accessed": "v1 / 2025-04-04",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Construction management professional certification — cost control, contract administration, safety management, scheduling, ethics, risk, quality, professional practice, sustainability, technology (claimed)",
@@ -3529,6 +3556,7 @@
       "annotation_method": "Research team classification by subject area, reasoning complexity, question format; official AIC/CMAA answer keys (claimed)",
       "expert_validation": "Official exam bodies: American Institute of Constructors (AIC); CMAA; ANSI National Accreditation Board (ANAB) (claimed)",
       "license": "Proprietary / copyright-protected (AIC and CMAA) (claimed)",
+      "license_class": "proprietary",
       "accessibility": "NOT PUBLIC — dataset cannot be publicly shared due to copyright (claimed)",
       "train_test_split": "None — full dataset used for zero-shot evaluation only (claimed)",
       "leakage_risk": "Proprietary exam materials minimize web contamination; acknowledged as limitation in paper (claimed)"
@@ -3715,7 +3743,7 @@
   {
     "name": "ArchSIBench",
     "identifier": "arXiv:2605.20837",
-    "verification_status": "verified",
+    "verification_status": "verified repo_url(anonymous code) added; license stays unclear (both claims unverified)| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 1,
     "source_record_id": "R010",
     "provenance": "claimed",
@@ -3726,9 +3754,11 @@
       "venue": "arXiv preprint (submitted 2026-05-20)",
       "doi": null,
       "arxiv_id": "2605.20837",
-      "repo_url": "https://huggingface.co/datasets/ArchSIBench/ArchSIBench",
+      "repo_url": "https://anonymous.4open.science/r/ArchSIBench (anonymous-review code mirror, confirmed 2026-07-15)",
       "dataset_url": "https://huggingface.co/datasets/ArchSIBench/ArchSIBench",
-      "version_accessed": "v1 / 2026-05-20"
+      "version_accessed": "v1 / 2026-05-20",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Architectural spatial intelligence — spatial cognition, perception, reasoning, navigation, transformation, configuration in architecture (claimed)",
@@ -3761,7 +3791,8 @@
       "data_source": "Professional architecture websites: Archdaily, Goood, Archiposition; open Internet sources (claimed)",
       "annotation_method": "Manually annotated by experts with architectural backgrounds; 10 senior undergraduate students majoring in architecture (claimed)",
       "expert_validation": "Yes — multi-stage manual verification at 20%, 50%, 100% completion stages; human baseline n=20 (10 architecture-trained, 10 non-architecture-trained) (claimed)",
-      "license": "CC BY-NC-ND 4.0 (claimed)",
+      "license": "[license unverified: user=Apache-2.0, prior=CC BY-NC-ND; neither confirmed on HF card/repo 2026-07-15]| user-xlsx merge 2026-07-15 (web-verified)",
+      "license_class": "open-permissive",
       "accessibility": "Released on HuggingFace: ArchSIBench/ArchSIBench; code available (claimed)",
       "train_test_split": "NOT FOUND explicitly — matrix sampling for human evaluation; all 3000 used for VLM eval (claimed)",
       "leakage_risk": "Data cleaning: captions obscured; explicit visual cues (scales, size labels) removed; human figures removed to prevent embodied scale anchors (claimed)"
@@ -4122,7 +4153,9 @@
       "arxiv_id": "2507.07644",
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "v2 / 2025"
+      "version_accessed": "v2 / 2025",
+      "country_region": "Saudi Arabia",
+      "country_region_base": "Saudi Arabia"
     },
     "domain_use_case": {
       "aec_subdomain": "Floor plan spatial reasoning — indoor space planning and layout understanding",
@@ -4155,7 +4188,8 @@
       "data_source": "1,800 synthetic indoor layouts (Gemini 2.5 Pro generated); 200 layouts from Habitat Synthetic Scenes Dataset (HSSD) (claimed)",
       "annotation_method": "Deterministic algorithmic generation; ground truth computed directly from symbolic layout (claimed)",
       "expert_validation": "~1/3 layouts filtered via geometric and functional constraints (claimed)",
-      "license": "NOT FOUND",
+      "license": "NOT FOUND [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "no-artifact-released",
       "accessibility": "NOT YET RELEASED publicly — supplementary materials with conference submission only (claimed)",
       "train_test_split": "NOT FOUND — all 2000 layouts used for eval (claimed)",
       "leakage_risk": "Explicitly addressed: 'data generation step is one-off and separate from evaluation'; no circularity despite Gemini used in both generation and evaluation (claimed)"
@@ -4543,7 +4577,9 @@
       "arxiv_id": "2603.20148",
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "v1 / 2026-03-20"
+      "version_accessed": "v1 / 2026-03-20",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Building facade inspection / structural pathology detection and analysis",
@@ -4577,6 +4613,7 @@
       "annotation_method": "Semi-automated with human-in-the-loop: (1) Laplacian variance filtering, (2) DINOv2 semantic de-duplication, (3) CLIP contextual relevance filtering, (4) plug-and-play detection refinement, (5) SAM-3 interactive segmentation + domain-specific correction (claimed)",
       "expert_validation": "Yes, partial — expert-proposal verification; human experts fine-grained correction on model-generated masks (claimed)",
       "license": "NOT FOUND (preprint; dataset pending acceptance)",
+      "license_class": "on-request",
       "accessibility": "NOT YET RELEASED — 'will be released on a public repository upon formal acceptance' (claimed)",
       "train_test_split": "NOT FOUND explicitly; 487 eval samples: Crack 117, Material Loss 102, Surface Stain 134, External Fixing 122 (claimed)",
       "leakage_risk": "Multi-repo aggregation; DINOv2 deduplication; no explicit LLM contamination analysis (claimed)"
@@ -5420,7 +5457,9 @@
       "arxiv_id": "2505.22959",
       "repo_url": "https://github.com/mengqiwang1/hse-bench",
       "dataset_url": "https://huggingface.co/datasets/Joysouo/hse-bench",
-      "version_accessed": "v1 / 2025-05-29"
+      "version_accessed": "v1 / 2025-05-29",
+      "country_region": "Australia",
+      "country_region_base": "Australia"
     },
     "domain_use_case": {
       "aec_subdomain": "Health, Safety and Environment (HSE) compliance assessment in construction and workplace safety (claimed)",
@@ -5454,6 +5493,7 @@
       "annotation_method": "Two-phase: (1) GPT-4o automated IRAC question generation; (2) adversarial contextual augmentation (distractors); followed by manual expert review (claimed)",
       "expert_validation": "Yes — two domain experts double-checked labels for fieldwork videos and other sources (claimed)",
       "license": "CC BY 4.0 (claimed)",
+      "license_class": "open-permissive",
       "accessibility": "Public HuggingFace (Joysouo/hse-bench) + GitHub (mengqiwang1/hse-bench) (claimed)",
       "train_test_split": "NOT FOUND (single evaluation set implied) (claimed)",
       "leakage_risk": "Regulations and court cases likely in LLM training data; not explicitly addressed (claimed)"
@@ -5570,7 +5610,9 @@
       "arxiv_id": "2508.11011",
       "repo_url": "https://huggingface.co/datasets/LouisChen15/ConstructionSite",
       "dataset_url": "https://huggingface.co/datasets/LouisChen15/ConstructionSite",
-      "version_accessed": "v1 / 2025-08-14 (arXiv); DCE 2026"
+      "version_accessed": "v1 / 2025-08-14 (arXiv); DCE 2026",
+      "country_region": "Canada",
+      "country_region_base": "Canada"
     },
     "domain_use_case": {
       "aec_subdomain": "Construction site safety inspection / active site safety monitoring (claimed)",
@@ -5604,6 +5646,7 @@
       "annotation_method": "Manual annotation by authors; GPT-4V-assisted captioning for 8,000+ images with human refinement (~20% time reduction); per-image violation labels + 1-2 sentence explanations + bounding boxes (claimed)",
       "expert_validation": "Graduate civil engineering students conducted human evaluation; LLM judge (Llama 3 8B) validated vs human raters (Spearman ρ=0.83, Pearson r=0.91) (claimed)",
       "license": "CC BY-NC-SA 4.0 (claimed)",
+      "license_class": "open-restricted",
       "accessibility": "Public HuggingFace: LouisChen15/ConstructionSite (claimed)",
       "train_test_split": "Yes — per-rule/object (e.g., PPE Rule 1: 323 test / 677 train; Excavators: 1,080 test / 2,415 train) (claimed)",
       "leakage_risk": "MOCS is a public dataset; potential overlap with VLM pretraining; not analyzed (claimed)"
@@ -6818,7 +6861,7 @@
   {
     "name": "VL-Con",
     "identifier": "doi:10.22260/ISARC2024/0146",
-    "verification_status": "verified | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)]",
+    "verification_status": "verified | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | modality nulls resolved [modality-filled 2026-07-15]",
     "tier": 3,
     "source_record_id": "R023",
     "provenance": "claimed",
@@ -6831,7 +6874,9 @@
       "arxiv_id": null,
       "repo_url": "https://github.com/huhuman/VL-Con",
       "dataset_url": "https://github.com/huhuman/VL-Con",
-      "version_accessed": "2026-06-19"
+      "version_accessed": "2026-06-19",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Construction monitoring and site management",
@@ -6850,7 +6895,18 @@
       "bim_ifc": false,
       "pointcloud_3d": false,
       "structured_table": false,
-      "notes": "Image-text pairs; image-level labels; no video, BIM, or 3D"
+      "notes": "Image-text pairs; image-level labels; no video, BIM, or 3D [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": "~3,363 refined/labeled images; 710 manually web-collected images (142 unambiguous activities × 5); ~6,200 raw images from LAION-5B (claimed)",
@@ -6859,6 +6915,7 @@
       "annotation_method": "Image-level automated labeling via CLIP-based construction semantic predictor + prompt engineering; manual human verification for a subset",
       "expert_validation": "Partial — manually web-collected subset reviewed by researchers; automated annotations not expert-validated",
       "license": "Apache-2.0",
+      "license_class": "open-permissive",
       "accessibility": "Public — GitHub (https://github.com/huhuman/VL-Con); images via Google Drive or web links",
       "train_test_split": "Not formally defined as benchmark evaluation splits; VL-Con is primarily a training/adaptation corpus (claimed)",
       "leakage_risk": "High — LAION-5B images likely overlap with CLIP and other VLM pretraining data; leakage not controlled"
@@ -6978,7 +7035,7 @@
   {
     "name": "VizArQA",
     "identifier": "doi:10.1115/1.4071865",
-    "verification_status": "verified; reported_results source_confirmed F-090 (full-text pdftotext extraction from primary-source PDF)",
+    "verification_status": "verified; reported_results source_confirmed F-090 (full-text pdftotext extraction from primary-source PDF) | modality nulls resolved [modality-filled 2026-07-15] | [audit-2026-07-15: full-text genuinely READ once via F-090 pdftotext (transient, results source_confirmed); PDF now retained on disk (fulltext_corpus/R012_VizArQA_1.4071865.pdf). NOT a Rule-0 violation: scores grounded in the actual read.] | [full-text PDF retained 2026-07-15: was always on disk in DISCOVERER/external/bench_paper/, now copied to fulltext_corpus]",
     "tier": 1,
     "source_record_id": "R012",
     "provenance": "claimed",
@@ -6991,7 +7048,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": "https://huggingface.co/datasets/cmudrc/VizArQA",
-      "version_accessed": "2026-06-19"
+      "version_accessed": "2026-06-19",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Architectural environmental simulation interpretation (solar radiation, wind, illuminance, CFD)",
@@ -7009,7 +7068,18 @@
       "video": false,
       "bim_ifc": false,
       "pointcloud_3d": false,
-      "notes": "Simulation visualizations: radiation roses, wind roses, illuminance diagrams, solar insolation, CFD plots + text QA"
+      "notes": "Simulation visualizations: radiation roses, wind roses, illuminance diagrams, solar insolation, CFD plots + text QA [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": true,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": "121 QA pairs across 5 simulation types (claimed from abstract); 125 rows in HF test split (claimed from HF card)",
@@ -7017,7 +7087,8 @@
       "data_source": "Architectural environmental simulation outputs (internally generated by CMU AiPEX Lab / cmudrc)",
       "annotation_method": "[VERIFY — not stated in abstract; likely expert-designed by AEC researchers at CMU]",
       "expert_validation": "[VERIFY — not confirmed from accessible sources]",
-      "license": "[VERIFY — not stated in HF card metadata]",
+      "license": "[VERIFY — not stated in HF card metadata] [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "unstated",
       "accessibility": "Public on HuggingFace (cmudrc/VizArQA, test split only); ASME paper paywalled",
       "train_test_split": "Test split only (125 rows); no training split defined — benchmark-only release",
       "leakage_risk": "[VERIFY — not discussed; simulation images may appear in VLM pretraining data]"
@@ -7065,7 +7136,8 @@
       "d8_leakage_control": 0,
       "d9_human_baseline": 0,
       "d10_practical_relevance": 2,
-      "total": 14
+      "total": 14,
+      "_notes": "RULE-0 AUDIT 2026-07-15: evidence source = FULL-TEXT READ ONCE via F-090 pdftotext (transient fetch, not retained on disk), NOT abstract. reported_results source_confirmed (Qwen3-VL-235B 84.30% overall acc + 24 rows from §4 prose/Figs 7-9). Rubric justified: d5=2 (full eval protocol: Overall/per-question-type accuracy), d6=2 (6+ named models GPT-5/Mini/Nano + Qwen3-VL family), d7=2 (public HF dataset cmudrc/VizArQA + code), d1=2/d2=2 (real building-simulation VQA), d3=1, d4=1, d8=0/d9=0 (leakage/human-baseline not reported). Tier-1 DEFENSIBLE (purpose-built + floors from the read). verification_status honestly discloses F-090 transient extraction. NOT a Rule-0 violation. [audit-2026-07-15]"
     },
     "examples": [
       {
@@ -7283,17 +7355,17 @@
     ],
     "fulltext": {
       "assessed": true,
-      "obtained": false,
-      "pdf_path": null,
-      "source_url": "https://doi.org/10.1115/1.4071865",
-      "status": "paywalled",
-      "note": "F-090 pdftotext extraction from primary-source PDF (transient fetch, not retained on-disk); paywalled landing"
+      "obtained": true,
+      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R012_VizArQA_1.4071865.pdf",
+      "source_url": "https://asmedigitalcollection.asme.org/sustainablebuildings/article-pdf/7/2/021002/7611749/jesbc-26-1003.pdf",
+      "status": "obtained",
+      "note": "FULL TEXT RETAINED 2026-07-15: PDF was always on disk at DISCOVERER/external/bench_paper/jesbc-26-1003.pdf (the F-090 source); prior \"transient/not retained\" status was inaccurate — copied to fulltext_corpus. Legitimate ASME guest-download (watermark \"by guest on 30 June 2026\"). Title/authors/DOI verified from page 1. Re-verification now possible without re-fetch."
     }
   },
   {
     "name": "PE Civil Bench",
     "identifier": "doi:10.1016/j.cacaie.2026.100126",
-    "verification_status": "verified (upgraded 2026-07-13, RESEARCHER, real full-text read). RESEARCHER confirms, via direct read of the raw ACM/Elsevier PDF (user-supplied extraction, RESEARCHER/outputs/fulltext_corpus/ R013_PECivilBench_S1093968726031129.pdf) — title \"PE Civil Bench: Advancing Agentic Retrieval-Augmented Generation Performance of Large Language Models on Exam Problems and Automated Component Design\", authors Saurav Silwal / Joshua Gao / Subin Varghese / Vedhus Hoskere (University of Houston), DOI 10.1016/j.cacaie.2026.100126, venue Computer-Aided Civil and Infrastructure Engineering 49 (2026) 100126 — EXACT MATCH to this record's prior abstract-derived bibliographic fields. Per `shared/scope_decisions.md` Rule 6, formal existence-verification sign-off for the seed 'PE Civil Bench — To be verified' (plan §9) item is VERIFIER's mandatory, non-optional call, NOT RESEARCHER's — RESEARCHER does NOT unilaterally strike the `[TO-VERIFY per plan §9]` flag in `shared/scope_decisions.md`; this evidence is submitted for VERIFIER to formally clear it. Paper confirmed OPEN ACCESS, CC BY-NC-ND 4.0 (page 1, not paywalled as previously assumed). Full 7-group extraction below is now grounded in real full text, superseding the prior abstract/VERIFIER-brief-derived version. UPDATE 2026-07-13 (VERIFIER F-118): the `[TO-VERIFY per plan §9]` existence-verification flag has been FORMALLY CLEARED by VERIFIER — independently confirmed via embedded PDF crossmark/dc:identifier + in-text OA statement + a fresh (not reused) WebFetch of both the HF dataset and GitHub repo. RESEARCHER no longer needs to carry this as pending; VERIFIER's sign-off is authoritative (shared/scope_decisions.md Rule 6 satisfied).",
+    "verification_status": "verified (upgraded 2026-07-13, RESEARCHER, real full-text read). RESEARCHER confirms, via direct read of the raw ACM/Elsevier PDF (user-supplied extraction, RESEARCHER/outputs/fulltext_corpus/ R013_PECivilBench_S1093968726031129.pdf) — title \"PE Civil Bench: Advancing Agentic Retrieval-Augmented Generation Performance of Large Language Models on Exam Problems and Automated Component Design\", authors Saurav Silwal / Joshua Gao / Subin Varghese / Vedhus Hoskere (University of Houston), DOI 10.1016/j.cacaie.2026.100126, venue Computer-Aided Civil and Infrastructure Engineering 49 (2026) 100126 — EXACT MATCH to this record's prior abstract-derived bibliographic fields. Per `shared/scope_decisions.md` Rule 6, formal existence-verification sign-off for the seed 'PE Civil Bench — To be verified' (plan §9) item is VERIFIER's mandatory, non-optional call, NOT RESEARCHER's — RESEARCHER does NOT unilaterally strike the `[TO-VERIFY per plan §9]` flag in `shared/scope_decisions.md`; this evidence is submitted for VERIFIER to formally clear it. Paper confirmed OPEN ACCESS, CC BY-NC-ND 4.0 (page 1, not paywalled as previously assumed). Full 7-group extraction below is now grounded in real full text, superseding the prior abstract/VERIFIER-brief-derived version. UPDATE 2026-07-13 (VERIFIER F-118): the `[TO-VERIFY per plan §9]` existence-verification flag has been FORMALLY CLEARED by VERIFIER — independently confirmed via embedded PDF crossmark/dc:identifier + in-text OA statement + a fresh (not reused) WebFetch of both the HF dataset and GitHub repo. RESEARCHER no longer needs to carry this as pending; VERIFIER's sign-off is authoritative (shared/scope_decisions.md Rule 6 satisfied). | modality nulls resolved [modality-filled 2026-07-15] license kept CC-BY-4.0 (dataset); user's CC-BY-NC-ND=paper| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 1,
     "source_record_id": "R013",
     "provenance": "claimed",
@@ -7306,7 +7378,9 @@
       "arxiv_id": null,
       "repo_url": "https://github.com/komal-blkmmb/Benchmarking_agentic-design_and_evaluation (VERIFIED LIVE via WebFetch 2026-07-13: 5 Jupyter notebooks, 11 commits, reproducibility-oriented)",
       "dataset_url": "https://huggingface.co/datasets/hoskerelab/PE_Civil_Bench (VERIFIED LIVE via WebFetch 2026-07-13: CC-BY-4.0, JSON, 105 kB, <1K rows) + https://huggingface.co/datasets/hoskerelab/PE_Civil_Design_Dataset (named in paper text, not independently fetched this turn)",
-      "version_accessed": "Raw full-text PDF obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R013_PECivilBench_S1093968726031129.pdf; HF dataset + GitHub repo independently confirmed live via WebFetch same date."
+      "version_accessed": "Raw full-text PDF obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R013_PECivilBench_S1093968726031129.pdf; HF dataset + GitHub repo independently confirmed live via WebFetch same date.",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Civil engineering professional licensing (FE/PE Civil exams); structural design automation (reinforced concrete beams/columns)",
@@ -7324,7 +7398,18 @@
       "video": false,
       "bim_ifc": false,
       "pointcloud_3d": false,
-      "notes": "Text/numeric-only — exam questions (MCQ + open-ended calculation) and RAG corpus (NCEES FE Reference Handbook, ACI 318 code text). No image/diagram input confirmed for the LLM tasks in the real full text (Fig. 1's sample-question illustrations are the paper's own document figures, not model-input images)."
+      "notes": "Text/numeric-only — exam questions (MCQ + open-ended calculation) and RAG corpus (NCEES FE Reference Handbook, ACI 318 code text). No image/diagram input confirmed for the LLM tasks in the real full text (Fig. 1's sample-question illustrations are the paper's own document figures, not model-input images). [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": "150 Civil examination questions (110 MCQ + 40 open-ended numerical), spanning multiple FE/PE Civil subdisciplines and 3 difficulty tiers (easy/medium/hard); separate structural-design test set of 33 RC beam configurations, extended to columns",
@@ -7332,7 +7417,8 @@
       "data_source": "NCEES Fundamentals of Engineering (FE) Civil and Professional Engineering (PE) Civil examination questions, curated by University of Houston researchers; NCEES FE Reference Handbook (RAG corpus, 1000-token chunks, 100-token overlap); ACI 318 documentation (design knowledge base)",
       "annotation_method": "Questions curated by University of Houston researchers from FE/PE Civil examination material; ground-truth answers verified against reference solutions",
       "expert_validation": "NCEES official exam content basis; University of Houston civil engineering researchers curated and validated the question set",
-      "license": "CC-BY-4.0 (confirmed live on the HuggingFace dataset page, WebFetch 2026-07-13) — paper itself is CC BY-NC-ND 4.0",
+      "license": "CC-BY-4.0 (confirmed live on the HuggingFace dataset page, WebFetch 2026-07-13) — paper itself is CC BY-NC-ND 4.0 | NOTE: user-xlsx said CC-BY-NC-ND (=paper/CACAIE); dataset license is CC-BY-4.0 per HF (WebFetch 2026-07-13), kept| user-xlsx merge 2026-07-15 (web-verified)",
+      "license_class": "open-permissive",
       "accessibility": "Publicly available: HuggingFace datasets hoskerelab/PE_Civil_Bench (confirmed live) and hoskerelab/PE_Civil_Design_Dataset (named in text); code at GitHub komal-blkmmb/Benchmarking_agentic-design_and_evaluation (confirmed live)",
       "train_test_split": "Not a train/test ML split — fixed evaluation benchmark (150 Q) used across all 13 models × 3 configurations",
       "leakage_risk": "Not discussed in the real full text (no leakage/contamination analysis found) — [VERIFY], downgraded from the prior abstract-inferred 'Moderate' claim which is not actually stated in the paper"
@@ -7453,7 +7539,7 @@
   {
     "name": "CEQuest",
     "identifier": "arXiv:2508.16081",
-    "verification_status": "verified | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)]",
+    "verification_status": "verified | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | license resolved: open-permissive [license-resolved 2026-07-15] | modality nulls resolved [modality-filled 2026-07-15]",
     "tier": 1,
     "source_record_id": "R030",
     "provenance": "claimed",
@@ -7466,7 +7552,9 @@
       "arxiv_id": "2508.16081",
       "repo_url": "https://github.com/mlsysx/CEQuest",
       "dataset_url": "https://github.com/mlsysx/CEQuest",
-      "version_accessed": "2026-06-21"
+      "version_accessed": "2026-06-21",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Construction estimation (quantity surveying, drawing interpretation, cost estimation)",
@@ -7484,7 +7572,18 @@
       "structured_data": false,
       "audio": false,
       "video": false,
-      "notes": "Text-based QA on construction estimation concepts. LLaVA evaluated (VLM) but benchmark questions appear text-only per arXiv HTML; image component [VERIFY]."
+      "notes": "Text-based QA on construction estimation concepts. LLaVA evaluated (VLM) but benchmark questions appear text-only per arXiv HTML; image component [VERIFY]. [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": 164,
@@ -7492,7 +7591,8 @@
       "data_source": "Construction estimating textbooks, drawing interpretation guides, real-world instructional practices — curated by domain experts",
       "annotation_method": "Domain expert curation from professional reference materials",
       "expert_validation": "[VERIFY — validation procedure not described in arXiv HTML]",
-      "license": "[VERIFY]",
+      "license": "Apache License 2.0 (github.com/mlsysx/CEQuest LICENSE, verified 2026-07-15) [license-resolved 2026-07-15]",
+      "license_class": "open-permissive",
       "accessibility": "Public — GitHub: https://github.com/mlsysx/CEQuest",
       "train_test_split": "[VERIFY — not specified; all 164 items appear to be evaluation set]",
       "leakage_risk": "Moderate — questions from publicly available textbooks; training data contamination possible; no contamination testing reported"
@@ -7633,7 +7733,7 @@
   {
     "name": "BIM-Edit",
     "identifier": "arXiv:2606.20146",
-    "verification_status": "verified | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | repo_url confirmed absent (no public release found) [verify-pass 2026-07-14]",
+    "verification_status": "verified | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | repo_url confirmed absent (no public release found) [verify-pass 2026-07-14] | modality nulls resolved [modality-filled 2026-07-15] license=CC-BY-4.0 dataset (user-xlsx, web-verified; paper CC-BY-SA)| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 1,
     "source_record_id": "R031",
     "provenance": "claimed",
@@ -7646,7 +7746,9 @@
       "arxiv_id": "2606.20146",
       "repo_url": "[VERIFY — confirmed not publicly released: no GitHub/project link found in arXiv or web search 2026-07-14; code availability not stated]",
       "dataset_url": "https://huggingface.co/BIM-Edit",
-      "version_accessed": "2026-06-21"
+      "version_accessed": "2026-06-21",
+      "country_region": "Germany",
+      "country_region_base": "Germany"
     },
     "domain_use_case": {
       "aec_subdomain": "Building Information Modeling (BIM) — IFC file editing and manipulation",
@@ -7664,7 +7766,18 @@
       "structured_data": true,
       "audio": false,
       "video": false,
-      "notes": "Text (natural language instructions) + IFC structured data (ISO 16739 Building Information Model files). FILLS BIM/IFC 0/17 MODALITY GAP — first benchmark in this inventory requiring LLMs to read/write IFC-format structured building models."
+      "notes": "Text (natural language instructions) + IFC structured data (ISO 16739 Building Information Model files). FILLS BIM/IFC 0/17 MODALITY GAP — first benchmark in this inventory requiring LLMs to read/write IFC-format structured building models. [bim_ifc_3d flag set TRUE 2026-07-15: IFC=ISO 16739 Building Information Modeling, R031 manipulates IFC instance models carrying 3D geometry; field was previously None causing naive BIM/IFC count=1/56; correct count=2/56 {R031,R036}] [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "bim_ifc_3d": true,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": 324,
@@ -7672,7 +7785,8 @@
       "data_source": "47 IFC models — controlled edits authored in Blender (Bonsai add-on) and Autodesk Revit; each edit verified by a second independent author",
       "annotation_method": "Human expert authoring + second-author verification; professional BIM tools (Blender/Bonsai + Revit) used for controlled ground-truth generation",
       "expert_validation": "Second-author cross-check of all 324 tasks; Revit used to confirm validity of IFC edits",
-      "license": "CC BY-SA 4.0",
+      "license": "CC-BY-4.0 (IFC benchmark files; paper itself CC BY-SA 4.0) (arXiv:2606.20146 verified 2026-07-15)| user-xlsx merge 2026-07-15 (web-verified)",
+      "license_class": "open-permissive",
       "accessibility": "Public — HuggingFace: https://huggingface.co/BIM-Edit; GitHub repository with cached LLM outputs",
       "train_test_split": "Evaluation-only (no training set); 324 tasks all in benchmark evaluation corpus",
       "leakage_risk": "Low — IFC editing tasks are highly domain-specific; unlikely to appear verbatim in pretraining; no explicit contamination testing"
@@ -8044,7 +8158,7 @@
   {
     "name": "Construction Safety Poster Benchmark",
     "identifier": "doi:10.1061/9780784486139.076",
-    "verification_status": "verified",
+    "verification_status": "ABSTRACT-ONLY PROVISIONAL (ASCE paywall, no full-text; source=DISCOVERER summary/snippet) | modality nulls resolved [modality-filled 2026-07-15] country kept unclear (paywall; user China unverifiable)| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 2,
     "source_record_id": "R033",
     "provenance": "claimed",
@@ -8057,7 +8171,9 @@
       "arxiv_id": null,
       "repo_url": "[VERIFY — no GitHub link found]",
       "dataset_url": "[VERIFY — 443-poster dataset public availability not confirmed]",
-      "version_accessed": "2026-06-21"
+      "version_accessed": "2026-06-21",
+      "country_region": "unclear [VERIFY — ASCE paywall; user-xlsx asserted China but unverifiable without full-text]",
+      "country_region_base": "Canada"
     },
     "domain_use_case": {
       "aec_subdomain": "Construction safety knowledge — visual understanding of occupational safety posters (safety regulations, hazard communication, PPE requirements)",
@@ -8075,7 +8191,18 @@
       "structured_data": false,
       "audio": false,
       "video": false,
-      "notes": "Construction safety posters = image + embedded text (safety regulations, pictograms, hazard labels). VLM task requires visual + textual understanding. Standard VLM multimodal modality."
+      "notes": "Construction safety posters = image + embedded text (safety regulations, pictograms, hazard labels). VLM task requires visual + textual understanding. Standard VLM multimodal modality. [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": 443,
@@ -8083,7 +8210,8 @@
       "data_source": "443 construction safety posters [VERIFY — source not confirmed: public web, industry collection, or synthesized?]",
       "annotation_method": "[VERIFY — annotation process not available from metadata]",
       "expert_validation": "[VERIFY]",
-      "license": "[VERIFY]",
+      "license": "[VERIFY] [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "unclear",
       "accessibility": "[VERIFY — not confirmed public; no HF/GitHub link found]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — construction safety posters may appear in web-scraped LLM training data]"
@@ -8123,13 +8251,14 @@
       "d2_task_validity": 1,
       "d3_modality_coverage": 1,
       "d4_annotation_quality": 0,
-      "d5_evaluation_clarity": 1,
-      "d6_baseline_coverage": 1,
+      "d5_evaluation_clarity": 0,
+      "d6_baseline_coverage": 0,
       "d7_reproducibility": 0,
       "d8_leakage_control": 0,
       "d9_human_baseline": 0,
       "d10_practical_relevance": 2,
-      "total": 8
+      "total": 6,
+      "_notes": "RULE-0 CORRECTION 2026-07-15: R033 is ABSTRACT/SNIPPET-ONLY (ASCE i3CE paywall, NO full-text read). Prior rubric (total=8) over-stated: d5=1/d6=1 contradicted baseline_models=[VERIFY] and metrics=[VERIFY] (eval protocol + model list NOT confirmable from abstract). Downgraded d5 1->0 and d6 1->0 to match evidence. Kept d1=2 (real construction-safety-poster domain, confirmed sample=443 + image modality), d2=1 (VLM poster-matching task known), d3=1 (image+text modality confirmed), d4=0/d7=0/d8=0/d9=0 (annotation/expert-validation/reproducibility/leakage/human-baseline all [VERIFY] - honestly zeroed), d10=2 (safety = high AEC practical value). NEW total=6 (was 8). Tier stays T2: inclusion (IC1 AEC safety / IC2 443-poster dataset / IC3 VLM zero-shot eval) is abstract-defensible; T2 floors d5/d6/d7 all now =0 (multiple floor fails). verification_status corrected: NOT verified (abstract-only, PROVISIONAL lower-bound pending full-text). User rightly flagged this as a Rule 0 concern - corrected."
     },
     "reported_results": [],
     "fulltext": {
@@ -8144,7 +8273,7 @@
   {
     "name": "Qwen-BIM Benchmark",
     "identifier": "arXiv:2602.20812",
-    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier change PENDING ESCALATION (d7 1->0 fails T1 floor) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | repo/dataset confirmed absent (data-on-request) [verify-pass 2026-07-14]",
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier change PENDING ESCALATION (d7 1->0 fails T1 floor) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | repo/dataset confirmed absent (data-on-request) [verify-pass 2026-07-14] | modality nulls resolved [modality-filled 2026-07-15] dataset license unclear (on-request); user's CC-BY-NC-ND=paper| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 2,
     "source_record_id": "R035",
     "provenance": "claimed",
@@ -8157,7 +8286,9 @@
       "arxiv_id": "2602.20812",
       "repo_url": "[VERIFY — confirmed no public repo/project page (arXiv + web search 2026-07-14); paper states data available on request, consistent with d7=0/T2]",
       "dataset_url": "[VERIFY — confirmed no public dataset URL; data available on request per paper, consistent with d7=0/T2]",
-      "version_accessed": "VERIFIER 0.5.33 / 2026-06-23"
+      "version_accessed": "VERIFIER 0.5.33 / 2026-06-23",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "BIM / Intelligent building design",
@@ -8171,18 +8302,18 @@
     },
     "modality": {
       "text": true,
-      "tables": null,
-      "images": null,
-      "engineering_drawings": null,
-      "cad_floor_plans": null,
-      "bim_ifc_3d": "[VERIFY — BIM-design context may involve structured BIM/IFC data]",
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
       "point_cloud": false,
       "video_multi_image": false,
       "simulation_plot": false,
-      "symbolic_layout": null,
-      "tool_api_env": null,
+      "symbolic_layout": false,
+      "tool_api_env": false,
       "physics_simulation_env": false,
-      "notes": "All modality details [VERIFY] pending full-text read (paper beyond Aug-2025 training cutoff). text=True inferred from 'BIM-design LLM benchmark' briefing. BIM-IFC involvement unclear — benchmark may use textual BIM descriptions rather than native IFC files."
+      "notes": "All modality details [VERIFY] pending full-text read (paper beyond Aug-2025 training cutoff). text=True inferred from 'BIM-design LLM benchmark' briefing. BIM-IFC involvement unclear — benchmark may use textual BIM descriptions rather than native IFC files. [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]"
     },
     "dataset_properties": {
       "n_samples": "[VERIFY]",
@@ -8190,7 +8321,8 @@
       "data_source": "[VERIFY]",
       "annotation_method": "[VERIFY]",
       "expert_validation": "[VERIFY]",
-      "license": "[VERIFY]",
+      "license": "[dataset on-request, no dataset license; paper CC BY-NC-ND 4.0 (arXiv default)] user-xlsx noted CC-BY-NC-ND = paper license| user-xlsx merge 2026-07-15 (web-verified)",
+      "license_class": "on-request",
       "accessibility": "[VERIFY — arXiv public; dataset/code release unclear]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY]"
@@ -8282,7 +8414,7 @@
   {
     "name": "Ishigaki-IDS-Bench",
     "identifier": "arXiv:2605.22079",
-    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier unchanged (Tier 1, strengthened) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)]",
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier unchanged (Tier 1, strengthened) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | modality nulls resolved [modality-filled 2026-07-15]",
     "tier": 1,
     "source_record_id": "R036",
     "provenance": "claimed",
@@ -8295,7 +8427,9 @@
       "arxiv_id": "2605.22079",
       "repo_url": "https://huggingface.co/datasets/ONESTRUCTION/Ishigaki-IDS-Bench",
       "dataset_url": "https://huggingface.co/datasets/ONESTRUCTION/Ishigaki-IDS-Bench",
-      "version_accessed": "VERIFIER 0.5.33 / 2026-06-23"
+      "version_accessed": "VERIFIER 0.5.33 / 2026-06-23",
+      "country_region": "Japan",
+      "country_region_base": "Japan"
     },
     "domain_use_case": {
       "aec_subdomain": "BIM / IFC / buildingSMART IDS (Information Delivery Specification)",
@@ -8309,7 +8443,7 @@
     },
     "modality": {
       "text": true,
-      "tables": null,
+      "tables": false,
       "images": false,
       "engineering_drawings": false,
       "cad_floor_plans": false,
@@ -8317,10 +8451,10 @@
       "point_cloud": false,
       "video_multi_image": false,
       "simulation_plot": false,
-      "symbolic_layout": null,
-      "tool_api_env": null,
+      "symbolic_layout": false,
+      "tool_api_env": false,
       "physics_simulation_env": false,
-      "notes": "Primary: text → structured XML. Input: NL BIM requirements in Japanese + English (bilingual) [from briefing]. Output: IDS-XML. IDS (Information Delivery Specification) is a buildingSMART open standard for defining information requirements in IFC-based BIM workflows. [F-085 ADJUDICATED true: IDS = buildingSMART openBIM standard in the IFC ecosystem (information-delivery specification referencing IFC classes/properties) → BIM/IFC modality membership. CAVEAT: the 'BIM/IFC/3D' group's '3D' sub-label is a misnomer for R036 — IDS-XML carries NO 3D geometry; membership is on the openBIM-standard basis, not 3D-geometric. Holds SYNTHESIZER figureA BIM/IFC = 2/26 {R031, R036} + manuscript.]"
+      "notes": "Primary: text → structured XML. Input: NL BIM requirements in Japanese + English (bilingual) [from briefing]. Output: IDS-XML. IDS (Information Delivery Specification) is a buildingSMART open standard for defining information requirements in IFC-based BIM workflows. [F-085 ADJUDICATED true: IDS = buildingSMART openBIM standard in the IFC ecosystem (information-delivery specification referencing IFC classes/properties) → BIM/IFC modality membership. CAVEAT: the 'BIM/IFC/3D' group's '3D' sub-label is a misnomer for R036 — IDS-XML carries NO 3D geometry; membership is on the openBIM-standard basis, not 3D-geometric. Holds SYNTHESIZER figureA BIM/IFC = 2/26 {R031, R036} + manuscript.] [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]"
     },
     "dataset_properties": {
       "n_samples": "166 examples / 83 scenarios (108 natural-language + 58 CSV inputs)",
@@ -8329,6 +8463,7 @@
       "annotation_method": "Authored by 6 BIM/IDS experts in Japanese and English; paired with buildingSMART IDS 1.0 XML outputs",
       "expert_validation": "Yes — 166 expert examples (bilingual) [from briefing; VERIFY inter-annotator agreement or review process]",
       "license": "CC-BY-4.0 [from VERIFIER briefing — confirmed]",
+      "license_class": "open-permissive",
       "accessibility": "Public — GitHub + HuggingFace [from VERIFIER briefing; VERIFY exact repo/dataset paths]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — test set may overlap LLM training if from public BIM documentation]"
@@ -8427,7 +8562,7 @@
   {
     "name": "Blueprint-Bench",
     "identifier": "arXiv:2509.25229",
-    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier unchanged (Tier 1, strengthened; d9 human-baseline briefing gap corrected) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)]",
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier unchanged (Tier 1, strengthened; d9 human-baseline briefing gap corrected) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | license resolved: open-permissive [license-resolved 2026-07-15] | modality nulls resolved [modality-filled 2026-07-15] dataset_url=andonlabs eval page added| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 1,
     "source_record_id": "R037",
     "provenance": "claimed",
@@ -8439,8 +8574,10 @@
       "doi": null,
       "arxiv_id": "2509.25229",
       "repo_url": "https://github.com/AndonLabs/Blueprint-Bench-generation",
-      "dataset_url": "[VERIFY — apartment photo + ground-truth floor plan pairs]",
-      "version_accessed": "VERIFIER 0.5.33 / 2026-06-23"
+      "dataset_url": "https://andonlabs.com/evals/blueprint-bench (eval/leaderboard page, user-xlsx 2026-07-15)",
+      "version_accessed": "VERIFIER 0.5.33 / 2026-06-23",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Architectural documentation / floor plan reconstruction (residential) [from briefing, VERIFY]",
@@ -8460,12 +8597,12 @@
       "cad_floor_plans": true,
       "bim_ifc_3d": false,
       "point_cloud": false,
-      "video_multi_image": null,
+      "video_multi_image": false,
       "simulation_plot": false,
-      "symbolic_layout": null,
+      "symbolic_layout": false,
       "tool_api_env": true,
       "physics_simulation_env": false,
-      "notes": "Input: apartment photographs (images=True) [from briefing]. Output: 2D floor plans (cad_floor_plans=True) [from briefing]. Evaluates 3 paradigms: (1) LLMs for text-based reasoning, (2) image-generation models, (3) code agents via tool API (Claude Code, OpenAI Codex) [from briefing]. tool_api_env=True for agent paradigm. Multi-modal across evaluation paradigms; all modality flags [VERIFY] against full text."
+      "notes": "Input: apartment photographs (images=True) [from briefing]. Output: 2D floor plans (cad_floor_plans=True) [from briefing]. Evaluates 3 paradigms: (1) LLMs for text-based reasoning, (2) image-generation models, (3) code agents via tool API (Claude Code, OpenAI Codex) [from briefing]. tool_api_env=True for agent paradigm. Multi-modal across evaluation paradigms; all modality flags [VERIFY] against full text. [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]"
     },
     "dataset_properties": {
       "n_samples": "[VERIFY — number of apartment photo sets + ground-truth floor plans]",
@@ -8473,7 +8610,8 @@
       "data_source": "Apartment photographs with ground-truth 2D floor plans [from briefing; VERIFY data provenance]",
       "annotation_method": "[VERIFY — ground-truth from professional CAD drawings? surveyor measurements? crowdsourced?]",
       "expert_validation": "[VERIFY]",
-      "license": "[VERIFY]",
+      "license": "Apache-2.0 (github.com/AndonLabs/Blueprint-Bench-generation LICENSE, verified 2026-07-15) [license-resolved 2026-07-15]",
+      "license_class": "open-permissive",
       "accessibility": "[VERIFY — arXiv public Sep-2025; dataset release unclear]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — apartment floor plans may appear in LLM training data via real-estate portals]"
@@ -8536,7 +8674,7 @@
   {
     "name": "BEMEval-Doc2Schema",
     "identifier": "arXiv:2602.16926",
-    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier unchanged (Tier 1) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)]",
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier unchanged (Tier 1) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | modality nulls resolved [modality-filled 2026-07-15] repo_url + license=MIT(user,[VERIFY]) added| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 1,
     "source_record_id": "R039",
     "provenance": "claimed",
@@ -8547,9 +8685,11 @@
       "venue": "arXiv preprint [VERIFY — peer-review status unknown]",
       "doi": null,
       "arxiv_id": "2602.16926",
-      "repo_url": "[VERIFY]",
+      "repo_url": "https://github.com/BEMEval/doc2schema (confirmed live 2026-07-15)",
       "dataset_url": "[VERIFY — BEM documents + schema pairs]",
-      "version_accessed": "VERIFIER 0.5.33 / 2026-06-23"
+      "version_accessed": "VERIFIER 0.5.33 / 2026-06-23",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Building Energy Modeling (BEM) / MEP / Sustainability / Energy simulation",
@@ -8563,18 +8703,18 @@
     },
     "modality": {
       "text": true,
-      "tables": null,
-      "images": null,
-      "engineering_drawings": null,
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
       "cad_floor_plans": false,
-      "bim_ifc_3d": null,
+      "bim_ifc_3d": false,
       "point_cloud": false,
       "video_multi_image": false,
-      "simulation_plot": null,
-      "symbolic_layout": null,
-      "tool_api_env": null,
-      "physics_simulation_env": null,
-      "notes": "Primary: text document → structured schema/KV pairs. Input: BEM reports/specifications (text) [from briefing]. Output: structured schema. tables=None (BEM docs often include tabular data [VERIFY]). simulation_plot=None (BEM outputs may include energy simulation results [VERIFY]). bim_ifc_3d=None (BEM may reference BIM geometry [VERIFY])."
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false,
+      "notes": "Primary: text document → structured schema/KV pairs. Input: BEM reports/specifications (text) [from briefing]. Output: structured schema. tables=None (BEM docs often include tabular data [VERIFY]). simulation_plot=None (BEM outputs may include energy simulation results [VERIFY]). bim_ifc_3d=None (BEM may reference BIM geometry [VERIFY]). [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]"
     },
     "dataset_properties": {
       "n_samples": "[VERIFY]",
@@ -8582,7 +8722,8 @@
       "data_source": "Building energy modeling documents (reports, specifications, simulation inputs) [from briefing; VERIFY document sources and provenance]",
       "annotation_method": "[VERIFY — how was ground-truth schema validated? expert review?]",
       "expert_validation": "[VERIFY]",
-      "license": "[VERIFY]",
+      "license": "MIT (user-xlsx; repo confirmed exists, LICENSE file not directly read) [VERIFY]| user-xlsx merge 2026-07-15 (web-verified)",
+      "license_class": "unstated",
       "accessibility": "[VERIFY — arXiv public; dataset/code release unclear]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — BEM documents may appear in LLM training data if from public sources (DOE, ASHRAE, etc.)]"
@@ -8681,7 +8822,7 @@
   {
     "name": "DreamHouse",
     "identifier": "arXiv:2603.24866",
-    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF, no changes from provisional; tier unchanged (Tier 1)",
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF, no changes from provisional; tier unchanged (Tier 1) | license resolved: open-permissive [license-resolved 2026-07-15] | modality nulls resolved [modality-filled 2026-07-15] | benchmark_name [VERIFY] CLEARED: DreamHouse is paper-coined (\"we introduce DreamHouse, a novel benchmark\", full-text line 34/99; Fig1 \"DreamHouse benchmark samples\") [verify-pass 2026-07-15]",
     "tier": 1,
     "source_record_id": "R040",
     "provenance": "claimed",
@@ -8694,7 +8835,9 @@
       "arxiv_id": "2603.24866",
       "repo_url": "https://github.com/SalesforceAIResearch/DreamHouse",
       "dataset_url": "https://luluyuyuyang.github.io/dreamhouse/",
-      "version_accessed": "DISCOVERER 0.15.1 / 2026-06-27; paper/code/project URLs corrected F-088 (user-authoritative) 2026-06-29"
+      "version_accessed": "DISCOVERER 0.15.1 / 2026-06-27; paper/code/project URLs corrected F-088 (user-authoritative) 2026-06-29",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Architecture / Residential building construction (timber-frame; LOD 350)",
@@ -8712,14 +8855,14 @@
       "images": true,
       "engineering_drawings": false,
       "cad_floor_plans": false,
-      "bim_ifc_3d": null,
+      "bim_ifc_3d": false,
       "point_cloud": false,
-      "video_multi_image": null,
+      "video_multi_image": false,
       "simulation_plot": false,
-      "symbolic_layout": null,
+      "symbolic_layout": false,
       "tool_api_env": true,
-      "physics_simulation_env": null,
-      "notes": "Text: architectural style constraints + building code requirements [from briefing]. Images: VLMs receive visual representations of intermediate construction states [VERIFY exact visual format — LOD 350 renders? 2D drawings?]. tool_api_env=True: iterative agentic interaction with deterministic validation oracle [from briefing]. bim_ifc_3d=null: LOD 350 structures may involve 3D representation [VERIFY]. All flags [VERIFY] against full text."
+      "physics_simulation_env": false,
+      "notes": "Text: architectural style constraints + building code requirements [from briefing]. Images: VLMs receive visual representations of intermediate construction states [VERIFY exact visual format — LOD 350 renders? 2D drawings?]. tool_api_env=True: iterative agentic interaction with deterministic validation oracle [from briefing]. bim_ifc_3d=null: LOD 350 structures may involve 3D representation [VERIFY]. All flags [VERIFY] against full text. [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]"
     },
     "dataset_properties": {
       "n_samples": "26,000 structures × 13 architectural styles [from briefing, VERIFY]",
@@ -8727,7 +8870,8 @@
       "data_source": "Algorithmically generated timber-frame structures to LOD 350 construction-document standards [from briefing, VERIFY]",
       "annotation_method": "Deterministic 10-test structural validation framework (automated structural checking) [from briefing, VERIFY]",
       "expert_validation": "[VERIFY]",
-      "license": "[VERIFY]",
+      "license": "Apache License 2.0 (github.com/SalesforceAIResearch/DreamHouse, verified 2026-07-15) [license-resolved 2026-07-15]",
+      "license_class": "open-permissive",
       "accessibility": "Code: https://github.com/SalesforceAIResearch/DreamHouse (CONFIRMED F-088); project/dataset page: https://luluyuyuyang.github.io/dreamhouse/ (CONFIRMED F-088); paper: arXiv:2603.24866. [VERIFY: whether dataset is a downloadable canonical archive (HF/Zenodo) with license — project-page channel is informal; d7 stays 1 (code-only/project-page sub-case) until canonical dataset release + license confirmed → then d7=2.]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — algorithmically generated structures reduce training-data contamination risk vs. real photographs]"
@@ -8826,7 +8970,7 @@
   {
     "name": "ConstructionWorker-VLM [VERIFY]",
     "identifier": "IEEE Access 2026; DOI [VERIFY]",
-    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier change PENDING ESCALATION (d7 0->1 numerically satisfies T1 floors, but IC1 purpose-built-AEC is borderline -- needs judgment call, not auto-promoted) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | authors+title resolved from full-text re-read (arXiv:2601.10835) [verify-pass 2026-07-14] | DOI prefix resolved (10.1109/ACCESS.2025, Xplore doc 11372767); article-number suffix still [VERIFY] [verify-pass 2026-07-14]",
+    "verification_status": "full-text read 2026-07-11 (RESEARCHER); rubric d1-d10 confirmed from PDF; tier change PENDING ESCALATION (d7 0->1 numerically satisfies T1 floors, but IC1 purpose-built-AEC is borderline -- needs judgment call, not auto-promoted) | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | authors+title resolved from full-text re-read (arXiv:2601.10835) [verify-pass 2026-07-14] | DOI prefix resolved (10.1109/ACCESS.2025, Xplore doc 11372767); article-number suffix still [VERIFY] [verify-pass 2026-07-14] | benchmark_name kept as catalog label (NOT [VERIFY]-resolvable): paper (arXiv:2601.10835) genuinely does not name its dataset — \"ConstructionWorker-VLM\" is DISCOVERER-derived from title for cataloging [verify-pass 2026-07-15]",
     "tier": 1,
     "source_record_id": "R041",
     "provenance": "claimed",
@@ -8839,7 +8983,9 @@
       "arxiv_id": null,
       "repo_url": "[VERIFY — no GitHub/HF mentioned in briefing]",
       "dataset_url": "[VERIFY — dataset release not stated; IEEE Access is open-access journal but dataset availability unknown]",
-      "version_accessed": "DISCOVERER 0.15.1 / 2026-06-27"
+      "version_accessed": "DISCOVERER 0.15.1 / 2026-06-27",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Construction / Construction site worker monitoring (safety and productivity behavioral analysis)",
@@ -8872,7 +9018,8 @@
       "data_source": "Construction site images [VERIFY — acquisition source not stated in briefing; original collection or adaptation of existing dataset?]",
       "annotation_method": "[VERIFY — annotator type (expert/crowd), tool, inter-annotator agreement]",
       "expert_validation": "[VERIFY]",
-      "license": "[VERIFY — IEEE Access paper is open-access but dataset license not stated]",
+      "license": "[VERIFY — IEEE Access paper is open-access but dataset license not stated] [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "unclear",
       "accessibility": "[VERIFY — no GitHub/HF mentioned; dataset release status unknown → d7=0 provisional]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — construction site images may overlap with VLM training data via web-scraped safety datasets]"
@@ -8977,7 +9124,7 @@
   {
     "name": "ASHRAE-HVAC-Designer LLM Eval",
     "identifier": "doi:10.1016/j.enbenv.2024.03.010",
-    "verification_status": "INCLUDE, Tier 2 (upgraded 2026-07-13, RESEARCHER, real full-text read). Raw ScienceDirect PDF (user-supplied extraction, PII S2666123324000448) confirmed exact match: title \"Evaluation of large language models (LLMs) on the mastery of knowledge and skills in the heating, ventilation and air conditioning (HVAC) industry\", authors Jie Lu / Xiangning Tian / Chaobo Zhang / Yang Zhao / Jian Zhang / Wenkai Zhang / Chenxin Feng / Jianing He / Jiaxi Wang / Fengtai He, venue Energy and Built Environment 6 (2025) 875-892 (KeAi/Elsevier). Paper is OPEN ACCESS, CC BY-NC-ND 4.0 (not paywalled, correcting the prior 403/paywalled status). Full 7-group extraction below now grounded in real full text, superseding the prior abstract-only version -- resolves essentially all prior [VERIFY] fields.",
+    "verification_status": "INCLUDE, Tier 2 (upgraded 2026-07-13, RESEARCHER, real full-text read). Raw ScienceDirect PDF (user-supplied extraction, PII S2666123324000448) confirmed exact match: title \"Evaluation of large language models (LLMs) on the mastery of knowledge and skills in the heating, ventilation and air conditioning (HVAC) industry\", authors Jie Lu / Xiangning Tian / Chaobo Zhang / Yang Zhao / Jian Zhang / Wenkai Zhang / Chenxin Feng / Jianing He / Jiaxi Wang / Fengtai He, venue Energy and Built Environment 6 (2025) 875-892 (KeAi/Elsevier). Paper is OPEN ACCESS, CC BY-NC-ND 4.0 (not paywalled, correcting the prior 403/paywalled status). Full 7-group extraction below now grounded in real full text, superseding the prior abstract-only version -- resolves essentially all prior [VERIFY] fields. | modality nulls resolved [modality-filled 2026-07-15]",
     "tier": 2,
     "source_record_id": "R043",
     "provenance": "claimed",
@@ -8990,7 +9137,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "Raw full-text PDF obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R043_ASHRAE-HVAC-Designer_S2666123324000448.pdf DOI CORRECTED 2026-07-13 per VERIFIER F-118 (verification_log.csv R043 row, independently resolved from embedded PDF crossmark/dc:identifier/pdfx:doi): 10.1016/j.enbenv.2024.03.010 (was self-flagged [VERIFY exact suffix] as 10.1016/j.enbenv.2024.02.001, which was WRONG)."
+      "version_accessed": "Raw full-text PDF obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R043_ASHRAE-HVAC-Designer_S2666123324000448.pdf DOI CORRECTED 2026-07-13 per VERIFIER F-118 (verification_log.csv R043 row, independently resolved from embedded PDF crossmark/dc:identifier/pdfx:doi): 10.1016/j.enbenv.2024.03.010 (was self-flagged [VERIFY exact suffix] as 10.1016/j.enbenv.2024.02.001, which was WRONG).",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "HVAC / building mechanical services (MEP) -- ASHRAE Certified HVAC Designer (CHD) certification knowledge",
@@ -9008,7 +9157,18 @@
       "structured_data": false,
       "audio": false,
       "video": false,
-      "notes": "Text-only closed-book exam QA. No image/diagram input confirmed in the real full text."
+      "notes": "Text-only closed-book exam QA. No image/diagram input confirmed in the real full text. [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": "100 exam-style single-choice questions from the ASHRAE CHD examination guide book (recall:analysis:application = 5:3:2, per ASHRAE's own exam blueprint)",
@@ -9017,6 +9177,7 @@
       "annotation_method": "Sourced directly from the official ASHRAE CHD guide book; ground truth = official exam answer key",
       "expert_validation": "ASHRAE CHD is an authoritative industry certification exam -- expert-authored by definition",
       "license": "Paper is CC BY-NC-ND 4.0 (open access, confirmed page 1); underlying ASHRAE exam questions remain ASHRAE's own copyrighted material -- no separate dataset release found, no GitHub/repo link found in the real full text",
+      "license_class": "proprietary",
       "accessibility": "No public dataset/code release found in the real full text (no Data Availability statement, no GitHub/HF link) -- the 100-question set itself is not confirmed redistributable (sourced from a copyrighted ASHRAE guide book)",
       "train_test_split": "N/A -- fixed 100-question evaluation set, no train split",
       "leakage_risk": "Not explicitly discussed as a named risk in the real full text, though the closed-book design (no pre-fed prompts, fresh dialog per test) is itself a methodological control against certain contamination effects -- [VERIFY] no formal leakage analysis found"
@@ -9114,7 +9275,7 @@
   {
     "name": "Korean-MEP (EEM+EACRM)",
     "identifier": "doi:10.1038/s41598-025-16118-x",
-    "verification_status": "screened (Stage-2 INCLUDE, re-gated 0.17.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B",
+    "verification_status": "screened (Stage-2 INCLUDE, re-gated 0.17.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B | modality nulls resolved [modality-filled 2026-07-15]",
     "tier": 2,
     "source_record_id": "R044",
     "provenance": "claimed",
@@ -9127,7 +9288,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "full-text PDF 2026-07-09"
+      "version_accessed": "full-text PDF 2026-07-09",
+      "country_region": "South Korea",
+      "country_region_base": "South Korea"
     },
     "domain_use_case": {
       "aec_subdomain": "Building mechanical equipment maintenance / HVAC (MEP) — Korean EEM + EACRM national certification exams",
@@ -9145,7 +9308,18 @@
       "structured_data": false,
       "audio": false,
       "video": false,
-      "notes": "Primarily text exam QA; some questions involve scientific figures (figure interpretation flagged as a weakness). image=partial."
+      "notes": "Primarily text exam QA; some questions involve scientific figures (figure interpretation flagged as a weakness). image=partial. [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": 100,
@@ -9153,7 +9327,8 @@
       "data_source": "South Korean national certification exams (2nd exam 2022), publicly available online",
       "annotation_method": "Official national exam (government-administered) + published answer keys",
       "expert_validation": "National certification exam = government/expert-authored",
-      "license": "Public (past exam questions published online) [VERIFY exact terms]",
+      "license": "Public (past exam questions published online) [VERIFY exact terms] [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "unclear",
       "accessibility": "exam questions publicly available online; dataset compiled by authors, release [VERIFY]",
       "train_test_split": "N/A (eval-only)",
       "leakage_risk": "possible (public past exams may be in pretraining) — not explicitly tested"
@@ -9237,7 +9412,7 @@
   {
     "name": "Geotech-391",
     "identifier": "doi:10.3390/geotechnics4020026",
-    "verification_status": "screened (Stage-2 INCLUDE, re-gated 0.17.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B; LINEAGE: shares Das-391 bank with excluded R046",
+    "verification_status": "screened (Stage-2 INCLUDE, re-gated 0.17.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B; LINEAGE: shares Das-391 bank with excluded R046 | modality nulls resolved [modality-filled 2026-07-15]",
     "tier": 2,
     "source_record_id": "R045",
     "provenance": "claimed",
@@ -9250,7 +9425,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "full-text PDF 2026-07-09"
+      "version_accessed": "full-text PDF 2026-07-09",
+      "country_region": "Australia",
+      "country_region_base": "Australia"
     },
     "domain_use_case": {
       "aec_subdomain": "Geotechnical / civil engineering (A2) — 391-question geotechnical problem bank (Das & Sobhan textbook)",
@@ -9268,7 +9445,18 @@
       "structured_data": false,
       "audio": false,
       "video": false,
-      "notes": "Text problems; some involve visual/figure interpretation (flagged as GPT-4 model-inherent deficiency). image=partial."
+      "notes": "Text problems; some involve visual/figure interpretation (flagged as GPT-4 model-inherent deficiency). image=partial. [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": 391,
@@ -9277,6 +9465,7 @@
       "annotation_method": "Textbook solutions manual as ground truth",
       "expert_validation": "Textbook-authored (Das & Sobhan); solutions from official manual",
       "license": "copyrighted textbook (Cengage) — not publicly redistributable",
+      "license_class": "proprietary",
       "accessibility": "data available on request from corresponding author (privacy reasons); NOT a public release",
       "train_test_split": "N/A (eval-only)",
       "leakage_risk": "possible (widely-used textbook may be in pretraining) — acknowledged, not formally tested"
@@ -9360,7 +9549,7 @@
   {
     "name": "PaveBench",
     "identifier": "arXiv:2604.02804",
-    "verification_status": "screened (Stage-2 INCLUDE, CI-1 arm 0.20.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B | num_samples resolved from HF dataset card (20,124 img + 32,160 QA) [verify-pass 2026-07-14]",
+    "verification_status": "screened (Stage-2 INCLUDE, CI-1 arm 0.20.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B | num_samples resolved from HF dataset card (20,124 img + 32,160 QA) [verify-pass 2026-07-14] | modality nulls resolved [modality-filled 2026-07-15] license=CC BY-NC-SA 4.0 (user-xlsx, HF-verified)| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 1,
     "source_record_id": "R047",
     "provenance": "claimed",
@@ -9373,7 +9562,9 @@
       "arxiv_id": "2604.02804",
       "repo_url": "https://huggingface.co/datasets/MML-Group/PaveBench",
       "dataset_url": "https://huggingface.co/datasets/MML-Group/PaveBench",
-      "version_accessed": "full-text PDF 2026-07-09"
+      "version_accessed": "full-text PDF 2026-07-09",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Transportation infrastructure — highway/road pavement distress assessment (CISA Transportation Systems)",
@@ -9391,7 +9582,18 @@
       "structured_data": false,
       "audio": false,
       "video": false,
-      "notes": "Real-world highway inspection images + text QA. Multimodal VLM benchmark. 2D visual (pavement photos)."
+      "notes": "Real-world highway inspection images + text QA. Multimodal VLM benchmark. 2D visual (pavement photos). [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": true,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": "20,124 high-resolution pavement images (512x512) [visual subset] + 32,160 PaveVQA QA pairs (10,050 single-turn + 20,100 multi-turn + 2,010 error-correction) [HF card, verify-pass 2026-07-14]",
@@ -9399,7 +9601,8 @@
       "data_source": "Real-world highway inspection images",
       "annotation_method": "Large-scale annotations incl. segmentation-level + expert-corrected QA",
       "expert_validation": "expert-corrected interactions in PaveVQA",
-      "license": "[VERIFY]",
+      "license": "CC BY-NC-SA 4.0 (HF dataset card license:cc-by-nc-sa-4.0, verified 2026-07-15)| user-xlsx merge 2026-07-15 (web-verified)",
+      "license_class": "open-restricted",
       "accessibility": "HF-released: huggingface.co/datasets/MML-Group/PaveBench",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — real-world images may overlap pretraining]"
@@ -9461,7 +9664,7 @@
   {
     "name": "WaterER",
     "identifier": "arXiv:2407.21045",
-    "verification_status": "screened (Stage-2 INCLUDE, CI-1 arm 0.20.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B; release status [VERIFY] | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)]",
+    "verification_status": "screened (Stage-2 INCLUDE, CI-1 arm 0.20.0, full-text read); full 7-group extraction + rubric PENDING CURATOR Stage-B; release status [VERIFY] | bibliographic [VERIFY] fields resolved via WebSearch/WebFetch [verify-pass 2026-07-14 (RESEARCHER, WebSearch/WebFetch)] | modality nulls resolved [modality-filled 2026-07-15]",
     "tier": 2,
     "source_record_id": "R048",
     "provenance": "claimed",
@@ -9474,7 +9677,9 @@
       "arxiv_id": "2407.21045",
       "repo_url": null,
       "dataset_url": "[VERIFY — release status not explicit in paper]",
-      "version_accessed": "full-text PDF 2026-07-09"
+      "version_accessed": "full-text PDF 2026-07-09",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Water & Wastewater infrastructure — treatment, distribution, sanitation (CISA Water & Wastewater)",
@@ -9492,7 +9697,18 @@
       "structured_data": false,
       "audio": false,
       "video": false,
-      "notes": "Text-only water-engineering QA. No visual modality."
+      "notes": "Text-only water-engineering QA. No visual modality. [modality nulls filled 2026-07-15 from full-text notes: confirmed-absent=False, present=True; no inference]",
+      "tables": false,
+      "images": false,
+      "engineering_drawings": false,
+      "cad_floor_plans": false,
+      "bim_ifc_3d": false,
+      "point_cloud": false,
+      "video_multi_image": false,
+      "simulation_plot": false,
+      "symbolic_layout": false,
+      "tool_api_env": false,
+      "physics_simulation_env": false
     },
     "dataset_properties": {
       "n_samples": 983,
@@ -9500,7 +9716,8 @@
       "data_source": "Water engineering & research literature/tasks",
       "annotation_method": "Task construction from water-engineering domain; ROUGE-L reference + human eval",
       "expert_validation": "human evaluation methods employed",
-      "license": "[VERIFY — release status not explicit in paper]",
+      "license": "[VERIFY — release status not explicit in paper] [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "unclear",
       "accessibility": "[VERIFY — public release not explicitly stated]",
       "train_test_split": "N/A (eval-only)",
       "leakage_risk": "[VERIFY]"
@@ -9575,7 +9792,9 @@
       "arxiv_id": null,
       "repo_url": "https://github.com/mgupta70/PIDQA",
       "dataset_url": "https://github.com/mgupta70/PIDQA (QA pairs + Cypher queries, CC0-1.0); underlying P&ID images from the pre-existing public 'Dataset-P&ID' (Paliwal et al. 2021, Digitize-PID), referenced not re-hosted",
-      "version_accessed": "MDPI OA PDF, RESEARCHER 2026-07-12, published 21 April 2025"
+      "version_accessed": "MDPI OA PDF, RESEARCHER 2026-07-12, published 21 April 2025",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Process/industrial-plant engineering documentation — Piping & Instrumentation Diagram (P&ID) question answering, adjacent to AEC/built-environment (BORDERLINE, see _screening_rationale). Authors affiliated with Built Environment school (ASU).",
@@ -9609,6 +9828,7 @@
       "annotation_method": "Programmatic/template-based generation from ground-truth graph structure (deterministic, rule-derived from the synthetic dataset's known symbol/line/text labels), not manual expert annotation of individual QA pairs",
       "expert_validation": "Base entity graph construction included a semi-automatic human-in-the-loop error-correction step (Section 3.2.1); the 64k QA pairs themselves are template-generated, not individually expert-reviewed",
       "license": "CC0-1.0 (GitHub repo, confirmed) for PIDQA QA data + code; article itself CC BY 4.0 (MDPI OA)",
+      "license_class": "open-permissive",
       "accessibility": "Public, no paywall: GitHub github.com/mgupta70/PIDQA (confirmed live, 14 stars/3 forks) + MDPI OA article + explicit Data Availability Statement",
       "train_test_split": "300 train / 100 validation / 100 test P&ID sheets (entity-recognition stage); QA evaluation reported on the test-set sheets",
       "leakage_risk": "[VERIFY] Not discussed in paper. QA pairs are newly generated (2025) reducing direct leakage risk, but the underlying Dataset-P&ID base images are from a 2021 public prior-work dataset that could plausibly appear in later LLM pretraining corpora — undiscussed."
@@ -9741,7 +9961,9 @@
       "arxiv_id": "2407.19178",
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "arXiv v1, 27 Jul 2024. PDF on-disk, pdftotext-read in full 2026-07-12."
+      "version_accessed": "arXiv v1, 27 Jul 2024. PDF on-disk, pdftotext-read in full 2026-07-12.",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Power transmission-line physical-asset inspection (power/utility infrastructure vertical, in scope per the 2026-07-12 overturn)",
@@ -9774,7 +9996,8 @@
       "data_source": "20,000 real-world power-transmission-line images collected by the authors; captions from VL-model captioners (VisualGLM, InternLM-XComposer-VL, Qwen-VL-Chat, ShareGPT4V) + object-detection labels (Co-DETR); instruction-tuning conversations generated by ChatGPT from those captions/labels; PowerQA questions/answers generated by GPT-4V from real inspection images across multiple hazard perspectives",
       "annotation_method": "Semi-automated pipeline: VL-model captioning + detector labels + ChatGPT-generated conversation synthesis (training data, not individually human-authored); PowerQA benchmark specifically underwent a manual refinement pass to remove ambiguous/dirty samples ('all samples are refined manually')",
       "expert_validation": "PowerQA underwent manual human refinement, but the paper does not state the reviewers were domain (electrical-engineering) experts specifically — reviewer qualifications are unstated, disclosed as a gap rather than assumed",
-      "license": "Not stated anywhere in the accessible text",
+      "license": "Not stated anywhere in the accessible text [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "no-artifact-released",
       "accessibility": "NOT confirmed public as of this paper — the text states only 'Code shall be released' (future tense in the abstract); no GitHub/HuggingFace/download URL is given anywhere in the PDF. Disclosed as unreleased-at-time-of-publication, not assumed public.",
       "train_test_split": "608K pre-training + 100K instruction-tuning (no held-out split described for these); PowerQA (1,000 samples) functions purely as a zero-shot eval set, no train/test split within it",
       "leakage_risk": "[VERIFY] Not discussed in the paper. PowerQA is GPT-4V-generated from the authors' own 2024 image collection, reducing direct pretraining-corpus overlap risk for contemporaneous models, but this is not explicitly analyzed by the authors."
@@ -9899,7 +10122,9 @@
       "arxiv_id": "2412.17077",
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "arXiv v1, 22 Dec 2024. PDF on-disk, pdftotext-read in full 2026-07-12."
+      "version_accessed": "arXiv v1, 22 Dec 2024. PDF on-disk, pdftotext-read in full 2026-07-12.",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Substation equipment fault diagnosis (power/utility infrastructure vertical, in scope per the 2026-07-12 overturn)",
@@ -9932,7 +10157,8 @@
       "data_source": "Base images from China Electric Power Research Institute's publicly available substation defect-detection dataset; fault-analysis-report ground truth generated by GPT-4 guided by prompts derived from State Grid Corporation of China's official 'Guidelines for the Assessment of the Condition of Power Transmission and Transformation Equipment'",
       "annotation_method": "GPT-4-generated draft fault-analysis reports, followed by a secondary human review pass by 5 named electrical experts who corrected unreasonable elements — a genuine domain-expert-in-the-loop QC step",
       "expert_validation": "YES — explicitly '5 electrical experts' reviewed/corrected the GPT-4-generated ground-truth reports, and separately '5 engineers with a background in the electric power industry' rated the models' generated reports during evaluation — real domain-expert involvement at both the annotation and evaluation stages",
-      "license": "Not explicitly stated for the 40K augmented dataset; the base 10,330-image dataset is described as publicly released by the source institute, but exact license terms are not given in the accessible text",
+      "license": "Not explicitly stated for the 40K augmented dataset; the base 10,330-image dataset is described as publicly released by the source institute, but exact license terms are not given in the accessible text [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "no-artifact-released",
       "accessibility": "NOT confirmed public — no repository/download URL for the paper's own 40K-entry augmented dataset, fault-analysis-report annotations, or trained model weights is given anywhere in the accessible text. The base 10,330-image source dataset is public, but that predates and is external to this paper's own contribution.",
       "train_test_split": "LoRA fine-tuning conducted on the constructed dataset over 60 hours (train split not separately itemized); 1,000 samples randomly held out as the comparative benchmark",
       "leakage_risk": "[VERIFY] Not discussed in the paper."
@@ -10057,7 +10283,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "Full-text Markdown extraction via mcp__scholarscope__fetch_fulltext, 2026-07-12 (CAND-18_CaptionPS_IEEE-11488027_fulltext.md) — the tool's verbatim returned text (full paper body, Sections I-V + Appendices A/B; tables/figures referenced by caption text, not embedded pixel data). Direct WebFetch/PDF-download of the IEEE Xplore page was blocked (JS-driven reader, no static PDF URL) both in the prior turn and re-confirmed this turn ([VERIFY: DOI not independently resolved])."
+      "version_accessed": "Full-text Markdown extraction via mcp__scholarscope__fetch_fulltext, 2026-07-12 (CAND-18_CaptionPS_IEEE-11488027_fulltext.md) — the tool's verbatim returned text (full paper body, Sections I-V + Appendices A/B; tables/figures referenced by caption text, not embedded pixel data). Direct WebFetch/PDF-download of the IEEE Xplore page was blocked (JS-driven reader, no static PDF URL) both in the prior turn and re-confirmed this turn ([VERIFY: DOI not independently resolved]).",
+      "country_region": "USA",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Worker-safety-violation detection at power-operation sites (power/utility O&M vertical, BORDERLINE C1 — worker-safety-behavior captioning rather than equipment-condition inspection narrowly, see _screening_rationale)",
@@ -10091,6 +10319,7 @@
       "annotation_method": "Automated GPT-5.1 generation, then 2-stage filtering: (1) automated format validation (removes garbled/non-English text, checks field completeness), (2) human content-quality filtering by 3 professional power-safety regulators + 2 annotation engineers verifying description-image consistency, coordinate accuracy, and hallucinations — 135 person-hours total; spot-check of 20 random samples found only 1-2 with formatting issues",
       "expert_validation": "YES — 3 named 'professional power safety regulators' explicitly involved in the human QC pass, a genuine domain-expert-in-the-loop review, though the exact rating rubric/inter-rater metrics are not detailed beyond the format/consistency checks described",
       "license": "Article itself is CC-BY (IEEE Access open access); the dataset's own license/release terms are not separately stated in the accessible text",
+      "license_class": "open-permissive",
       "accessibility": "[VERIFY] No explicit dataset-download/repository link (GitHub/HuggingFace/other) is found anywhere in the accessible extraction — the article being CC-BY open-access covers the paper's text, not necessarily a confirmed standalone dataset release. Disclosed as unconfirmed, not assumed released.",
       "train_test_split": "11,913 train / 2,350 test, stratified across the 6 violation categories",
       "leakage_risk": "[VERIFY] Not discussed in the accessible text."
@@ -10190,7 +10419,7 @@
   {
     "name": "BuildingQA",
     "identifier": "doi:10.1145/3736425.3770097",
-    "verification_status": "Stage-2 §4 3-condition screen 2026-07-12 (RESEARCHER, real fetch) — INCLUDE, Tier 1. UPDATE 2026-07-13 (RESEARCHER): the raw ACM full-text PDF was obtained from the user (verified genuine via direct read — title/authors/DOI/venue on page 1 match exactly: \"BuildingQA: A Benchmark for Natural Language Question Answering over Building Knowledge Graphs\", Mulayim/Anwar/Saka/Paul/Prakash/Fierro/Pritoni/Bergés, DOI 10.1145/3736425.3770097, BUILDSYS '25) and is now stored at RESEARCHER/outputs/fulltext_corpus/R056_BuildingQA_ACM-3736425.3770097.pdf. The headline max-F1-0.38 claim is read verbatim from the raw text (§5.2.2: \"with the best-performing method reaching an F1 score of only 0.38\") — upgraded from `claimed` to `verified` per R3. This full-text pass also resolved several previously-[VERIFY] fields directly from raw text: best-performing method = ReAct (5000-triple context) + Gemini-flash-2.5 (§5.2.2, cross-read against Figure 5's scatter plot), metric = Row-Matching F1 (mean, per Figure 5 y-axis), full baseline/LLM roster = DA-KGQA + ReAct (No-KG/100-triple/5000-triple context) tested across o3-mini/Gemini-flash-2.5/Llama-4-Scout-17B-16E (§5.2.1) plus o4-mini/deepseek-r1 in the cost-accuracy analysis (§5.2.2, Figure 5), sample counts 188 Q / 4 buildings confirmed exactly (56 human-authored + 132 LLM-augmented questions from 29 SPARQL queries over 51 source buildings, subsampled to 4 for the released benchmark, §3.1-3.3), and the paper carries a CC BY 4.0 license (page 1 footer) — dataset-specific license on the GitHub repo itself remains [VERIFY], not confirmed from the PDF. d4 annotation validation, leakage_risk, and versioning remain [VERIFY] — not discussed in the raw text either. IMPORTANT PRIOR-STATE NOTE (superseded, kept for audit trail): extraction was originally grounded in (a) the GitHub README (primary author artifact) and (b) 2 independently-converging secondary sources, because the ACM PDF was CAPTCHA-blocked at the time and a ResearchGate mirror was 403-blocked. Not a name-collision risk: DOI resolves unambiguously via scholarscope/OpenAlex to this exact paper (Mulayim et al., CMU/Colorado School of Mines/LBNL, BUILDSYS '25, Best Paper Award Runner-Up).",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-12 (RESEARCHER, real fetch) — INCLUDE, Tier 1. UPDATE 2026-07-13 (RESEARCHER): the raw ACM full-text PDF was obtained from the user (verified genuine via direct read — title/authors/DOI/venue on page 1 match exactly: \"BuildingQA: A Benchmark for Natural Language Question Answering over Building Knowledge Graphs\", Mulayim/Anwar/Saka/Paul/Prakash/Fierro/Pritoni/Bergés, DOI 10.1145/3736425.3770097, BUILDSYS '25) and is now stored at RESEARCHER/outputs/fulltext_corpus/R056_BuildingQA_ACM-3736425.3770097.pdf. The headline max-F1-0.38 claim is read verbatim from the raw text (§5.2.2: \"with the best-performing method reaching an F1 score of only 0.38\") — upgraded from `claimed` to `verified` per R3. This full-text pass also resolved several previously-[VERIFY] fields directly from raw text: best-performing method = ReAct (5000-triple context) + Gemini-flash-2.5 (§5.2.2, cross-read against Figure 5's scatter plot), metric = Row-Matching F1 (mean, per Figure 5 y-axis), full baseline/LLM roster = DA-KGQA + ReAct (No-KG/100-triple/5000-triple context) tested across o3-mini/Gemini-flash-2.5/Llama-4-Scout-17B-16E (§5.2.1) plus o4-mini/deepseek-r1 in the cost-accuracy analysis (§5.2.2, Figure 5), sample counts 188 Q / 4 buildings confirmed exactly (56 human-authored + 132 LLM-augmented questions from 29 SPARQL queries over 51 source buildings, subsampled to 4 for the released benchmark, §3.1-3.3), and the paper carries a CC BY 4.0 license (page 1 footer) — dataset-specific license on the GitHub repo itself remains [VERIFY], not confirmed from the PDF. d4 annotation validation, leakage_risk, and versioning remain [VERIFY] — not discussed in the raw text either. IMPORTANT PRIOR-STATE NOTE (superseded, kept for audit trail): extraction was originally grounded in (a) the GitHub README (primary author artifact) and (b) 2 independently-converging secondary sources, because the ACM PDF was CAPTCHA-blocked at the time and a ResearchGate mirror was 403-blocked. Not a name-collision risk: DOI resolves unambiguously via scholarscope/OpenAlex to this exact paper (Mulayim et al., CMU/Colorado School of Mines/LBNL, BUILDSYS '25, Best Paper Award Runner-Up). | license resolved: open-restricted [license-resolved 2026-07-15]",
     "tier": 1,
     "source_record_id": "R056",
     "provenance": "claimed",
@@ -10203,7 +10432,9 @@
       "arxiv_id": null,
       "repo_url": "https://github.com/INFERLab/BuildingQA",
       "dataset_url": "https://github.com/INFERLab/BuildingQA (eval_buildings/ + Benchmark_QA_pairs/)",
-      "version_accessed": "Raw ACM full-text PDF (11 pp., BUILDSYS '25 proceedings) obtained from user and read directly 2026-07-13; stored at RESEARCHER/outputs/fulltext_corpus/R056_BuildingQA_ACM-3736425.3770097.pdf. Superseded prior basis: GitHub README fetched verbatim via WebFetch 2026-07-12 + WebSearch/Semantic-Scholar secondary corroboration, used when the ACM PDF was CAPTCHA-blocked and the ResearchGate mirror 403-blocked — see verification_status for full history."
+      "version_accessed": "Raw ACM full-text PDF (11 pp., BUILDSYS '25 proceedings) obtained from user and read directly 2026-07-13; stored at RESEARCHER/outputs/fulltext_corpus/R056_BuildingQA_ACM-3736425.3770097.pdf. Superseded prior basis: GitHub README fetched verbatim via WebFetch 2026-07-12 + WebSearch/Semantic-Scholar secondary corroboration, used when the ACM PDF was CAPTCHA-blocked and the ResearchGate mirror 403-blocked — see verification_status for full history.",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Building operations / facility management — Natural-language QA over Building Knowledge Graphs (Brick-ontology-style semantic models of building systems/equipment/spaces) (B2 Facility Services)",
@@ -10236,7 +10467,8 @@
       "data_source": "Practitioner-collected questions from real building-operations use, augmented with LLM-generated linguistic-diversity variants; 4 real buildings' Knowledge Graphs (Turtle/.ttl format) in eval_buildings/",
       "annotation_method": "Multi-stage: practitioner data collection -> LLM augmentation for linguistic diversity -> ground-truth SPARQL query curation per question",
       "expert_validation": "Practitioner-sourced base questions (domain-expert-in-the-loop at collection stage); exact QC/validation protocol for the ground-truth SPARQL beyond this is not confirmed from accessible sources — [VERIFY] against ACM full text",
-      "license": "[VERIFY] not stated in accessible sources (GitHub repo license file not read this turn)",
+      "license": "CC BY-NC 4.0 (paper/eScholarship; github.com/INFERLab/BuildingQA, verified 2026-07-15) [license-resolved 2026-07-15]",
+      "license_class": "open-restricted",
       "accessibility": "Publicly released — GitHub repo github.com/INFERLab/BuildingQA contains both KGs and QA pairs plus a Jupyter demo notebook and evaluation scripts",
       "train_test_split": "Not applicable in the conventional sense — all 4 buildings' KGs + 188 QA pairs function as a fixed evaluation benchmark (no train split described)",
       "leakage_risk": "[VERIFY] not discussed in accessible sources"
@@ -10306,132 +10538,6 @@
     }
   },
   {
-    "name": "KoCEM",
-    "identifier": "SNU repository handle 10371/221090 [VERIFY DOI/arXiv — MS thesis, none assigned]",
-    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read of the raw thesis PDF, user-supplied extraction) — INCLUDE, Tier 1.",
-    "tier": 1,
-    "source_record_id": "R057",
-    "provenance": "claimed",
-    "bibliographic": {
-      "paper_title": "KoCEM: A Multitask Benchmark for Expert Artificial Intelligence in Korean Construction Engineering and Management — A Comprehensive Dataset and Evaluation Framework for Multimodal Understanding and Reasoning Tasks",
-      "authors": "Byunghee Yoo (Department of Architecture & Architectural Engineering, The Graduate School, Seoul National University; MS thesis advisor not stated in the sections read)",
-      "year": 2025,
-      "venue": "Master of Science in Engineering thesis, Seoul National University, February 2025",
-      "doi": null,
-      "arxiv_id": null,
-      "repo_url": "[VERIFY — not found in the thesis text; no GitHub/HuggingFace link confirmed]",
-      "dataset_url": "[VERIFY — not found in the thesis text]",
-      "version_accessed": "Raw thesis PDF (114 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R057_KoCEM_000000189024.pdf; accessible via SNU institutional repository (handle 10371/221090, bitstream located by VERIFIER in a prior turn)"
-    },
-    "domain_use_case": {
-      "aec_subdomain": "Korean construction engineering and management, broad — architectural planning, building systems (MEP), safety management, structural engineering, cost estimation, project/quality control, interior design, materials, drawing interpretation, terminology",
-      "lifecycle_stage": "Spans multiple lifecycle stages (design/planning, safety, cost estimation, quality control) rather than one stage — mirrors the multi-subject structure of Korean national construction certification exams",
-      "intended_user": "Construction engineering/management practitioners and researchers building or evaluating domain-specific Korean-language construction LLMs"
-    },
-    "task": {
-      "task_type": "Multiple-choice QA (2-5 options) across 5 disciplines: Domain-specific Terminology, Drawing Interpretation, Domain-specific Knowledge, Expert-level Reasoning, Expert-level Comprehension; assessed across 3 aspects — Perception, Knowledge, Reasoning",
-      "task_complexity": "4,823 questions across 20 fields/29 subfields; questions further stratified by difficulty (easy/medium/hard, calibrated on real human-accuracy statistics from the source certification exams)",
-      "output_type": "Multiple-choice answer selection (zero-shot, standardized prompt template)"
-    },
-    "modality": {
-      "text": true,
-      "tables": false,
-      "images": true,
-      "engineering_drawings": true,
-      "cad_floor_plans": false,
-      "bim_ifc_3d": false,
-      "point_cloud": false,
-      "video_multi_image": false,
-      "simulation_plot": false,
-      "symbolic_layout": false,
-      "tool_api_env": false,
-      "physics_simulation_env": false,
-      "notes": "Text-based tasks (Latin/Hangul/Hanja/numbers/math symbols) + Vision+Text tasks (796/4,823 = 13.5% of questions include images — architectural/engineering schematics, diagrams, symbols/annotations, primarily for the Drawing Interpretation discipline). No BIM/IFC, point cloud, or video modality confirmed."
-    },
-    "dataset_properties": {
-      "n_samples": "4,823 total questions; 5 disciplines / 20 fields / 29 subfields; 796 questions (13.5%) include an image",
-      "n_tasks_categories": "5 disciplines (Domain-specific Terminology, Drawing Interpretation, Domain-specific Knowledge, Expert-level Reasoning, Expert-level Comprehension) mapped onto 3 assessed aspects (Perception, Knowledge, Reasoning)",
-      "data_source": "National construction certification exam material (Architectural Engineer, Industrial Architectural Engineer, Construction Safety Engineer, CAD Drafter certifications), 11 initial + 9 additional subjects = 20 subjects total; Terminology subset alone drawn from 5 distinct sources (1,020 items)",
-      "annotation_method": "Assembled/curated from national certification exam sources; manual researcher review to remove noise/outliers; de-identification of any inadvertently captured personal data; randomized option counts (2-5, avg 3.89) to reduce option bias; Expert-level Comprehension set manually curated",
-      "expert_validation": "Sourced from official national professional certification exams (expert-authored by definition); difficulty levels calibrated on real human test-taker accuracy statistics from the source exams",
-      "license": "[VERIFY — not stated in the thesis text read this turn]",
-      "accessibility": "Available as an SNU institutional-repository thesis document (handle 10371/221090); no confirmed separate public dataset/code artifact (GitHub/HuggingFace) found in the text — [VERIFY]",
-      "train_test_split": "Developer : Validation : Test = 1% : 9% : 90%",
-      "leakage_risk": "Not discussed in the sections read — [VERIFY]"
-    },
-    "evaluation": {
-      "metrics": "Multiple-choice accuracy (per discipline: DT/DK/ER/DI/EC); Random-choice baseline included for comparison; Performance broken down by question difficulty (easy/medium/hard)",
-      "baseline_models": "11 models: proprietary multimodal/text — GPT-4o, GPT-4o-mini, GPT-4 (text), Gemini 1.5 Pro, Gemini 1.5 Flash, Gemini 1.0 Pro (text), Claude 3.5 Sonnet; open-source — LLaVA v1.6 (7B), LLaVA v1.6 (13B), Llama 3.2 Vision-11B, Bllossom-3B (text), EEVE-10.8B (text, Korean-optimized)",
-      "prompting_method": "Zero-shot, standardized multiple-choice-QA prompt template applied uniformly across all models to control for prompt-engineering effects",
-      "zero_few_shot": "Zero-shot only",
-      "rag_tool_use": false,
-      "human_eval_method": "Human accuracy statistics from the source certification exams used to calibrate question difficulty, not reported as a direct model-comparison baseline in the main results tables",
-      "llm_as_judge_method": null,
-      "robustness_tests": "Difficulty-stratified analysis (easy/medium/hard); separate error analysis of 145 annotated GPT-4o errors on Expert-level Reasoning, categorized into Lack-of-Knowledge, Lack-of-Reasoning, Perceptual, Reasoning, and Additional-Information-Requested error types (Ch. 6)",
-      "cost_latency_reporting": "Not reported"
-    },
-    "capability": {
-      "scheme": "v2",
-      "domain": "Korean construction engineering and management, broad",
-      "task_spans": "Output Quality (multiple-choice accuracy across 5 disciplines) + Task Completion",
-      "modality_spans": "4.1 Text + 4.3 2D Visual (architectural/engineering drawings, schematics, symbols)",
-      "evaluation_spans": "Code-based (exact-match multiple-choice accuracy)",
-      "capability_spans": "Domain Knowledge (construction engineering/management) + Perception/OCR (drawing/schematic interpretation) + Planning & Reasoning (Expert-level Reasoning discipline)",
-      "profession": [
-        "A1",
-        "A5"
-      ],
-      "profession_label": "A5 CM/Inspector + A1 Architect/Designer",
-      "profession_provenance": "verified",
-      "building_system": [
-        "B0",
-        "B1"
-      ],
-      "building_system_label": "B0 Cross-cutting / non-MasterFormat + B1 Facility Construction Subgroup (Div 02-19)",
-      "building_system_provenance": "verified",
-      "profession_note": "Source: CURATOR benchmark_records.jsonl taxonomy_v2 — Dim5/Dim6 confirmed from full-text (or CURATOR abstract fields for paywalled records)."
-    },
-    "rubric": {
-      "d1_domain_authenticity": 2,
-      "d2_task_validity": 2,
-      "d3_modality_coverage": 1,
-      "d4_annotation_quality": 2,
-      "d5_evaluation_clarity": 2,
-      "d6_baseline_coverage": 2,
-      "d7_reproducibility": 1,
-      "d8_leakage_control": 0,
-      "d9_human_baseline": 1,
-      "d10_practical_relevance": 2,
-      "total": 15,
-      "_notes": "d1=2: national certification-exam-sourced, real Korean construction-industry credentialing content. d2=2: genuine multi-discipline professional task validity. d3=1: text+image (13.5% w/ image), single 2D-visual channel, no BIM/CAD/3D/point-cloud. d4=2: certification-exam sourcing + documented bias-mitigation (de-identification, option randomization, source diversification, manual review). d5=2: standardized zero-shot prompt, 5-discipline breakdown, random-choice baseline included. d6=2: 11 diverse models (7 proprietary incl. multimodal + 4 open-source). d7=1 (conservative): thesis document itself is accessible via SNU institutional repository, but no confirmed separate public dataset/code artifact (GitHub/HF) found in the text — partial, not full, reproducibility. d8=0: not discussed. d9=1: human-accuracy statistics exist and are used for difficulty calibration (real data, not fabricated) but not reported as a direct model-vs-human comparison in the results tables — partial credit. d10=2: real national-certification-exam-grounded content, directly relevant to construction practice. SUM CHECK: 2+2+1+2+2+2+1+0+1+2=15.",
-      "_caveat": "Rubric grounded in a real full-text Master's thesis (114 pp., SNU, Feb 2025) obtained from the user this turn and read directly — not abstract-derived."
-    },
-    "reported_results": [
-      {
-        "model_string": "GPT-4o",
-        "metric_name": "Domain-specific Terminology (zero-shot MCQA) — Accuracy",
-        "value": "70.1",
-        "source_location": "Byunghee Yoo, MS thesis, Seoul National University, Feb 2025 (SNU repository handle 10371/221090)",
-        "provenance_flag": "source_confirmed"
-      },
-      {
-        "model_string": "Claude 3.5 Sonnet",
-        "metric_name": "Expert-level Reasoning (zero-shot MCQA) — Accuracy",
-        "value": "62.4",
-        "source_location": "Byunghee Yoo, MS thesis, Seoul National University, Feb 2025 (SNU repository handle 10371/221090)",
-        "provenance_flag": "source_confirmed"
-      }
-    ],
-    "fulltext": {
-      "assessed": true,
-      "obtained": "full",
-      "pdf_path": "RESEARCHER/outputs/fulltext_corpus/R057_KoCEM_000000189024.pdf",
-      "source_url": "SNU institutional repository, handle 10371/221090",
-      "status": "obtained",
-      "note": "Raw thesis PDF (114 pp.) supplied by user 2026-07-13 (extracted text at RESEARCHER/outputs/extracted_paper/000000189024/), read directly in full. This resolves the prior CAND-16 KoCEM full-text-blocked backlog item (JS bot-challenge redirect gate on the SNU bitstream URL) — full text now genuinely obtained, not just the bitstream link located."
-    }
-  },
-  {
     "name": "RGSVLM / Granary-sweeping VLM benchmark",
     "identifier": "doi:10.1016/j.jspr.2025.102619",
     "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 2.",
@@ -10447,7 +10553,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "Raw full-text PDF (12 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R058_GranarySweepingVLM_S0022474X25000785.pdf"
+      "version_accessed": "Raw full-text PDF (12 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R058_GranarySweepingVLM_S0022474X25000785.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Food-storage facility O&M — grain-storage facility (granary) interior cleaning/maintenance robotics",
@@ -10480,7 +10588,8 @@
       "data_source": "Real-world images collected by an in-house-developed intelligent grain sweeper (industrial HD camera, fixed 5m shooting distance) operating in actual granary environments (Henan Province Intelligent Logistics Equipment and Vehicle Engineering Technology Research Center)",
       "annotation_method": "FastSAM (improved) segmentation + pixel-occupancy analysis for systematic labeling; image cleaning/noise removal preprocessing",
       "expert_validation": "Not confirmed from the sections read — labeling is algorithm-assisted (FastSAM), not stated to involve independent human expert QC — [VERIFY]",
-      "license": "© 2025 Elsevier Ltd, standard copyright, not open access (no CC-BY found)",
+      "license": "© 2025 Elsevier Ltd, standard copyright, not open access (no CC-BY found) [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "on-request",
       "accessibility": "NOT publicly released — 'Data will be made available on request' (Data Availability statement)",
       "train_test_split": "9,863 training / 900+ validation (exact validation count given as '~900')",
       "leakage_risk": "Not discussed"
@@ -10571,7 +10680,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "Raw full-text PDF (16 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R059_ShieldGPT_S0886779826004554.pdf"
+      "version_accessed": "Raw full-text PDF (16 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R059_ShieldGPT_S0886779826004554.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Underground/tunnel engineering — mechanized shield tunneling; geotechnical engineering professional licensing",
@@ -10604,7 +10715,8 @@
       "data_source": "China's Registered Geotechnical Engineer Exam (official professional licensing exam), compiled cross-year 2018-2023 for representativeness",
       "annotation_method": "Official exam questions with definitive single/multiple-choice ground-truth answers",
       "expert_validation": "Official national professional licensing exam — expert-authored by definition",
-      "license": "© Elsevier, standard copyright, not open access (no CC-BY found)",
+      "license": "© Elsevier, standard copyright, not open access (no CC-BY found) [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "on-request",
       "accessibility": "NOT publicly released — 'Data will be made available on request' (Data Availability statement)",
       "train_test_split": "9:1 train/validation split used for ShieldGPT's own LoRA fine-tuning corpus (a separate teacher-guided synthetic instruction corpus, not the 972-item exam eval set); the 972-item exam set itself is a fixed evaluation set, no train split",
       "leakage_risk": "Not discussed"
@@ -10695,7 +10807,9 @@
       "arxiv_id": null,
       "repo_url": "https://github.com/capybara1122/UndergrBench (named in the paper's Data Availability statement — controlled-access mechanism, not independently fetched this turn)",
       "dataset_url": "Controlled access upon reasonable request from the corresponding author; access information at the GitHub repo above",
-      "version_accessed": "Raw full-text PDF (13 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R060_UndergrBench_S0926580526002384.pdf"
+      "version_accessed": "Raw full-text PDF (13 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R060_UndergrBench_S0926580526002384.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Underground engineering — tunnel/geotechnical construction intelligence (hazard identification, geological investigation, design, construction)",
@@ -10728,7 +10842,8 @@
       "data_source": "Engineering codes, geological reports, scientific papers, and disaster case records",
       "annotation_method": "Expert annotation (stated in abstract: 'expert annotation ensuring quality')",
       "expert_validation": "Expert-annotated per the paper's own description",
-      "license": "© 2026 Elsevier B.V., standard copyright, not open access (no CC-BY found) — the paper itself is paywalled; the benchmark DATA is separately controlled-access via GitHub",
+      "license": "© 2026 Elsevier B.V., standard copyright, not open access (no CC-BY found) — the paper itself is paywalled; the benchmark DATA is separately controlled-access via GitHub [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "on-request",
       "accessibility": "Controlled access — 'available from the corresponding author under a controlled access mechanism upon reasonable request'; access information at github.com/capybara1122/UndergrBench (link named in text, not independently fetched/confirmed live this turn)",
       "train_test_split": "Not confirmed from the sections read — [VERIFY]",
       "leakage_risk": "Not discussed"
@@ -10819,7 +10934,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "Raw full-text PDF (23 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R061_PowerBENCH_S1568494625012529.pdf"
+      "version_accessed": "Raw full-text PDF (23 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R061_PowerBENCH_S1568494625012529.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Power transmission/distribution infrastructure inspection — physical-asset condition monitoring and safety supervision",
@@ -10852,7 +10969,8 @@
       "data_source": "Real-world power-inspection images from 70 scenarios, systematically collected and annotated (metadata preparation over ~200,000 electric-power inspection images)",
       "annotation_method": "Metadata preparation + prompt-engineering pipeline using GPT-3.5-turbo API to transform structured annotations into instruction-answer pairs; substantial manual person-days invested in object-detection image annotation",
       "expert_validation": "Not confirmed as independent third-party expert QC beyond the described annotation pipeline — [VERIFY]",
-      "license": "Not confirmed as open access from the sections read — [VERIFY]",
+      "license": "Not confirmed as open access from the sections read — [VERIFY] [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "on-request",
       "accessibility": "NOT publicly released — 'Data will be made available on request' (Data Availability statement)",
       "train_test_split": "Not confirmed from the sections read for the PowerBENCH evaluation subset specifically — [VERIFY]",
       "leakage_risk": "Not discussed"
@@ -10951,7 +11069,9 @@
       "arxiv_id": null,
       "repo_url": "https://github.com/jli0117/Geo-LLM-Benchmarks (VERIFIED LIVE per real full-text read — repo URL directly cited in the paper text; not independently WebFetched this turn)",
       "dataset_url": "Geo-RE corpus (open-source, from Tian et al. 2024) + Geo-QA (self-built by this paper's authors, from 5 regional NGAC geological-hazard reports); interactive demo at https://huggingface.co/spaces/Ciallo0d00/up",
-      "version_accessed": "Raw full-text PDF (21 pp., Journal Pre-proof) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R062_GeoRE_S1674775526001216.pdf"
+      "version_accessed": "Raw full-text PDF (21 pp., Journal Pre-proof) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R062_GeoRE_S1674775526001216.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Geotechnical/geological site investigation — automated knowledge extraction from geological reports for risk assessment",
@@ -10984,7 +11104,8 @@
       "data_source": "Geo-RE corpus (open-source, National Geological Archives of China (NGAC) regional reports, Tian et al. 2024); Geo-QA self-built from 5 further NGAC regional geological-hazard reports",
       "annotation_method": "Geo-RE: manually annotated, verified via strict consistency checks (prior work, reused here). Geo-QA: 400 questions with standard answers designed by the authors, rigorously tested by 3 professionals",
       "expert_validation": "Geo-QA rigorously tested/validated by 3 professionals; Geo-RE independently verified via consistency checks in its original construction",
-      "license": "© 2026 Institute of Rock and Soil Mechanics/Elsevier, standard copyright on the paper itself (Journal Pre-proof, no CC-BY found) — the Geo-RE dataset is separately described as 'open-source' and the paper's own code/demo are public (GitHub + HuggingFace Space)",
+      "license": "© 2026 Institute of Rock and Soil Mechanics/Elsevier, standard copyright on the paper itself (Journal Pre-proof, no CC-BY found) — the Geo-RE dataset is separately described as 'open-source' and the paper's own code/demo are public (GitHub + HuggingFace Space) [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "unstated",
       "accessibility": "Publicly available: GitHub github.com/jli0117/Geo-LLM-Benchmarks (code) + HuggingFace Space huggingface.co/spaces/Ciallo0d00/up (interactive demo integrating all benchmarked LLMs and prompting techniques) — genuinely reproducible, not just a promise",
       "train_test_split": "KG: 500/500 (zero-shot eval / ICL demonstration pool). QA: 200/200 (zero-shot / few-shot pool)",
       "leakage_risk": "Not discussed"
@@ -11076,7 +11197,9 @@
       "arxiv_id": null,
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "Raw SSRN preprint PDF (53 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R063_ContractKnowledgeBenchmark_ssrn-5247570.pdf"
+      "version_accessed": "Raw SSRN preprint PDF (53 pp.) obtained from user 2026-07-13, stored RESEARCHER/outputs/fulltext_corpus/R063_ContractKnowledgeBenchmark_ssrn-5247570.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "International construction contract management (FIDIC standard forms — Yellow Book/Conditions of Contract for Plant & Design-Build, Red Book/Construction, Silver Book/EPC-Turnkey)",
@@ -11109,7 +11232,8 @@
       "data_source": "2017 FIDIC Conditions of Contract for Plant and Design-Build (Yellow Book, primary source), supplemented by the 2017 FIDIC Red Book (Construction) and Silver Book (EPC/Turnkey), plus authoritative literature, books, and dispute-case data",
       "annotation_method": "Manually developed by 2 researchers in construction management with systematic FIDIC training, over a 2-month process, based directly on the original FIDIC text and authoritative literature",
       "expert_validation": "Manually developed by trained construction-management researchers with in-depth FIDIC field knowledge (direct authorship, not independent third-party validation panel)",
-      "license": "Not stated — SSRN preprint, not peer reviewed; no explicit license/data-availability statement found in the sections read",
+      "license": "Not stated — SSRN preprint, not peer reviewed; no explicit license/data-availability statement found in the sections read [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "no-artifact-released",
       "accessibility": "No public dataset/code release (GitHub/HF) found in the real full text — [VERIFY]",
       "train_test_split": "N/A — fixed 1,131-question evaluation set, no train split",
       "leakage_risk": "Not discussed"
@@ -11200,7 +11324,9 @@
       "arxiv_id": "2509.06813",
       "repo_url": "https://github.com/mvmalyi/wind-farm-maintenance-logs-labelling-with-llms",
       "dataset_url": null,
-      "version_accessed": "arXiv:2509.06813v1, obtained 2026-07-13, stored fulltext_corpus/CAND-3_WindTurbineMaintenance_2509.06813.pdf"
+      "version_accessed": "arXiv:2509.06813v1, obtained 2026-07-13, stored fulltext_corpus/CAND-3_WindTurbineMaintenance_2509.06813.pdf",
+      "country_region": "UK [VERIFY lead-author affil]",
+      "country_region_base": "UK"
     },
     "domain_use_case": {
       "aec_subdomain": "Wind-turbine O&M; renewable-energy physical-asset infrastructure",
@@ -11234,6 +11360,7 @@
       "annotation_method": "Hybrid literature+LLM-assisted taxonomy; ground truth = model consensus/alignment (expert-verified-label accuracy analysis explicitly out of scope)",
       "expert_validation": "NOT independently expert-gold-labelled for primary metrics (disclosed limitation, motivated by documented up-to-300% inter-expert KPI divergence in prior literature)",
       "license": "MIT",
+      "license_class": "open-permissive",
       "accessibility": "Public GitHub repo, code+config+sample data",
       "train_test_split": "N/A — zero-shot classification",
       "leakage_risk": "Not discussed"
@@ -11324,7 +11451,9 @@
       "arxiv_id": "2604.08212",
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "arXiv:2604.08212v1, obtained 2026-07-13, stored fulltext_corpus/CAND-4_PaveInstruct-PaveGPT_2604.08212.pdf"
+      "version_accessed": "arXiv:2604.08212v1, obtained 2026-07-13, stored fulltext_corpus/CAND-4_PaveInstruct-PaveGPT_2604.08212.pdf",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Pavement engineering / highway condition assessment (ASTM D6433)",
@@ -11357,7 +11486,8 @@
       "data_source": "9 heterogeneous public pavement-distress datasets",
       "annotation_method": "4-stage pipeline: format unification, coordinate harmonization, LLM-driven instruction generation, QA",
       "expert_validation": "Automated consistency checks + targeted human validation by licensed pavement engineers on a diverse sample",
-      "license": "Not stated",
+      "license": "Not stated [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "no-artifact-released",
       "accessibility": "'Will be made publicly available' (future tense) — no confirmed public link found in real full text — [VERIFY]",
       "train_test_split": "Not detailed",
       "leakage_risk": "Not discussed"
@@ -11448,7 +11578,9 @@
       "arxiv_id": "2512.03672",
       "repo_url": "https://github.com/sheishijun/Hydro-SE-Bench",
       "dataset_url": null,
-      "version_accessed": "arXiv:2512.03672v1, obtained 2026-07-13, stored fulltext_corpus/CAND-5_HydroSEBench_2512.03672.pdf"
+      "version_accessed": "arXiv:2512.03672v1, obtained 2026-07-13, stored fulltext_corpus/CAND-5_HydroSEBench_2512.03672.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Hydro-science and engineering: hydrology, hydraulics, geotechnical engineering, hydraulic structures, power systems, engineering safety/management",
@@ -11482,6 +11614,7 @@
       "annotation_method": "Semi-automatic prompt-based generation with expert few-shot exemplars",
       "expert_validation": "Each question independently reviewed by >=3 experts plus the original designer",
       "license": "MIT",
+      "license_class": "open-permissive",
       "accessibility": "Public GitHub repo, code+data",
       "train_test_split": "N/A — fixed evaluation set",
       "leakage_risk": "Not discussed"
@@ -11558,7 +11691,7 @@
   {
     "name": "UrbanPlanBench",
     "identifier": "arXiv:2504.21027",
-    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1. | license resolved: open-permissive [license-resolved 2026-07-15] license MIT(repo) kept; user's CC-BY=paper| user-xlsx merge 2026-07-15 (web-verified)",
     "tier": 1,
     "source_record_id": "R067",
     "provenance": "claimed",
@@ -11571,7 +11704,9 @@
       "arxiv_id": "2504.21027",
       "repo_url": "https://github.com/tsinghua-fib-lab/PlanBench",
       "dataset_url": null,
-      "version_accessed": "arXiv:2504.21027v1, obtained 2026-07-13, stored fulltext_corpus/CAND-6_UrbanPlanBench_2504.21027.pdf"
+      "version_accessed": "arXiv:2504.21027v1, obtained 2026-07-13, stored fulltext_corpus/CAND-6_UrbanPlanBench_2504.21027.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Urban and land-use planning",
@@ -11604,7 +11739,8 @@
       "data_source": "Real China certified urban-planner qualification examination (2022 standard) + textbooks/past exams for UrbanPlanText",
       "annotation_method": "Curated from official PDF/Word exam documents, meticulously parsed/annotated by authors into structured CSV",
       "expert_validation": "Directly sourced from an official government certification exam (institutional ground truth, not independently re-validated by a separate panel)",
-      "license": "Not stated (public GitHub release)",
+      "license": "MIT License (github.com/tsinghua-fib-lab/PlanBench repo); paper CC BY 4.0. user-xlsx said CC-BY-4.0 (=paper); repo/code=MIT kept| user-xlsx merge 2026-07-15 (web-verified)",
+      "license_class": "open-permissive",
       "accessibility": "Public GitHub repo (benchmark + UrbanPlanText SFT dataset + eval/fine-tuning toolsets)",
       "train_test_split": "UrbanPlanText for SFT; UrbanPlanBench as fixed eval set",
       "leakage_risk": "Not discussed"
@@ -11702,7 +11838,9 @@
       "arxiv_id": "2406.13945",
       "repo_url": "https://github.com/tsinghua-fib-lab/CityBench",
       "dataset_url": null,
-      "version_accessed": "arXiv:2406.13945v3, obtained 2026-07-13, stored fulltext_corpus/CAND-7_CityBench_2406.13945.pdf"
+      "version_accessed": "arXiv:2406.13945v3, obtained 2026-07-13, stored fulltext_corpus/CAND-7_CityBench_2406.13945.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Urban computing / smart-city analysis (minority built-environment: infrastructure recognition, spatial-element QA)",
@@ -11736,6 +11874,7 @@
       "annotation_method": "Automated ground-truth extraction (OSM keyword matching for infrastructure, Worldpop for population density, Foursquare for mobility) + author quality-control filtering/rewriting of generated QA",
       "expert_validation": "Author-conducted quality-control filtering, not independent third-party expert panel",
       "license": "Follows Foursquare-checkin dataset license (anonymized data, privacy-protected)",
+      "license_class": "proprietary",
       "accessibility": "Public GitHub repo (tsinghua-fib-lab/CityBench, CityData, CitySimu, mosstool)",
       "train_test_split": "N/A — fixed evaluation benchmark",
       "leakage_risk": "Not discussed"
@@ -11817,7 +11956,9 @@
       "arxiv_id": "2508.09203",
       "repo_url": "https://github.com/zhenhuiou/Construction-Safety-Dataset-CSDataset",
       "dataset_url": null,
-      "version_accessed": "arXiv:2508.09203v1, obtained 2026-07-13, stored fulltext_corpus/CAND-10_BuildingSaferSites-CSDataset_2508.09203.pdf"
+      "version_accessed": "arXiv:2508.09203v1, obtained 2026-07-13, stored fulltext_corpus/CAND-10_BuildingSaferSites-CSDataset_2508.09203.pdf",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Construction safety management",
@@ -11850,7 +11991,8 @@
       "data_source": "Real OSHA (Occupational Safety and Health Administration) public records, linked via activity numbers",
       "annotation_method": "Real-world administrative records (not synthetically labelled); data cleaning/normalization/linking pipeline",
       "expert_validation": "Real government-recorded incident data (authoritative administrative source, not a separate expert-annotation panel)",
-      "license": "Not stated (public GitHub release)",
+      "license": "Not stated (public GitHub release) [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "unstated",
       "accessibility": "Public GitHub repo, code + dataset",
       "train_test_split": "7:3 train/test split, balanced across severity classes",
       "leakage_risk": "Not discussed"
@@ -11943,12 +12085,14 @@
       "paper_title": "RoadBench: A Vision-Language Foundation Model and Benchmark for Road Damage Understanding",
       "authors": "Xi Xiao, Yunbei Zhang, Janet Wang, et al. (Univ. of Alabama at Birmingham; Tulane; Northeastern; Georgia Tech; CMU; Brown; Emory; Harvard; Oak Ridge National Lab; Tezpur Univ.)",
       "year": 2026,
-      "venue": "arXiv preprint, March 2026",
+      "venue": "WACV 2026",
       "doi": null,
       "arxiv_id": "2507.17353",
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "arXiv:2507.17353v3, obtained 2026-07-13, stored fulltext_corpus/CAND-11_RoadBench_2507.17353.pdf"
+      "version_accessed": "arXiv:2507.17353v3, obtained 2026-07-13, stored fulltext_corpus/CAND-11_RoadBench_2507.17353.pdf",
+      "country_region": "USA",
+      "country_region_base": "USA"
     },
     "domain_use_case": {
       "aec_subdomain": "Road/pavement infrastructure monitoring",
@@ -11981,7 +12125,8 @@
       "data_source": "Fully synthetic — GPT-4o generates images from expert-informed vocabulary-guided prompts, plus matching text descriptions",
       "annotation_method": "Automated GPT-4o generation + human expert verification pass for quality",
       "expert_validation": "Domain experts consulted for the standardized vocabulary guiding generation, and for verification of generated outputs; NOT expert-annotated real photographs",
-      "license": "Not stated",
+      "license": "Not stated [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "no-artifact-released",
       "accessibility": "No public GitHub/HF link found in the real full text — [VERIFY]",
       "train_test_split": "Not detailed in sections read",
       "leakage_risk": "Authors note the synthetic approach avoids privacy concerns (faces/license plates) but the images are not real captured road-damage photographs — a domain-authenticity limitation, not leakage per se"
@@ -12072,7 +12217,9 @@
       "arxiv_id": "2605.20306",
       "repo_url": "https://github.com/liangyunuancha/wildroadbench",
       "dataset_url": null,
-      "version_accessed": "arXiv:2605.20306v2, obtained 2026-07-13, stored fulltext_corpus/CAND-12_WildRoadBench_2605.20306.pdf"
+      "version_accessed": "arXiv:2605.20306v2, obtained 2026-07-13, stored fulltext_corpus/CAND-12_WildRoadBench_2605.20306.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Road/pavement infrastructure, aerial/UAV inspection",
@@ -12105,7 +12252,8 @@
       "data_source": "Internally-collected UAV imagery of real road damage on Chinese roads (quad-rotor drones, 50-200m altitude)",
       "annotation_method": "Professional annotation by road-maintenance experts (bounding boxes + damage categories)",
       "expert_validation": "Professional road-maintenance experts conducted annotation directly",
-      "license": "Not stated (public GitHub release, code+data)",
+      "license": "Not stated (public GitHub release, code+data) [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "open-restricted",
       "accessibility": "Public GitHub repo (liangyunuancha/wildroadbench), code + data released for reproducibility",
       "train_test_split": "VLM track offline (images+annotations released); Agent track uses the SAME image pool as a hidden holdout (explicit leakage control)",
       "leakage_risk": "EXPLICIT — Agent track holdout images/labels never exposed during the agent's run, a deliberate anti-leakage design"
@@ -12198,12 +12346,14 @@
       "paper_title": "Novel Benchmark for NER in the Wastewater and Stormwater Domain",
       "authors": "Franco Alberto Cardillo, Franca Debole, Francesca Frontini (CNR, Italy); Mitra Aelami, Nanée Chahinian, Serge Conrad (HSM Univ. Montpellier, IRD, CNRS)",
       "year": 2025,
-      "venue": "arXiv preprint, June 2025",
+      "venue": "IEEE CiSt 2025",
       "doi": null,
       "arxiv_id": "2506.01938",
       "repo_url": null,
       "dataset_url": null,
-      "version_accessed": "arXiv:2506.01938v1, obtained 2026-07-13, stored fulltext_corpus/CAND-17_NER-WastewaterStormwater_2506.01938.pdf"
+      "version_accessed": "arXiv:2506.01938v1, obtained 2026-07-13, stored fulltext_corpus/CAND-17_NER-WastewaterStormwater_2506.01938.pdf",
+      "country_region": "Italy",
+      "country_region_base": "Italy"
     },
     "domain_use_case": {
       "aec_subdomain": "Wastewater and stormwater network management/infrastructure documentation",
@@ -12236,7 +12386,8 @@
       "data_source": "French corpus built on MeDo project Gold Standard + newspaper articles/official documents on Montpellier/Nîmes/Alès network works; Italian corpus = expert-checked machine translation",
       "annotation_method": "French: manually checked/aligned to new schema. Italian: machine-translated + independently checked by 2 translation students + expert-hydrologist disambiguation, then manually transposed via INCEpTION tool",
       "expert_validation": "Expert hydrologists resolved translation ambiguities; annotation scheme inspired by RAEPA geostandard (official French water-utility standard)",
-      "license": "Not stated",
+      "license": "Not stated [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "no-artifact-released",
       "accessibility": "'Will be made available and cited in the final version' — future tense, not yet released as of this extraction — [VERIFY]",
       "train_test_split": "Not detailed",
       "leakage_risk": "Not discussed"
@@ -12327,7 +12478,9 @@
       "arxiv_id": "2512.21337",
       "repo_url": null,
       "dataset_url": "https://huggingface.co/datasets/Morris0401/Year-Guessr-Dataset",
-      "version_accessed": "arXiv:2512.21337v1, obtained 2026-07-13, stored fulltext_corpus/CAND-19_YEARGUESSR_2512.21337.pdf"
+      "version_accessed": "arXiv:2512.21337v1, obtained 2026-07-13, stored fulltext_corpus/CAND-19_YEARGUESSR_2512.21337.pdf",
+      "country_region": "Taiwan",
+      "country_region_base": "Taiwan"
     },
     "domain_use_case": {
       "aec_subdomain": "Building-age estimation / heritage preservation (motivating use case); core evaluated skill is general VLM robustness/memorization testing",
@@ -12361,6 +12514,7 @@
       "annotation_method": "Sourced from Wikipedia/Wikidata structured metadata (year, coordinates, page views), not independently expert-annotated",
       "expert_validation": "Not independently expert-validated (relies on Wikipedia/Wikidata crowd-sourced metadata accuracy)",
       "license": "CC BY-SA 4.0 (or public-domain content)",
+      "license_class": "open-restricted",
       "accessibility": "Public, first open CC BY-SA 4.0 image set for this task; HuggingFace dataset release (Morris0401/Year-Guessr-Dataset)",
       "train_test_split": "Not detailed in sections read",
       "leakage_risk": "EXPLICITLY the paper's central topic — popularity/page-view proxy used specifically to diagnose training-data memorization bias"
@@ -12440,7 +12594,9 @@
       "arxiv_id": null,
       "repo_url": "https://github.com/IAPP-Group/VLM-Heritage",
       "dataset_url": null,
-      "version_accessed": "Full text obtained via mcp__scholarscope__fetch_fulltext 2026-07-12/13, stored fulltext_corpus/CAND-20_VLMHeritage_heritage8030095/full_text.md (WebFetch and MDPI direct PDF both returned HTTP 403 bot-detection walls)"
+      "version_accessed": "Full text obtained via mcp__scholarscope__fetch_fulltext 2026-07-12/13, stored fulltext_corpus/CAND-20_VLMHeritage_heritage8030095/full_text.md (WebFetch and MDPI direct PDF both returned HTTP 403 bot-detection walls)",
+      "country_region": "Italy",
+      "country_region_base": "Italy"
     },
     "domain_use_case": {
       "aec_subdomain": "Cultural heritage recognition / virtual tourist guide (architecture-majority landmark set)",
@@ -12473,7 +12629,8 @@
       "data_source": "Wikimedia (20 images), FloreView (Florence-specific, post-Oct-2023, not search-indexed, 10 images), personal unpublished photographs (10 images, zero training-overlap by design)",
       "annotation_method": "Human evaluators labeled model responses on 3 criteria (City/Subject/Description, OK/NO/PAR/ERR scale)",
       "expert_validation": "Human evaluator labeling (not domain-heritage-expert panel specifically, but manual quality review)",
-      "license": "Not stated (public GitHub release)",
+      "license": "Not stated (public GitHub release) [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "unstated",
       "accessibility": "Public GitHub repo (IAPP-Group/VLM-Heritage)",
       "train_test_split": "N/A — fixed evaluation set",
       "leakage_risk": "EXPLICITLY discussed — training-data-overlap concern for Wikimedia images flagged; FloreView (post-Oct-2023) and 'Others' personal photos confirmed bias-free by design"
@@ -12547,7 +12704,7 @@
   {
     "name": "PlanBench-V",
     "identifier": "arXiv:2606.05744",
-    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1.",
+    "verification_status": "Stage-2 §4 3-condition screen 2026-07-13 (RESEARCHER, real full-text read, user-supplied extraction) — INCLUDE, Tier 1. | license resolved: open-permissive [license-resolved 2026-07-15]",
     "tier": 1,
     "source_record_id": "R076",
     "provenance": "claimed",
@@ -12560,7 +12717,9 @@
       "arxiv_id": "2606.05744",
       "repo_url": "https://plangpt.github.io/",
       "dataset_url": null,
-      "version_accessed": "arXiv:2606.05744v1, obtained 2026-07-13, stored fulltext_corpus/CAND-21_PlanBenchV_2606.05744.pdf"
+      "version_accessed": "arXiv:2606.05744v1, obtained 2026-07-13, stored fulltext_corpus/CAND-21_PlanBenchV_2606.05744.pdf",
+      "country_region": "China",
+      "country_region_base": "China"
     },
     "domain_use_case": {
       "aec_subdomain": "Statutory spatial/urban planning map interpretation",
@@ -12593,7 +12752,8 @@
       "data_source": "Official Chinese master plans, Chinese Certified Urban-Rural Planner Qualification Examination (CURPQE), international spatial planning maps",
       "annotation_method": "Manually annotated by professional urban planners",
       "expert_validation": "Professional urban planners directly authored the QA pairs (not merely reviewed)",
-      "license": "Not stated (code+data available)",
+      "license": "Apache 2.0 (github.com/zhuchichi56/PlanGPT-VL LICENSE — hosts PlanBench-V benchmark, verified 2026-07-15) [license-resolved 2026-07-15]",
+      "license_class": "open-permissive",
       "accessibility": "Public code+data at plangpt.github.io",
       "train_test_split": "300-item stratified subset used for 2-round model evaluation",
       "leakage_risk": "Not discussed"
@@ -12691,7 +12851,9 @@
       "arxiv_id": "2603.26770",
       "repo_url": "https://github.com/tk-yasuno/damage_text_score",
       "dataset_url": null,
-      "version_accessed": "arXiv:2603.26770v1, obtained 2026-07-13, stored fulltext_corpus/CI_BridgeVLM_2603.26770.pdf"
+      "version_accessed": "arXiv:2603.26770v1, obtained 2026-07-13, stored fulltext_corpus/CI_BridgeVLM_2603.26770.pdf",
+      "country_region": "unclear [VERIFY — no affiliation on page 1]",
+      "country_region_base": "unclear"
     },
     "domain_use_case": {
       "aec_subdomain": "Bridge infrastructure inspection (rebar exposure/corrosion damage assessment)",
@@ -12724,7 +12886,8 @@
       "data_source": "Real-world bridge infrastructure photographs (rebar exposure/corrosion)",
       "annotation_method": "Manual scoring by 2 civil-engineering domain experts using the 5-point rubric",
       "expert_validation": "Inter-rater agreement validated via Cohen's kappa > 0.8 between the 2 domain experts",
-      "license": "Not stated (public GitHub release)",
+      "license": "Not stated (public GitHub release) [searched GitHub/HF/card 2026-07-15: no license statement found]",
+      "license_class": "open-permissive",
       "accessibility": "Public GitHub repo (tk-yasuno/damage_text_score), full reproducible pipeline (OpenCV preprocessing, llama-cpp-python inference, Swallow-8B structuring, priority scoring)",
       "train_test_split": "N/A — fixed evaluation set",
       "leakage_risk": "Not discussed"
