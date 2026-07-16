@@ -1,9 +1,10 @@
 // Integrity constants — single source of truth for gating rules
 // Mirrors preview.html LB_NO_RESULTS / EXCLUDED sets
 
-/** Records with zero source_confirmed reported_results rows (derived from benchmarks.json:
- *  26 minus the 15 with results). Re-derive whenever reported_results changes. */
-export const LB_NO_RESULTS = new Set(['R004', 'R008', 'R013', 'R017', 'R033', 'R035', 'R036', 'R037', 'R039', 'R040', 'R041']);
+/** Records with zero source_confirmed reported_results rows (N=55 corpus, RESEARCHER 0.51.0).
+ *  R004/R033: paywall abstract-only. R037: results only in figures (not transcribed). R047/R048: no extracted results.
+ *  NOTE: leaderboard.astro now derives this set dynamically from benchmarks.json — this export is kept for other consumers. */
+export const LB_NO_RESULTS = new Set(['R004', 'R033', 'R037', 'R047', 'R048']);
 
 /** Excluded records — must NEVER appear in catalog or inventory listings */
 export const EXCLUDED = new Set(['R032']);

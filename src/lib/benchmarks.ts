@@ -8,7 +8,7 @@ import rawData from '../data/benchmarks.json';
 
 const allData = rawData as Benchmark[];
 
-/** All 24 included benchmarks (R032 excluded per VERIFIER 0.5.23 F-054; R038 excluded as EX-CONSOL dup-of-R008) */
+/** All 55 included benchmarks (R032 excluded per VERIFIER 0.5.23 F-054; R057 excluded EX7 2026-07-16) */
 export const benchmarks: Benchmark[] = allData.filter(
   (b) => !isExcluded(b.source_record_id)
 );
