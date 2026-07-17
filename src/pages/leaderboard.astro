@@ -16,17 +16,30 @@ const noResults = allSorted.filter(b =>
   !(b.reported_results ?? []).some((r: any) => r.provenance_flag === 'source_confirmed')
 );
 
+// Paywall records: no PDF exists, ASCE paywall
+const PAYWALL_IDS = new Set(['R004', 'R033']);
+
+// Build per-benchmark map of figure-only models (roster confirmed, values chart-only)
+const figureOnlyMap: Record<string, string[]> = {};
+for (const b of allSorted) {
+  const models = (b.reported_results ?? [])
+    .filter((r: any) => r.provenance_flag === 'source_confirmed_model_figure_only_value')
+    .map((r: any) => r.model_string as string);
+  const unique = [...new Set(models)];
+  if (unique.length > 0) figureOnlyMap[b.source_record_id] = unique;
+}
+
 // IDs for client-side selectors (ordered)
 const BM_ORDER = allSorted.map(b => b.source_record_id);
 const LB_NO_RESULTS_IDS = noResults.map(b => b.source_record_id);
 const LB_PILOT = withResults.map(b => b.source_record_id);
 
-// Slim data for client (records with results only — no-results records omitted from chart payload)
+// Slim data for client (records with source_confirmed results — figure-only rows excluded from chart payload)
 const chartBenchmarks = withResults.map(b => ({
   source_record_id: b.source_record_id,
   name: b.name,
   tier: b.tier,
-  reported_results: b.reported_results ?? [],
+  reported_results: (b.reported_results ?? []).filter((r: any) => r.provenance_flag === 'source_confirmed'),
   identifier: b.identifier,
 }));
 
@@ -44,6 +57,7 @@ const _yearLookup = JSON.stringify(YEAR_LOOKUP);
 const _lbNoResults = JSON.stringify(LB_NO_RESULTS_IDS);
 const _lbPilot = JSON.stringify(LB_PILOT);
 const _bmOrder = JSON.stringify(BM_ORDER);
+const _figureOnlyMap = JSON.stringify(figureOnlyMap);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
@@ -136,26 +150,51 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <span>Approx. year (◎)</span>
         </div>
       </div>
+      <!-- Figure-only notice (populated by client JS when applicable) -->
+      <div id="lbFigureOnlyPanel" class="hidden border-t border-slate-200 bg-violet-50/50 px-4 py-3">
+        <p class="text-[11px] font-semibold text-violet-700 mb-1">
+          ◈ Figure-only models for this benchmark — roster confirmed, numeric values in paper charts only
+        </p>
+        <p id="lbFigureOnlyList" class="text-[11px] text-violet-600"></p>
+      </div>
     </div>
 
     <!-- Integrity gating notices -->
-    <div class="mt-6">
-      <!-- LB_NO_RESULTS: 5 records with no extracted performance data -->
-      <div class="rounded-xl border border-slate-300/40 bg-slate-100/20 p-4">
-        <h3 class="text-xs font-semibold text-slate-600 mb-2">⟨no reported results⟩ — {noResults.length} benchmarks</h3>
-        <p class="text-[11px] text-slate-500 mb-2">
-          No extractable performance data (paywall abstract-only / figure-only / pending extraction).
-          Disabled in selector. All other {withResults.length} benchmarks are chartable.
-        </p>
-        <div class="flex flex-wrap gap-1">
-          {noResults.map(b => (
-            <a href={`${base}/benchmarks/${b.source_record_id.toLowerCase()}`}
-               class="chip bg-slate-300/50 text-slate-600 border border-slate-300 font-mono text-[10px] hover:bg-slate-300/80">
-              {b.source_record_id} {b.name}
-            </a>
-          ))}
+    <div class="mt-6 space-y-3">
+      <!-- Paywall records: no PDF exists -->
+      {noResults.filter(b => PAYWALL_IDS.has(b.source_record_id)).length > 0 && (
+        <div class="rounded-xl border border-amber-200/60 bg-amber-50/40 p-4">
+          <h3 class="text-xs font-semibold text-amber-700 mb-2">⟨paywall — no extractable data⟩ — {noResults.filter(b => PAYWALL_IDS.has(b.source_record_id)).length} benchmarks</h3>
+          <p class="text-[11px] text-amber-600 mb-2">
+            No PDF available (ASCE paywall, no preprint). Full-text screening was completed at title/abstract; these benchmarks are included in the corpus count but no performance numbers could be extracted. Disabled in selector.
+          </p>
+          <div class="flex flex-wrap gap-1">
+            {noResults.filter(b => PAYWALL_IDS.has(b.source_record_id)).map(b => (
+              <a href={`${base}/benchmarks/${b.source_record_id.toLowerCase()}`}
+                 class="chip bg-amber-100 text-amber-700 border border-amber-300 font-mono text-[10px] hover:bg-amber-200">
+                {b.source_record_id} {b.name}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+      <!-- Other no-results records (non-paywall) -->
+      {noResults.filter(b => !PAYWALL_IDS.has(b.source_record_id)).length > 0 && (
+        <div class="rounded-xl border border-slate-300/40 bg-slate-100/20 p-4">
+          <h3 class="text-xs font-semibold text-slate-600 mb-2">⟨no reported results⟩ — {noResults.filter(b => !PAYWALL_IDS.has(b.source_record_id)).length} benchmarks</h3>
+          <p class="text-[11px] text-slate-500 mb-2">
+            No extractable performance data (pending extraction). Disabled in selector.
+          </p>
+          <div class="flex flex-wrap gap-1">
+            {noResults.filter(b => !PAYWALL_IDS.has(b.source_record_id)).map(b => (
+              <a href={`${base}/benchmarks/${b.source_record_id.toLowerCase()}`}
+                 class="chip bg-slate-300/50 text-slate-600 border border-slate-300 font-mono text-[10px] hover:bg-slate-300/80">
+                {b.source_record_id} {b.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
 
     <!-- Coverage summary -->
@@ -224,12 +263,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 </style>
 
 <!-- All chart logic — client-side, no CDN deps -->
-<script define:vars={{ _chartData, _yearLookup, _lbNoResults, _lbPilot, _bmOrder }}>
+<script define:vars={{ _chartData, _yearLookup, _lbNoResults, _lbPilot, _bmOrder, _figureOnlyMap }}>
 const DATA = JSON.parse(_chartData);
 const YEAR_LOOKUP = JSON.parse(_yearLookup);
 const LB_NO_RESULTS = new Set(JSON.parse(_lbNoResults));
 const LB_PILOT = new Set(JSON.parse(_lbPilot));
 const BM_ORDER = JSON.parse(_bmOrder);
+const FIGURE_ONLY_MAP = JSON.parse(_figureOnlyMap);
 
 // ── State ──────────────────────────────────────────────────────────────────
 let _lbRid = 'R001';
@@ -313,11 +353,27 @@ function setMode(mode) {
   renderChart();
 }
 
+// ── Figure-only panel update ───────────────────────────────────────────────
+function updateFigureOnlyPanel(rid) {
+  const panel = document.getElementById('lbFigureOnlyPanel');
+  const list = document.getElementById('lbFigureOnlyList');
+  if (!panel || !list) return;
+  const models = FIGURE_ONLY_MAP[rid];
+  if (models && models.length > 0) {
+    list.textContent = models.join(' · ');
+    panel.classList.remove('hidden');
+  } else {
+    panel.classList.add('hidden');
+    list.textContent = '';
+  }
+}
+
 // ── Main render ────────────────────────────────────────────────────────────
 function renderChart() {
   const wrap = document.getElementById('lbChartWrap');
   if (!wrap) return;
   if (!_lbRid) { wrap.innerHTML = '<p class="text-slate-500 text-sm">Select a benchmark.</p>'; return; }
+  updateFigureOnlyPanel(_lbRid);
   if (_lbMode === 'bar') {
     if (!_lbMetric) { wrap.innerHTML = '<p class="text-slate-500 text-sm">Select a metric.</p>'; return; }
     wrap.innerHTML = buildBarChart(_lbRid, _lbMetric);
