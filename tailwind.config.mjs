@@ -4,28 +4,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary brand (indigo-blue — replaces flat blue-600)
+        // Primary brand — prussian blue (AEC blueprint heritage)
         primary: {
-          50:  '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b',
+          50:  '#f0f5fb',
+          100: '#d9e8f5',
+          200: '#b4cfe9',
+          300: '#85b3da',
+          400: '#5596ca',
+          500: '#357bb8',
+          600: '#255f9b',
+          700: '#1a4a7f',  // prussian blue — main accent
+          800: '#123360',
+          900: '#0b2042',
+          950: '#060f20',
         },
-        // Accent (cyan — for callouts, highlights)
+        // Warm paper tones
+        paper: '#faf9f7',       // barely warm off-white
+        parchment: '#f3f1eb',   // section alternates (paper-2)
+        // Editorial ink
+        ink: '#131418',         // near-black
+        muted: '#5a5c63',       // secondary text
+        // Warm rule / border
+        rule: '#dbd9d4',
+        // Muted teal (accent chips — non-brand)
         accent: {
-          300: '#67e8f9',
-          400: '#22d3ee',
-          500: '#06b6d4',
-          600: '#0891b2',
+          300: '#8dbdce',
+          400: '#62a4bc',
+          500: '#3e8daa',
+          600: '#2a7090',
         },
-        // Tier palette
+        // Tier palette — unchanged (semantic)
         t1: {
           50:  '#ecfdf5',
           100: '#d1fae5',
@@ -52,12 +60,12 @@ export default {
         },
       },
       fontFamily: {
+        // Editorial serif for headings — distinct from every SaaS sans
         display: [
-          'Space Grotesk',
-          'Inter',
-          'ui-sans-serif',
-          'system-ui',
-          'sans-serif',
+          'Newsreader',
+          'Georgia',
+          'ui-serif',
+          'serif',
         ],
         sans: [
           'Inter',
@@ -78,36 +86,23 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-glow':
-          'radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,102,241,0.18), transparent)',
-        'card-glow':
-          'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(99,102,241,0.12), transparent)',
       },
       boxShadow: {
-        // Lightened for bright-white theme (was 0.3-0.4 alpha — too heavy on white)
-        'card':    '0 1px 2px 0 rgba(15,23,42,0.06), 0 1px 3px -1px rgba(15,23,42,0.05)',
-        'card-lg': '0 4px 12px 0 rgba(15,23,42,0.08), 0 2px 4px -1px rgba(15,23,42,0.05)',
-        'glow-sm': '0 0 12px rgba(99,102,241,0.18)',
-        'glow':    '0 0 24px rgba(99,102,241,0.22)',
+        // Editorial shadows — no glow, just subtle depth
+        'card':    '0 1px 2px rgba(19,20,24,.04), 0 1px 4px rgba(19,20,24,.03)',
+        'card-lg': '0 4px 16px rgba(19,20,24,.07), 0 2px 6px rgba(19,20,24,.04)',
+        'card-xs': '0 1px 2px rgba(19,20,24,.04)',
       },
       animation: {
-        'fade-in':  'fadeIn 0.3s ease-out',
-        'slide-up': 'slideUp 0.4s ease-out',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4,0,0.6,1) infinite',
+        'fade-in': 'fadeIn 0.2s ease-out',
       },
       keyframes: {
         fadeIn: {
-          '0%':   { opacity: '0', transform: 'translateY(6px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        slideUp: {
-          '0%':   { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '0%':   { opacity: '0' },
+          '100%': { opacity: '1' },
         },
       },
-      // Reduced radii (user directive 2026-07-01: "cards more square").
-      // Overrides Tailwind defaults so rounded-lg/xl/2xl/3xl are uniformly
-      // squarer across every component; rounded-full (chips/badges) stays round.
+      // Squarer border-radii (user directive 2026-07-01 — preserved)
       borderRadius: {
         'sm':    '0.125rem',
         DEFAULT: '0.125rem',
