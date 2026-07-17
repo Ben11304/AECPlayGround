@@ -2267,7 +2267,7 @@
       "annotation_method": "Custom QA pairs; LLM-assisted synonym mapping for evaluation; full method [VERIFY — ASCE paywall] (claimed)",
       "expert_validation": "[VERIFY — paper paywalled]; funded by NSFC Grant 72301250 (claimed)",
       "license": "[dataset via Google Drive, on-request; no explicit license] (user-xlsx: 'google drive require'| user-xlsx merge 2026-07-15 (web-verified))",
-      "license_class": "unstated",
+      "license_class": "on-request",
       "accessibility": "Public GitHub (0 stars, 4 commits); Google Drive dataset link (claimed)",
       "train_test_split": "Three-way split inherited from FloorPlanCAD (test/train/val); exact ratios [VERIFY] (claimed)",
       "leakage_risk": "[VERIFY — paper paywalled]"
@@ -4366,7 +4366,7 @@
       "annotation_method": "Deterministic algorithmic generation; ground truth computed directly from symbolic layout (claimed)",
       "expert_validation": "~1/3 layouts filtered via geometric and functional constraints (claimed)",
       "license": "NOT FOUND [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "no-artifact-released",
+      "license_class": "unstated",
       "accessibility": "NOT YET RELEASED publicly — supplementary materials with conference submission only (claimed)",
       "train_test_split": "NOT FOUND — all 2000 layouts used for eval (claimed)",
       "leakage_risk": "Explicitly addressed: 'data generation step is one-off and separate from evaluation'; no circularity despite Gemini used in both generation and evaluation (claimed)"
@@ -4937,7 +4937,7 @@
       "annotation_method": "Semi-automated with human-in-the-loop: (1) Laplacian variance filtering, (2) DINOv2 semantic de-duplication, (3) CLIP contextual relevance filtering, (4) plug-and-play detection refinement, (5) SAM-3 interactive segmentation + domain-specific correction (claimed)",
       "expert_validation": "Yes, partial — expert-proposal verification; human experts fine-grained correction on model-generated masks (claimed)",
       "license": "NOT FOUND (preprint; dataset pending acceptance)",
-      "license_class": "on-request",
+      "license_class": "no-artifact-released",
       "accessibility": "NOT YET RELEASED — 'will be released on a public repository upon formal acceptance' (claimed)",
       "train_test_split": "NOT FOUND explicitly; 487 eval samples: Crack 117, Material Loss 102, Surface Stain 134, External Fixing 122 (claimed)",
       "leakage_risk": "Multi-repo aggregation; DINOv2 deduplication; no explicit LLM contamination analysis (claimed)"
@@ -8651,7 +8651,7 @@
       "annotation_method": "[VERIFY — annotation process not available from metadata]",
       "expert_validation": "[VERIFY]",
       "license": "[VERIFY] [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "unclear",
+      "license_class": "unstated",
       "accessibility": "[VERIFY — not confirmed public; no HF/GitHub link found]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — construction safety posters may appear in web-scraped LLM training data]"
@@ -10227,7 +10227,7 @@
       "annotation_method": "[VERIFY — annotator type (expert/crowd), tool, inter-annotator agreement]",
       "expert_validation": "[VERIFY]",
       "license": "[VERIFY — IEEE Access paper is open-access but dataset license not stated] [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "unclear",
+      "license_class": "unstated",
       "accessibility": "[VERIFY — no GitHub/HF mentioned; dataset release status unknown → d7=0 provisional]",
       "train_test_split": "[VERIFY]",
       "leakage_risk": "[VERIFY — construction site images may overlap with VLM training data via web-scraped safety datasets]"
@@ -10798,7 +10798,7 @@
       "annotation_method": "Official national exam (government-administered) + published answer keys",
       "expert_validation": "National certification exam = government/expert-authored",
       "license": "Public (past exam questions published online) [VERIFY exact terms] [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "unclear",
+      "license_class": "unstated",
       "accessibility": "exam questions publicly available online; dataset compiled by authors, release [VERIFY]",
       "train_test_split": "N/A (eval-only)",
       "leakage_risk": "possible (public past exams may be in pretraining) — not explicitly tested"
@@ -11965,7 +11965,7 @@
       "annotation_method": "Task construction from water-engineering domain; ROUGE-L reference + human eval",
       "expert_validation": "human evaluation methods employed",
       "license": "[VERIFY — release status not explicit in paper] [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "unclear",
+      "license_class": "unstated",
       "accessibility": "[VERIFY — public release not explicitly stated]",
       "train_test_split": "N/A (eval-only)",
       "leakage_risk": "[VERIFY]"
@@ -12871,7 +12871,7 @@
       "annotation_method": "Semi-automated pipeline: VL-model captioning + detector labels + ChatGPT-generated conversation synthesis (training data, not individually human-authored); PowerQA benchmark specifically underwent a manual refinement pass to remove ambiguous/dirty samples ('all samples are refined manually')",
       "expert_validation": "PowerQA underwent manual human refinement, but the paper does not state the reviewers were domain (electrical-engineering) experts specifically — reviewer qualifications are unstated, disclosed as a gap rather than assumed",
       "license": "Not stated anywhere in the accessible text [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "no-artifact-released",
+      "license_class": "unstated",
       "accessibility": "NOT confirmed public as of this paper — the text states only 'Code shall be released' (future tense in the abstract); no GitHub/HuggingFace/download URL is given anywhere in the PDF. Disclosed as unreleased-at-time-of-publication, not assumed public.",
       "train_test_split": "608K pre-training + 100K instruction-tuning (no held-out split described for these); PowerQA (1,000 samples) functions purely as a zero-shot eval set, no train/test split within it",
       "leakage_risk": "[VERIFY] Not discussed in the paper. PowerQA is GPT-4V-generated from the authors' own 2024 image collection, reducing direct pretraining-corpus overlap risk for contemporaneous models, but this is not explicitly analyzed by the authors."
@@ -13046,7 +13046,7 @@
       "annotation_method": "GPT-4-generated draft fault-analysis reports, followed by a secondary human review pass by 5 named electrical experts who corrected unreasonable elements — a genuine domain-expert-in-the-loop QC step",
       "expert_validation": "YES — explicitly '5 electrical experts' reviewed/corrected the GPT-4-generated ground-truth reports, and separately '5 engineers with a background in the electric power industry' rated the models' generated reports during evaluation — real domain-expert involvement at both the annotation and evaluation stages",
       "license": "Not explicitly stated for the 40K augmented dataset; the base 10,330-image dataset is described as publicly released by the source institute, but exact license terms are not given in the accessible text [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "no-artifact-released",
+      "license_class": "unstated",
       "accessibility": "NOT confirmed public — no repository/download URL for the paper's own 40K-entry augmented dataset, fault-analysis-report annotations, or trained model weights is given anywhere in the accessible text. The base 10,330-image source dataset is public, but that predates and is external to this paper's own contribution.",
       "train_test_split": "LoRA fine-tuning conducted on the constructed dataset over 60 hours (train split not separately itemized); 1,000 samples randomly held out as the comparative benchmark",
       "leakage_risk": "[VERIFY] Not discussed in the paper."
@@ -13221,7 +13221,7 @@
       "annotation_method": "Automated GPT-5.1 generation, then 2-stage filtering: (1) automated format validation (removes garbled/non-English text, checks field completeness), (2) human content-quality filtering by 3 professional power-safety regulators + 2 annotation engineers verifying description-image consistency, coordinate accuracy, and hallucinations — 135 person-hours total; spot-check of 20 random samples found only 1-2 with formatting issues",
       "expert_validation": "YES — 3 named 'professional power safety regulators' explicitly involved in the human QC pass, a genuine domain-expert-in-the-loop review, though the exact rating rubric/inter-rater metrics are not detailed beyond the format/consistency checks described",
       "license": "Article itself is CC-BY (IEEE Access open access); the dataset's own license/release terms are not separately stated in the accessible text",
-      "license_class": "open-permissive",
+      "license_class": "unstated",
       "accessibility": "[VERIFY] No explicit dataset-download/repository link (GitHub/HuggingFace/other) is found anywhere in the accessible extraction — the article being CC-BY open-access covers the paper's text, not necessarily a confirmed standalone dataset release. Disclosed as unconfirmed, not assumed released.",
       "train_test_split": "11,913 train / 2,350 test, stratified across the 6 violation categories",
       "leakage_risk": "[VERIFY] Not discussed in the accessible text."
@@ -13536,7 +13536,7 @@
       "annotation_method": "FastSAM (improved) segmentation + pixel-occupancy analysis for systematic labeling; image cleaning/noise removal preprocessing",
       "expert_validation": "Not confirmed from the sections read — labeling is algorithm-assisted (FastSAM), not stated to involve independent human expert QC — [VERIFY]",
       "license": "© 2025 Elsevier Ltd, standard copyright, not open access (no CC-BY found) [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "on-request",
+      "license_class": "proprietary",
       "accessibility": "NOT publicly released — 'Data will be made available on request' (Data Availability statement)",
       "train_test_split": "9,863 training / 900+ validation (exact validation count given as '~900')",
       "leakage_risk": "Not discussed"
@@ -13699,7 +13699,7 @@
       "annotation_method": "Official exam questions with definitive single/multiple-choice ground-truth answers",
       "expert_validation": "Official national professional licensing exam — expert-authored by definition",
       "license": "© Elsevier, standard copyright, not open access (no CC-BY found) [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "on-request",
+      "license_class": "proprietary",
       "accessibility": "NOT publicly released — 'Data will be made available on request' (Data Availability statement)",
       "train_test_split": "9:1 train/validation split used for ShieldGPT's own LoRA fine-tuning corpus (a separate teacher-guided synthetic instruction corpus, not the 972-item exam eval set); the 972-item exam set itself is a fixed evaluation set, no train split",
       "leakage_risk": "Not discussed"
@@ -13961,7 +13961,7 @@
       "annotation_method": "Metadata preparation + prompt-engineering pipeline using GPT-3.5-turbo API to transform structured annotations into instruction-answer pairs; substantial manual person-days invested in object-detection image annotation",
       "expert_validation": "Not confirmed as independent third-party expert QC beyond the described annotation pipeline — [VERIFY]",
       "license": "Not confirmed as open access from the sections read — [VERIFY] [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "on-request",
+      "license_class": "unstated",
       "accessibility": "NOT publicly released — 'Data will be made available on request' (Data Availability statement)",
       "train_test_split": "Not confirmed from the sections read for the PowerBENCH evaluation subset specifically — [VERIFY]",
       "leakage_risk": "Not discussed"
@@ -14920,7 +14920,7 @@
       "annotation_method": "Manually developed by 2 researchers in construction management with systematic FIDIC training, over a 2-month process, based directly on the original FIDIC text and authoritative literature",
       "expert_validation": "Manually developed by trained construction-management researchers with in-depth FIDIC field knowledge (direct authorship, not independent third-party validation panel)",
       "license": "Not stated — SSRN preprint, not peer reviewed; no explicit license/data-availability statement found in the sections read [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "no-artifact-released",
+      "license_class": "unstated",
       "accessibility": "No public dataset/code release (GitHub/HF) found in the real full text — [VERIFY]",
       "train_test_split": "N/A — fixed 1,131-question evaluation set, no train split",
       "leakage_risk": "Not discussed"
@@ -15722,7 +15722,7 @@
       "annotation_method": "4-stage pipeline: format unification, coordinate harmonization, LLM-driven instruction generation, QA",
       "expert_validation": "Automated consistency checks + targeted human validation by licensed pavement engineers on a diverse sample",
       "license": "Not stated [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "no-artifact-released",
+      "license_class": "unstated",
       "accessibility": "'Will be made publicly available' (future tense) — no confirmed public link found in real full text — [VERIFY]",
       "train_test_split": "Not detailed",
       "leakage_risk": "Not discussed"
@@ -22330,7 +22330,7 @@
       "annotation_method": "Automated GPT-4o generation + human expert verification pass for quality",
       "expert_validation": "Domain experts consulted for the standardized vocabulary guiding generation, and for verification of generated outputs; NOT expert-annotated real photographs",
       "license": "Not stated [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "no-artifact-released",
+      "license_class": "unstated",
       "accessibility": "No public GitHub/HF link found in the real full text — [VERIFY]",
       "train_test_split": "Not detailed in sections read",
       "leakage_risk": "Authors note the synthetic approach avoids privacy concerns (faces/license plates) but the images are not real captured road-damage photographs — a domain-authenticity limitation, not leakage per se"
@@ -22863,7 +22863,7 @@
       "annotation_method": "Professional annotation by road-maintenance experts (bounding boxes + damage categories)",
       "expert_validation": "Professional road-maintenance experts conducted annotation directly",
       "license": "Not stated (public GitHub release, code+data) [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "open-restricted",
+      "license_class": "unstated",
       "accessibility": "Public GitHub repo (liangyunuancha/wildroadbench), code + data released for reproducibility",
       "train_test_split": "VLM track offline (images+annotations released); Agent track uses the SAME image pool as a hidden holdout (explicit leakage control)",
       "leakage_risk": "EXPLICIT — Agent track holdout images/labels never exposed during the agent's run, a deliberate anti-leakage design"
@@ -23711,7 +23711,7 @@
       "annotation_method": "French: manually checked/aligned to new schema. Italian: machine-translated + independently checked by 2 translation students + expert-hydrologist disambiguation, then manually transposed via INCEpTION tool",
       "expert_validation": "Expert hydrologists resolved translation ambiguities; annotation scheme inspired by RAEPA geostandard (official French water-utility standard)",
       "license": "Not stated [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "no-artifact-released",
+      "license_class": "unstated",
       "accessibility": "'Will be made available and cited in the final version' — future tense, not yet released as of this extraction — [VERIFY]",
       "train_test_split": "Not detailed",
       "leakage_risk": "Not discussed"
@@ -25472,7 +25472,7 @@
       "annotation_method": "Manual scoring by 2 civil-engineering domain experts using the 5-point rubric",
       "expert_validation": "Inter-rater agreement validated via Cohen's kappa > 0.8 between the 2 domain experts",
       "license": "Not stated (public GitHub release) [searched GitHub/HF/card 2026-07-15: no license statement found]",
-      "license_class": "open-permissive",
+      "license_class": "unstated",
       "accessibility": "Public GitHub repo (tk-yasuno/damage_text_score), full reproducible pipeline (OpenCV preprocessing, llama-cpp-python inference, Swallow-8B structuring, priority scoring)",
       "train_test_split": "N/A — fixed evaluation set",
       "leakage_risk": "Not discussed"
@@ -25598,7 +25598,8 @@
       "n_tasks_categories": "",
       "data_source": "ResStock 2024.2 dataset, National Renewable Energy Laboratory (NREL) — simulation-based national residential stock database",
       "annotation_method": "Ground truth derived from ResStock simulation outputs, not human annotation. ResStock 2024.2 does not include cost data (stated in full text); payback-period ground truth required the authors to add cost assumptions.",
-      "expert_validation": "N/A (simulation-derived ground truth, no human annotation)"
+      "expert_validation": "N/A (simulation-derived ground truth, no human annotation)",
+      "license_class": "no-artifact-released"
     },
     "evaluation": {
       "metrics": "Top-1 accuracy, Top-3 accuracy, Top-5 accuracy, Fleiss' Kappa (cross-model agreement), sensitivity analysis, reasoning-quality qualitative assessment",
@@ -25840,7 +25841,8 @@
       "n_tasks_categories": "",
       "data_source": "Robotic sewer/culvert inspection platform imagery",
       "annotation_method": "Manual human verification of descriptions (\"Human Manual Verification\" stage stated in full text)",
-      "expert_validation": "ABSENT — not reported"
+      "expert_validation": "ABSENT — not reported",
+      "license_class": "unstated"
     },
     "evaluation": {
       "metrics": "ROUGE-1, ROUGE-2, ROUGE-L, BLEU, BERTScore, METEOR, CIDEr, F1-score (segmentation), mIoU (segmentation)",
